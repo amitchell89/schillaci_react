@@ -1,0 +1,56 @@
+{
+  "name": "schillaci_react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "./node_modules/.bin/webpack -d --watch",
+    "build": "webpack -p",
+    "start--old": "webpack-dev-server --hot --inline",
+    "server": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitchell89/schillaci_react.git"
+  },
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "body-parser": "^1.15.2",
+    "css-loader": "^0.26.1",
+    "express": "^4.14.0",
+    "file-loader": "^0.9.0",
+    "forever": "^0.15.3",
+    "helmet": "^3.1.0",
+    "node-sass": "^3.13.0",
+    "nodemailer": "^0.7.1",
+    "nodemailer-smtp-transport": "^2.7.2",
+    "react": "^15.3.2",
+    "react-bootstrap": "^0.30.5",
+    "react-dom": "^15.3.2",
+    "react-helmet": "^3.3.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux": "^3.6.0",
+    "redux-devtools": "^3.3.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "xss": "^0.3.3"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "author": "Aaron Mitchell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitchell89/schillaci_react/issues"
+  },
+  "homepage": "https://github.com/amitchell89/schillaci_react#readme"
+}

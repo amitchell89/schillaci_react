@@ -1,0 +1,10 @@
+.DS_Store
+
+#node js
+node_modules
+
+# Ignore debug
+npm-debug.log
+
+# Ignore Caddy
+Caddyfile
