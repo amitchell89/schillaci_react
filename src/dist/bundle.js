@@ -22075,6 +22075,10 @@
 	
 	var _home2 = _interopRequireDefault(_home);
 	
+	var _contact = __webpack_require__(/*! ./contact */ 296);
+	
+	var _contact2 = _interopRequireDefault(_contact);
+	
 	var _appContainer = __webpack_require__(/*! ./appContainer */ 283);
 	
 	var _appContainer2 = _interopRequireDefault(_appContainer);
@@ -22119,6 +22123,7 @@
 	            _reactRouter.Route,
 	            { path: '/', component: _appContainer2.default, meta: meta },
 	            _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default, meta: meta }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _contact2.default, meta: meta }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '*', component: _notFound2.default, meta: meta })
 	          )
 	        )
@@ -31608,13 +31613,14 @@
 	        'header',
 	        null,
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/' },
-	            'Home'
-	          )
+	          _reactRouter.Link,
+	          { to: '/' },
+	          'Home'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/contact' },
+	          'Contact'
 	        )
 	      );
 	    }
@@ -32282,6 +32288,98 @@
 	    type: types.CLOSE_MODAL
 	  };
 	}
+
+/***/ },
+/* 296 */
+/*!******************************!*\
+  !*** ./src/views/contact.js ***!
+  \******************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 273);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Contact = function (_Component) {
+	  _inherits(Contact, _Component);
+	
+	  function Contact() {
+	    _classCallCheck(this, Contact);
+	
+	    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+	  }
+	
+	  _createClass(Contact, [{
+	    key: "render",
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: "",
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          "h2",
+	          null,
+	          "Contact"
+	        ),
+	        _react2.default.createElement(
+	          "form",
+	          { id: "contact_form", method: "post" },
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Your Name"
+	          ),
+	          _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Your Name" }),
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Your Email Address"
+	          ),
+	          _react2.default.createElement("input", { type: "text", name: "email", placeholder: "Your Email" }),
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Your Message"
+	          ),
+	          _react2.default.createElement("textarea", { type: "text", name: "message", placeholder: "Your Message", rows: "7" }),
+	          _react2.default.createElement(
+	            "button",
+	            { type: "submit", form: "contact_form", value: "Submit", className: "btn--contact" },
+	            "Send Message"
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Contact;
+	}(_react.Component);
+	
+	exports.default = Contact;
 
 /***/ }
 /******/ ]);

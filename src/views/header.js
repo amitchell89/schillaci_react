@@ -5,9 +5,8 @@ export default class Header extends Component {
   render() {
     return (
       <header>
-        <h1>
           <Link to="/">Home</Link>
-        </h1>
+          <Link to="/contact">Contact</Link>
       </header>
     )
   }

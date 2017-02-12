@@ -5,6 +5,7 @@ import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 're
 
 import store from '../store/reducers';
 import Home from './home'
+import Contact from './contact'
 import AppContainer from './appContainer'
 import NotFound from './notFound'
 
@@ -21,6 +22,7 @@ export default class Routes extends Component {
         <Router history={browserHistory}>
           <Route path='/' component={AppContainer} meta={meta}>
             <IndexRoute component={Home} meta={meta} />
+            <Route path='/contact' component={Contact} meta={meta} />
             <Route path='*' component={NotFound} meta={meta} />
           </Route>
         </Router>
