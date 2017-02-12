@@ -22,9 +22,11 @@ var config = {
       {
         test : /\.jsx?/,
         include : APP_DIR,
-        loaders: [
-          'babel'
-        ]
+        loader: "babel-loader", 
+        query:
+          {
+            presets:['react', 'es2015']
+          }
       },
       {
         test: /\.scss$/,

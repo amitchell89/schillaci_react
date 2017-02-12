@@ -3,10 +3,12 @@ import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 
-// import store from '../store/reducers';
-// import AppContainer from './appContainer'
-// import NotFound from './notFound'
-// import * as meta from '../store/constants/meta_info'
+import store from '../store/reducers';
+import Home from './home'
+import AppContainer from './appContainer'
+import NotFound from './notFound'
+
+import * as meta from '../store/constants/meta_info'
 
 export default class Routes extends Component {
   constructor(props) {
@@ -15,15 +17,14 @@ export default class Routes extends Component {
 
   render() {
     return (
-      <div>test</div>
-      // <Provider store={store}>
-      //   <Router history={browserHistory}>
-      //     <Route path='/' component={AppContainer} meta={meta}>
-      //       <IndexRoute component={About} meta={meta} />
-      //       <Route path='*' component={NotFound} meta={meta} />
-      //     </Route>
-      //   </Router>
-      // </Provider>
+      <Provider store={store}>
+        <Router history={browserHistory}>
+          <Route path='/' component={AppContainer} meta={meta}>
+            <IndexRoute component={Home} meta={meta} />
+            <Route path='*' component={NotFound} meta={meta} />
+          </Route>
+        </Router>
+      </Provider>
     )
   }
 }
