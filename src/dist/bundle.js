@@ -73,7 +73,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(/*! ./css/index.scss */ 288);
+	__webpack_require__(/*! ./css/index.scss */ 293);
 	
 	_reactDom2.default.render(_react2.default.createElement(_router2.default, null), document.getElementById('app'));
 
@@ -22071,23 +22071,23 @@
 	
 	var _reducers2 = _interopRequireDefault(_reducers);
 	
-	var _home = __webpack_require__(/*! ./home */ 272);
+	var _home = __webpack_require__(/*! ./home */ 274);
 	
 	var _home2 = _interopRequireDefault(_home);
 	
-	var _contact = __webpack_require__(/*! ./contact */ 296);
+	var _contact = __webpack_require__(/*! ./contact */ 285);
 	
 	var _contact2 = _interopRequireDefault(_contact);
 	
-	var _appContainer = __webpack_require__(/*! ./appContainer */ 283);
+	var _appContainer = __webpack_require__(/*! ./appContainer */ 286);
 	
 	var _appContainer2 = _interopRequireDefault(_appContainer);
 	
-	var _notFound = __webpack_require__(/*! ./notFound */ 286);
+	var _notFound = __webpack_require__(/*! ./notFound */ 291);
 	
 	var _notFound2 = _interopRequireDefault(_notFound);
 	
-	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 287);
+	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 292);
 	
 	var meta = _interopRequireWildcard(_meta_info);
 	
@@ -29709,7 +29709,7 @@
 	
 	var _redux = __webpack_require__(/*! redux */ 180);
 	
-	var _modal = __webpack_require__(/*! ./modal */ 292);
+	var _modal = __webpack_require__(/*! ./modal */ 272);
 	
 	var _modal2 = _interopRequireDefault(_modal);
 	
@@ -29725,6 +29725,68 @@
 
 /***/ },
 /* 272 */
+/*!*************************************!*\
+  !*** ./src/store/reducers/modal.js ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _redux = __webpack_require__(/*! redux */ 180);
+	
+	var _ActionTypes = __webpack_require__(/*! ../constants/ActionTypes */ 273);
+	
+	var types = _interopRequireWildcard(_ActionTypes);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	var display = function display() {
+	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+	  var action = arguments[1];
+	
+	  console.log('reducer fired', action.type);
+	  switch (action.type) {
+	
+	    case types.OPEN_MODAL:
+	      console.log('reducer open modal');
+	      return true;
+	
+	    case types.CLOSE_MODAL:
+	      console.log('reducer close modal');
+	      return false;
+	
+	    default:
+	      return state;
+	  }
+	};
+	
+	var modal = (0, _redux.combineReducers)({
+	  display: display
+	});
+	
+	exports.default = modal;
+
+/***/ },
+/* 273 */
+/*!********************************************!*\
+  !*** ./src/store/constants/ActionTypes.js ***!
+  \********************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var OPEN_MODAL = exports.OPEN_MODAL = 'OPEN_MODAL';
+	var CLOSE_MODAL = exports.CLOSE_MODAL = 'CLOSE_MODAL';
+
+/***/ },
+/* 274 */
 /*!***************************!*\
   !*** ./src/views/home.js ***!
   \***************************/
@@ -29744,7 +29806,7 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 210);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 273);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
@@ -29790,7 +29852,7 @@
 	exports.default = Home;
 
 /***/ },
-/* 273 */
+/* 275 */
 /*!**************************************!*\
   !*** ./~/react-helmet/lib/Helmet.js ***!
   \**************************************/
@@ -29806,7 +29868,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactSideEffect = __webpack_require__(/*! react-side-effect */ 274);
+	var _reactSideEffect = __webpack_require__(/*! react-side-effect */ 276);
 	
 	var _reactSideEffect2 = _interopRequireDefault(_reactSideEffect);
 	
@@ -29818,9 +29880,9 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _HelmetConstants = __webpack_require__(/*! ./HelmetConstants.js */ 281);
+	var _HelmetConstants = __webpack_require__(/*! ./HelmetConstants.js */ 283);
 	
-	var _PlainComponent = __webpack_require__(/*! ./PlainComponent */ 282);
+	var _PlainComponent = __webpack_require__(/*! ./PlainComponent */ 284);
 	
 	var _PlainComponent2 = _interopRequireDefault(_PlainComponent);
 	
@@ -30331,7 +30393,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 274 */
+/* 276 */
 /*!******************************************!*\
   !*** ./~/react-side-effect/lib/index.js ***!
   \******************************************/
@@ -30351,11 +30413,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _exenv = __webpack_require__(/*! exenv */ 275);
+	var _exenv = __webpack_require__(/*! exenv */ 277);
 	
 	var _exenv2 = _interopRequireDefault(_exenv);
 	
-	var _shallowequal = __webpack_require__(/*! shallowequal */ 276);
+	var _shallowequal = __webpack_require__(/*! shallowequal */ 278);
 	
 	var _shallowequal2 = _interopRequireDefault(_shallowequal);
 	
@@ -30463,7 +30525,7 @@
 	};
 
 /***/ },
-/* 275 */
+/* 277 */
 /*!**************************!*\
   !*** ./~/exenv/index.js ***!
   \**************************/
@@ -30512,7 +30574,7 @@
 
 
 /***/ },
-/* 276 */
+/* 278 */
 /*!*****************************************!*\
   !*** ./~/shallowequal/modules/index.js ***!
   \*****************************************/
@@ -30520,7 +30582,7 @@
 
 	'use strict';
 	
-	var fetchKeys = __webpack_require__(/*! lodash.keys */ 277);
+	var fetchKeys = __webpack_require__(/*! lodash.keys */ 279);
 	
 	module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 	
@@ -30568,7 +30630,7 @@
 	};
 
 /***/ },
-/* 277 */
+/* 279 */
 /*!********************************!*\
   !*** ./~/lodash.keys/index.js ***!
   \********************************/
@@ -30582,9 +30644,9 @@
 	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
-	var getNative = __webpack_require__(/*! lodash._getnative */ 278),
-	    isArguments = __webpack_require__(/*! lodash.isarguments */ 279),
-	    isArray = __webpack_require__(/*! lodash.isarray */ 280);
+	var getNative = __webpack_require__(/*! lodash._getnative */ 280),
+	    isArguments = __webpack_require__(/*! lodash.isarguments */ 281),
+	    isArray = __webpack_require__(/*! lodash.isarray */ 282);
 	
 	/** Used to detect unsigned integer values. */
 	var reIsUint = /^\d+$/;
@@ -30813,7 +30875,7 @@
 
 
 /***/ },
-/* 278 */
+/* 280 */
 /*!**************************************!*\
   !*** ./~/lodash._getnative/index.js ***!
   \**************************************/
@@ -30959,7 +31021,7 @@
 
 
 /***/ },
-/* 279 */
+/* 281 */
 /*!***************************************!*\
   !*** ./~/lodash.isarguments/index.js ***!
   \***************************************/
@@ -31197,7 +31259,7 @@
 
 
 /***/ },
-/* 280 */
+/* 282 */
 /*!***********************************!*\
   !*** ./~/lodash.isarray/index.js ***!
   \***********************************/
@@ -31386,7 +31448,7 @@
 
 
 /***/ },
-/* 281 */
+/* 283 */
 /*!***********************************************!*\
   !*** ./~/react-helmet/lib/HelmetConstants.js ***!
   \***********************************************/
@@ -31425,7 +31487,7 @@
 	};
 
 /***/ },
-/* 282 */
+/* 284 */
 /*!**********************************************!*\
   !*** ./~/react-helmet/lib/PlainComponent.js ***!
   \**********************************************/
@@ -31470,7 +31532,99 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 283 */
+/* 285 */
+/*!******************************!*\
+  !*** ./src/views/contact.js ***!
+  \******************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Contact = function (_Component) {
+	  _inherits(Contact, _Component);
+	
+	  function Contact() {
+	    _classCallCheck(this, Contact);
+	
+	    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+	  }
+	
+	  _createClass(Contact, [{
+	    key: "render",
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: "",
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          "h2",
+	          null,
+	          "Contact"
+	        ),
+	        _react2.default.createElement(
+	          "form",
+	          { id: "contact_form", method: "post" },
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Your Name"
+	          ),
+	          _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Your Name" }),
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Your Email Address"
+	          ),
+	          _react2.default.createElement("input", { type: "text", name: "email", placeholder: "Your Email" }),
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Your Message"
+	          ),
+	          _react2.default.createElement("textarea", { type: "text", name: "message", placeholder: "Your Message", rows: "7" }),
+	          _react2.default.createElement(
+	            "button",
+	            { type: "submit", form: "contact_form", value: "Submit", className: "btn--contact" },
+	            "Send Message"
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Contact;
+	}(_react.Component);
+	
+	exports.default = Contact;
+
+/***/ },
+/* 286 */
 /*!***********************************!*\
   !*** ./src/views/appContainer.js ***!
   \***********************************/
@@ -31492,19 +31646,19 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 273);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _header = __webpack_require__(/*! ./header */ 284);
+	var _header = __webpack_require__(/*! ./header */ 287);
 	
 	var _header2 = _interopRequireDefault(_header);
 	
-	var _footer = __webpack_require__(/*! ./footer */ 285);
+	var _footer = __webpack_require__(/*! ./footer */ 288);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
-	var _modal = __webpack_require__(/*! ./modal */ 294);
+	var _modal = __webpack_require__(/*! ./modal */ 289);
 	
 	var _modal2 = _interopRequireDefault(_modal);
 	
@@ -31569,7 +31723,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(AppContainer);
 
 /***/ },
-/* 284 */
+/* 287 */
 /*!*****************************!*\
   !*** ./src/views/header.js ***!
   \*****************************/
@@ -31632,7 +31786,7 @@
 	exports.default = Header;
 
 /***/ },
-/* 285 */
+/* 288 */
 /*!*****************************!*\
   !*** ./src/views/footer.js ***!
   \*****************************/
@@ -31690,7 +31844,114 @@
 	exports.default = Footer;
 
 /***/ },
-/* 286 */
+/* 289 */
+/*!****************************!*\
+  !*** ./src/views/modal.js ***!
+  \****************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
+	var _ToggleModal = __webpack_require__(/*! ../store/actions/ToggleModal */ 290);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	function mapDispatchToProps(dispatch) {
+	  return {
+	    closeModal: function closeModal(gallery, e) {
+	      dispatch((0, _ToggleModal.closeModal)());
+	      _reactRouter.browserHistory.push('/gallery/' + gallery);
+	    }
+	  };
+	}
+	
+	var Modal = function (_Component) {
+	  _inherits(Modal, _Component);
+	
+	  function Modal() {
+	    _classCallCheck(this, Modal);
+	
+	    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
+	  }
+	
+	  _createClass(Modal, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'modal' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Modal'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Modal;
+	}(_react.Component);
+	
+	exports.default = (0, _reactRedux.connect)(mapDispatchToProps)(Modal);
+
+/***/ },
+/* 290 */
+/*!******************************************!*\
+  !*** ./src/store/actions/ToggleModal.js ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.openModal = openModal;
+	exports.closeModal = closeModal;
+	
+	var _ActionTypes = __webpack_require__(/*! ../constants/ActionTypes */ 273);
+	
+	var types = _interopRequireWildcard(_ActionTypes);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	function openModal() {
+	  console.log('action dispatched: open modal');
+	  return {
+	    type: types.OPEN_MODAL
+	  };
+	}
+	
+	function closeModal() {
+	  console.log('action dispatched: close modal');
+	  return {
+	    type: types.CLOSE_MODAL
+	  };
+	}
+
+/***/ },
+/* 291 */
 /*!*******************************!*\
   !*** ./src/views/notFound.js ***!
   \*******************************/
@@ -31746,7 +32007,7 @@
 	exports.default = NotFound;
 
 /***/ },
-/* 287 */
+/* 292 */
 /*!******************************************!*\
   !*** ./src/store/constants/meta_info.js ***!
   \******************************************/
@@ -31761,7 +32022,7 @@
 	var meta_404 = exports.meta_404 = 'Womp womp. Looks like this link is broken.';
 
 /***/ },
-/* 288 */
+/* 293 */
 /*!****************************!*\
   !*** ./src/css/index.scss ***!
   \****************************/
@@ -31770,10 +32031,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../../~/css-loader!./../../~/sass-loader?sourceMap!./index.scss */ 289);
+	var content = __webpack_require__(/*! !./../../~/css-loader!./../../~/sass-loader?sourceMap!./index.scss */ 294);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../../~/style-loader/addStyles.js */ 291)(content, {});
+	var update = __webpack_require__(/*! ./../../~/style-loader/addStyles.js */ 296)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -31790,13 +32051,13 @@
 	}
 
 /***/ },
-/* 289 */
+/* 294 */
 /*!*********************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader?sourceMap!./src/css/index.scss ***!
   \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../../~/css-loader/lib/css-base.js */ 290)();
+	exports = module.exports = __webpack_require__(/*! ./../../~/css-loader/lib/css-base.js */ 295)();
 	// imports
 	
 	
@@ -31807,7 +32068,7 @@
 
 
 /***/ },
-/* 290 */
+/* 295 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -31866,7 +32127,7 @@
 
 
 /***/ },
-/* 291 */
+/* 296 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -32119,267 +32380,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 292 */
-/*!*************************************!*\
-  !*** ./src/store/reducers/modal.js ***!
-  \*************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _redux = __webpack_require__(/*! redux */ 180);
-	
-	var _ActionTypes = __webpack_require__(/*! ../constants/ActionTypes */ 293);
-	
-	var types = _interopRequireWildcard(_ActionTypes);
-	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-	
-	var display = function display() {
-	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-	  var action = arguments[1];
-	
-	  console.log('reducer fired', action.type);
-	  switch (action.type) {
-	
-	    case types.OPEN_MODAL:
-	      console.log('reducer open modal');
-	      return true;
-	
-	    case types.CLOSE_MODAL:
-	      console.log('reducer close modal');
-	      return false;
-	
-	    default:
-	      return state;
-	  }
-	};
-	
-	var modal = (0, _redux.combineReducers)({
-	  display: display
-	});
-	
-	exports.default = modal;
-
-/***/ },
-/* 293 */
-/*!********************************************!*\
-  !*** ./src/store/constants/ActionTypes.js ***!
-  \********************************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var OPEN_MODAL = exports.OPEN_MODAL = 'OPEN_MODAL';
-	var CLOSE_MODAL = exports.CLOSE_MODAL = 'CLOSE_MODAL';
-
-/***/ },
-/* 294 */
-/*!****************************!*\
-  !*** ./src/views/modal.js ***!
-  \****************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 210);
-	
-	var _ToggleModal = __webpack_require__(/*! ../store/actions/ToggleModal */ 295);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	function mapDispatchToProps(dispatch) {
-	  return {
-	    closeModal: function closeModal(gallery, e) {
-	      dispatch((0, _ToggleModal.closeModal)());
-	      _reactRouter.browserHistory.push('/gallery/' + gallery);
-	    }
-	  };
-	}
-	
-	var Modal = function (_Component) {
-	  _inherits(Modal, _Component);
-	
-	  function Modal() {
-	    _classCallCheck(this, Modal);
-	
-	    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
-	  }
-	
-	  _createClass(Modal, [{
-	    key: 'render',
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'modal' },
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Modal'
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Modal;
-	}(_react.Component);
-	
-	exports.default = (0, _reactRedux.connect)(mapDispatchToProps)(Modal);
-
-/***/ },
-/* 295 */
-/*!******************************************!*\
-  !*** ./src/store/actions/ToggleModal.js ***!
-  \******************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.openModal = openModal;
-	exports.closeModal = closeModal;
-	
-	var _ActionTypes = __webpack_require__(/*! ../constants/ActionTypes */ 293);
-	
-	var types = _interopRequireWildcard(_ActionTypes);
-	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-	
-	function openModal() {
-	  console.log('action dispatched: open modal');
-	  return {
-	    type: types.OPEN_MODAL
-	  };
-	}
-	
-	function closeModal() {
-	  console.log('action dispatched: close modal');
-	  return {
-	    type: types.CLOSE_MODAL
-	  };
-	}
-
-/***/ },
-/* 296 */
-/*!******************************!*\
-  !*** ./src/views/contact.js ***!
-  \******************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 273);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Contact = function (_Component) {
-	  _inherits(Contact, _Component);
-	
-	  function Contact() {
-	    _classCallCheck(this, Contact);
-	
-	    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
-	  }
-	
-	  _createClass(Contact, [{
-	    key: "render",
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: "",
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
-	        }),
-	        _react2.default.createElement(
-	          "h2",
-	          null,
-	          "Contact"
-	        ),
-	        _react2.default.createElement(
-	          "form",
-	          { id: "contact_form", method: "post" },
-	          _react2.default.createElement(
-	            "label",
-	            null,
-	            "Your Name"
-	          ),
-	          _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Your Name" }),
-	          _react2.default.createElement(
-	            "label",
-	            null,
-	            "Your Email Address"
-	          ),
-	          _react2.default.createElement("input", { type: "text", name: "email", placeholder: "Your Email" }),
-	          _react2.default.createElement(
-	            "label",
-	            null,
-	            "Your Message"
-	          ),
-	          _react2.default.createElement("textarea", { type: "text", name: "message", placeholder: "Your Message", rows: "7" }),
-	          _react2.default.createElement(
-	            "button",
-	            { type: "submit", form: "contact_form", value: "Submit", className: "btn--contact" },
-	            "Send Message"
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Contact;
-	}(_react.Component);
-	
-	exports.default = Contact;
 
 /***/ }
 /******/ ]);
