@@ -7,12 +7,15 @@ export default class Header extends Component {
     return (
       <header>
           <Logo />
-          <Link to="/">Home</Link>
-          <Link to="/guitars">Guitars</Link>
-          <Link to="/necks">Necks</Link>
-          <Link to="/microtonal">Microtonal</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <nav>
+            <Link to="/">Home</Link>
+            <p>Made in the USA</p>
+            <Link to="/guitars">Guitars</Link>
+            <Link to="/necks">Necks</Link>
+            <Link to="/microtonal">Microtonal</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+          </nav>
       </header>
     )
   }
