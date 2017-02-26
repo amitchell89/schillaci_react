@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router'
 import Helmet from "react-helmet";
-import ModalButton from '../components/ModalButton'
+import ModalButton from '../../components/ModalButton'
 
 export default class Home extends Component {
   render() {

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Helmet from "react-helmet";
-import ContactForm from '../components/ContactForm'
 
-export default class Contact extends Component {
+export default class Necks extends Component {
   render() {
 
     return (
@@ -16,9 +15,8 @@ export default class Contact extends Component {
           ] }
           />
         <h2>
-        Contact
+        Necks
         </h2>
-        <ContactForm />
       </div>
     )
   }

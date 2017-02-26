@@ -6,6 +6,10 @@ export default class Header extends Component {
     return (
       <header>
           <Link to="/">Home</Link>
+          <Link to="/guitars">Guitars</Link>
+          <Link to="/necks">Necks</Link>
+          <Link to="/microtonal">Microtonal</Link>
+          <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
       </header>
     )
