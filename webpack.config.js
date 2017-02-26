@@ -33,7 +33,7 @@ var config = {
         loader: 'style!css!sass?sourceMap'
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|eot|svg|ttf|woff|woff2)$/i,
         loader: 'file?name=[name].[ext]'
       }
     ]

@@ -18,3 +18,8 @@ Project based on [React_Starter](https://github.com/amitchell89/react_starter)
 `npm run server`: Starts express server
 
 Visit localhost:3000
+
+
+## Slider
+
+The Slider is built using [slick-carousel](https://www.npmjs.com/package/slick-carousel) and [react-slick](https://github.com/akiran/react-slick)

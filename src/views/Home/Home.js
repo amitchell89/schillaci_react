@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router'
 import Helmet from "react-helmet";
 import ModalButton from '../../components/ModalButton'
+import GuitarSlider from '../../components/GuitarSlider'
 
 export default class Home extends Component {
   render() {
@@ -21,6 +22,8 @@ export default class Home extends Component {
           <h3>"I'm blown away by this guitar. I can feel the rock solid construction and the neck is amazing. Thank you so much for your craftsmanship and for working with me on this idea."</h3>
           <p>- Adam Krichmar, Satisifed Customer</p>
         </div>
+        <GuitarSlider />
+        <div>test</div>
       </div>
     )
   }
