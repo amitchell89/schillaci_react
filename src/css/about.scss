@@ -1,0 +1,15 @@
+.about__info {
+  width: calc(100% - 420px);
+  padding-right: 2rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.about__info p:first-child {
+  margin-top: 0;
+}
+
+.about__picture {
+  width: 420px;
+  display: inline-block;
+}
