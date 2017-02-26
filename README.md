@@ -1,4 +1,4 @@
-# React Starter
+# Schillaci Guitars
 
 ## Built with
 - Node
@@ -7,6 +7,8 @@
 - React Router
 - Webpack
 - Babel
+
+Project based on [React_Starter](https://github.com/amitchell89/react_starter)
 
 ## Setup
 `npm install`
