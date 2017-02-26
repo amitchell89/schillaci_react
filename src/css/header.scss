@@ -1,0 +1,30 @@
+
+.Logo {
+  width: 150px;
+  height: 68px;
+  background-image: url('../img/Schillaci_Guitars_Logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  float: left;
+}
+
+.header__tagline {
+  float: right;
+}
+
+nav {
+  clear: both;
+  padding-top: 1rem;
+  a {
+    color: $gray-light;
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  a:last-child {
+    margin-right: 0;
+  }
+  a:hover {
+    color: $accent-primary;
+  }
+}

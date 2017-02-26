@@ -4,14 +4,35 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   font-family: 'Montserrat', helvetica, arial, sans-serif;
 }
 
-.Logo {
-  width: 200px;
-  height: 90px;
-  background-image: url('../img/Schillaci_Guitars_Logo.png');
+body {
+  background-image: url('../img/bkgd_purple.png');
+  background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.site_wrapper {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.content_wrapper {
+  padding: 1rem 2rem;
+  background: $white;
+}
+
+.footer {
+  background: $black;
+  color: $white;
+  padding: 0.5rem 2rem;
+  font-size: 0.75rem;
 }
