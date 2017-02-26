@@ -17,6 +17,35 @@ export default class Necks extends Component {
         <h2>
         Necks
         </h2>
+        <div className="necks__info">
+          <p>
+          Schillaci Guitars is a manufacturer and seller of necks. Necks and neck profiles are made to order in vintage or modern design which feature one piece maple construction or rosewood slab board. Replacement necks are also available. Heel widths compatible to industry standards.
+          </p>
+          <p>
+          Necks and Neck Profiles resembling: 
+          </p>
+
+          <p>- 20 Fret Bass Rose Slab Fingerboard</p>
+          <p>- 20 Fret Bass 1 Pc w/ Plug</p> 
+          <p>- 21 Fret Guitar, 50's 1 Pc w/ Plug</p> 
+          <p>- 21 Fret Guitar 60's Rose Slab Fingerboard</p>
+          <p>- 21 Fret Guitar 70's 1 Pc w/ Bullet</p>
+          <p>- 22 Fret Guitar w/ Upper Truss Rod Adjustment</p> 
+
+          <p>Nut widths available:</p>
+
+          <p>- 4 String Bass 1 9/16" (make fraction smaller if can)</p> 
+          <p>- 5 String Bass 1 11/16"</p>
+          <p>- 6 String Guitar 1 5/8" Vintage</p> 
+          <p>- 6 String Guitar 1 11/16" Modern</p>
+          <p>- 6 String Guitar 1 3/4" Oversize</p> 
+          <p>- 7 String Guitar 1 7/8"</p>
+        </div>
+        <div className="necks__pictures">
+          <img src="../../img/Necks/schillaci_guitars_microtonal_all_necks.jpg" />
+          <img src="../../img/About/schillaci_guitars_shop_3.jpg" />
+          <img src="../../img/About/schillaci_guitars_shop_2.jpg" />
+         </div>
       </div>
     )
   }

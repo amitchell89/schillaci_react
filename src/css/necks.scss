@@ -1,19 +1,20 @@
-.about__info {
-  width: calc(100% - 420px);
+.necks__info {
+  width: calc(100% - 620px);
   padding-right: 2rem;
   display: inline-block;
   vertical-align: top;
 }
 
-.about__info p:first-child {
+.necks__info p:first-child {
   margin-top: 0;
 }
 
-.about__picture {
-  width: 420px;
+.necks__pictures {
+  width: 620px;
   display: inline-block;
   img {
     width: 100%;
     height: auto;
+    margin-bottom: 1rem;
   }
 }
