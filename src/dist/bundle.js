@@ -73,7 +73,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(/*! ./css/index.scss */ 300);
+	__webpack_require__(/*! ./css/index.scss */ 302);
 	
 	_reactDom2.default.render(_react2.default.createElement(_router2.default, null), document.getElementById('app'));
 
@@ -22071,39 +22071,39 @@
 	
 	var _reducers2 = _interopRequireDefault(_reducers);
 	
-	var _Home = __webpack_require__(/*! ./Home */ 274);
+	var _Home = __webpack_require__(/*! ./Home */ 276);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _Guitars = __webpack_require__(/*! ./Guitars */ 287);
+	var _Guitars = __webpack_require__(/*! ./Guitars */ 289);
 	
 	var _Guitars2 = _interopRequireDefault(_Guitars);
 	
-	var _Necks = __webpack_require__(/*! ./Necks */ 288);
+	var _Necks = __webpack_require__(/*! ./Necks */ 290);
 	
 	var _Necks2 = _interopRequireDefault(_Necks);
 	
-	var _Microtonal = __webpack_require__(/*! ./Microtonal */ 289);
+	var _Microtonal = __webpack_require__(/*! ./Microtonal */ 291);
 	
 	var _Microtonal2 = _interopRequireDefault(_Microtonal);
 	
-	var _About = __webpack_require__(/*! ./About */ 290);
+	var _About = __webpack_require__(/*! ./About */ 292);
 	
 	var _About2 = _interopRequireDefault(_About);
 	
-	var _Contact = __webpack_require__(/*! ./Contact */ 291);
+	var _Contact = __webpack_require__(/*! ./Contact */ 293);
 	
 	var _Contact2 = _interopRequireDefault(_Contact);
 	
-	var _appContainer = __webpack_require__(/*! ./appContainer */ 293);
+	var _appContainer = __webpack_require__(/*! ./appContainer */ 295);
 	
 	var _appContainer2 = _interopRequireDefault(_appContainer);
 	
-	var _notFound = __webpack_require__(/*! ./notFound */ 298);
+	var _notFound = __webpack_require__(/*! ./notFound */ 300);
 	
 	var _notFound2 = _interopRequireDefault(_notFound);
 	
-	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 299);
+	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 301);
 	
 	var meta = _interopRequireWildcard(_meta_info);
 	
@@ -29733,7 +29733,7 @@
 	
 	var _modal2 = _interopRequireDefault(_modal);
 	
-	var _guitars = __webpack_require__(/*! ./guitars */ 313);
+	var _guitars = __webpack_require__(/*! ./guitars */ 274);
 	
 	var _guitars2 = _interopRequireDefault(_guitars);
 	
@@ -29812,6 +29812,64 @@
 
 /***/ },
 /* 274 */
+/*!***************************************!*\
+  !*** ./src/store/reducers/guitars.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = guitars;
+	
+	var _guitars = __webpack_require__(/*! ../constants/guitars */ 275);
+	
+	var allGuitars = _interopRequireWildcard(_guitars);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	function guitars() {
+	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : allGuitars.guitars;
+	  var action = arguments[1];
+	
+	  switch (action.type) {
+	    default:
+	      return state;
+	  }
+	}
+
+/***/ },
+/* 275 */
+/*!****************************************!*\
+  !*** ./src/store/constants/guitars.js ***!
+  \****************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var guitars = exports.guitars = [{
+	  name: "LSG",
+	  about: "1 5/8 thick 2pc. Mahogany body",
+	  slider_photo: "Guitars/schillaci_guitars_slider_lsg_guitar_1.png",
+	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_lsg_guitar_1.jpg",
+	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03"],
+	  hidden: false
+	}, {
+	  name: "Knucklehead",
+	  about: "One Piece Ash Body",
+	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_1",
+	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_1.jpg",
+	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_01", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_02"],
+	  hidden: false
+	}];
+
+/***/ },
+/* 276 */
 /*!********************************!*\
   !*** ./src/views/Home/Home.js ***!
   \********************************/
@@ -29831,11 +29889,11 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 210);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _ModalButton = __webpack_require__(/*! ../../components/ModalButton */ 285);
+	var _ModalButton = __webpack_require__(/*! ../../components/ModalButton */ 287);
 	
 	var _ModalButton2 = _interopRequireDefault(_ModalButton);
 	
@@ -29882,7 +29940,7 @@
 	exports.default = Home;
 
 /***/ },
-/* 275 */
+/* 277 */
 /*!**************************************!*\
   !*** ./~/react-helmet/lib/Helmet.js ***!
   \**************************************/
@@ -29898,7 +29956,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactSideEffect = __webpack_require__(/*! react-side-effect */ 276);
+	var _reactSideEffect = __webpack_require__(/*! react-side-effect */ 278);
 	
 	var _reactSideEffect2 = _interopRequireDefault(_reactSideEffect);
 	
@@ -29910,9 +29968,9 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _HelmetConstants = __webpack_require__(/*! ./HelmetConstants.js */ 283);
+	var _HelmetConstants = __webpack_require__(/*! ./HelmetConstants.js */ 285);
 	
-	var _PlainComponent = __webpack_require__(/*! ./PlainComponent */ 284);
+	var _PlainComponent = __webpack_require__(/*! ./PlainComponent */ 286);
 	
 	var _PlainComponent2 = _interopRequireDefault(_PlainComponent);
 	
@@ -30423,7 +30481,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 276 */
+/* 278 */
 /*!******************************************!*\
   !*** ./~/react-side-effect/lib/index.js ***!
   \******************************************/
@@ -30443,11 +30501,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _exenv = __webpack_require__(/*! exenv */ 277);
+	var _exenv = __webpack_require__(/*! exenv */ 279);
 	
 	var _exenv2 = _interopRequireDefault(_exenv);
 	
-	var _shallowequal = __webpack_require__(/*! shallowequal */ 278);
+	var _shallowequal = __webpack_require__(/*! shallowequal */ 280);
 	
 	var _shallowequal2 = _interopRequireDefault(_shallowequal);
 	
@@ -30555,7 +30613,7 @@
 	};
 
 /***/ },
-/* 277 */
+/* 279 */
 /*!**************************!*\
   !*** ./~/exenv/index.js ***!
   \**************************/
@@ -30604,7 +30662,7 @@
 
 
 /***/ },
-/* 278 */
+/* 280 */
 /*!*****************************************!*\
   !*** ./~/shallowequal/modules/index.js ***!
   \*****************************************/
@@ -30612,7 +30670,7 @@
 
 	'use strict';
 	
-	var fetchKeys = __webpack_require__(/*! lodash.keys */ 279);
+	var fetchKeys = __webpack_require__(/*! lodash.keys */ 281);
 	
 	module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 	
@@ -30660,7 +30718,7 @@
 	};
 
 /***/ },
-/* 279 */
+/* 281 */
 /*!********************************!*\
   !*** ./~/lodash.keys/index.js ***!
   \********************************/
@@ -30674,9 +30732,9 @@
 	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
-	var getNative = __webpack_require__(/*! lodash._getnative */ 280),
-	    isArguments = __webpack_require__(/*! lodash.isarguments */ 281),
-	    isArray = __webpack_require__(/*! lodash.isarray */ 282);
+	var getNative = __webpack_require__(/*! lodash._getnative */ 282),
+	    isArguments = __webpack_require__(/*! lodash.isarguments */ 283),
+	    isArray = __webpack_require__(/*! lodash.isarray */ 284);
 	
 	/** Used to detect unsigned integer values. */
 	var reIsUint = /^\d+$/;
@@ -30905,7 +30963,7 @@
 
 
 /***/ },
-/* 280 */
+/* 282 */
 /*!**************************************!*\
   !*** ./~/lodash._getnative/index.js ***!
   \**************************************/
@@ -31051,7 +31109,7 @@
 
 
 /***/ },
-/* 281 */
+/* 283 */
 /*!***************************************!*\
   !*** ./~/lodash.isarguments/index.js ***!
   \***************************************/
@@ -31289,7 +31347,7 @@
 
 
 /***/ },
-/* 282 */
+/* 284 */
 /*!***********************************!*\
   !*** ./~/lodash.isarray/index.js ***!
   \***********************************/
@@ -31478,7 +31536,7 @@
 
 
 /***/ },
-/* 283 */
+/* 285 */
 /*!***********************************************!*\
   !*** ./~/react-helmet/lib/HelmetConstants.js ***!
   \***********************************************/
@@ -31517,7 +31575,7 @@
 	};
 
 /***/ },
-/* 284 */
+/* 286 */
 /*!**********************************************!*\
   !*** ./~/react-helmet/lib/PlainComponent.js ***!
   \**********************************************/
@@ -31562,7 +31620,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 285 */
+/* 287 */
 /*!***************************************************!*\
   !*** ./src/components/ModalButton/ModalButton.js ***!
   \***************************************************/
@@ -31582,7 +31640,7 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
-	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 286);
+	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 288);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -31637,7 +31695,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(ModalButton);
 
 /***/ },
-/* 286 */
+/* 288 */
 /*!******************************************!*\
   !*** ./src/store/actions/ToggleModal.js ***!
   \******************************************/
@@ -31672,7 +31730,7 @@
 	}
 
 /***/ },
-/* 287 */
+/* 289 */
 /*!**************************************!*\
   !*** ./src/views/Guitars/Guitars.js ***!
   \**************************************/
@@ -31692,7 +31750,7 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
@@ -31730,6 +31788,25 @@
 	
 	      console.log('check', guitars);
 	
+	      var guitarThumbs = _react2.default.createElement(
+	        'div',
+	        { className: 'guitar__gallery' },
+	        guitars.map(function (s, i) {
+	
+	          var thumb = '../../img/' + s.thumb_photo;
+	          return _react2.default.createElement(
+	            'div',
+	            { className: 'guitar__thumb' },
+	            _react2.default.createElement('img', { src: thumb }),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              s.name
+	            )
+	          );
+	        }.bind(this))
+	      );
+	
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -31741,7 +31818,8 @@
 	          'h2',
 	          null,
 	          'Guitars'
-	        )
+	        ),
+	        guitarThumbs
 	      );
 	    }
 	  }]);
@@ -31752,7 +31830,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Guitars);
 
 /***/ },
-/* 288 */
+/* 290 */
 /*!**********************************!*\
   !*** ./src/views/Necks/Necks.js ***!
   \**********************************/
@@ -31770,7 +31848,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
@@ -31903,7 +31981,7 @@
 	exports.default = Necks;
 
 /***/ },
-/* 289 */
+/* 291 */
 /*!********************************************!*\
   !*** ./src/views/Microtonal/Microtonal.js ***!
   \********************************************/
@@ -31921,7 +31999,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
@@ -31968,7 +32046,7 @@
 	exports.default = Microtonal;
 
 /***/ },
-/* 290 */
+/* 292 */
 /*!**********************************!*\
   !*** ./src/views/About/About.js ***!
   \**********************************/
@@ -31988,7 +32066,7 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 210);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
@@ -32104,7 +32182,7 @@
 	exports.default = About;
 
 /***/ },
-/* 291 */
+/* 293 */
 /*!**************************************!*\
   !*** ./src/views/Contact/Contact.js ***!
   \**************************************/
@@ -32122,11 +32200,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _ContactForm = __webpack_require__(/*! ../../components/ContactForm */ 292);
+	var _ContactForm = __webpack_require__(/*! ../../components/ContactForm */ 294);
 	
 	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 	
@@ -32179,7 +32257,7 @@
 	exports.default = Contact;
 
 /***/ },
-/* 292 */
+/* 294 */
 /*!***************************************************!*\
   !*** ./src/components/ContactForm/ContactForm.js ***!
   \***************************************************/
@@ -32270,7 +32348,7 @@
 	exports.default = ContactForm;
 
 /***/ },
-/* 293 */
+/* 295 */
 /*!***********************************!*\
   !*** ./src/views/appContainer.js ***!
   \***********************************/
@@ -32292,19 +32370,19 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _Header = __webpack_require__(/*! ../containers/Header */ 294);
+	var _Header = __webpack_require__(/*! ../containers/Header */ 296);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _Footer = __webpack_require__(/*! ../components/Footer */ 296);
+	var _Footer = __webpack_require__(/*! ../components/Footer */ 298);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
-	var _Modal = __webpack_require__(/*! ../components/Modal */ 297);
+	var _Modal = __webpack_require__(/*! ../components/Modal */ 299);
 	
 	var _Modal2 = _interopRequireDefault(_Modal);
 	
@@ -32369,7 +32447,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(AppContainer);
 
 /***/ },
-/* 294 */
+/* 296 */
 /*!*****************************************!*\
   !*** ./src/containers/Header/Header.js ***!
   \*****************************************/
@@ -32389,7 +32467,7 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 210);
 	
-	var _Logo = __webpack_require__(/*! ../../components/Logo */ 295);
+	var _Logo = __webpack_require__(/*! ../../components/Logo */ 297);
 	
 	var _Logo2 = _interopRequireDefault(_Logo);
 	
@@ -32470,7 +32548,7 @@
 	exports.default = Header;
 
 /***/ },
-/* 295 */
+/* 297 */
 /*!*************************************!*\
   !*** ./src/components/Logo/Logo.js ***!
   \*************************************/
@@ -32524,7 +32602,7 @@
 	exports.default = Logo;
 
 /***/ },
-/* 296 */
+/* 298 */
 /*!*****************************************!*\
   !*** ./src/components/Footer/Footer.js ***!
   \*****************************************/
@@ -32587,7 +32665,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 297 */
+/* 299 */
 /*!***************************************!*\
   !*** ./src/components/Modal/Modal.js ***!
   \***************************************/
@@ -32607,7 +32685,7 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
-	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 286);
+	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 288);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -32667,7 +32745,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Modal);
 
 /***/ },
-/* 298 */
+/* 300 */
 /*!*******************************!*\
   !*** ./src/views/notFound.js ***!
   \*******************************/
@@ -32723,7 +32801,7 @@
 	exports.default = NotFound;
 
 /***/ },
-/* 299 */
+/* 301 */
 /*!******************************************!*\
   !*** ./src/store/constants/meta_info.js ***!
   \******************************************/
@@ -32738,7 +32816,7 @@
 	var meta_404 = exports.meta_404 = 'Womp womp. Looks like this link is broken.';
 
 /***/ },
-/* 300 */
+/* 302 */
 /*!****************************!*\
   !*** ./src/css/index.scss ***!
   \****************************/
@@ -32747,10 +32825,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 301);
+	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 303);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 309)(content, {});
+	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 307)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -32767,24 +32845,24 @@
 	}
 
 /***/ },
-/* 301 */
+/* 303 */
 /*!*********************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader?sourceMap!./src/css/index.scss ***!
   \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 302)();
+	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 304)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'Montserrat', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 312) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n\n/* Fonts */\nh2 {\n  color: #4e74aa; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n.header {\n  border-bottom: 1px solid #dddddd; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 310) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n.necks__info {\n  width: calc(100% - 620px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__pictures {\n  width: 620px;\n  display: inline-block; }\n  .necks__pictures img {\n    width: 100%;\n    height: auto;\n    margin-bottom: 1rem; }\n\n.about__info {\n  width: calc(100% - 420px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.about__picture {\n  width: 420px;\n  display: inline-block; }\n  .about__picture img {\n    width: 100%;\n    height: auto; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n", ""]);
+	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'Montserrat', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 305) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n\n/* Fonts */\nh2 {\n  color: #4e74aa; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n.header {\n  border-bottom: 1px solid #dddddd; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 306) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n.necks__info {\n  width: calc(100% - 620px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__pictures {\n  width: 620px;\n  display: inline-block; }\n  .necks__pictures img {\n    width: 100%;\n    height: auto;\n    margin-bottom: 1rem; }\n\n.about__info {\n  width: calc(100% - 420px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.about__picture {\n  width: 420px;\n  display: inline-block; }\n  .about__picture img {\n    width: 100%;\n    height: auto; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 302 */
+/* 304 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -32843,13 +32921,25 @@
 
 
 /***/ },
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */
+/* 305 */
+/*!*********************************!*\
+  !*** ./src/img/bkgd_purple.png ***!
+  \*********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "bkgd_purple.png";
+
+/***/ },
+/* 306 */
+/*!********************************************!*\
+  !*** ./src/img/Schillaci_Guitars_Logo.png ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "Schillaci_Guitars_Logo.png";
+
+/***/ },
+/* 307 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -33102,76 +33192,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 310 */
-/*!********************************************!*\
-  !*** ./src/img/Schillaci_Guitars_Logo.png ***!
-  \********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "Schillaci_Guitars_Logo.png";
-
-/***/ },
-/* 311 */,
-/* 312 */
-/*!*********************************!*\
-  !*** ./src/img/bkgd_purple.png ***!
-  \*********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "bkgd_purple.png";
-
-/***/ },
-/* 313 */
-/*!***************************************!*\
-  !*** ./src/store/reducers/guitars.js ***!
-  \***************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = guitars;
-	
-	var _guitars = __webpack_require__(/*! ../constants/guitars */ 314);
-	
-	var allGuitars = _interopRequireWildcard(_guitars);
-	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-	
-	function guitars() {
-	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : allGuitars.guitars;
-	  var action = arguments[1];
-	
-	  switch (action.type) {
-	    default:
-	      return state;
-	  }
-	}
-
-/***/ },
-/* 314 */
-/*!****************************************!*\
-  !*** ./src/store/constants/guitars.js ***!
-  \****************************************/
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var guitars = exports.guitars = [{
-	  name: "LSG",
-	  about: "1 5/8 thick 2pc. Mahogany body",
-	  slider_photo: "Guitars/schillaci_guitars_slider_lsg_guitar_1.png",
-	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_lsg_guitar_1.jpg",
-	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03"],
-	  hidden: false
-	}];
 
 /***/ }
 /******/ ]);

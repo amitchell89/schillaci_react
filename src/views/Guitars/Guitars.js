@@ -19,6 +19,20 @@ class Guitars extends Component {
 
     console.log('check', guitars)
 
+    const guitarThumbs = (
+      <div className="guitar__gallery">
+        {guitars.map(function (s, i) {
+
+          let thumb = '../../img/' + s.thumb_photo;
+          return (
+            <div className="guitar__thumb">
+              <img src={thumb} />
+              <p>{s.name}</p>
+            </div>
+          )}.bind(this))}
+      </div>
+    )
+
     return (
       <div>
         <Helmet
@@ -32,6 +46,7 @@ class Guitars extends Component {
         <h2>
         Guitars
         </h2>
+        {guitarThumbs}
       </div>
     )
   }
