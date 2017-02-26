@@ -29862,14 +29862,14 @@
 	  about: "1 5/8 thick 2pc. Mahogany body",
 	  slider_photo: "Guitars/schillaci_guitars_slider_lsg_guitar_1.png",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_lsg_guitar_1.jpg",
-	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03"],
+	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03.jpg"],
 	  hidden: false
 	}, {
 	  name: "Knucklehead",
 	  about: "One Piece Ash Body",
-	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_1",
+	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_1.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_1.jpg",
-	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_01", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_02"],
+	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_01.jpg", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_02.jpg"],
 	  hidden: false
 	}];
 
@@ -33209,7 +33209,7 @@
   \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -33220,6 +33220,8 @@
 	var _react = __webpack_require__(/*! react */ 2);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
 	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
@@ -33233,39 +33235,75 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Contact = function (_Component) {
-	  _inherits(Contact, _Component);
+	function mapStateToProps(state) {
+	  return {
+	    guitars: state.guitars
+	  };
+	}
 	
-	  function Contact() {
-	    _classCallCheck(this, Contact);
+	var GuitarPage = function (_Component) {
+	  _inherits(GuitarPage, _Component);
 	
-	    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+	  function GuitarPage() {
+	    _classCallCheck(this, GuitarPage);
+	
+	    return _possibleConstructorReturn(this, (GuitarPage.__proto__ || Object.getPrototypeOf(GuitarPage)).apply(this, arguments));
 	  }
 	
-	  _createClass(Contact, [{
-	    key: "render",
+	  _createClass(GuitarPage, [{
+	    key: 'render',
 	    value: function render() {
+	      var guitars = this.props.guitars;
+	
+	      var thisGuitar = this.props.params.guitar;
+	      var data = guitars[thisGuitar];
+	      var hero = '../../img/' + data.slider_photo;
+	
+	      var guitarDetails = _react2.default.createElement(
+	        'div',
+	        { className: 'guitarPage__details' },
+	        data.detail_photos.map(function (s, i) {
+	          var detail = '../../img/' + s;
+	          return _react2.default.createElement(
+	            'div',
+	            { className: 'detail' },
+	            _react2.default.createElement('img', { src: detail })
+	          );
+	        }.bind(this))
+	      );
 	
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: "",
+	          title: '',
 	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
 	        }),
 	        _react2.default.createElement(
-	          "h2",
+	          'h2',
 	          null,
-	          "Guitar Page"
-	        )
+	          'Guitar Page'
+	        ),
+	        _react2.default.createElement('img', { src: hero }),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          data.name
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          data.about
+	        ),
+	        guitarDetails
 	      );
 	    }
 	  }]);
 	
-	  return Contact;
+	  return GuitarPage;
 	}(_react.Component);
 	
-	exports.default = Contact;
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(GuitarPage);
 
 /***/ }
 /******/ ]);
