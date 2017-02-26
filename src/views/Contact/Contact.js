@@ -16,8 +16,11 @@ export default class Contact extends Component {
           ] }
           />
         <h2>
-        Contact
+        Interested in ordering a guitar or neck?
         </h2>
+        <p>
+        Because of the time constraints involved in making each guitar it is best to get in contact as soon as possible so we can determine an adequate schedule for your project.
+        </p>
         <ContactForm />
       </div>
     )

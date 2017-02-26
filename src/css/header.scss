@@ -1,3 +1,6 @@
+.header {
+  border-bottom: 1px solid $gray-light;
+}
 
 .Logo {
   width: 150px;
@@ -11,15 +14,17 @@
 
 .header__tagline {
   float: right;
+  margin-top: 2rem;
 }
 
 nav {
   clear: both;
   padding-top: 1rem;
+  font-size: 0.875rem;
   a {
-    color: $gray-light;
+    color: $gray-mid;
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
   }
   a:last-child {
     margin-right: 0;

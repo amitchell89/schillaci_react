@@ -6,6 +6,7 @@
 
 html {
   font-family: 'Montserrat', helvetica, arial, sans-serif;
+  line-height: 1.5;
 }
 
 body {
@@ -16,6 +17,8 @@ body {
   height: 100%;
   width: 100%;
 }
+
+/* Layout */
 
 .site_wrapper {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -30,9 +33,43 @@ body {
   background: $white;
 }
 
+/* Fonts */
+
+h2 {
+  color: $accent-primary;
+}
+
+p {
+  color: $gray-dark;
+}
+
+/* Inputs */
+
+input, textarea {
+  padding: 0.5rem;
+}
+
+/* Buttons */
+
+button {
+  background: $accent-cta;
+  color: $white;
+  padding: 1rem 2rem;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+
+}
+
+/* Footer */
+
 .footer {
   background: $black;
-  color: $white;
   padding: 0.5rem 2rem;
   font-size: 0.75rem;
+  p {
+    color: $gray-mid;
+  }
 }
+
+

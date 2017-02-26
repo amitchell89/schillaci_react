@@ -1,0 +1,13 @@
+
+.form__row label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: $gray-dark;
+  font-size: 0.875rem;
+}
+
+.form__row input, .form__row textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}

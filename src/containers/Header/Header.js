@@ -6,7 +6,7 @@ export default class Header extends Component {
   render() {
     return (
       <header>
-          <div className="content_wrapper">
+          <div className="header content_wrapper">
             <Logo />
             <p className="header__tagline">Made in the USA</p>
             <nav>
