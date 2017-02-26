@@ -1,8 +1,23 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import Helmet from "react-helmet";
 
-export default class Guitars extends Component {
+
+function mapStateToProps(state) {
+   return {
+    guitars: state.guitars
+  };
+}
+
+class Guitars extends Component {
   render() {
+    var { guitars } = this.props;
+
+    // guitars = guitars.filter(function(n) {
+    //   return n.hidden !== true;
+    // });
+
+    console.log('check', guitars)
 
     return (
       <div>
@@ -21,3 +36,5 @@ export default class Guitars extends Component {
     )
   }
 }
+
+export default connect(mapStateToProps)(Guitars);

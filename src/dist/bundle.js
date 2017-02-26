@@ -29733,10 +29733,15 @@
 	
 	var _modal2 = _interopRequireDefault(_modal);
 	
+	var _guitars = __webpack_require__(/*! ./guitars */ 313);
+	
+	var _guitars2 = _interopRequireDefault(_guitars);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var reducer = (0, _redux.combineReducers)({
-	  modal: _modal2.default
+	  modal: _modal2.default,
+	  guitars: _guitars2.default
 	});
 	
 	var store = (0, _redux.createStore)(reducer);
@@ -31673,7 +31678,7 @@
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -31684,6 +31689,8 @@
 	var _react = __webpack_require__(/*! react */ 2);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
 	var _reactHelmet = __webpack_require__(/*! react-helmet */ 275);
 	
@@ -31697,6 +31704,12 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	function mapStateToProps(state) {
+	  return {
+	    guitars: state.guitars
+	  };
+	}
+	
 	var Guitars = function (_Component) {
 	  _inherits(Guitars, _Component);
 	
@@ -31707,20 +31720,27 @@
 	  }
 	
 	  _createClass(Guitars, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
+	      var guitars = this.props.guitars;
+	
+	      // guitars = guitars.filter(function(n) {
+	      //   return n.hidden !== true;
+	      // });
+	
+	      console.log('check', guitars);
 	
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: "",
+	          title: '',
 	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
 	        }),
 	        _react2.default.createElement(
-	          "h2",
+	          'h2',
 	          null,
-	          "Guitars"
+	          'Guitars'
 	        )
 	      );
 	    }
@@ -31729,7 +31749,7 @@
 	  return Guitars;
 	}(_react.Component);
 	
-	exports.default = Guitars;
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Guitars);
 
 /***/ },
 /* 288 */
@@ -33101,6 +33121,57 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "bkgd_purple.png";
+
+/***/ },
+/* 313 */
+/*!***************************************!*\
+  !*** ./src/store/reducers/guitars.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = guitars;
+	
+	var _guitars = __webpack_require__(/*! ../constants/guitars */ 314);
+	
+	var allGuitars = _interopRequireWildcard(_guitars);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	function guitars() {
+	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : allGuitars.guitars;
+	  var action = arguments[1];
+	
+	  switch (action.type) {
+	    default:
+	      return state;
+	  }
+	}
+
+/***/ },
+/* 314 */
+/*!****************************************!*\
+  !*** ./src/store/constants/guitars.js ***!
+  \****************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var guitars = exports.guitars = [{
+	  name: "LSG",
+	  about: "1 5/8 thick 2pc. Mahogany body",
+	  slider_photo: "Guitars/schillaci_guitars_slider_lsg_guitar_1.png",
+	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_lsg_guitar_1.jpg",
+	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03"],
+	  hidden: false
+	}];
 
 /***/ }
 /******/ ]);

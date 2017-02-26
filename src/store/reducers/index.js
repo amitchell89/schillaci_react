@@ -1,8 +1,10 @@
 import { combineReducers, createStore } from 'redux';
 import modal from './modal'
+import guitars from './guitars'
 
 const reducer = combineReducers({
-  modal
+  modal,
+  guitars
 });
 
 const store = createStore(reducer);
