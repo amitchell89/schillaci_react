@@ -16,8 +16,11 @@ export default class Home extends Component {
             { property: "og:image", content: ''},
           ] }
         />
-        <p>Home Page</p>
-        <ModalButton />
+        <div className="home__hero"></div>
+        <div className="home__testimonial">
+          <h3>"I'm blown away by this guitar. I can feel the rock solid construction and the neck is amazing. Thank you so much for your craftsmanship and for working with me on this idea."</h3>
+          <p>- Adam Krichmar, Satisifed Customer</p>
+        </div>
       </div>
     )
   }
