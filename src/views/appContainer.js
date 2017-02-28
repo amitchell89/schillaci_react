@@ -35,7 +35,7 @@ class AppContainer extends Component {
         {modal}
         <div className="site_wrapper site_wrapper--main">
           <Header />
-          <div className="content_wrapper">
+          <div className="content content_wrapper">
             {this.props.children}
           </div>
           <Footer />

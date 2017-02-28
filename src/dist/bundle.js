@@ -73,7 +73,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(/*! ./css/index.scss */ 321);
+	__webpack_require__(/*! ./css/index.scss */ 332);
 	
 	_reactDom2.default.render(_react2.default.createElement(_router2.default, null), document.getElementById('app'));
 
@@ -22075,39 +22075,39 @@
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _Guitars = __webpack_require__(/*! ./Guitars */ 307);
+	var _Guitars = __webpack_require__(/*! ./Guitars */ 318);
 	
 	var _Guitars2 = _interopRequireDefault(_Guitars);
 	
-	var _GuitarPage = __webpack_require__(/*! ./GuitarPage */ 308);
+	var _GuitarPage = __webpack_require__(/*! ./GuitarPage */ 319);
 	
 	var _GuitarPage2 = _interopRequireDefault(_GuitarPage);
 	
-	var _Necks = __webpack_require__(/*! ./Necks */ 309);
+	var _Necks = __webpack_require__(/*! ./Necks */ 320);
 	
 	var _Necks2 = _interopRequireDefault(_Necks);
 	
-	var _Microtonal = __webpack_require__(/*! ./Microtonal */ 310);
+	var _Microtonal = __webpack_require__(/*! ./Microtonal */ 321);
 	
 	var _Microtonal2 = _interopRequireDefault(_Microtonal);
 	
-	var _About = __webpack_require__(/*! ./About */ 311);
+	var _About = __webpack_require__(/*! ./About */ 322);
 	
 	var _About2 = _interopRequireDefault(_About);
 	
-	var _Contact = __webpack_require__(/*! ./Contact */ 312);
+	var _Contact = __webpack_require__(/*! ./Contact */ 323);
 	
 	var _Contact2 = _interopRequireDefault(_Contact);
 	
-	var _appContainer = __webpack_require__(/*! ./appContainer */ 314);
+	var _appContainer = __webpack_require__(/*! ./appContainer */ 325);
 	
 	var _appContainer2 = _interopRequireDefault(_appContainer);
 	
-	var _notFound = __webpack_require__(/*! ./notFound */ 319);
+	var _notFound = __webpack_require__(/*! ./notFound */ 330);
 	
 	var _notFound2 = _interopRequireDefault(_notFound);
 	
-	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 320);
+	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 331);
 	
 	var meta = _interopRequireWildcard(_meta_info);
 	
@@ -31778,6 +31778,8 @@
 	
 	var _reactSlick2 = _interopRequireDefault(_reactSlick);
 	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -31786,8 +31788,8 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! slick-carousel/slick/slick-theme.scss */ 328);
-	__webpack_require__(/*! slick-carousel/slick/slick.scss */ 335);
+	__webpack_require__(/*! slick-carousel/slick/slick-theme.scss */ 307);
+	__webpack_require__(/*! slick-carousel/slick/slick.scss */ 316);
 	
 	function mapStateToProps(state) {
 	  return {
@@ -31828,10 +31830,15 @@
 	        guitars.map(function (s, i) {
 	
 	          var slide = '../../img/' + s.slider_photo;
+	          var slide_link = '/guitar/' + i;
 	          return _react2.default.createElement(
 	            'div',
 	            { className: 'guitar__slide' },
-	            _react2.default.createElement('img', { src: slide })
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: slide_link },
+	              _react2.default.createElement('img', { src: slide })
+	            )
 	          );
 	        }.bind(this))
 	      );
@@ -34154,1214 +34161,25 @@
 
 /***/ },
 /* 307 */
-/*!**************************************!*\
-  !*** ./src/views/Guitars/Guitars.js ***!
-  \**************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	function mapStateToProps(state) {
-	  return {
-	    guitars: state.guitars
-	  };
-	}
-	
-	var Guitars = function (_Component) {
-	  _inherits(Guitars, _Component);
-	
-	  function Guitars() {
-	    _classCallCheck(this, Guitars);
-	
-	    return _possibleConstructorReturn(this, (Guitars.__proto__ || Object.getPrototypeOf(Guitars)).apply(this, arguments));
-	  }
-	
-	  _createClass(Guitars, [{
-	    key: 'render',
-	    value: function render() {
-	      var guitars = this.props.guitars;
-	
-	      // guitars = guitars.filter(function(n) {
-	      //   return n.hidden !== true;
-	      // });
-	
-	      console.log('check', guitars);
-	
-	      var guitarThumbs = _react2.default.createElement(
-	        'div',
-	        { className: 'guitar__gallery' },
-	        guitars.map(function (s, i) {
-	
-	          var thumb = '../../img/' + s.thumb_photo;
-	          return _react2.default.createElement(
-	            'div',
-	            { className: 'guitar__thumb' },
-	            _react2.default.createElement('img', { src: thumb }),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              s.name
-	            )
-	          );
-	        }.bind(this))
-	      );
-	
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
-	        }),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Guitars'
-	        ),
-	        guitarThumbs
-	      );
-	    }
-	  }]);
-	
-	  return Guitars;
-	}(_react.Component);
-	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Guitars);
-
-/***/ },
-/* 308 */
-/*!********************************************!*\
-  !*** ./src/views/GuitarPage/GuitarPage.js ***!
-  \********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	function mapStateToProps(state) {
-	  return {
-	    guitars: state.guitars
-	  };
-	}
-	
-	var GuitarPage = function (_Component) {
-	  _inherits(GuitarPage, _Component);
-	
-	  function GuitarPage() {
-	    _classCallCheck(this, GuitarPage);
-	
-	    return _possibleConstructorReturn(this, (GuitarPage.__proto__ || Object.getPrototypeOf(GuitarPage)).apply(this, arguments));
-	  }
-	
-	  _createClass(GuitarPage, [{
-	    key: 'render',
-	    value: function render() {
-	      var guitars = this.props.guitars;
-	
-	      var thisGuitar = this.props.params.guitar;
-	      var data = guitars[thisGuitar];
-	      var hero = '../../img/' + data.slider_photo;
-	
-	      var guitarDetails = _react2.default.createElement(
-	        'div',
-	        { className: 'guitarPage__details' },
-	        data.detail_photos.map(function (s, i) {
-	          var detail = '../../img/' + s;
-	          return _react2.default.createElement(
-	            'div',
-	            { className: 'detail' },
-	            _react2.default.createElement('img', { src: detail })
-	          );
-	        }.bind(this))
-	      );
-	
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
-	        }),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Guitar Page'
-	        ),
-	        _react2.default.createElement('img', { src: hero }),
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          data.name
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          data.about
-	        ),
-	        guitarDetails
-	      );
-	    }
-	  }]);
-	
-	  return GuitarPage;
-	}(_react.Component);
-	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps)(GuitarPage);
-
-/***/ },
-/* 309 */
-/*!**********************************!*\
-  !*** ./src/views/Necks/Necks.js ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Necks = function (_Component) {
-	  _inherits(Necks, _Component);
-	
-	  function Necks() {
-	    _classCallCheck(this, Necks);
-	
-	    return _possibleConstructorReturn(this, (Necks.__proto__ || Object.getPrototypeOf(Necks)).apply(this, arguments));
-	  }
-	
-	  _createClass(Necks, [{
-	    key: "render",
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: "",
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
-	        }),
-	        _react2.default.createElement(
-	          "h2",
-	          null,
-	          "Necks"
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "necks__info" },
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Schillaci Guitars is a manufacturer and seller of necks. Necks and neck profiles are made to order in vintage or modern design which feature one piece maple construction or rosewood slab board. Replacement necks are also available. Heel widths compatible to industry standards."
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Necks and Neck Profiles resembling:"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 20 Fret Bass Rose Slab Fingerboard"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 20 Fret Bass 1 Pc w/ Plug"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 21 Fret Guitar, 50's 1 Pc w/ Plug"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 21 Fret Guitar 60's Rose Slab Fingerboard"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 21 Fret Guitar 70's 1 Pc w/ Bullet"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 22 Fret Guitar w/ Upper Truss Rod Adjustment"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Nut widths available:"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 4 String Bass 1 9/16\" (make fraction smaller if can)"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 5 String Bass 1 11/16\""
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 6 String Guitar 1 5/8\" Vintage"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 6 String Guitar 1 11/16\" Modern"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 6 String Guitar 1 3/4\" Oversize"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "- 7 String Guitar 1 7/8\""
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "necks__pictures" },
-	          _react2.default.createElement("img", { src: "../../img/Necks/schillaci_guitars_microtonal_all_necks.jpg" }),
-	          _react2.default.createElement("img", { src: "../../img/About/schillaci_guitars_shop_3.jpg" }),
-	          _react2.default.createElement("img", { src: "../../img/About/schillaci_guitars_shop_2.jpg" })
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Necks;
-	}(_react.Component);
-	
-	exports.default = Necks;
-
-/***/ },
-/* 310 */
-/*!********************************************!*\
-  !*** ./src/views/Microtonal/Microtonal.js ***!
-  \********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Microtonal = function (_Component) {
-	  _inherits(Microtonal, _Component);
-	
-	  function Microtonal() {
-	    _classCallCheck(this, Microtonal);
-	
-	    return _possibleConstructorReturn(this, (Microtonal.__proto__ || Object.getPrototypeOf(Microtonal)).apply(this, arguments));
-	  }
-	
-	  _createClass(Microtonal, [{
-	    key: "render",
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: "",
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
-	        }),
-	        _react2.default.createElement(
-	          "h2",
-	          null,
-	          "Microtonal"
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Microtonal;
-	}(_react.Component);
-	
-	exports.default = Microtonal;
-
-/***/ },
-/* 311 */
-/*!**********************************!*\
-  !*** ./src/views/About/About.js ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 210);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var About = function (_Component) {
-	  _inherits(About, _Component);
-	
-	  function About() {
-	    _classCallCheck(this, About);
-	
-	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-	  }
-	
-	  _createClass(About, [{
-	    key: 'render',
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
-	        }),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'About'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'about__info' },
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'p__highlight' },
-	              'Darren Schillaci'
-	            ),
-	            ' has been building guitars for over twenty years. A lifelong player, he turns his passion into an unmatched precision that resonates from every guitar. When you order from Schillaci Guitars, you are guaranteed to receive a one of a kind instrument.'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'All guitars are made 100% in house by one person, handcrafted to meet even the most particular player\'s needs. If you\'re not ready for the commitment of your own Schillaci guitar, consider replacing a lower grade import neck with an american made Schillaci neck to truly feel the difference.'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'All guitar bodies are painted with sparkling Dupont paint (matched colors available upon request). Figured tops and bodies, natural woods, stains and sunburst finishes are also available.'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'p__highlight' },
-	              'If you are interested in ordering a guitar or neck,'
-	            ),
-	            ' ',
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/contact' },
-	              'continue to the contact page where you can send us an email.'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Photography by'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Tina Guay guayphotography@gmail.com'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Bill Harbold eharbold@comcast.net'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Website Design by ',
-	            _react2.default.createElement(
-	              'a',
-	              { href: 'http://www.mitchellaaron.com' },
-	              'Aaron Mitchell.'
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'about__picture' },
-	          _react2.default.createElement('img', { src: '../../img/About/Darren_Schillaci_Portrait_02.jpg' })
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return About;
-	}(_react.Component);
-	
-	exports.default = About;
-
-/***/ },
-/* 312 */
-/*!**************************************!*\
-  !*** ./src/views/Contact/Contact.js ***!
-  \**************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	var _ContactForm = __webpack_require__(/*! ../../components/ContactForm */ 313);
-	
-	var _ContactForm2 = _interopRequireDefault(_ContactForm);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Contact = function (_Component) {
-	  _inherits(Contact, _Component);
-	
-	  function Contact() {
-	    _classCallCheck(this, Contact);
-	
-	    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
-	  }
-	
-	  _createClass(Contact, [{
-	    key: 'render',
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
-	        }),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Interested in ordering a guitar or neck?'
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          'Because of the time constraints involved in making each guitar it is best to get in contact as soon as possible so we can determine an adequate schedule for your project.'
-	        ),
-	        _react2.default.createElement(_ContactForm2.default, null)
-	      );
-	    }
-	  }]);
-	
-	  return Contact;
-	}(_react.Component);
-	
-	exports.default = Contact;
-
-/***/ },
-/* 313 */
-/*!***************************************************!*\
-  !*** ./src/components/ContactForm/ContactForm.js ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ContactForm = function (_Component) {
-	  _inherits(ContactForm, _Component);
-	
-	  function ContactForm() {
-	    _classCallCheck(this, ContactForm);
-	
-	    return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).apply(this, arguments));
-	  }
-	
-	  _createClass(ContactForm, [{
-	    key: "render",
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "form",
-	          { id: "contact_form", method: "post" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "form__row" },
-	            _react2.default.createElement(
-	              "label",
-	              null,
-	              "Your Name:"
-	            ),
-	            _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Your Name" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "form__row" },
-	            _react2.default.createElement(
-	              "label",
-	              null,
-	              "Your Email Address:"
-	            ),
-	            _react2.default.createElement("input", { type: "text", name: "email", placeholder: "Your Email" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "form__row" },
-	            _react2.default.createElement(
-	              "label",
-	              null,
-	              "Your Message:"
-	            ),
-	            _react2.default.createElement("textarea", { type: "text", name: "message", placeholder: "Your Message", rows: "7" })
-	          ),
-	          _react2.default.createElement(
-	            "button",
-	            { type: "submit", form: "contact_form", value: "Submit", className: "btn--contact" },
-	            "Send Message"
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return ContactForm;
-	}(_react.Component);
-	
-	exports.default = ContactForm;
-
-/***/ },
-/* 314 */
-/*!***********************************!*\
-  !*** ./src/views/appContainer.js ***!
-  \***********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _redux = __webpack_require__(/*! redux */ 180);
-	
-	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	var _Header = __webpack_require__(/*! ../containers/Header */ 315);
-	
-	var _Header2 = _interopRequireDefault(_Header);
-	
-	var _Footer = __webpack_require__(/*! ../components/Footer */ 317);
-	
-	var _Footer2 = _interopRequireDefault(_Footer);
-	
-	var _Modal = __webpack_require__(/*! ../components/Modal */ 318);
-	
-	var _Modal2 = _interopRequireDefault(_Modal);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	function mapStateToProps(state) {
-	  return {
-	    modal: state.modal.display
-	  };
-	}
-	
-	var AppContainer = function (_Component) {
-	  _inherits(AppContainer, _Component);
-	
-	  function AppContainer() {
-	    _classCallCheck(this, AppContainer);
-	
-	    return _possibleConstructorReturn(this, (AppContainer.__proto__ || Object.getPrototypeOf(AppContainer)).apply(this, arguments));
-	  }
-	
-	  _createClass(AppContainer, [{
-	    key: 'render',
-	    value: function render() {
-	
-	      var modal = null;
-	
-	      if (this.props.modal) {
-	        modal = _react2.default.createElement(_Modal2.default, { meta: this.props.route.meta });
-	      }
-	
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          meta: [{ property: "og:site_name", content: 'Site Name Here' }, { property: "og:type", content: 'website' }]
-	        }),
-	        modal,
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'site_wrapper site_wrapper--main' },
-	          _react2.default.createElement(_Header2.default, null),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'content_wrapper' },
-	            this.props.children
-	          ),
-	          _react2.default.createElement(_Footer2.default, null)
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return AppContainer;
-	}(_react.Component);
-	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps)(AppContainer);
-
-/***/ },
-/* 315 */
-/*!*****************************************!*\
-  !*** ./src/containers/Header/Header.js ***!
-  \*****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 210);
-	
-	var _Logo = __webpack_require__(/*! ../../components/Logo */ 316);
-	
-	var _Logo2 = _interopRequireDefault(_Logo);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Header = function (_Component) {
-	  _inherits(Header, _Component);
-	
-	  function Header() {
-	    _classCallCheck(this, Header);
-	
-	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
-	  }
-	
-	  _createClass(Header, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'header',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'header content_wrapper' },
-	          _react2.default.createElement(_Logo2.default, null),
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'header__tagline' },
-	            'Made in the USA'
-	          ),
-	          _react2.default.createElement(
-	            'nav',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              'Home'
-	            ),
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/guitars' },
-	              'Guitars'
-	            ),
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/necks' },
-	              'Necks'
-	            ),
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/microtonal' },
-	              'Microtonal'
-	            ),
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/about' },
-	              'About'
-	            ),
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/contact' },
-	              'Contact'
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Header;
-	}(_react.Component);
-	
-	exports.default = Header;
-
-/***/ },
-/* 316 */
-/*!*************************************!*\
-  !*** ./src/components/Logo/Logo.js ***!
-  \*************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 210);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Logo = function (_Component) {
-	  _inherits(Logo, _Component);
-	
-	  function Logo() {
-	    _classCallCheck(this, Logo);
-	
-	    return _possibleConstructorReturn(this, (Logo.__proto__ || Object.getPrototypeOf(Logo)).apply(this, arguments));
-	  }
-	
-	  _createClass(Logo, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/' },
-	        _react2.default.createElement('div', { className: 'Logo' })
-	      );
-	    }
-	  }]);
-	
-	  return Logo;
-	}(_react.Component);
-	
-	exports.default = Logo;
-
-/***/ },
-/* 317 */
-/*!*****************************************!*\
-  !*** ./src/components/Footer/Footer.js ***!
-  \*****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Footer = function (_Component) {
-	  _inherits(Footer, _Component);
-	
-	  function Footer() {
-	    _classCallCheck(this, Footer);
-	
-	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-	  }
-	
-	  _createClass(Footer, [{
-	    key: "render",
-	    value: function render() {
-	      var year = new Date().getFullYear();
-	      return _react2.default.createElement(
-	        "footer",
-	        null,
-	        _react2.default.createElement(
-	          "div",
-	          { className: "footer content_wrapper" },
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "\xA9 ",
-	            year,
-	            "  Schillaci Guitars - Guitars, Basses and Necks Made to Order"
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Footer;
-	}(_react.Component);
-	
-	exports.default = Footer;
-
-/***/ },
-/* 318 */
-/*!***************************************!*\
-  !*** ./src/components/Modal/Modal.js ***!
-  \***************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
-	
-	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 288);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	function mapStateToProps(state) {
-	  return {
-	    modal: state.modal.display
-	  };
-	}
-	
-	function mapDispatchToProps(dispatch) {
-	  return {
-	    closeModal: function closeModal() {
-	      dispatch((0, _ToggleModal.closeModal)());
-	    }
-	  };
-	}
-	
-	var Modal = function (_Component) {
-	  _inherits(Modal, _Component);
-	
-	  function Modal() {
-	    _classCallCheck(this, Modal);
-	
-	    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
-	  }
-	
-	  _createClass(Modal, [{
-	    key: 'render',
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Modal Here'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: this.props.closeModal },
-	          'Close Modal'
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Modal;
-	}(_react.Component);
-	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Modal);
-
-/***/ },
-/* 319 */
-/*!*******************************!*\
-  !*** ./src/views/notFound.js ***!
-  \*******************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var NotFound = function (_Component) {
-	  _inherits(NotFound, _Component);
-	
-	  function NotFound() {
-	    _classCallCheck(this, NotFound);
-	
-	    return _possibleConstructorReturn(this, (NotFound.__proto__ || Object.getPrototypeOf(NotFound)).apply(this, arguments));
-	  }
-	
-	  _createClass(NotFound, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          '404. Page Not Found.'
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return NotFound;
-	}(_react.Component);
-	
-	exports.default = NotFound;
-
-/***/ },
-/* 320 */
-/*!******************************************!*\
-  !*** ./src/store/constants/meta_info.js ***!
-  \******************************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var meta_standard = exports.meta_standard = 'Meta Information Goes Here';
-	var meta_404 = exports.meta_404 = 'Womp womp. Looks like this link is broken.';
-
-/***/ },
-/* 321 */
-/*!****************************!*\
-  !*** ./src/css/index.scss ***!
-  \****************************/
+/*!*************************************************!*\
+  !*** ./~/slick-carousel/slick/slick-theme.scss ***!
+  \*************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 322);
+	var content = __webpack_require__(/*! !../../css-loader!../../sass-loader?sourceMap!./slick-theme.scss */ 308);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 327)(content, {});
+	var update = __webpack_require__(/*! ../../style-loader/addStyles.js */ 315)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/index.js?sourceMap!./index.scss", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/index.js?sourceMap!./index.scss");
+			module.hot.accept("!!../../css-loader/index.js!../../sass-loader/index.js?sourceMap!./slick-theme.scss", function() {
+				var newContent = require("!!../../css-loader/index.js!../../sass-loader/index.js?sourceMap!./slick-theme.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -35371,24 +34189,24 @@
 	}
 
 /***/ },
-/* 322 */
-/*!*********************************************************************!*\
-  !*** ./~/css-loader!./~/sass-loader?sourceMap!./src/css/index.scss ***!
-  \*********************************************************************/
+/* 308 */
+/*!******************************************************************************************!*\
+  !*** ./~/css-loader!./~/sass-loader?sourceMap!./~/slick-carousel/slick/slick-theme.scss ***!
+  \******************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 323)();
+	exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ 309)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'Montserrat', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 324) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n\n/* Fonts */\nh2 {\n  color: #4e74aa; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n.header {\n  border-bottom: 1px solid #dddddd; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 325) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n.home__hero {\n  height: 400px;\n  background-image: url(" + __webpack_require__(/*! ../img/home_guitar.jpg */ 326) + ");\n  background-position: fixed;\n  background-size: 1024px;\n  background-position: center; }\n\n.necks__info {\n  width: calc(100% - 620px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__pictures {\n  width: 620px;\n  display: inline-block; }\n  .necks__pictures img {\n    width: 100%;\n    height: auto;\n    margin-bottom: 1rem; }\n\n.about__info {\n  width: calc(100% - 420px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.about__picture {\n  width: 420px;\n  display: inline-block; }\n  .about__picture img {\n    width: 100%;\n    height: auto; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Slider */\n.slick-loading .slick-list {\n  background: #fff url(" + __webpack_require__(/*! ./ajax-loader.gif */ 310) + ") center center no-repeat; }\n\n/* Icons */\n@font-face {\n  font-family: \"slick\";\n  src: url(" + __webpack_require__(/*! ./fonts/slick.eot */ 311) + ");\n  src: url(" + __webpack_require__(/*! ./fonts/slick.eot */ 311) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(/*! ./fonts/slick.woff */ 312) + ") format(\"woff\"), url(" + __webpack_require__(/*! ./fonts/slick.ttf */ 313) + ") format(\"truetype\"), url(" + __webpack_require__(/*! ./fonts/slick.svg */ 314) + "#slick) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n/* Arrows */\n.slick-prev,\n.slick-next {\n  position: absolute;\n  display: block;\n  height: 20px;\n  width: 20px;\n  line-height: 0px;\n  font-size: 0px;\n  cursor: pointer;\n  background: transparent;\n  color: transparent;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n  -ms-transform: translate(0, -50%);\n  transform: translate(0, -50%);\n  padding: 0;\n  border: none;\n  outline: none; }\n  .slick-prev:hover, .slick-prev:focus,\n  .slick-next:hover,\n  .slick-next:focus {\n    outline: none;\n    background: transparent;\n    color: transparent; }\n    .slick-prev:hover:before, .slick-prev:focus:before,\n    .slick-next:hover:before,\n    .slick-next:focus:before {\n      opacity: 1; }\n  .slick-prev.slick-disabled:before,\n  .slick-next.slick-disabled:before {\n    opacity: 0.25; }\n  .slick-prev:before,\n  .slick-next:before {\n    font-family: \"slick\";\n    font-size: 20px;\n    line-height: 1;\n    color: white;\n    opacity: 0.75;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale; }\n\n.slick-prev {\n  left: -25px; }\n  [dir=\"rtl\"] .slick-prev {\n    left: auto;\n    right: -25px; }\n  .slick-prev:before {\n    content: \"\\2190\"; }\n    [dir=\"rtl\"] .slick-prev:before {\n      content: \"\\2192\"; }\n\n.slick-next {\n  right: -25px; }\n  [dir=\"rtl\"] .slick-next {\n    left: -25px;\n    right: auto; }\n  .slick-next:before {\n    content: \"\\2192\"; }\n    [dir=\"rtl\"] .slick-next:before {\n      content: \"\\2190\"; }\n\n/* Dots */\n.slick-dotted.slick-slider {\n  margin-bottom: 30px; }\n\n.slick-dots {\n  position: absolute;\n  bottom: -25px;\n  list-style: none;\n  display: block;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n  .slick-dots li {\n    position: relative;\n    display: inline-block;\n    height: 20px;\n    width: 20px;\n    margin: 0 5px;\n    padding: 0;\n    cursor: pointer; }\n    .slick-dots li button {\n      border: 0;\n      background: transparent;\n      display: block;\n      height: 20px;\n      width: 20px;\n      outline: none;\n      line-height: 0px;\n      font-size: 0px;\n      color: transparent;\n      padding: 5px;\n      cursor: pointer; }\n      .slick-dots li button:hover, .slick-dots li button:focus {\n        outline: none; }\n        .slick-dots li button:hover:before, .slick-dots li button:focus:before {\n          opacity: 1; }\n      .slick-dots li button:before {\n        position: absolute;\n        top: 0;\n        left: 0;\n        content: \"\\2022\";\n        width: 20px;\n        height: 20px;\n        font-family: \"slick\";\n        font-size: 6px;\n        line-height: 20px;\n        text-align: center;\n        color: black;\n        opacity: 0.25;\n        -webkit-font-smoothing: antialiased;\n        -moz-osx-font-smoothing: grayscale; }\n    .slick-dots li.slick-active button:before {\n      color: black;\n      opacity: 0.75; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 323 */
+/* 309 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -35447,34 +34265,52 @@
 
 
 /***/ },
-/* 324 */
-/*!*********************************!*\
-  !*** ./src/img/bkgd_purple.png ***!
-  \*********************************/
+/* 310 */
+/*!************************************************!*\
+  !*** ./~/slick-carousel/slick/ajax-loader.gif ***!
+  \************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "bkgd_purple.png";
+	module.exports = __webpack_require__.p + "ajax-loader.gif";
 
 /***/ },
-/* 325 */
-/*!********************************************!*\
-  !*** ./src/img/Schillaci_Guitars_Logo.png ***!
-  \********************************************/
+/* 311 */
+/*!************************************************!*\
+  !*** ./~/slick-carousel/slick/fonts/slick.eot ***!
+  \************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "Schillaci_Guitars_Logo.png";
+	module.exports = __webpack_require__.p + "slick.eot";
 
 /***/ },
-/* 326 */
-/*!*********************************!*\
-  !*** ./src/img/home_guitar.jpg ***!
-  \*********************************/
+/* 312 */
+/*!*************************************************!*\
+  !*** ./~/slick-carousel/slick/fonts/slick.woff ***!
+  \*************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "home_guitar.jpg";
+	module.exports = __webpack_require__.p + "slick.woff";
 
 /***/ },
-/* 327 */
+/* 313 */
+/*!************************************************!*\
+  !*** ./~/slick-carousel/slick/fonts/slick.ttf ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "slick.ttf";
+
+/***/ },
+/* 314 */
+/*!************************************************!*\
+  !*** ./~/slick-carousel/slick/fonts/slick.svg ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "slick.svg";
+
+/***/ },
+/* 315 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -35729,98 +34565,7 @@
 
 
 /***/ },
-/* 328 */
-/*!*************************************************!*\
-  !*** ./~/slick-carousel/slick/slick-theme.scss ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(/*! !../../css-loader!../../sass-loader?sourceMap!./slick-theme.scss */ 329);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../style-loader/addStyles.js */ 327)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../css-loader/index.js!../../sass-loader/index.js?sourceMap!./slick-theme.scss", function() {
-				var newContent = require("!!../../css-loader/index.js!../../sass-loader/index.js?sourceMap!./slick-theme.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 329 */
-/*!******************************************************************************************!*\
-  !*** ./~/css-loader!./~/sass-loader?sourceMap!./~/slick-carousel/slick/slick-theme.scss ***!
-  \******************************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ 323)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Slider */\n.slick-loading .slick-list {\n  background: #fff url(" + __webpack_require__(/*! ./ajax-loader.gif */ 330) + ") center center no-repeat; }\n\n/* Icons */\n@font-face {\n  font-family: \"slick\";\n  src: url(" + __webpack_require__(/*! ./fonts/slick.eot */ 331) + ");\n  src: url(" + __webpack_require__(/*! ./fonts/slick.eot */ 331) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(/*! ./fonts/slick.woff */ 332) + ") format(\"woff\"), url(" + __webpack_require__(/*! ./fonts/slick.ttf */ 333) + ") format(\"truetype\"), url(" + __webpack_require__(/*! ./fonts/slick.svg */ 334) + "#slick) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n/* Arrows */\n.slick-prev,\n.slick-next {\n  position: absolute;\n  display: block;\n  height: 20px;\n  width: 20px;\n  line-height: 0px;\n  font-size: 0px;\n  cursor: pointer;\n  background: transparent;\n  color: transparent;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n  -ms-transform: translate(0, -50%);\n  transform: translate(0, -50%);\n  padding: 0;\n  border: none;\n  outline: none; }\n  .slick-prev:hover, .slick-prev:focus,\n  .slick-next:hover,\n  .slick-next:focus {\n    outline: none;\n    background: transparent;\n    color: transparent; }\n    .slick-prev:hover:before, .slick-prev:focus:before,\n    .slick-next:hover:before,\n    .slick-next:focus:before {\n      opacity: 1; }\n  .slick-prev.slick-disabled:before,\n  .slick-next.slick-disabled:before {\n    opacity: 0.25; }\n  .slick-prev:before,\n  .slick-next:before {\n    font-family: \"slick\";\n    font-size: 20px;\n    line-height: 1;\n    color: white;\n    opacity: 0.75;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale; }\n\n.slick-prev {\n  left: -25px; }\n  [dir=\"rtl\"] .slick-prev {\n    left: auto;\n    right: -25px; }\n  .slick-prev:before {\n    content: \"\\2190\"; }\n    [dir=\"rtl\"] .slick-prev:before {\n      content: \"\\2192\"; }\n\n.slick-next {\n  right: -25px; }\n  [dir=\"rtl\"] .slick-next {\n    left: -25px;\n    right: auto; }\n  .slick-next:before {\n    content: \"\\2192\"; }\n    [dir=\"rtl\"] .slick-next:before {\n      content: \"\\2190\"; }\n\n/* Dots */\n.slick-dotted.slick-slider {\n  margin-bottom: 30px; }\n\n.slick-dots {\n  position: absolute;\n  bottom: -25px;\n  list-style: none;\n  display: block;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n  .slick-dots li {\n    position: relative;\n    display: inline-block;\n    height: 20px;\n    width: 20px;\n    margin: 0 5px;\n    padding: 0;\n    cursor: pointer; }\n    .slick-dots li button {\n      border: 0;\n      background: transparent;\n      display: block;\n      height: 20px;\n      width: 20px;\n      outline: none;\n      line-height: 0px;\n      font-size: 0px;\n      color: transparent;\n      padding: 5px;\n      cursor: pointer; }\n      .slick-dots li button:hover, .slick-dots li button:focus {\n        outline: none; }\n        .slick-dots li button:hover:before, .slick-dots li button:focus:before {\n          opacity: 1; }\n      .slick-dots li button:before {\n        position: absolute;\n        top: 0;\n        left: 0;\n        content: \"\\2022\";\n        width: 20px;\n        height: 20px;\n        font-family: \"slick\";\n        font-size: 6px;\n        line-height: 20px;\n        text-align: center;\n        color: black;\n        opacity: 0.25;\n        -webkit-font-smoothing: antialiased;\n        -moz-osx-font-smoothing: grayscale; }\n    .slick-dots li.slick-active button:before {\n      color: black;\n      opacity: 0.75; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 330 */
-/*!************************************************!*\
-  !*** ./~/slick-carousel/slick/ajax-loader.gif ***!
-  \************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ajax-loader.gif";
-
-/***/ },
-/* 331 */
-/*!************************************************!*\
-  !*** ./~/slick-carousel/slick/fonts/slick.eot ***!
-  \************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "slick.eot";
-
-/***/ },
-/* 332 */
-/*!*************************************************!*\
-  !*** ./~/slick-carousel/slick/fonts/slick.woff ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "slick.woff";
-
-/***/ },
-/* 333 */
-/*!************************************************!*\
-  !*** ./~/slick-carousel/slick/fonts/slick.ttf ***!
-  \************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "slick.ttf";
-
-/***/ },
-/* 334 */
-/*!************************************************!*\
-  !*** ./~/slick-carousel/slick/fonts/slick.svg ***!
-  \************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "slick.svg";
-
-/***/ },
-/* 335 */
+/* 316 */
 /*!*******************************************!*\
   !*** ./~/slick-carousel/slick/slick.scss ***!
   \*******************************************/
@@ -35829,10 +34574,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../css-loader!../../sass-loader?sourceMap!./slick.scss */ 336);
+	var content = __webpack_require__(/*! !../../css-loader!../../sass-loader?sourceMap!./slick.scss */ 317);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../style-loader/addStyles.js */ 327)(content, {});
+	var update = __webpack_require__(/*! ../../style-loader/addStyles.js */ 315)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35849,13 +34594,13 @@
 	}
 
 /***/ },
-/* 336 */
+/* 317 */
 /*!************************************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader?sourceMap!./~/slick-carousel/slick/slick.scss ***!
   \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ 323)();
+	exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ 309)();
 	// imports
 	
 	
@@ -35864,6 +34609,1275 @@
 	
 	// exports
 
+
+/***/ },
+/* 318 */
+/*!**************************************!*\
+  !*** ./src/views/Guitars/Guitars.js ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	function mapStateToProps(state) {
+	  return {
+	    guitars: state.guitars
+	  };
+	}
+	
+	var Guitars = function (_Component) {
+	  _inherits(Guitars, _Component);
+	
+	  function Guitars() {
+	    _classCallCheck(this, Guitars);
+	
+	    return _possibleConstructorReturn(this, (Guitars.__proto__ || Object.getPrototypeOf(Guitars)).apply(this, arguments));
+	  }
+	
+	  _createClass(Guitars, [{
+	    key: 'render',
+	    value: function render() {
+	      var guitars = this.props.guitars;
+	
+	      // guitars = guitars.filter(function(n) {
+	      //   return n.hidden !== true;
+	      // });
+	
+	      console.log('check', guitars);
+	
+	      var guitarThumbs = _react2.default.createElement(
+	        'div',
+	        { className: 'guitar__gallery' },
+	        guitars.map(function (s, i) {
+	
+	          var thumb = '../../img/' + s.thumb_photo;
+	          var guitar_link = '/guitar/' + i;
+	          return _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: guitar_link },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'guitar__thumb' },
+	              _react2.default.createElement('img', { src: thumb }),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'guitar__thumb__label' },
+	                s.name
+	              )
+	            )
+	          );
+	        }.bind(this))
+	      );
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: '',
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Guitars'
+	        ),
+	        guitarThumbs
+	      );
+	    }
+	  }]);
+	
+	  return Guitars;
+	}(_react.Component);
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Guitars);
+
+/***/ },
+/* 319 */
+/*!********************************************!*\
+  !*** ./src/views/GuitarPage/GuitarPage.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	function mapStateToProps(state) {
+	  return {
+	    guitars: state.guitars
+	  };
+	}
+	
+	var GuitarPage = function (_Component) {
+	  _inherits(GuitarPage, _Component);
+	
+	  function GuitarPage() {
+	    _classCallCheck(this, GuitarPage);
+	
+	    return _possibleConstructorReturn(this, (GuitarPage.__proto__ || Object.getPrototypeOf(GuitarPage)).apply(this, arguments));
+	  }
+	
+	  _createClass(GuitarPage, [{
+	    key: 'render',
+	    value: function render() {
+	      var guitars = this.props.guitars;
+	
+	      var thisGuitar = this.props.params.guitar;
+	      var data = guitars[thisGuitar];
+	      var hero = '../../img/' + data.slider_photo;
+	
+	      var guitarDetails = _react2.default.createElement(
+	        'div',
+	        { className: 'guitarPage__details' },
+	        data.detail_photos.map(function (s, i) {
+	          var detail = '../../img/' + s;
+	          return _react2.default.createElement(
+	            'div',
+	            { className: 'detail' },
+	            _react2.default.createElement('img', { src: detail })
+	          );
+	        }.bind(this))
+	      );
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: '',
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Guitar Page'
+	        ),
+	        _react2.default.createElement('img', { src: hero }),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          data.name
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          data.about
+	        ),
+	        guitarDetails
+	      );
+	    }
+	  }]);
+	
+	  return GuitarPage;
+	}(_react.Component);
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(GuitarPage);
+
+/***/ },
+/* 320 */
+/*!**********************************!*\
+  !*** ./src/views/Necks/Necks.js ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Necks = function (_Component) {
+	  _inherits(Necks, _Component);
+	
+	  function Necks() {
+	    _classCallCheck(this, Necks);
+	
+	    return _possibleConstructorReturn(this, (Necks.__proto__ || Object.getPrototypeOf(Necks)).apply(this, arguments));
+	  }
+	
+	  _createClass(Necks, [{
+	    key: "render",
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: "",
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          "h2",
+	          null,
+	          "Necks"
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "necks__info" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Schillaci Guitars is a manufacturer and seller of necks. Necks and neck profiles are made to order in vintage or modern design which feature one piece maple construction or rosewood slab board. Replacement necks are also available. Heel widths compatible to industry standards."
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Necks and Neck Profiles resembling:"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 20 Fret Bass Rose Slab Fingerboard"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 20 Fret Bass 1 Pc w/ Plug"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 21 Fret Guitar, 50's 1 Pc w/ Plug"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 21 Fret Guitar 60's Rose Slab Fingerboard"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 21 Fret Guitar 70's 1 Pc w/ Bullet"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 22 Fret Guitar w/ Upper Truss Rod Adjustment"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Nut widths available:"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 4 String Bass 1 9/16\" (make fraction smaller if can)"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 5 String Bass 1 11/16\""
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 6 String Guitar 1 5/8\" Vintage"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 6 String Guitar 1 11/16\" Modern"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 6 String Guitar 1 3/4\" Oversize"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "- 7 String Guitar 1 7/8\""
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "necks__pictures" },
+	          _react2.default.createElement("img", { src: "../../img/Necks/schillaci_guitars_microtonal_all_necks.jpg" }),
+	          _react2.default.createElement("img", { src: "../../img/About/schillaci_guitars_shop_3.jpg" }),
+	          _react2.default.createElement("img", { src: "../../img/About/schillaci_guitars_shop_2.jpg" })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Necks;
+	}(_react.Component);
+	
+	exports.default = Necks;
+
+/***/ },
+/* 321 */
+/*!********************************************!*\
+  !*** ./src/views/Microtonal/Microtonal.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Microtonal = function (_Component) {
+	  _inherits(Microtonal, _Component);
+	
+	  function Microtonal() {
+	    _classCallCheck(this, Microtonal);
+	
+	    return _possibleConstructorReturn(this, (Microtonal.__proto__ || Object.getPrototypeOf(Microtonal)).apply(this, arguments));
+	  }
+	
+	  _createClass(Microtonal, [{
+	    key: "render",
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: "",
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          "h2",
+	          null,
+	          "Microtonal"
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Microtonal;
+	}(_react.Component);
+	
+	exports.default = Microtonal;
+
+/***/ },
+/* 322 */
+/*!**********************************!*\
+  !*** ./src/views/About/About.js ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var About = function (_Component) {
+	  _inherits(About, _Component);
+	
+	  function About() {
+	    _classCallCheck(this, About);
+	
+	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+	  }
+	
+	  _createClass(About, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: '',
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'About'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'about__info' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'p__highlight' },
+	              'Darren Schillaci'
+	            ),
+	            ' has been building guitars for over twenty years. A lifelong player, he turns his passion into an unmatched precision that resonates from every guitar. When you order from Schillaci Guitars, you are guaranteed to receive a one of a kind instrument.'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'All guitars are made 100% in house by one person, handcrafted to meet even the most particular player\'s needs. If you\'re not ready for the commitment of your own Schillaci guitar, consider replacing a lower grade import neck with an american made Schillaci neck to truly feel the difference.'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'All guitar bodies are painted with sparkling Dupont paint (matched colors available upon request). Figured tops and bodies, natural woods, stains and sunburst finishes are also available.'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'p__highlight' },
+	              'If you are interested in ordering a guitar or neck,'
+	            ),
+	            ' ',
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/contact' },
+	              'continue to the contact page where you can send us an email.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Photography by'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Tina Guay guayphotography@gmail.com'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Bill Harbold eharbold@comcast.net'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Website Design by ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'http://www.mitchellaaron.com' },
+	              'Aaron Mitchell.'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'about__picture' },
+	          _react2.default.createElement('img', { src: '../../img/About/Darren_Schillaci_Portrait_02.jpg' })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return About;
+	}(_react.Component);
+	
+	exports.default = About;
+
+/***/ },
+/* 323 */
+/*!**************************************!*\
+  !*** ./src/views/Contact/Contact.js ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	var _ContactForm = __webpack_require__(/*! ../../components/ContactForm */ 324);
+	
+	var _ContactForm2 = _interopRequireDefault(_ContactForm);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Contact = function (_Component) {
+	  _inherits(Contact, _Component);
+	
+	  function Contact() {
+	    _classCallCheck(this, Contact);
+	
+	    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+	  }
+	
+	  _createClass(Contact, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: '',
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Interested in ordering a guitar or neck?'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Because of the time constraints involved in making each guitar it is best to get in contact as soon as possible so we can determine an adequate schedule for your project.'
+	        ),
+	        _react2.default.createElement(_ContactForm2.default, null)
+	      );
+	    }
+	  }]);
+	
+	  return Contact;
+	}(_react.Component);
+	
+	exports.default = Contact;
+
+/***/ },
+/* 324 */
+/*!***************************************************!*\
+  !*** ./src/components/ContactForm/ContactForm.js ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ContactForm = function (_Component) {
+	  _inherits(ContactForm, _Component);
+	
+	  function ContactForm() {
+	    _classCallCheck(this, ContactForm);
+	
+	    return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).apply(this, arguments));
+	  }
+	
+	  _createClass(ContactForm, [{
+	    key: "render",
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "form",
+	          { id: "contact_form", method: "post" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "form__row" },
+	            _react2.default.createElement(
+	              "label",
+	              null,
+	              "Your Name:"
+	            ),
+	            _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Your Name" })
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "form__row" },
+	            _react2.default.createElement(
+	              "label",
+	              null,
+	              "Your Email Address:"
+	            ),
+	            _react2.default.createElement("input", { type: "text", name: "email", placeholder: "Your Email" })
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "form__row" },
+	            _react2.default.createElement(
+	              "label",
+	              null,
+	              "Your Message:"
+	            ),
+	            _react2.default.createElement("textarea", { type: "text", name: "message", placeholder: "Your Message", rows: "7" })
+	          ),
+	          _react2.default.createElement(
+	            "button",
+	            { type: "submit", form: "contact_form", value: "Submit", className: "btn--contact" },
+	            "Send Message"
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ContactForm;
+	}(_react.Component);
+	
+	exports.default = ContactForm;
+
+/***/ },
+/* 325 */
+/*!***********************************!*\
+  !*** ./src/views/appContainer.js ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _redux = __webpack_require__(/*! redux */ 180);
+	
+	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	var _Header = __webpack_require__(/*! ../containers/Header */ 326);
+	
+	var _Header2 = _interopRequireDefault(_Header);
+	
+	var _Footer = __webpack_require__(/*! ../components/Footer */ 328);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
+	var _Modal = __webpack_require__(/*! ../components/Modal */ 329);
+	
+	var _Modal2 = _interopRequireDefault(_Modal);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	function mapStateToProps(state) {
+	  return {
+	    modal: state.modal.display
+	  };
+	}
+	
+	var AppContainer = function (_Component) {
+	  _inherits(AppContainer, _Component);
+	
+	  function AppContainer() {
+	    _classCallCheck(this, AppContainer);
+	
+	    return _possibleConstructorReturn(this, (AppContainer.__proto__ || Object.getPrototypeOf(AppContainer)).apply(this, arguments));
+	  }
+	
+	  _createClass(AppContainer, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      var modal = null;
+	
+	      if (this.props.modal) {
+	        modal = _react2.default.createElement(_Modal2.default, { meta: this.props.route.meta });
+	      }
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          meta: [{ property: "og:site_name", content: 'Site Name Here' }, { property: "og:type", content: 'website' }]
+	        }),
+	        modal,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'site_wrapper site_wrapper--main' },
+	          _react2.default.createElement(_Header2.default, null),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'content content_wrapper' },
+	            this.props.children
+	          ),
+	          _react2.default.createElement(_Footer2.default, null)
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return AppContainer;
+	}(_react.Component);
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(AppContainer);
+
+/***/ },
+/* 326 */
+/*!*****************************************!*\
+  !*** ./src/containers/Header/Header.js ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
+	var _Logo = __webpack_require__(/*! ../../components/Logo */ 327);
+	
+	var _Logo2 = _interopRequireDefault(_Logo);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Header = function (_Component) {
+	  _inherits(Header, _Component);
+	
+	  function Header() {
+	    _classCallCheck(this, Header);
+	
+	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+	  }
+	
+	  _createClass(Header, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'header',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'header content_wrapper' },
+	          _react2.default.createElement(_Logo2.default, null),
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'header__tagline' },
+	            'Made in the USA'
+	          ),
+	          _react2.default.createElement(
+	            'nav',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Home'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/guitars' },
+	              'Guitars'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/necks' },
+	              'Necks'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/microtonal' },
+	              'Microtonal'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/about' },
+	              'About'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/contact' },
+	              'Contact'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Header;
+	}(_react.Component);
+	
+	exports.default = Header;
+
+/***/ },
+/* 327 */
+/*!*************************************!*\
+  !*** ./src/components/Logo/Logo.js ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Logo = function (_Component) {
+	  _inherits(Logo, _Component);
+	
+	  function Logo() {
+	    _classCallCheck(this, Logo);
+	
+	    return _possibleConstructorReturn(this, (Logo.__proto__ || Object.getPrototypeOf(Logo)).apply(this, arguments));
+	  }
+	
+	  _createClass(Logo, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/' },
+	        _react2.default.createElement('div', { className: 'Logo' })
+	      );
+	    }
+	  }]);
+	
+	  return Logo;
+	}(_react.Component);
+	
+	exports.default = Logo;
+
+/***/ },
+/* 328 */
+/*!*****************************************!*\
+  !*** ./src/components/Footer/Footer.js ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_Component) {
+	  _inherits(Footer, _Component);
+	
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+	
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+	
+	  _createClass(Footer, [{
+	    key: "render",
+	    value: function render() {
+	      var year = new Date().getFullYear();
+	      return _react2.default.createElement(
+	        "footer",
+	        null,
+	        _react2.default.createElement(
+	          "div",
+	          { className: "footer content_wrapper" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "\xA9 ",
+	            year,
+	            "  Schillaci Guitars - Guitars, Basses and Necks Made to Order"
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Footer;
+	}(_react.Component);
+	
+	exports.default = Footer;
+
+/***/ },
+/* 329 */
+/*!***************************************!*\
+  !*** ./src/components/Modal/Modal.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
+	
+	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 288);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	function mapStateToProps(state) {
+	  return {
+	    modal: state.modal.display
+	  };
+	}
+	
+	function mapDispatchToProps(dispatch) {
+	  return {
+	    closeModal: function closeModal() {
+	      dispatch((0, _ToggleModal.closeModal)());
+	    }
+	  };
+	}
+	
+	var Modal = function (_Component) {
+	  _inherits(Modal, _Component);
+	
+	  function Modal() {
+	    _classCallCheck(this, Modal);
+	
+	    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
+	  }
+	
+	  _createClass(Modal, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Modal Here'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onClick: this.props.closeModal },
+	          'Close Modal'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Modal;
+	}(_react.Component);
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Modal);
+
+/***/ },
+/* 330 */
+/*!*******************************!*\
+  !*** ./src/views/notFound.js ***!
+  \*******************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var NotFound = function (_Component) {
+	  _inherits(NotFound, _Component);
+	
+	  function NotFound() {
+	    _classCallCheck(this, NotFound);
+	
+	    return _possibleConstructorReturn(this, (NotFound.__proto__ || Object.getPrototypeOf(NotFound)).apply(this, arguments));
+	  }
+	
+	  _createClass(NotFound, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          '404. Page Not Found.'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return NotFound;
+	}(_react.Component);
+	
+	exports.default = NotFound;
+
+/***/ },
+/* 331 */
+/*!******************************************!*\
+  !*** ./src/store/constants/meta_info.js ***!
+  \******************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var meta_standard = exports.meta_standard = 'Meta Information Goes Here';
+	var meta_404 = exports.meta_404 = 'Womp womp. Looks like this link is broken.';
+
+/***/ },
+/* 332 */
+/*!****************************!*\
+  !*** ./src/css/index.scss ***!
+  \****************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 333);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 315)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/index.js?sourceMap!./index.scss", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/index.js?sourceMap!./index.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 333 */
+/*!*********************************************************************!*\
+  !*** ./~/css-loader!./~/sass-loader?sourceMap!./src/css/index.scss ***!
+  \*********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 309)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'Montserrat', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 334) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n\n.content {\n  padding-top: 138px; }\n\n/* Fonts */\nh2 {\n  color: #4e74aa; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 335) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n.home__hero {\n  height: 400px;\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem;\n  background-image: url(" + __webpack_require__(/*! ../img/home_guitar.jpg */ 336) + ");\n  background-attachment: fixed;\n  background-size: 1024px;\n  background-position: center; }\n\n.guitar__thumb {\n  width: 25%;\n  display: inline-block; }\n\n.guitar__thumb__label {\n  background: rgba(0, 0, 0, 0.8);\n  color: #ffffff;\n  display: inline;\n  padding: 0.5rem;\n  position: relative;\n  top: -2rem; }\n\n.necks__info {\n  width: calc(100% - 620px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__pictures {\n  width: 620px;\n  display: inline-block; }\n  .necks__pictures img {\n    width: 100%;\n    height: auto;\n    margin-bottom: 1rem; }\n\n.about__info {\n  width: calc(100% - 420px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.about__picture {\n  width: 420px;\n  display: inline-block; }\n  .about__picture img {\n    width: 100%;\n    height: auto; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 334 */
+/*!*********************************!*\
+  !*** ./src/img/bkgd_purple.png ***!
+  \*********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "bkgd_purple.png";
+
+/***/ },
+/* 335 */
+/*!********************************************!*\
+  !*** ./src/img/Schillaci_Guitars_Logo.png ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "Schillaci_Guitars_Logo.png";
+
+/***/ },
+/* 336 */
+/*!*********************************!*\
+  !*** ./src/img/home_guitar.jpg ***!
+  \*********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "home_guitar.jpg";
 
 /***/ }
 /******/ ]);

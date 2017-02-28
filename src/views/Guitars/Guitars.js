@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import Helmet from "react-helmet";
-
+import { Link } from 'react-router';
 
 function mapStateToProps(state) {
    return {
@@ -24,11 +24,14 @@ class Guitars extends Component {
         {guitars.map(function (s, i) {
 
           let thumb = '../../img/' + s.thumb_photo;
+          let guitar_link = '/guitar/' + i;
           return (
-            <div className="guitar__thumb">
-              <img src={thumb} />
-              <p>{s.name}</p>
-            </div>
+            <Link to={guitar_link}>
+              <div className="guitar__thumb">
+                <img src={thumb} />
+                <p className="guitar__thumb__label">{s.name}</p>
+              </div>
+            </Link>
           )}.bind(this))}
       </div>
     )

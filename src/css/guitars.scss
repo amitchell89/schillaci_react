@@ -1,0 +1,13 @@
+.guitar__thumb {
+  width: 25%;
+  display: inline-block;
+}
+
+.guitar__thumb__label {
+  background: rgba(0,0,0,0.8);
+  color: $white;
+  display: inline;
+  padding: 0.5rem;
+  position: relative;
+  top: -2rem;
+}

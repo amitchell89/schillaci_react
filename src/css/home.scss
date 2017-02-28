@@ -1,7 +1,10 @@
 .home__hero {
   height: 400px;
+  width: calc(100% + 4rem);
+  position: relative;
+  left: -2rem;
   background-image: url('../img/home_guitar.jpg');
-  background-position: fixed;
+  background-attachment: fixed;
   background-size: 1024px;
   background-position: center;
 }

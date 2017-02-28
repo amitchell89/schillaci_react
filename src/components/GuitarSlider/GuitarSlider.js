@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
+import { Link } from 'react-router';
+
 require('slick-carousel/slick/slick-theme.scss');
 require('slick-carousel/slick/slick.scss');
 
@@ -32,9 +34,12 @@ class GuitarSlider extends Component {
         {guitars.map(function (s, i) {
 
           let slide = '../../img/' + s.slider_photo;
+          let slide_link = '/guitar/' + i;
           return (
             <div className="guitar__slide">
-              <img src={slide} />
+              <Link to={slide_link}>
+                <img src={slide} />
+              </Link>
             </div>
           )}.bind(this))}
       </Slider>
