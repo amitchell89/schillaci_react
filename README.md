@@ -23,3 +23,7 @@ Visit localhost:3000
 ## Slider
 
 The Slider is built using [slick-carousel](https://www.npmjs.com/package/slick-carousel) and [react-slick](https://github.com/akiran/react-slick)
+
+## Parallax
+
+Parallax effect built using [react-parallax](https://www.npmjs.com/package/react-parallax)

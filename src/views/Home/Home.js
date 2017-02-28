@@ -26,7 +26,6 @@ export default class Home extends Component {
           <p>- Adam Krichmar, Satisifed Customer</p>
         </div>
         <GuitarSlider />
-        <div>test</div>
       </div>
     )
   }

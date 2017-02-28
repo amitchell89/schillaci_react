@@ -46,7 +46,7 @@ class GuitarSlider extends Component {
     );
 
     return (
-      <div>
+      <div className="guitar__slider">
         {guitarSlides}
       </div>
     )
