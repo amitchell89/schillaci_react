@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Helmet from "react-helmet";
+import { Parallax } from 'react-parallax';
 
 export default class Necks extends Component {
   render() {
@@ -14,10 +15,11 @@ export default class Necks extends Component {
             { property: "og:url", content: ''},
           ] }
           />
-        <h2>
-        Necks
-        </h2>
+        <Parallax className="hero" bgImage="../../img/Necks/schillaci_guitars_custom_necks.jpg" strength={400}>
+        </Parallax>
+
         <div className="necks__info">
+          <h2>Custom Necks</h2>
           <p>
           Schillaci Guitars is a manufacturer and seller of necks. Necks and neck profiles are made to order in vintage or modern design which feature one piece maple construction or rosewood slab board. Replacement necks are also available. Heel widths compatible to industry standards.
           </p>
