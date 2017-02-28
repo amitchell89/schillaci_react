@@ -28,6 +28,17 @@ class GuitarPage extends Component {
       </div>
     )
 
+    const guitarAbout = (
+      <div className="guitarPage__about">
+        {data.about.map(function (s, i) {
+          return (
+            <p className="detail">
+              {s}
+            </p>
+          )}.bind(this))}
+      </div>
+    )
+
     return (
       <div>
         <Helmet
@@ -43,7 +54,7 @@ class GuitarPage extends Component {
         </h2>
         <img src={hero} />
         <p>{data.name}</p>
-        <p>{data.about}</p>
+        {guitarAbout}
         {guitarDetails}
       </div>
     )
