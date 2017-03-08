@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router'
 import { connect } from 'react-redux';
 import Helmet from "react-helmet";
 
@@ -52,6 +53,9 @@ class GuitarPage extends Component {
         <img className="guitarPage__hero" src={hero} />
         <div className="guitarPage__name">
           <p>{data.name} &nbsp;|&nbsp; {data.price}</p>
+          <Link to="/contact">
+            <button className="btn--outline btn--small">Order Guitar</button>
+          </Link>
         </div>
         {guitarAbout}
         {guitarDetails}

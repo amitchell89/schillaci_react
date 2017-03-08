@@ -10,6 +10,14 @@
   margin-bottom: 0;
   margin-top: 1rem;
   font-weight: bold;
+  @include clearfix();
+  p {
+    float: left;
+  }
+  button {
+    float: right;
+    margin-top: 0.2rem;
+  }
 }
 
 .guitarPage__about {
