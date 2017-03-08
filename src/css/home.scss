@@ -1,7 +1,45 @@
+
+.home__tagline {
+  text-align: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  h1 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+.home__testimonial {
+  background: $accent-primary;
+  width: calc(100% + 4rem);
+  position: relative;
+  left: -2rem;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-bottom: 3px solid #ffffff;
+  h2 {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+}
+
 .home__necks {
   background: rgba(255,255,255,0.8);
   width: 100%;
   max-width: 360px;
   padding: 2rem;
   margin-top: 2.5rem;
+}
+
+.home__logo {
+  @include clearfix();
+  padding: 5rem 0;
+  .Logo {
+    margin: 0 auto;
+    float: none;
+  }
 }

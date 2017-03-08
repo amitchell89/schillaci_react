@@ -38,20 +38,28 @@ export default class About extends Component {
             All guitar bodies are painted with sparkling Dupont paint (matched colors available upon request). Figured tops and bodies, natural woods, stains and sunburst finishes are also available.
           </p>
           <p>
-            <span className="p__highlight">If you are interested in ordering a guitar or neck,</span> <Link to="/contact">continue to the contact page where you can send us an email.</Link>
+            <span className="p__highlight">Interested in ordering a guitar or neck?</span>
           </p>
-          <p>
-            Photography by
-          </p>
-          <p>
-            Tina Guay guayphotography@gmail.com
-          </p>
-          <p>
-            Bill Harbold eharbold@comcast.net
-          </p>
-          <p>
-            Website Design by <a href="http://www.mitchellaaron.com">Aaron Mitchell.</a>
-          </p>
+          <Link to="/contact">
+            <button className="btn--outline">Send us a Message</button>
+          </Link>
+          <div className="contact__credits">
+            <p>
+              Website Design by <a href="http://www.mitchellaaron.com">Aaron Mitchell</a>
+            </p>
+            <p>
+              Site Photography by
+            </p>
+            <p>
+              Shaun Murphree stmphotography@yahoo.com
+            </p>
+            <p>
+              Tina Guay guayphotography@gmail.com
+            </p>
+            <p>
+              Bill Harbold eharbold@comcast.net
+            </p>
+          </div>
         </div>
       </div>
     )

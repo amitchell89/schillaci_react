@@ -26,11 +26,20 @@ export default class Home extends Component {
         >
         </Parallax>
 
+        <div className="home__tagline">
+          <h1>Let's Build Your Next Guitar</h1>
+          <p>Guitars, Basses and Necks Made to Order</p>
+          <Link to="/guitars">
+            <button className="btn--outline">View All Guitars</button>
+          </Link>
+        </div>
+
+        <GuitarSlider />
+
         <div className="home__testimonial">
           <h2>"I'm blown away by this guitar. I can feel the rock solid construction and the neck is amazing. Thank you so much for your craftsmanship and for working with me on this idea."</h2>
           <p>- Adam Krichmar, Satisifed Customer</p>
         </div>
-        <GuitarSlider />
 
         <Parallax
           className="hero"
@@ -45,6 +54,10 @@ export default class Home extends Component {
             </Link>
           </div>
         </Parallax>
+
+        <div className="home__logo">
+          <div className="Logo"></div>
+        </div>
 
       </div>
     )
