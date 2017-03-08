@@ -19,7 +19,7 @@ export default class Home extends Component {
           ] }
         />
 
-        <Parallax className="hero" bgImage="../../img/Home/home_guitar.jpg" strength={400}></Parallax>
+        <Parallax className="hero" bgImage="../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg" strength={400}></Parallax>
 
         <div className="home__testimonial">
           <h2>"I'm blown away by this guitar. I can feel the rock solid construction and the neck is amazing. Thank you so much for your craftsmanship and for working with me on this idea."</h2>

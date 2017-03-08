@@ -17,7 +17,8 @@ export const guitars = [
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_lsg_guitar_01.jpg",
       "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02.jpg",
-      "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03.jpg"
+      "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03.jpg",
+      "Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"
       ],
     hidden: false
   },

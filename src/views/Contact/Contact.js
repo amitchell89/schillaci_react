@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Helmet from "react-helmet";
 import ContactForm from '../../components/ContactForm'
+import { Parallax } from 'react-parallax';
 
 export default class Contact extends Component {
   render() {
@@ -15,6 +16,10 @@ export default class Contact extends Component {
             { property: "og:url", content: ''},
           ] }
           />
+
+        <Parallax className="hero" bgImage="../../img/Guitar_Details/schillaci_guitars_detail_riptide_bass_c_02.jpg" strength={400}>
+        </Parallax>
+
         <h2>
         Interested in ordering a guitar or neck?
         </h2>

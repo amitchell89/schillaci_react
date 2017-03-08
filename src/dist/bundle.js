@@ -29863,7 +29863,7 @@
 	  about: ["1 5/8 thick 2pc. Mahogany body", "3pc. Mahogany neck w/ rosewood fingerboard", "24 5/8 short scale neck", "Headstock/ Pickguard match w/ matching truss cover plate", "Single pickup / Single volume control configuration", "Standard stop bar and tailpiece", "Side mounted output jack", "\"Greenglow\" red mahogany finish"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_lsg_guitar_1.png",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_lsg_guitar_1.jpg",
-	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03.jpg"],
+	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"],
 	  hidden: false
 	}, {
 	  name: "Knucklehead",
@@ -30057,7 +30057,7 @@
 	          title: 'Page Title',
 	          meta: [{ name: "description", content: this.props.route.meta.meta_about }, { property: "og:title", content: '' }, { property: "og:url", content: '' }, { property: "og:image", content: '' }]
 	        }),
-	        _react2.default.createElement(_reactParallax.Parallax, { className: 'hero', bgImage: '../../img/Home/home_guitar.jpg', strength: 400 }),
+	        _react2.default.createElement(_reactParallax.Parallax, { className: 'hero', bgImage: '../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg', strength: 400 }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'home__testimonial' },
@@ -35336,6 +35336,8 @@
 	
 	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 	
+	var _reactParallax = __webpack_require__(/*! react-parallax */ 318);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35364,6 +35366,7 @@
 	          title: '',
 	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
 	        }),
+	        _react2.default.createElement(_reactParallax.Parallax, { className: 'hero', bgImage: '../../img/Guitar_Details/schillaci_guitars_detail_riptide_bass_c_02.jpg', strength: 400 }),
 	        _react2.default.createElement(
 	          'h2',
 	          null,
