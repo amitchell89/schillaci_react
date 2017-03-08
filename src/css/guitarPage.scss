@@ -1,0 +1,43 @@
+
+.guitarPage__name {
+  border-top: 1px solid $gray-light;
+  border-left: 1px solid $gray-light;
+  border-right: 1px solid $gray-light;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.guitarPage__about {
+  border: 1px solid $gray-light;
+  padding: 1em 1rem 0;
+  @include clearfix();
+  margin-bottom: 1rem;
+}
+
+.guitarPage__about__item {
+  width: 33.333%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.guitarPage__details {
+  @include clearfix();
+  position: relative;
+  left: -1rem;
+  width: calc(100% + 2rem);
+}
+
+.guitarPage__detail {
+  float: left;
+  width: 33.333%;
+  padding: 1rem;
+  margin: 0;
+  img {
+    width: 100%;
+  }
+}

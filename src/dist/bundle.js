@@ -29860,6 +29860,7 @@
 	var guitars = exports.guitars = [{
 	  name: "LSG",
 	  type: "guitar",
+	  price: "$2499.00",
 	  about: ["1 5/8 thick 2pc. Mahogany body", "3pc. Mahogany neck w/ rosewood fingerboard", "24 5/8 short scale neck", "Headstock/ Pickguard match w/ matching truss cover plate", "Single pickup / Single volume control configuration", "Standard stop bar and tailpiece", "Side mounted output jack", "\"Greenglow\" red mahogany finish"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_lsg_guitar_1.png",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_lsg_guitar_1.jpg",
@@ -29868,6 +29869,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  price: "$1599.00",
 	  about: ["One Piece Ash Body", "72 Matching Stained Gloss Finish", "Competition Racing Stripes", "Rosewood Neck with Skunk Stripe", "Black Tusq Nut", "Reverse Tremolo", "Vintage Bridge Plate with Custom Saddles", "Humbuckers with Individual Tone Controls", "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_1.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_1.jpg",
@@ -29876,6 +29878,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  price: "$1199.00",
 	  about: ["One Piece Mahogany Ribbon Body with Black Binding", "Natural Hand Rubbed Satin Finish", "Vintage Laotian Ebony Neck", "Black Tusq Nut", "24 Fret Short Scale", "Hard Tail Bridge with Black Hardware", "Alternating Bobbin Humbuckers", "Two Volume and Two Tone Controls with Blade Switch", "Side Mounted Jack"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_2.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_2.jpg",
@@ -29884,6 +29887,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  price: "$899.00",
 	  about: ["Multi-laminated body", "Tusq nut", "22 fret long scale", "Hard tail bridge", "Two volume, two tone with blade switch", "Side mounted jack"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_3.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_4.jpg",
@@ -29892,6 +29896,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  price: "$1799.00",
 	  about: ["Three Piece Ash Body", "Flame Maple Gloss Finish", "Matching Seafoam Green Peghead, Pickguard and Back", "Chambered with F Hole", "One Piece Maple Neck with Skunk Stripe", "White Tusq Nut", "Sperzel Locking Tuners", "Vintage Reverse Tremolo with Modern Saddles", "Chrome Covered Humbuckers", "Elongated Pickguard", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_4.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_3.jpg",
@@ -29900,6 +29905,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  price: "$899.00",
 	  about: ["Solid Maple Body", "Solid Chartreuse Yellow Gloss Finish", "Rosewood Finger Board Non Skunk Stripe Neck", "Upper Tross Rod Adjustment", "Vintage Reverse Tremolo", "Chrome Covered Humbuckers with Individual Tone Controls", "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_5.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_5.jpg",
@@ -29908,6 +29914,7 @@
 	}, {
 	  name: "Hammerhead",
 	  type: "guitar",
+	  price: "$1499.00",
 	  about: ["Three Piece Mahogany Body", "Solid Seafoam Green Gloss Finish", "Matching Peghead", "Gabon Ebony Finger Board with Pearl Dots", "Graf-Tech Nut", "Reverse Vintage Tremolo with Graf-Tech Saddles", "Three Single Coil Pickups", "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_1.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_hammerhead_guitar_1.jpg",
@@ -29916,6 +29923,7 @@
 	}, {
 	  name: "7 String Hammerhead",
 	  type: "guitar",
+	  price: "1199.00",
 	  about: ["One Piece Mahogany Ribbon Body", "Natural Hand Rubbed Satin Finish", "One Piece Maple Neck with Black Binding", "Micarta Nut", "Hard Tail Bridge with Black Hardware", "7 String Humbuckers with Individual Tone Controls", "Elongated Spacing Between Volume and Tone Knobs", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_2.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_hammerhead_guitar_2.jpg",
@@ -29924,6 +29932,7 @@
 	}, {
 	  name: "Hammerhead",
 	  type: "guitar",
+	  price: "$999.00",
 	  about: ["1 PC. Pine body", "Clear \"GreenGlow\" finish", "22 fret rosewood neck", "Standard elongated pick guard", "Alnico sin/sin/sin pickup configuration", "w/ standard controls", "Top mounted jack cup", "Toggle \"kill\" switch"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_3.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_hammerhead_3.jpg",
@@ -29932,6 +29941,7 @@
 	}, {
 	  name: "Roy's Caster",
 	  type: "guitar",
+	  price: "$999.00",
 	  about: ["3 piece popular body", "Red gloss finish", "1 piece maple neck", "Matching peg head", "Three single coil pickups", "Elongated pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_royscaster_1.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_royscaster_guitar_1.jpg",
@@ -29940,6 +29950,7 @@
 	}, {
 	  name: "Riptide Bass I",
 	  type: "bass",
+	  price: "$899.00",
 	  about: ["2 PC. Popular body", "Red gloss finish", "Rosewood fingerboard", "Single J pickup", "Elongated vintage style pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_1.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_riptide_bass_1.jpg",
@@ -29948,6 +29959,7 @@
 	}, {
 	  name: "Riptide Bass I",
 	  type: "bass",
+	  price: "$799.00",
 	  about: ["2 PC. Popular body", "Red gloss finish", "Rosewood fingerboard", "Single J pickup", "Elongated vintage style pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_2.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_riptide_bass_2.jpg",
@@ -29956,6 +29968,7 @@
 	}, {
 	  name: "Riptide Bass II",
 	  type: "bass",
+	  price: "$999.00",
 	  about: ["Three Piece Alder Body", "Solid Antique White Gloss Finish", "Matching Peghead", "One Piece Maple Neck", "White Tusq Nut", "Two J Pickups", "Elongated Tortoise Shell Vintage Style Pickguard", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_3.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_riptide_bass_3.jpg",
@@ -29964,6 +29977,7 @@
 	}, {
 	  name: "Bosko Bass",
 	  type: "bass",
+	  price: "$1199.00",
 	  about: ["One Piece Mahogany Ribbon Body", "Natural Hand Rubbed Satin Finish", "One Piece Maple Neck with Black Binding and Black Inlays", "Micarta Nut", "5 String Hard Tail Bridge with Black Hardware", "Single P Pickup", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_bosko_bass_2.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_bosko_bass_2.jpg",
@@ -29972,6 +29986,7 @@
 	}, {
 	  name: "Bosko Bass",
 	  type: "bass",
+	  price: "",
 	  about: ["3 PC. Alder body ( east coast) sea green", "Maple neck w/ rosewood board", "Single P pickup", "Enlongated vintage style pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_bosko_bass_1.png",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_bosko_bass_1.jpg",
@@ -29980,6 +29995,7 @@
 	}, {
 	  name: "PJ Bass",
 	  type: "bass",
+	  price: "$799.00",
 	  about: ["70's style 1 PC. Maple neck w/ binding + big block inlays", "60's style Electronics w/ concentric pots + knobs", "50's style Basswood body w/ large face pick guard", "Hip shot string thru body bridge", "Flat black finish"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_pj_bass_1.png",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_pj_bass_1.png",
@@ -29988,6 +30004,7 @@
 	}, {
 	  name: "Kestral",
 	  type: "guitar",
+	  price: "$1299.00",
 	  about: ["5 string orchestral guitar tuned in 5th's", "1 bass string & 4 guitar strings each with individual saddles", "24 fret. 26.5\" scale length", "Matching rosewood truss rod cover plate", "2 PC. Mahogany body", "Maple neck w/angled peghead", "Rosewood fingerboard", "Top mounted jack cup", "Neck bolt ferrules", "26.5\" scale length", "2 Lace Sensor humbuckers", "Coil tapped w/ push-pull tone pots"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_kestral_guitar_1.jpg",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_kestral_guitar_1.jpg",
@@ -34793,16 +34810,21 @@
 	    value: function render() {
 	      var guitars = this.props.guitars;
 	
-	      // guitars = guitars.filter(function(n) {
-	      //   return n.hidden !== true;
-	      // });
+	
+	      var guitar_list = guitars.filter(function (n) {
+	        return n.hidden !== true && n.type === 'guitar';
+	      });
+	
+	      var bass_list = guitars.filter(function (n) {
+	        return n.hidden !== true && n.type === 'bass';
+	      });
 	
 	      console.log('check', guitars);
 	
 	      var guitarThumbs = _react2.default.createElement(
 	        'div',
 	        { className: 'guitar__gallery' },
-	        guitars.map(function (s, i) {
+	        guitar_list.map(function (s, i) {
 	
 	          var thumb = '../../img/' + s.thumb_photo;
 	          var guitar_link = '/guitar/' + i;
@@ -34814,9 +34836,51 @@
 	              { className: 'guitar__thumb' },
 	              _react2.default.createElement('img', { src: thumb }),
 	              _react2.default.createElement(
-	                'p',
+	                'div',
 	                { className: 'guitar__thumb__label' },
-	                s.name
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'guitar__thumb__label--name' },
+	                  s.name
+	                ),
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'guitar__thumb__label--price' },
+	                  s.price
+	                )
+	              )
+	            )
+	          );
+	        }.bind(this))
+	      );
+	
+	      var bassThumbs = _react2.default.createElement(
+	        'div',
+	        { className: 'guitar__gallery' },
+	        bass_list.map(function (s, i) {
+	
+	          var thumb = '../../img/' + s.thumb_photo;
+	          var bass_link = '/guitar/' + i;
+	          return _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: bass_link },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'guitar__thumb' },
+	              _react2.default.createElement('img', { src: thumb }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'guitar__thumb__label' },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'guitar__thumb__label--name' },
+	                  s.name
+	                ),
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'guitar__thumb__label--price' },
+	                  s.price
+	                )
 	              )
 	            )
 	          );
@@ -34835,7 +34899,16 @@
 	          null,
 	          'Guitars'
 	        ),
-	        guitarThumbs
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          guitarThumbs
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          bassThumbs
+	        )
 	      );
 	    }
 	  }]);
@@ -34909,7 +34982,7 @@
 	          var detail = '../../img/' + s;
 	          return _react2.default.createElement(
 	            'div',
-	            { className: 'detail' },
+	            { className: 'guitarPage__detail' },
 	            _react2.default.createElement('img', { src: detail })
 	          );
 	        }.bind(this))
@@ -34921,7 +34994,7 @@
 	        data.about.map(function (s, i) {
 	          return _react2.default.createElement(
 	            'p',
-	            { className: 'detail' },
+	            { className: 'guitarPage__about__item' },
 	            s
 	          );
 	        }.bind(this))
@@ -34934,16 +35007,17 @@
 	          title: '',
 	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
 	        }),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Guitar Page'
-	        ),
 	        _react2.default.createElement('img', { src: hero }),
 	        _react2.default.createElement(
-	          'p',
-	          null,
-	          data.name
+	          'div',
+	          { className: 'guitarPage__name' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            data.name,
+	            ' \xA0|\xA0 ',
+	            data.price
+	          )
 	        ),
 	        guitarAbout,
 	        guitarDetails
@@ -35987,7 +36061,7 @@
 	
 	
 	// module
-	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'PT Sans', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 335) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n\n.content {\n  padding-top: 138px; }\n\n/* Fonts */\nh2 {\n  color: #4e74aa; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem;\n  border: 1px solid #dddddd; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n/* Hero */\n.hero {\n  height: 400px;\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem;\n  margin-bottom: 2rem; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 336) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n.guitar__thumb {\n  width: 25%;\n  display: inline-block; }\n\n.guitar__thumb__label {\n  background: rgba(0, 0, 0, 0.8);\n  color: #ffffff;\n  display: inline;\n  padding: 0.5rem;\n  position: relative;\n  top: -2rem; }\n\n.guitar__slide img {\n  width: 100%; }\n\n.necks__info {\n  width: calc(100% - 620px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__pictures {\n  width: 620px;\n  display: inline-block; }\n  .necks__pictures img {\n    width: 100%;\n    height: auto;\n    margin-bottom: 1rem; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n", ""]);
+	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'PT Sans', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 335) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n\n.content {\n  padding-top: 138px; }\n\n/* Fonts */\nh2 {\n  color: #4e74aa; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem;\n  border: 1px solid #dddddd; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n/* Hero */\n.hero {\n  height: 400px;\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem;\n  margin-bottom: 2rem; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 336) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n.guitar__thumb {\n  width: 25%;\n  display: inline-block; }\n\n.guitar__thumb__label {\n  color: #ffffff;\n  position: relative;\n  top: -2rem; }\n\n.guitar__thumb__label--name {\n  background: rgba(0, 0, 0, 0.8);\n  padding: 0.5rem; }\n\n.guitar__thumb__label--price {\n  background: rgba(0, 0, 0, 0.5);\n  padding: 0.5rem; }\n\n.guitarPage__name {\n  border-top: 1px solid #dddddd;\n  border-left: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  padding: 0.5rem 1rem;\n  margin-bottom: 0;\n  margin-top: 1rem; }\n\n.guitarPage__about {\n  border: 1px solid #dddddd;\n  padding: 1em 1rem 0;\n  margin-bottom: 1rem; }\n  .guitarPage__about:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__about__item {\n  width: 33.333%;\n  display: inline-block;\n  vertical-align: top;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding-right: 2rem;\n  padding-bottom: 1rem; }\n\n.guitarPage__details {\n  position: relative;\n  left: -1rem;\n  width: calc(100% + 2rem); }\n  .guitarPage__details:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__detail {\n  float: left;\n  width: 33.333%;\n  padding: 1rem;\n  margin: 0; }\n  .guitarPage__detail img {\n    width: 100%; }\n\n.guitar__slide img {\n  width: 100%; }\n\n.necks__info {\n  width: calc(100% - 620px);\n  padding-right: 2rem;\n  display: inline-block;\n  vertical-align: top; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__pictures {\n  width: 620px;\n  display: inline-block; }\n  .necks__pictures img {\n    width: 100%;\n    height: auto;\n    margin-bottom: 1rem; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n", ""]);
 	
 	// exports
 

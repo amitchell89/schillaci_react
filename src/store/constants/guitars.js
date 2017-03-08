@@ -2,6 +2,7 @@ export const guitars = [
   {
     name: "LSG",
     type: "guitar",
+    price: "$2499.00",
     about: [
       "1 5/8 thick 2pc. Mahogany body",
       "3pc. Mahogany neck w/ rosewood fingerboard",
@@ -25,6 +26,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    price: "$1599.00",
     about: [
       "One Piece Ash Body",
       "72 Matching Stained Gloss Finish",
@@ -48,6 +50,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    price: "$1199.00",
     about: [
       "One Piece Mahogany Ribbon Body with Black Binding",
       "Natural Hand Rubbed Satin Finish",
@@ -70,6 +73,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    price: "$899.00",
     about: [
       "Multi-laminated body",
       "Tusq nut",
@@ -89,6 +93,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    price: "$1799.00",
     about: [
       "Three Piece Ash Body",
       "Flame Maple Gloss Finish",
@@ -114,6 +119,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    price: "$899.00",
     about: [
       "Solid Maple Body",
       "Solid Chartreuse Yellow Gloss Finish",
@@ -135,6 +141,7 @@ export const guitars = [
   {
     name: "Hammerhead",
     type: "guitar",
+    price: "$1499.00",
     about: [
       "Three Piece Mahogany Body",
       "Solid Seafoam Green Gloss Finish",
@@ -154,6 +161,7 @@ export const guitars = [
   {
     name: "7 String Hammerhead",
     type: "guitar",
+    price: "1199.00",
     about: [
       "One Piece Mahogany Ribbon Body",
       "Natural Hand Rubbed Satin Finish",
@@ -175,6 +183,7 @@ export const guitars = [
   {
     name: "Hammerhead",
     type: "guitar",
+    price: "$999.00",
     about: [
       "1 PC. Pine body",
       "Clear \"GreenGlow\" finish",
@@ -197,6 +206,7 @@ export const guitars = [
   {
     name: "Roy's Caster",
     type: "guitar",
+    price: "$999.00",
     about: [
       "3 piece popular body",
       "Red gloss finish",
@@ -217,6 +227,7 @@ export const guitars = [
   {
     name: "Riptide Bass I",
     type: "bass",
+    price: "$899.00",
     about: [
       "2 PC. Popular body",
       "Red gloss finish",
@@ -237,6 +248,7 @@ export const guitars = [
   {
     name: "Riptide Bass I",
     type: "bass",
+    price: "$799.00",
     about: [
       "2 PC. Popular body",
       "Red gloss finish",
@@ -256,6 +268,7 @@ export const guitars = [
   {
     name: "Riptide Bass II",
     type: "bass",
+    price: "$999.00",
     about: [
       "Three Piece Alder Body",
       "Solid Antique White Gloss Finish",
@@ -277,6 +290,7 @@ export const guitars = [
   {
     name: "Bosko Bass",
     type: "bass",
+    price: "$1199.00",
     about: [
       "One Piece Mahogany Ribbon Body",
       "Natural Hand Rubbed Satin Finish",
@@ -298,6 +312,7 @@ export const guitars = [
   {
     name: "Bosko Bass",
     type: "bass",
+    price: "",
     about: [
       "3 PC. Alder body ( east coast) sea green",
       "Maple neck w/ rosewood board",
@@ -317,6 +332,7 @@ export const guitars = [
   {
     name: "PJ Bass",
     type: "bass",
+    price: "$799.00",
     about: [
       "70's style 1 PC. Maple neck w/ binding + big block inlays",
       "60's style Electronics w/ concentric pots + knobs",
@@ -336,6 +352,7 @@ export const guitars = [
   {
     name: "Kestral",
     type: "guitar",
+    price: "$1299.00",
     about: [
       "5 string orchestral guitar tuned in 5th's",
       "1 bass string & 4 guitar strings each with individual saddles",

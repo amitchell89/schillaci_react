@@ -21,7 +21,7 @@ class GuitarPage extends Component {
         {data.detail_photos.map(function (s, i) {
           let detail = '../../img/' + s;
           return (
-            <div className="detail">
+            <div className="guitarPage__detail">
               <img src={detail} />
             </div>
           )}.bind(this))}
@@ -32,7 +32,7 @@ class GuitarPage extends Component {
       <div className="guitarPage__about">
         {data.about.map(function (s, i) {
           return (
-            <p className="detail">
+            <p className="guitarPage__about__item">
               {s}
             </p>
           )}.bind(this))}
@@ -49,11 +49,10 @@ class GuitarPage extends Component {
             { property: "og:url", content: ''},
           ] }
           />
-        <h2>
-        Guitar Page
-        </h2>
         <img src={hero} />
-        <p>{data.name}</p>
+        <div className="guitarPage__name">
+          <p>{data.name} &nbsp;|&nbsp; {data.price}</p>
+        </div>
         {guitarAbout}
         {guitarDetails}
       </div>
