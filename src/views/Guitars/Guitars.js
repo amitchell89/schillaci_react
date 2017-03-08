@@ -73,9 +73,10 @@ class Guitars extends Component {
             { property: "og:url", content: ''},
           ] }
           />
-        <h2>Guitars</h2>
-        <div>{guitarThumbs}</div>
-        <div>{bassThumbs}</div>
+        <div className="guitar__thumb__container">
+          <div>{guitarThumbs}</div>
+          <div>{bassThumbs}</div>
+        </div>
       </div>
     )
   }

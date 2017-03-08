@@ -24,6 +24,28 @@ export const guitars = [
     hidden: false
   },
   {
+    name: "LP Junior",
+    type: "guitar",
+    price: "$2999.00",
+    about: [
+      "12 tone ultra plus fingerboard",
+      "All maple body + neck",
+      "Chambered body with flame top",
+      "59 sunburst top",
+      "All gold back + sides",
+      "25.5 long scale",
+      "P-90 pickup",
+      "Wraparound stop tailpiece"
+    ],
+    slider_photo: "Guitars/schillaci_guitars_slider_junior_guitar_1.jpg",
+    thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_junior_guitar_1.jpg",
+    detail_photos: [
+      "Guitar_Details/schillaci_guitars_detail_junior_guitar_a_01.jpg",
+      "Guitar_Details/schillaci_guitars_detail_junior_guitar_a_02.jpg"
+      ],
+    hidden: false
+  },
+  {
     name: "Knucklehead",
     type: "guitar",
     price: "$1599.00",

@@ -8,7 +8,7 @@ export default class Header extends Component {
       <header>
           <div className="header content_wrapper">
             <Logo />
-            <p className="header__tagline">Made in the USA</p>
+            <h2 className="header__tagline">Made in the USA</h2>
             <nav>
               <Link to="/">Home</Link>
               <Link to="/guitars">Guitars</Link>

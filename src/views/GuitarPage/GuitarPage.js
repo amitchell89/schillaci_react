@@ -49,7 +49,7 @@ class GuitarPage extends Component {
             { property: "og:url", content: ''},
           ] }
           />
-        <img src={hero} />
+        <img className="guitarPage__hero" src={hero} />
         <div className="guitarPage__name">
           <p>{data.name} &nbsp;|&nbsp; {data.price}</p>
         </div>
