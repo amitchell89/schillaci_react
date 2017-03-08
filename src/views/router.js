@@ -30,7 +30,6 @@ export default class Routes extends Component {
             <Route path='/guitars' component={Guitars} meta={meta} />
             <Route path='/guitar/(:guitar)' component={GuitarPage} meta={meta} />
             <Route path='/necks' component={Necks} meta={meta} />
-            <Route path='/microtonal' component={Microtonal} meta={meta} />
             <Route path='/about' component={About} meta={meta} />
             <Route path='/contact' component={Contact} meta={meta} />
             <Route path='*' component={NotFound} meta={meta} />

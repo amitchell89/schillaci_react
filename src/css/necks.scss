@@ -1,17 +1,34 @@
-.necks__info {
-  width: calc(100% - 620px);
-  padding-right: 2rem;
-  display: inline-block;
-  vertical-align: top;
-}
 
 .necks__info p:first-child {
   margin-top: 0;
 }
 
+.necks__spec-list {
+  width: calc(50% - 1rem);
+  border: 1px solid $gray-light;
+  @include clearfix();
+  margin: 1rem 0;
+  p {
+    padding: 0.25rem 1rem;
+  }
+}
+
+.necks__spec-list--profiles {
+  float: left;
+}
+
+.necks__spec-list--nuts {
+  float: right;
+}
+
+.necks__spec-list__header {
+  border-bottom: 1px solid $gray-light;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+
 .necks__pictures {
-  width: 620px;
-  display: inline-block;
   img {
     width: 100%;
     height: auto;
