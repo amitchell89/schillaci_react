@@ -35102,6 +35102,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
 	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
@@ -35226,6 +35228,15 @@
 	              'p',
 	              null,
 	              '7 String Guitar 1 7/8"'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/contact' },
+	            _react2.default.createElement(
+	              'button',
+	              { className: 'btn--outline' },
+	              'Order a Custom Neck'
 	            )
 	          ),
 	          _react2.default.createElement(
