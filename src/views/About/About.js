@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Helmet from "react-helmet";
+import { Parallax } from 'react-parallax';
 
 export default class About extends Component {
   render() {
@@ -15,10 +16,14 @@ export default class About extends Component {
             { property: "og:url", content: ''},
           ] }
           />
-        <h2>
-        About
-        </h2>
+        
+        <Parallax className="hero" bgImage="../../img/About/Darren_Schillaci_In_The_Shop_Guitars.jpg" strength={400}>
+        </Parallax>
+
         <div className="about__info">
+          <h2>
+          About
+          </h2>
           <p>
             <span className="p__highlight">Darren Schillaci</span> has been building guitars for over twenty years. A lifelong player, he turns his passion into an unmatched precision that resonates from every guitar. When you order from Schillaci Guitars, you are guaranteed to receive a one of a kind instrument.
           </p>
@@ -43,9 +48,6 @@ export default class About extends Component {
           <p>
             Website Design by <a href="http://www.mitchellaaron.com">Aaron Mitchell.</a>
           </p>
-        </div>
-        <div className="about__picture">
-          <img src="../../img/About/Darren_Schillaci_Portrait_02.jpg" />
         </div>
       </div>
     )
