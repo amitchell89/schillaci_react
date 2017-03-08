@@ -74,7 +74,13 @@ button {
   border: 0;
   outline: 0;
   border-radius: 10px;
+  font-weight: bold;
+}
 
+.btn--outline {
+  background: none;
+  border: 3px solid $accent-primary;
+  color: $accent-primary;
 }
 
 /* Footer */

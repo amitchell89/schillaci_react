@@ -48,8 +48,11 @@ export default class Necks extends Component {
           Schillaci Guitars also specializes in custom microtonal necks. A Microtonal instrument uses intervals beyond the western system of 12 intervals per octave, opening up a world of new sounds and musical opportunities. Several styles of microtonal necks are available, each providing their own unique playing style and personality.
           </p>
           <p>The 19 Tone Equal Neck</p>
+          <img src="../../img/Necks/schillaci_guitars_microtonal_neck_2.png" />
           <p>The 31 Tone Equal Neck</p>
+          <img src="../../img/Necks/schillaci_guitars_microtonal_neck_3.png" />
           <p>The Fretless Flyer Neck</p>
+          <img src="../../img/Necks/schillaci_guitars_microtonal_neck_1.png" />
         </div>
         <div className="necks__pictures">
           <img src="../../img/Necks/schillaci_guitars_microtonal_all_necks.jpg" />

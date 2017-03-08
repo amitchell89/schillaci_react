@@ -31,6 +31,21 @@ export default class Home extends Component {
           <p>- Adam Krichmar, Satisifed Customer</p>
         </div>
         <GuitarSlider />
+
+        <Parallax
+          className="hero"
+          bgImage="../../img/Necks/schillaci_guitars_custom_necks_2.jpg"
+          strength={400}
+        >
+          <div className="home__necks">
+            <h2>Custom Necks</h2>
+            <p>Looking for a replacement neck or upgrade? Schillaci Guitars is your premier source for hand crafted custom necks. Each neck is made to order in vintage or modern design.</p>
+            <Link to="/necks">
+              <button className="btn--outline">Learn More</button>
+            </Link>
+          </div>
+        </Parallax>
+
       </div>
     )
   }
