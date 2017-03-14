@@ -22075,21 +22075,17 @@
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _Guitars = __webpack_require__(/*! ./Guitars */ 319);
+	var _Guitars = __webpack_require__(/*! ./Guitars */ 320);
 	
 	var _Guitars2 = _interopRequireDefault(_Guitars);
 	
-	var _GuitarPage = __webpack_require__(/*! ./GuitarPage */ 320);
+	var _GuitarPage = __webpack_require__(/*! ./GuitarPage */ 321);
 	
 	var _GuitarPage2 = _interopRequireDefault(_GuitarPage);
 	
-	var _Necks = __webpack_require__(/*! ./Necks */ 321);
+	var _Necks = __webpack_require__(/*! ./Necks */ 322);
 	
 	var _Necks2 = _interopRequireDefault(_Necks);
-	
-	var _Microtonal = __webpack_require__(/*! ./Microtonal */ 322);
-	
-	var _Microtonal2 = _interopRequireDefault(_Microtonal);
 	
 	var _About = __webpack_require__(/*! ./About */ 323);
 	
@@ -30045,15 +30041,19 @@
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _ModalButton = __webpack_require__(/*! ../../components/ModalButton */ 287);
+	var _reactParallax = __webpack_require__(/*! react-parallax */ 287);
+	
+	var _ModalButton = __webpack_require__(/*! ../../components/ModalButton */ 288);
 	
 	var _ModalButton2 = _interopRequireDefault(_ModalButton);
 	
-	var _GuitarSlider = __webpack_require__(/*! ../../components/GuitarSlider */ 289);
+	var _GuitarSlider = __webpack_require__(/*! ../../components/GuitarSlider */ 290);
 	
 	var _GuitarSlider2 = _interopRequireDefault(_GuitarSlider);
 	
-	var _reactParallax = __webpack_require__(/*! react-parallax */ 318);
+	var _SignUpForm = __webpack_require__(/*! ../../components/SignUpForm */ 319);
+	
+	var _SignUpForm2 = _interopRequireDefault(_SignUpForm);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -30156,6 +30156,7 @@
 	            )
 	          )
 	        ),
+	        _react2.default.createElement(_SignUpForm2.default, null),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'home__logo' },
@@ -31852,6 +31853,15 @@
 
 /***/ },
 /* 287 */
+/*!****************************************!*\
+  !*** ./~/react-parallax/dist/index.js ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	!function(e,t){ true?module.exports=t(__webpack_require__(/*! react */ 2),__webpack_require__(/*! react-dom */ 33)):"function"==typeof define&&define.amd?define(["react","react-dom"],t):"object"==typeof exports?exports["react-parallax"]=t(require("react"),require("react-dom")):e["react-parallax"]=t(e.React,e.ReactDOM)}(this,function(e,t){return function(e){function t(i){if(n[i])return n[i].exports;var o=n[i]={exports:{},id:i,loaded:!1};return e[i].call(o.exports,o,o.exports,t),o.loaded=!0,o.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}([function(e,t,n){"use strict";function i(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0}),t.Background=t.Parallax=void 0;var o=n(4),r=i(o),s=n(3),a=i(s);t.Parallax=r.default,t.Background=a.default},function(t,n){t.exports=e},function(e,t){"use strict";function n(e,t){if(!t)return!1;var n=e.getBoundingClientRect().top,i=e.getBoundingClientRect().bottom;return n<=0&&i>=0||n>=0&&i<=window.innerHeight||n<=window.innerHeight&&i>=window.innerHeight}function i(e){if(!e)return 0;var t=window,n=document,i=n.documentElement,o=n.getElementsByTagName("body")[0];return t.innerHeight||i.clientHeight||o.clientHeight}function o(){return!("undefined"==typeof window||!window.document||!window.document.createElement)}function r(e,t){if(!t)return 0;var n=e,i=(e.getBoundingClientRect().height,Math.round(n.getBoundingClientRect().top));return i=i>window.innerHeight?window.innerHeight:i,s(0,window.innerHeight,i)}function s(e,t,n){var i=t-e,o=n-e;return o/i}function a(e,t,n,i){if(i)switch(console.log("hello"),t.property){case"blur":e.style.filter="blur("+n+(t.unit||"px")+")"}}Object.defineProperty(t,"__esModule",{value:!0}),t.isScrolledIntoView=n,t.getWindowHeight=i,t.canUseDOM=o,t.getRelativePosition=r,t.getPercentage=s,t.setStyleProp=a},function(e,t,n){"use strict";function i(e){return e&&e.__esModule?e:{default:e}}function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function s(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),l=n(1),u=i(l),c=function(e){function t(){return o(this,t),r(this,(t.__proto__||Object.getPrototypeOf(t)).apply(this,arguments))}return s(t,e),a(t,[{key:"isParallaxBackground",value:function(){return!0}},{key:"render",value:function(){return u.default.createElement("div",{className:"react-parallax-background "+this.props.className},this.props.children)}}]),t}(u.default.Component);c.propTypes={children:u.default.PropTypes.node,className:u.default.PropTypes.string},c.defaultProps={className:""},t.default=c},function(e,t,n){"use strict";function i(e){return e&&e.__esModule?e:{default:e}}function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function s(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),l=n(1),u=i(l),c=n(5),d=i(c),h=n(2),p=function(e){function t(e){o(this,t);var n=r(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return n.state={childStyle:{position:"relative"}},n.canUseDOM=(0,h.canUseDOM)(),n.ReactDOM=d.default.findDOMNode?d.default:u.default,n.node=null,n.content=null,n.splitChildren=n.getSplitChildren(e),n.windowHeight=(0,h.getWindowHeight)(n.canUseDOM),n.timestamp=Date.now(),n.dynamicBlur=!(!e.blur||void 0===e.blur.min||void 0===e.blur.max),n.autobind(),n}return s(t,e),a(t,[{key:"componentWillReceiveProps",value:function(e){this.splitChildren=this.getSplitChildren(e)}},{key:"autobind",value:function(){this.onScroll=this.onScroll.bind(this),this.onWindowResize=this.onWindowResize.bind(this),this.updatePosition=this.updatePosition.bind(this),this.onWindowLoad=this.onWindowLoad.bind(this)}},{key:"render",value:function(){var e=this;return u.default.createElement("div",{className:"react-parallax "+(this.props.className?this.props.className:"")},this.props.bgImage?u.default.createElement("img",{className:"react-parallax-bgimage",src:this.props.bgImage,ref:"bgImage",alt:""}):null,this.splitChildren.bgChildren.length>0?u.default.createElement("div",{className:"react-parallax-background-children",ref:function(t){return e.bgMounted(t)}},this.splitChildren.bgChildren):null,u.default.createElement("div",{className:"react-parallax-content",style:this.state.childStyle,ref:"content"},this.splitChildren.children))}},{key:"componentWillUnmount",value:function(){this.canUseDOM&&(document.removeEventListener("scroll",this.onScroll,!1),window.removeEventListener("resize",this.onWindowResize,!1),window.removeEventListener("load",this.onWindowLoad,!1))}},{key:"componentDidMount",value:function(){var e=this;if(this.canUseDOM&&(document.addEventListener("scroll",this.onScroll,!1),window.addEventListener("resize",this.onWindowResize,!1),window.addEventListener("load",this.onWindowLoad,!1)),this.node=this.ReactDOM.findDOMNode(this),this.img=this.refs.bgImage?this.ReactDOM.findDOMNode(this.refs.bgImage):null,this.props.bgImage){var t=new Image;t.onload=t.onerror=function(t){e.updatePosition()},t.src=this.props.bgImage}else this.updatePosition();this.setParallaxStyle(),this.setInitialBackgroundStyles(this.img),this.setInitialBackgroundStyles(this.bg)}},{key:"bgMounted",value:function(e){this.bg=this.ReactDOM.findDOMNode(e)}},{key:"onScroll",value:function(e){if(this.canUseDOM){var t=Date.now();t-this.timestamp>=10&&(window.requestAnimationFrame(this.updatePosition),this.timestamp=t)}}},{key:"onWindowLoad",value:function(){this.updatePosition()}},{key:"getSplitChildren",value:function(e){var t=[],n=u.default.Children.toArray(e.children);return n.forEach(function(e,i){e.type&&e.type.prototype&&e.type.prototype.isParallaxBackground&&(t=t.concat(n.splice(i,1)))}),{bgChildren:t,children:n}}},{key:"updatePosition",value:function(){var e=!1;this.content=this.ReactDOM.findDOMNode(this.refs.content),this.contentHeight=this.content.getBoundingClientRect().height,this.contentWidth=this.node.getBoundingClientRect().width,this.img&&this.img.naturalWidth/this.img.naturalHeight<this.contentWidth/this.getImageHeight()&&(e=!0);var t=(0,h.getRelativePosition)(this.node,this.canUseDOM);this.img&&this.setImagePosition(t,e),this.bg&&this.splitChildren.bgChildren.length>0&&this.setBackgroundPosition(t)}},{key:"getImageHeight",value:function(){var e=this.props.strength<0;return Math.floor(this.contentHeight+(e?2.5:1)*Math.abs(this.props.strength))}},{key:"setImagePosition",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=this.props.bgHeight||(t?"auto":this.getImageHeight()+"px"),i=this.props.bgWidth||(t?this.contentWidth+"px":"auto");if(this.img.style.height=n,this.img.style.width=i,this.props.disabled!==!0){var o=this.props.strength<0,r=(o?this.props.strength:0)-this.props.strength*e;if(this.img.style.WebkitTransform="translate3d(-50%, "+r+"px, 0)",this.img.style.transform="translate3d(-50%, "+r+"px, 0)",this.props.blur){var s=this.dynamicBlur?this.props.blur.min+(1-e)*this.props.blur.max:this.props.blur;this.setBlur(this.img,s)}}}},{key:"setBlur",value:function(e,t){e.style.WebkitFilter="blur("+t+"px)",e.style.filter="blur("+t+"px)"}},{key:"setBackgroundPosition",value:function(e){if(this.props.disabled!==!0){var t=this.props.strength<0,n=(t?this.props.strength:0)-this.props.strength*e;this.bg.style.WebkitTransform="translate3d(-50%, "+n+"px, 0)",this.bg.style.transform="translate3d(-50%, "+n+"px, 0)"}}},{key:"setInitialBackgroundStyles",value:function(e){var t=this;e&&(e.style.position="absolute",e.style.left="50%",e.style.WebkitTransform="translate3d(-50%, 0, 0)",e.style.transform="translate3d(-50%, 0, 0)",e.style.WebkitTransformStyle="preserve-3d",e.style.WebkitBackfaceVisibility="hidden",e.style.MozBackfaceVisibility="hidden",e.style.MsBackfaceVisibility="hidden",this.props.bgStyle&&Object.keys(this.props.bgStyle).forEach(function(n){e.style[n]=t.props.bgStyle[n]}))}},{key:"onWindowResize",value:function(){this.windowHeight=(0,h.getWindowHeight)(this.canUseDOM),this.updatePosition()}},{key:"setParallaxStyle",value:function(){this.node&&(this.node.style.position="relative",this.node.style.overflow="hidden")}},{key:"log",value:function(){if(this.props.log){var e;(e=console).log.apply(e,arguments)}}}]),t}(u.default.Component);p.propTypes={bgImage:u.default.PropTypes.string,bgStyle:u.default.PropTypes.object,bgWidth:u.default.PropTypes.string,bgHeight:u.default.PropTypes.string,strength:u.default.PropTypes.number,blur:u.default.PropTypes.oneOfType([u.default.PropTypes.number,u.default.PropTypes.object]),className:u.default.PropTypes.string},p.defaultProps={strength:100,log:!1,disabled:!1},t.default=p},function(e,n){e.exports=t}])});
+
+/***/ },
+/* 288 */
 /*!***************************************************!*\
   !*** ./src/components/ModalButton/ModalButton.js ***!
   \***************************************************/
@@ -31871,7 +31881,7 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
-	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 288);
+	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 289);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -31926,7 +31936,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(ModalButton);
 
 /***/ },
-/* 288 */
+/* 289 */
 /*!******************************************!*\
   !*** ./src/store/actions/ToggleModal.js ***!
   \******************************************/
@@ -31961,7 +31971,7 @@
 	}
 
 /***/ },
-/* 289 */
+/* 290 */
 /*!*****************************************************!*\
   !*** ./src/components/GuitarSlider/GuitarSlider.js ***!
   \*****************************************************/
@@ -31981,7 +31991,7 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
-	var _reactSlick = __webpack_require__(/*! react-slick */ 290);
+	var _reactSlick = __webpack_require__(/*! react-slick */ 291);
 	
 	var _reactSlick2 = _interopRequireDefault(_reactSlick);
 	
@@ -31995,8 +32005,8 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! slick-carousel/slick/slick-theme.scss */ 307);
-	__webpack_require__(/*! slick-carousel/slick/slick.scss */ 316);
+	__webpack_require__(/*! slick-carousel/slick/slick-theme.scss */ 308);
+	__webpack_require__(/*! slick-carousel/slick/slick.scss */ 317);
 	
 	function mapStateToProps(state) {
 	  return {
@@ -32064,7 +32074,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(GuitarSlider);
 
 /***/ },
-/* 290 */
+/* 291 */
 /*!************************************!*\
   !*** ./~/react-slick/lib/index.js ***!
   \************************************/
@@ -32072,10 +32082,10 @@
 
 	'use strict';
 	
-	module.exports = __webpack_require__(/*! ./slider */ 291);
+	module.exports = __webpack_require__(/*! ./slider */ 292);
 
 /***/ },
-/* 291 */
+/* 292 */
 /*!*************************************!*\
   !*** ./~/react-slick/lib/slider.js ***!
   \*************************************/
@@ -32089,21 +32099,21 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _innerSlider = __webpack_require__(/*! ./inner-slider */ 292);
+	var _innerSlider = __webpack_require__(/*! ./inner-slider */ 293);
 	
 	var _objectAssign = __webpack_require__(/*! object-assign */ 5);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _json2mq = __webpack_require__(/*! json2mq */ 302);
+	var _json2mq = __webpack_require__(/*! json2mq */ 303);
 	
 	var _json2mq2 = _interopRequireDefault(_json2mq);
 	
-	var _reactResponsiveMixin = __webpack_require__(/*! react-responsive-mixin */ 304);
+	var _reactResponsiveMixin = __webpack_require__(/*! react-responsive-mixin */ 305);
 	
 	var _reactResponsiveMixin2 = _interopRequireDefault(_reactResponsiveMixin);
 	
-	var _defaultProps = __webpack_require__(/*! ./default-props */ 297);
+	var _defaultProps = __webpack_require__(/*! ./default-props */ 298);
 	
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 	
@@ -32210,7 +32220,7 @@
 	module.exports = Slider;
 
 /***/ },
-/* 292 */
+/* 293 */
 /*!*******************************************!*\
   !*** ./~/react-slick/lib/inner-slider.js ***!
   \*******************************************/
@@ -32227,23 +32237,23 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _eventHandlers = __webpack_require__(/*! ./mixins/event-handlers */ 293);
+	var _eventHandlers = __webpack_require__(/*! ./mixins/event-handlers */ 294);
 	
 	var _eventHandlers2 = _interopRequireDefault(_eventHandlers);
 	
-	var _helpers = __webpack_require__(/*! ./mixins/helpers */ 295);
+	var _helpers = __webpack_require__(/*! ./mixins/helpers */ 296);
 	
 	var _helpers2 = _interopRequireDefault(_helpers);
 	
-	var _initialState = __webpack_require__(/*! ./initial-state */ 296);
+	var _initialState = __webpack_require__(/*! ./initial-state */ 297);
 	
 	var _initialState2 = _interopRequireDefault(_initialState);
 	
-	var _defaultProps = __webpack_require__(/*! ./default-props */ 297);
+	var _defaultProps = __webpack_require__(/*! ./default-props */ 298);
 	
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 	
-	var _classnames = __webpack_require__(/*! classnames */ 298);
+	var _classnames = __webpack_require__(/*! classnames */ 299);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -32251,11 +32261,11 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _track = __webpack_require__(/*! ./track */ 299);
+	var _track = __webpack_require__(/*! ./track */ 300);
 	
-	var _dots = __webpack_require__(/*! ./dots */ 300);
+	var _dots = __webpack_require__(/*! ./dots */ 301);
 	
-	var _arrows = __webpack_require__(/*! ./arrows */ 301);
+	var _arrows = __webpack_require__(/*! ./arrows */ 302);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -32496,7 +32506,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../node-libs-browser/~/process/browser.js */ 4)))
 
 /***/ },
-/* 293 */
+/* 294 */
 /*!****************************************************!*\
   !*** ./~/react-slick/lib/mixins/event-handlers.js ***!
   \****************************************************/
@@ -32506,9 +32516,9 @@
 	
 	exports.__esModule = true;
 	
-	var _trackHelper = __webpack_require__(/*! ./trackHelper */ 294);
+	var _trackHelper = __webpack_require__(/*! ./trackHelper */ 295);
 	
-	var _helpers = __webpack_require__(/*! ./helpers */ 295);
+	var _helpers = __webpack_require__(/*! ./helpers */ 296);
 	
 	var _helpers2 = _interopRequireDefault(_helpers);
 	
@@ -32846,7 +32856,7 @@
 	exports.default = EventHandlers;
 
 /***/ },
-/* 294 */
+/* 295 */
 /*!*************************************************!*\
   !*** ./~/react-slick/lib/mixins/trackHelper.js ***!
   \*************************************************/
@@ -33010,7 +33020,7 @@
 	};
 
 /***/ },
-/* 295 */
+/* 296 */
 /*!*********************************************!*\
   !*** ./~/react-slick/lib/mixins/helpers.js ***!
   \*********************************************/
@@ -33030,7 +33040,7 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _trackHelper = __webpack_require__(/*! ./trackHelper */ 294);
+	var _trackHelper = __webpack_require__(/*! ./trackHelper */ 295);
 	
 	var _objectAssign = __webpack_require__(/*! object-assign */ 5);
 	
@@ -33387,7 +33397,7 @@
 	exports.default = helpers;
 
 /***/ },
-/* 296 */
+/* 297 */
 /*!********************************************!*\
   !*** ./~/react-slick/lib/initial-state.js ***!
   \********************************************/
@@ -33441,7 +33451,7 @@
 	module.exports = initialState;
 
 /***/ },
-/* 297 */
+/* 298 */
 /*!********************************************!*\
   !*** ./~/react-slick/lib/default-props.js ***!
   \********************************************/
@@ -33510,7 +33520,7 @@
 	module.exports = defaultProps;
 
 /***/ },
-/* 298 */
+/* 299 */
 /*!*******************************!*\
   !*** ./~/classnames/index.js ***!
   \*******************************/
@@ -33567,7 +33577,7 @@
 
 
 /***/ },
-/* 299 */
+/* 300 */
 /*!************************************!*\
   !*** ./~/react-slick/lib/track.js ***!
   \************************************/
@@ -33586,7 +33596,7 @@
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _classnames = __webpack_require__(/*! classnames */ 298);
+	var _classnames = __webpack_require__(/*! classnames */ 299);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -33739,7 +33749,7 @@
 	});
 
 /***/ },
-/* 300 */
+/* 301 */
 /*!***********************************!*\
   !*** ./~/react-slick/lib/dots.js ***!
   \***********************************/
@@ -33754,7 +33764,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(/*! classnames */ 298);
+	var _classnames = __webpack_require__(/*! classnames */ 299);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -33820,7 +33830,7 @@
 	});
 
 /***/ },
-/* 301 */
+/* 302 */
 /*!*************************************!*\
   !*** ./~/react-slick/lib/arrows.js ***!
   \*************************************/
@@ -33837,11 +33847,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(/*! classnames */ 298);
+	var _classnames = __webpack_require__(/*! classnames */ 299);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _helpers = __webpack_require__(/*! ./mixins/helpers */ 295);
+	var _helpers = __webpack_require__(/*! ./mixins/helpers */ 296);
 	
 	var _helpers2 = _interopRequireDefault(_helpers);
 	
@@ -33936,13 +33946,13 @@
 	});
 
 /***/ },
-/* 302 */
+/* 303 */
 /*!****************************!*\
   !*** ./~/json2mq/index.js ***!
   \****************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var camel2hyphen = __webpack_require__(/*! string-convert/camel2hyphen */ 303);
+	var camel2hyphen = __webpack_require__(/*! string-convert/camel2hyphen */ 304);
 	
 	var isDimension = function (feature) {
 	  var re = /[height|width]$/;
@@ -33995,7 +34005,7 @@
 	module.exports = json2mq;
 
 /***/ },
-/* 303 */
+/* 304 */
 /*!******************************************!*\
   !*** ./~/string-convert/camel2hyphen.js ***!
   \******************************************/
@@ -34012,15 +34022,15 @@
 	module.exports = camel2hyphen;
 
 /***/ },
-/* 304 */
+/* 305 */
 /*!*******************************************!*\
   !*** ./~/react-responsive-mixin/index.js ***!
   \*******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var canUseDOM = __webpack_require__(/*! can-use-dom */ 305);
-	var enquire = canUseDOM && __webpack_require__(/*! enquire.js */ 306);
-	var json2mq = __webpack_require__(/*! json2mq */ 302);
+	var canUseDOM = __webpack_require__(/*! can-use-dom */ 306);
+	var enquire = canUseDOM && __webpack_require__(/*! enquire.js */ 307);
+	var json2mq = __webpack_require__(/*! json2mq */ 303);
 	
 	var ResponsiveMixin = {
 	  media: function (query, handler) {
@@ -34051,7 +34061,7 @@
 
 
 /***/ },
-/* 305 */
+/* 306 */
 /*!********************************!*\
   !*** ./~/can-use-dom/index.js ***!
   \********************************/
@@ -34066,7 +34076,7 @@
 	module.exports = canUseDOM;
 
 /***/ },
-/* 306 */
+/* 307 */
 /*!**************************************!*\
   !*** ./~/enquire.js/dist/enquire.js ***!
   \**************************************/
@@ -34367,7 +34377,7 @@
 	}));
 
 /***/ },
-/* 307 */
+/* 308 */
 /*!*************************************************!*\
   !*** ./~/slick-carousel/slick/slick-theme.scss ***!
   \*************************************************/
@@ -34376,10 +34386,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../css-loader!../../sass-loader?sourceMap!./slick-theme.scss */ 308);
+	var content = __webpack_require__(/*! !../../css-loader!../../sass-loader?sourceMap!./slick-theme.scss */ 309);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../style-loader/addStyles.js */ 315)(content, {});
+	var update = __webpack_require__(/*! ../../style-loader/addStyles.js */ 316)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -34396,24 +34406,24 @@
 	}
 
 /***/ },
-/* 308 */
+/* 309 */
 /*!******************************************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader?sourceMap!./~/slick-carousel/slick/slick-theme.scss ***!
   \******************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ 309)();
+	exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ 310)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Slider */\n.slick-loading .slick-list {\n  background: #fff url(" + __webpack_require__(/*! ./ajax-loader.gif */ 310) + ") center center no-repeat; }\n\n/* Icons */\n@font-face {\n  font-family: \"slick\";\n  src: url(" + __webpack_require__(/*! ./fonts/slick.eot */ 311) + ");\n  src: url(" + __webpack_require__(/*! ./fonts/slick.eot */ 311) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(/*! ./fonts/slick.woff */ 312) + ") format(\"woff\"), url(" + __webpack_require__(/*! ./fonts/slick.ttf */ 313) + ") format(\"truetype\"), url(" + __webpack_require__(/*! ./fonts/slick.svg */ 314) + "#slick) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n/* Arrows */\n.slick-prev,\n.slick-next {\n  position: absolute;\n  display: block;\n  height: 20px;\n  width: 20px;\n  line-height: 0px;\n  font-size: 0px;\n  cursor: pointer;\n  background: transparent;\n  color: transparent;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n  -ms-transform: translate(0, -50%);\n  transform: translate(0, -50%);\n  padding: 0;\n  border: none;\n  outline: none; }\n  .slick-prev:hover, .slick-prev:focus,\n  .slick-next:hover,\n  .slick-next:focus {\n    outline: none;\n    background: transparent;\n    color: transparent; }\n    .slick-prev:hover:before, .slick-prev:focus:before,\n    .slick-next:hover:before,\n    .slick-next:focus:before {\n      opacity: 1; }\n  .slick-prev.slick-disabled:before,\n  .slick-next.slick-disabled:before {\n    opacity: 0.25; }\n  .slick-prev:before,\n  .slick-next:before {\n    font-family: \"slick\";\n    font-size: 20px;\n    line-height: 1;\n    color: white;\n    opacity: 0.75;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale; }\n\n.slick-prev {\n  left: -25px; }\n  [dir=\"rtl\"] .slick-prev {\n    left: auto;\n    right: -25px; }\n  .slick-prev:before {\n    content: \"\\2190\"; }\n    [dir=\"rtl\"] .slick-prev:before {\n      content: \"\\2192\"; }\n\n.slick-next {\n  right: -25px; }\n  [dir=\"rtl\"] .slick-next {\n    left: -25px;\n    right: auto; }\n  .slick-next:before {\n    content: \"\\2192\"; }\n    [dir=\"rtl\"] .slick-next:before {\n      content: \"\\2190\"; }\n\n/* Dots */\n.slick-dotted.slick-slider {\n  margin-bottom: 30px; }\n\n.slick-dots {\n  position: absolute;\n  bottom: -25px;\n  list-style: none;\n  display: block;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n  .slick-dots li {\n    position: relative;\n    display: inline-block;\n    height: 20px;\n    width: 20px;\n    margin: 0 5px;\n    padding: 0;\n    cursor: pointer; }\n    .slick-dots li button {\n      border: 0;\n      background: transparent;\n      display: block;\n      height: 20px;\n      width: 20px;\n      outline: none;\n      line-height: 0px;\n      font-size: 0px;\n      color: transparent;\n      padding: 5px;\n      cursor: pointer; }\n      .slick-dots li button:hover, .slick-dots li button:focus {\n        outline: none; }\n        .slick-dots li button:hover:before, .slick-dots li button:focus:before {\n          opacity: 1; }\n      .slick-dots li button:before {\n        position: absolute;\n        top: 0;\n        left: 0;\n        content: \"\\2022\";\n        width: 20px;\n        height: 20px;\n        font-family: \"slick\";\n        font-size: 6px;\n        line-height: 20px;\n        text-align: center;\n        color: black;\n        opacity: 0.25;\n        -webkit-font-smoothing: antialiased;\n        -moz-osx-font-smoothing: grayscale; }\n    .slick-dots li.slick-active button:before {\n      color: black;\n      opacity: 0.75; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Slider */\n.slick-loading .slick-list {\n  background: #fff url(" + __webpack_require__(/*! ./ajax-loader.gif */ 311) + ") center center no-repeat; }\n\n/* Icons */\n@font-face {\n  font-family: \"slick\";\n  src: url(" + __webpack_require__(/*! ./fonts/slick.eot */ 312) + ");\n  src: url(" + __webpack_require__(/*! ./fonts/slick.eot */ 312) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(/*! ./fonts/slick.woff */ 313) + ") format(\"woff\"), url(" + __webpack_require__(/*! ./fonts/slick.ttf */ 314) + ") format(\"truetype\"), url(" + __webpack_require__(/*! ./fonts/slick.svg */ 315) + "#slick) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n/* Arrows */\n.slick-prev,\n.slick-next {\n  position: absolute;\n  display: block;\n  height: 20px;\n  width: 20px;\n  line-height: 0px;\n  font-size: 0px;\n  cursor: pointer;\n  background: transparent;\n  color: transparent;\n  top: 50%;\n  -webkit-transform: translate(0, -50%);\n  -ms-transform: translate(0, -50%);\n  transform: translate(0, -50%);\n  padding: 0;\n  border: none;\n  outline: none; }\n  .slick-prev:hover, .slick-prev:focus,\n  .slick-next:hover,\n  .slick-next:focus {\n    outline: none;\n    background: transparent;\n    color: transparent; }\n    .slick-prev:hover:before, .slick-prev:focus:before,\n    .slick-next:hover:before,\n    .slick-next:focus:before {\n      opacity: 1; }\n  .slick-prev.slick-disabled:before,\n  .slick-next.slick-disabled:before {\n    opacity: 0.25; }\n  .slick-prev:before,\n  .slick-next:before {\n    font-family: \"slick\";\n    font-size: 20px;\n    line-height: 1;\n    color: white;\n    opacity: 0.75;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale; }\n\n.slick-prev {\n  left: -25px; }\n  [dir=\"rtl\"] .slick-prev {\n    left: auto;\n    right: -25px; }\n  .slick-prev:before {\n    content: \"\\2190\"; }\n    [dir=\"rtl\"] .slick-prev:before {\n      content: \"\\2192\"; }\n\n.slick-next {\n  right: -25px; }\n  [dir=\"rtl\"] .slick-next {\n    left: -25px;\n    right: auto; }\n  .slick-next:before {\n    content: \"\\2192\"; }\n    [dir=\"rtl\"] .slick-next:before {\n      content: \"\\2190\"; }\n\n/* Dots */\n.slick-dotted.slick-slider {\n  margin-bottom: 30px; }\n\n.slick-dots {\n  position: absolute;\n  bottom: -25px;\n  list-style: none;\n  display: block;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  width: 100%; }\n  .slick-dots li {\n    position: relative;\n    display: inline-block;\n    height: 20px;\n    width: 20px;\n    margin: 0 5px;\n    padding: 0;\n    cursor: pointer; }\n    .slick-dots li button {\n      border: 0;\n      background: transparent;\n      display: block;\n      height: 20px;\n      width: 20px;\n      outline: none;\n      line-height: 0px;\n      font-size: 0px;\n      color: transparent;\n      padding: 5px;\n      cursor: pointer; }\n      .slick-dots li button:hover, .slick-dots li button:focus {\n        outline: none; }\n        .slick-dots li button:hover:before, .slick-dots li button:focus:before {\n          opacity: 1; }\n      .slick-dots li button:before {\n        position: absolute;\n        top: 0;\n        left: 0;\n        content: \"\\2022\";\n        width: 20px;\n        height: 20px;\n        font-family: \"slick\";\n        font-size: 6px;\n        line-height: 20px;\n        text-align: center;\n        color: black;\n        opacity: 0.25;\n        -webkit-font-smoothing: antialiased;\n        -moz-osx-font-smoothing: grayscale; }\n    .slick-dots li.slick-active button:before {\n      color: black;\n      opacity: 0.75; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 309 */
+/* 310 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -34472,7 +34482,7 @@
 
 
 /***/ },
-/* 310 */
+/* 311 */
 /*!************************************************!*\
   !*** ./~/slick-carousel/slick/ajax-loader.gif ***!
   \************************************************/
@@ -34481,7 +34491,7 @@
 	module.exports = __webpack_require__.p + "ajax-loader.gif";
 
 /***/ },
-/* 311 */
+/* 312 */
 /*!************************************************!*\
   !*** ./~/slick-carousel/slick/fonts/slick.eot ***!
   \************************************************/
@@ -34490,7 +34500,7 @@
 	module.exports = __webpack_require__.p + "slick.eot";
 
 /***/ },
-/* 312 */
+/* 313 */
 /*!*************************************************!*\
   !*** ./~/slick-carousel/slick/fonts/slick.woff ***!
   \*************************************************/
@@ -34499,7 +34509,7 @@
 	module.exports = __webpack_require__.p + "slick.woff";
 
 /***/ },
-/* 313 */
+/* 314 */
 /*!************************************************!*\
   !*** ./~/slick-carousel/slick/fonts/slick.ttf ***!
   \************************************************/
@@ -34508,7 +34518,7 @@
 	module.exports = __webpack_require__.p + "slick.ttf";
 
 /***/ },
-/* 314 */
+/* 315 */
 /*!************************************************!*\
   !*** ./~/slick-carousel/slick/fonts/slick.svg ***!
   \************************************************/
@@ -34517,7 +34527,7 @@
 	module.exports = __webpack_require__.p + "slick.svg";
 
 /***/ },
-/* 315 */
+/* 316 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -34772,7 +34782,7 @@
 
 
 /***/ },
-/* 316 */
+/* 317 */
 /*!*******************************************!*\
   !*** ./~/slick-carousel/slick/slick.scss ***!
   \*******************************************/
@@ -34781,10 +34791,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../css-loader!../../sass-loader?sourceMap!./slick.scss */ 317);
+	var content = __webpack_require__(/*! !../../css-loader!../../sass-loader?sourceMap!./slick.scss */ 318);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../style-loader/addStyles.js */ 315)(content, {});
+	var update = __webpack_require__(/*! ../../style-loader/addStyles.js */ 316)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -34801,13 +34811,13 @@
 	}
 
 /***/ },
-/* 317 */
+/* 318 */
 /*!************************************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader?sourceMap!./~/slick-carousel/slick/slick.scss ***!
   \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ 309)();
+	exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ 310)();
 	// imports
 	
 	
@@ -34818,16 +34828,78 @@
 
 
 /***/ },
-/* 318 */
-/*!****************************************!*\
-  !*** ./~/react-parallax/dist/index.js ***!
-  \****************************************/
+/* 319 */
+/*!*************************************************!*\
+  !*** ./src/components/SignUpForm/SignUpForm.js ***!
+  \*************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	!function(e,t){ true?module.exports=t(__webpack_require__(/*! react */ 2),__webpack_require__(/*! react-dom */ 33)):"function"==typeof define&&define.amd?define(["react","react-dom"],t):"object"==typeof exports?exports["react-parallax"]=t(require("react"),require("react-dom")):e["react-parallax"]=t(e.React,e.ReactDOM)}(this,function(e,t){return function(e){function t(i){if(n[i])return n[i].exports;var o=n[i]={exports:{},id:i,loaded:!1};return e[i].call(o.exports,o,o.exports,t),o.loaded=!0,o.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}([function(e,t,n){"use strict";function i(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0}),t.Background=t.Parallax=void 0;var o=n(4),r=i(o),s=n(3),a=i(s);t.Parallax=r.default,t.Background=a.default},function(t,n){t.exports=e},function(e,t){"use strict";function n(e,t){if(!t)return!1;var n=e.getBoundingClientRect().top,i=e.getBoundingClientRect().bottom;return n<=0&&i>=0||n>=0&&i<=window.innerHeight||n<=window.innerHeight&&i>=window.innerHeight}function i(e){if(!e)return 0;var t=window,n=document,i=n.documentElement,o=n.getElementsByTagName("body")[0];return t.innerHeight||i.clientHeight||o.clientHeight}function o(){return!("undefined"==typeof window||!window.document||!window.document.createElement)}function r(e,t){if(!t)return 0;var n=e,i=(e.getBoundingClientRect().height,Math.round(n.getBoundingClientRect().top));return i=i>window.innerHeight?window.innerHeight:i,s(0,window.innerHeight,i)}function s(e,t,n){var i=t-e,o=n-e;return o/i}function a(e,t,n,i){if(i)switch(console.log("hello"),t.property){case"blur":e.style.filter="blur("+n+(t.unit||"px")+")"}}Object.defineProperty(t,"__esModule",{value:!0}),t.isScrolledIntoView=n,t.getWindowHeight=i,t.canUseDOM=o,t.getRelativePosition=r,t.getPercentage=s,t.setStyleProp=a},function(e,t,n){"use strict";function i(e){return e&&e.__esModule?e:{default:e}}function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function s(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),l=n(1),u=i(l),c=function(e){function t(){return o(this,t),r(this,(t.__proto__||Object.getPrototypeOf(t)).apply(this,arguments))}return s(t,e),a(t,[{key:"isParallaxBackground",value:function(){return!0}},{key:"render",value:function(){return u.default.createElement("div",{className:"react-parallax-background "+this.props.className},this.props.children)}}]),t}(u.default.Component);c.propTypes={children:u.default.PropTypes.node,className:u.default.PropTypes.string},c.defaultProps={className:""},t.default=c},function(e,t,n){"use strict";function i(e){return e&&e.__esModule?e:{default:e}}function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function s(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),l=n(1),u=i(l),c=n(5),d=i(c),h=n(2),p=function(e){function t(e){o(this,t);var n=r(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return n.state={childStyle:{position:"relative"}},n.canUseDOM=(0,h.canUseDOM)(),n.ReactDOM=d.default.findDOMNode?d.default:u.default,n.node=null,n.content=null,n.splitChildren=n.getSplitChildren(e),n.windowHeight=(0,h.getWindowHeight)(n.canUseDOM),n.timestamp=Date.now(),n.dynamicBlur=!(!e.blur||void 0===e.blur.min||void 0===e.blur.max),n.autobind(),n}return s(t,e),a(t,[{key:"componentWillReceiveProps",value:function(e){this.splitChildren=this.getSplitChildren(e)}},{key:"autobind",value:function(){this.onScroll=this.onScroll.bind(this),this.onWindowResize=this.onWindowResize.bind(this),this.updatePosition=this.updatePosition.bind(this),this.onWindowLoad=this.onWindowLoad.bind(this)}},{key:"render",value:function(){var e=this;return u.default.createElement("div",{className:"react-parallax "+(this.props.className?this.props.className:"")},this.props.bgImage?u.default.createElement("img",{className:"react-parallax-bgimage",src:this.props.bgImage,ref:"bgImage",alt:""}):null,this.splitChildren.bgChildren.length>0?u.default.createElement("div",{className:"react-parallax-background-children",ref:function(t){return e.bgMounted(t)}},this.splitChildren.bgChildren):null,u.default.createElement("div",{className:"react-parallax-content",style:this.state.childStyle,ref:"content"},this.splitChildren.children))}},{key:"componentWillUnmount",value:function(){this.canUseDOM&&(document.removeEventListener("scroll",this.onScroll,!1),window.removeEventListener("resize",this.onWindowResize,!1),window.removeEventListener("load",this.onWindowLoad,!1))}},{key:"componentDidMount",value:function(){var e=this;if(this.canUseDOM&&(document.addEventListener("scroll",this.onScroll,!1),window.addEventListener("resize",this.onWindowResize,!1),window.addEventListener("load",this.onWindowLoad,!1)),this.node=this.ReactDOM.findDOMNode(this),this.img=this.refs.bgImage?this.ReactDOM.findDOMNode(this.refs.bgImage):null,this.props.bgImage){var t=new Image;t.onload=t.onerror=function(t){e.updatePosition()},t.src=this.props.bgImage}else this.updatePosition();this.setParallaxStyle(),this.setInitialBackgroundStyles(this.img),this.setInitialBackgroundStyles(this.bg)}},{key:"bgMounted",value:function(e){this.bg=this.ReactDOM.findDOMNode(e)}},{key:"onScroll",value:function(e){if(this.canUseDOM){var t=Date.now();t-this.timestamp>=10&&(window.requestAnimationFrame(this.updatePosition),this.timestamp=t)}}},{key:"onWindowLoad",value:function(){this.updatePosition()}},{key:"getSplitChildren",value:function(e){var t=[],n=u.default.Children.toArray(e.children);return n.forEach(function(e,i){e.type&&e.type.prototype&&e.type.prototype.isParallaxBackground&&(t=t.concat(n.splice(i,1)))}),{bgChildren:t,children:n}}},{key:"updatePosition",value:function(){var e=!1;this.content=this.ReactDOM.findDOMNode(this.refs.content),this.contentHeight=this.content.getBoundingClientRect().height,this.contentWidth=this.node.getBoundingClientRect().width,this.img&&this.img.naturalWidth/this.img.naturalHeight<this.contentWidth/this.getImageHeight()&&(e=!0);var t=(0,h.getRelativePosition)(this.node,this.canUseDOM);this.img&&this.setImagePosition(t,e),this.bg&&this.splitChildren.bgChildren.length>0&&this.setBackgroundPosition(t)}},{key:"getImageHeight",value:function(){var e=this.props.strength<0;return Math.floor(this.contentHeight+(e?2.5:1)*Math.abs(this.props.strength))}},{key:"setImagePosition",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=this.props.bgHeight||(t?"auto":this.getImageHeight()+"px"),i=this.props.bgWidth||(t?this.contentWidth+"px":"auto");if(this.img.style.height=n,this.img.style.width=i,this.props.disabled!==!0){var o=this.props.strength<0,r=(o?this.props.strength:0)-this.props.strength*e;if(this.img.style.WebkitTransform="translate3d(-50%, "+r+"px, 0)",this.img.style.transform="translate3d(-50%, "+r+"px, 0)",this.props.blur){var s=this.dynamicBlur?this.props.blur.min+(1-e)*this.props.blur.max:this.props.blur;this.setBlur(this.img,s)}}}},{key:"setBlur",value:function(e,t){e.style.WebkitFilter="blur("+t+"px)",e.style.filter="blur("+t+"px)"}},{key:"setBackgroundPosition",value:function(e){if(this.props.disabled!==!0){var t=this.props.strength<0,n=(t?this.props.strength:0)-this.props.strength*e;this.bg.style.WebkitTransform="translate3d(-50%, "+n+"px, 0)",this.bg.style.transform="translate3d(-50%, "+n+"px, 0)"}}},{key:"setInitialBackgroundStyles",value:function(e){var t=this;e&&(e.style.position="absolute",e.style.left="50%",e.style.WebkitTransform="translate3d(-50%, 0, 0)",e.style.transform="translate3d(-50%, 0, 0)",e.style.WebkitTransformStyle="preserve-3d",e.style.WebkitBackfaceVisibility="hidden",e.style.MozBackfaceVisibility="hidden",e.style.MsBackfaceVisibility="hidden",this.props.bgStyle&&Object.keys(this.props.bgStyle).forEach(function(n){e.style[n]=t.props.bgStyle[n]}))}},{key:"onWindowResize",value:function(){this.windowHeight=(0,h.getWindowHeight)(this.canUseDOM),this.updatePosition()}},{key:"setParallaxStyle",value:function(){this.node&&(this.node.style.position="relative",this.node.style.overflow="hidden")}},{key:"log",value:function(){if(this.props.log){var e;(e=console).log.apply(e,arguments)}}}]),t}(u.default.Component);p.propTypes={bgImage:u.default.PropTypes.string,bgStyle:u.default.PropTypes.object,bgWidth:u.default.PropTypes.string,bgHeight:u.default.PropTypes.string,strength:u.default.PropTypes.number,blur:u.default.PropTypes.oneOfType([u.default.PropTypes.number,u.default.PropTypes.object]),className:u.default.PropTypes.string},p.defaultProps={strength:100,log:!1,disabled:!1},t.default=p},function(e,n){e.exports=t}])});
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SignUpForm = function (_Component) {
+	  _inherits(SignUpForm, _Component);
+	
+	  function SignUpForm() {
+	    _classCallCheck(this, SignUpForm);
+	
+	    return _possibleConstructorReturn(this, (SignUpForm.__proto__ || Object.getPrototypeOf(SignUpForm)).apply(this, arguments));
+	  }
+	
+	  _createClass(SignUpForm, [{
+	    key: "render",
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "SignUpForm" },
+	        _react2.default.createElement(
+	          "h2",
+	          null,
+	          "Join Our Mailing List"
+	        ),
+	        _react2.default.createElement(
+	          "form",
+	          { id: "contact_form", method: "post" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "form__row" },
+	            _react2.default.createElement("input", { type: "text", name: "email", placeholder: "Your Email" })
+	          ),
+	          _react2.default.createElement(
+	            "button",
+	            { type: "submit", form: "email_form", value: "Submit", className: "btn--outline" },
+	            "Join Now"
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return SignUpForm;
+	}(_react.Component);
+	
+	exports.default = SignUpForm;
 
 /***/ },
-/* 319 */
+/* 320 */
 /*!**************************************!*\
   !*** ./src/views/Guitars/Guitars.js ***!
   \**************************************/
@@ -34989,7 +35061,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Guitars);
 
 /***/ },
-/* 320 */
+/* 321 */
 /*!********************************************!*\
   !*** ./src/views/GuitarPage/GuitarPage.js ***!
   \********************************************/
@@ -35112,7 +35184,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(GuitarPage);
 
 /***/ },
-/* 321 */
+/* 322 */
 /*!**********************************!*\
   !*** ./src/views/Necks/Necks.js ***!
   \**********************************/
@@ -35136,7 +35208,7 @@
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _reactParallax = __webpack_require__(/*! react-parallax */ 318);
+	var _reactParallax = __webpack_require__(/*! react-parallax */ 287);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35313,71 +35385,6 @@
 	exports.default = Necks;
 
 /***/ },
-/* 322 */
-/*!********************************************!*\
-  !*** ./src/views/Microtonal/Microtonal.js ***!
-  \********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactHelmet = __webpack_require__(/*! react-helmet */ 277);
-	
-	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Microtonal = function (_Component) {
-	  _inherits(Microtonal, _Component);
-	
-	  function Microtonal() {
-	    _classCallCheck(this, Microtonal);
-	
-	    return _possibleConstructorReturn(this, (Microtonal.__proto__ || Object.getPrototypeOf(Microtonal)).apply(this, arguments));
-	  }
-	
-	  _createClass(Microtonal, [{
-	    key: "render",
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: "",
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
-	        }),
-	        _react2.default.createElement(
-	          "h2",
-	          null,
-	          "Microtonal"
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Microtonal;
-	}(_react.Component);
-	
-	exports.default = Microtonal;
-
-/***/ },
 /* 323 */
 /*!**********************************!*\
   !*** ./src/views/About/About.js ***!
@@ -35402,7 +35409,7 @@
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _reactParallax = __webpack_require__(/*! react-parallax */ 318);
+	var _reactParallax = __webpack_require__(/*! react-parallax */ 287);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35554,7 +35561,7 @@
 	
 	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 	
-	var _reactParallax = __webpack_require__(/*! react-parallax */ 318);
+	var _reactParallax = __webpack_require__(/*! react-parallax */ 287);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -36033,7 +36040,7 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 201);
 	
-	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 288);
+	var _ToggleModal = __webpack_require__(/*! ../../store/actions/ToggleModal */ 289);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -36176,7 +36183,7 @@
 	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 334);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 315)(content, {});
+	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 316)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -36199,12 +36206,12 @@
   \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 309)();
+	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 310)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'PT Sans', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 335) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n\n.content {\n  padding-top: 138px; }\n\n/* Fonts */\nh1, h2 {\n  color: #4e74aa; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem;\n  border: 1px solid #dddddd; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px;\n  font-weight: bold; }\n\n.btn--outline {\n  background: none;\n  border: 3px solid #4e74aa;\n  color: #4e74aa; }\n\n.btn--small {\n  padding: 0.5rem 1rem;\n  font-size: 0.875rem; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n/* Hero */\n.hero {\n  height: 400px;\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem;\n  margin-bottom: 2rem; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 336) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n.home__tagline {\n  text-align: center;\n  text-align: center;\n  margin-bottom: 1rem; }\n  .home__tagline h1 {\n    margin-bottom: 0; }\n  .home__tagline p {\n    margin-top: 0; }\n\n.home__testimonial {\n  background: #4e74aa;\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem;\n  padding: 2rem;\n  margin-top: 3rem;\n  border-bottom: 3px solid #ffffff; }\n  .home__testimonial h2 {\n    color: #ffffff; }\n  .home__testimonial p {\n    color: #ffffff; }\n\n.home__necks {\n  background: rgba(255, 255, 255, 0.8);\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  margin-top: 2.5rem; }\n\n.home__logo {\n  padding: 5rem 0; }\n  .home__logo:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .home__logo .Logo {\n    margin: 0 auto;\n    float: none; }\n\n.guitar__thumb__container {\n  margin-top: 2rem; }\n\n.guitar__thumb {\n  width: 25%;\n  padding: 1rem;\n  display: inline-block; }\n  .guitar__thumb img {\n    width: 100%; }\n\n.guitar__thumb__label {\n  color: #555555;\n  position: relative;\n  top: -1.5rem;\n  font-size: 0.875rem; }\n\n.guitar__thumb__label--name {\n  background: rgba(255, 255, 255, 0.9);\n  border: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitar__thumb__label--price {\n  background: rgba(255, 255, 255, 0.7);\n  border-top: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  border-bottom: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitarPage__hero {\n  margin-top: 2rem; }\n\n.guitarPage__name {\n  border-top: 1px solid #dddddd;\n  border-left: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  padding: 0.5rem 1rem;\n  margin-bottom: 0;\n  margin-top: 1rem;\n  font-weight: bold; }\n  .guitarPage__name:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .guitarPage__name p {\n    float: left; }\n  .guitarPage__name button {\n    float: right;\n    margin-top: 0.2rem; }\n\n.guitarPage__about {\n  border: 1px solid #dddddd;\n  padding: 1em 1rem 0;\n  margin-bottom: 1rem; }\n  .guitarPage__about:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__about__item {\n  width: 33.333%;\n  display: inline-block;\n  vertical-align: top;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding-right: 2rem;\n  padding-bottom: 1rem; }\n\n.guitarPage__details {\n  position: relative;\n  left: -1rem;\n  width: calc(100% + 2rem); }\n  .guitarPage__details:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__detail {\n  float: left;\n  width: 33.333%;\n  padding: 1rem;\n  margin: 0; }\n  .guitarPage__detail img {\n    width: 100%; }\n\n.guitar__slide img {\n  width: 100%; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__spec-list {\n  width: calc(50% - 1rem);\n  border: 1px solid #dddddd;\n  margin: 1rem 0; }\n  .necks__spec-list:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .necks__spec-list p {\n    padding: 0.25rem 1rem; }\n\n.necks__spec-list--profiles {\n  float: left; }\n\n.necks__spec-list--nuts {\n  float: right; }\n\n.necks__spec-list__header {\n  border-bottom: 1px solid #dddddd;\n  padding: 1rem;\n  font-weight: bold; }\n\n.necks__pictures img {\n  width: 100%;\n  height: auto;\n  margin-bottom: 1rem; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n\n.contact__credits {\n  margin-top: 4rem; }\n", ""]);
+	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'PT Sans', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 335) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n\n.content {\n  padding-top: 138px; }\n\n/* Fonts */\nh1, h2 {\n  color: #4e74aa; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem;\n  border: 1px solid #dddddd; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px;\n  font-weight: bold; }\n\n.btn--outline {\n  background: none;\n  border: 3px solid #4e74aa;\n  color: #4e74aa; }\n\n.btn--small {\n  padding: 0.5rem 1rem;\n  font-size: 0.875rem; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n/* Hero */\n.hero {\n  height: 400px;\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem;\n  margin-bottom: 2rem; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 336) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n.home__tagline {\n  text-align: center;\n  text-align: center;\n  margin-bottom: 1rem; }\n  .home__tagline h1 {\n    margin-bottom: 0; }\n  .home__tagline p {\n    margin-top: 0; }\n\n.home__testimonial {\n  background: #4e74aa;\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem;\n  padding: 2rem;\n  margin-top: 3rem;\n  border-bottom: 3px solid #ffffff; }\n  .home__testimonial h2 {\n    color: #ffffff; }\n  .home__testimonial p {\n    color: #ffffff; }\n\n.home__necks {\n  background: rgba(255, 255, 255, 0.8);\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  margin-top: 2.5rem; }\n\n.home__logo {\n  padding: 5rem 0; }\n  .home__logo:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .home__logo .Logo {\n    margin: 0 auto;\n    float: none; }\n\n.guitar__thumb__container {\n  margin-top: 2rem; }\n\n.guitar__thumb {\n  width: 25%;\n  padding: 1rem;\n  display: inline-block; }\n  .guitar__thumb img {\n    width: 100%; }\n\n.guitar__thumb__label {\n  color: #555555;\n  position: relative;\n  top: -1.5rem;\n  font-size: 0.875rem; }\n\n.guitar__thumb__label--name {\n  background: rgba(255, 255, 255, 0.9);\n  border: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitar__thumb__label--price {\n  background: rgba(255, 255, 255, 0.7);\n  border-top: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  border-bottom: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitarPage__hero {\n  margin-top: 2rem; }\n\n.guitarPage__name {\n  border-top: 1px solid #dddddd;\n  border-left: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  padding: 0.5rem 1rem;\n  margin-bottom: 0;\n  margin-top: 1rem;\n  font-weight: bold; }\n  .guitarPage__name:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .guitarPage__name p {\n    float: left; }\n  .guitarPage__name button {\n    float: right;\n    margin-top: 0.2rem; }\n\n.guitarPage__about {\n  border: 1px solid #dddddd;\n  padding: 1em 1rem 0;\n  margin-bottom: 1rem; }\n  .guitarPage__about:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__about__item {\n  width: 33.333%;\n  display: inline-block;\n  vertical-align: top;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding-right: 2rem;\n  padding-bottom: 1rem; }\n\n.guitarPage__details {\n  position: relative;\n  left: -1rem;\n  width: calc(100% + 2rem); }\n  .guitarPage__details:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__detail {\n  float: left;\n  width: 33.333%;\n  padding: 1rem;\n  margin: 0; }\n  .guitarPage__detail img {\n    width: 100%; }\n\n.guitar__slide img {\n  width: 100%; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__spec-list {\n  width: calc(50% - 1rem);\n  border: 1px solid #dddddd;\n  margin: 1rem 0; }\n  .necks__spec-list:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .necks__spec-list p {\n    padding: 0.25rem 1rem; }\n\n.necks__spec-list--profiles {\n  float: left; }\n\n.necks__spec-list--nuts {\n  float: right; }\n\n.necks__spec-list__header {\n  border-bottom: 1px solid #dddddd;\n  padding: 1rem;\n  font-weight: bold; }\n\n.necks__pictures img {\n  width: 100%;\n  height: auto;\n  margin-bottom: 1rem; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n\n.contact__credits {\n  margin-top: 4rem; }\n\n.SignUpForm {\n  width: 100%;\n  max-width: 512px;\n  margin: 4rem auto 0;\n  text-align: center; }\n", ""]);
 	
 	// exports
 

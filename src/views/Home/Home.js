@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router'
 import Helmet from "react-helmet";
+import { Parallax } from 'react-parallax';
+
 import ModalButton from '../../components/ModalButton'
 import GuitarSlider from '../../components/GuitarSlider'
-import { Parallax } from 'react-parallax';
+import SignUpForm from '../../components/SignUpForm'
 
 export default class Home extends Component {
   render() {
@@ -54,7 +56,7 @@ export default class Home extends Component {
             </Link>
           </div>
         </Parallax>
-
+        <SignUpForm />
         <div className="home__logo">
           <div className="Logo"></div>
         </div>

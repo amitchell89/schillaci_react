@@ -8,7 +8,6 @@ import Home from './Home';
 import Guitars from './Guitars';
 import GuitarPage from './GuitarPage';
 import Necks from './Necks';
-import Microtonal from './Microtonal';
 import About from './About';
 import Contact from './Contact';
 import AppContainer from './appContainer';
