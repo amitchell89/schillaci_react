@@ -34834,7 +34834,7 @@
   \*************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -34864,29 +34864,58 @@
 	  }
 	
 	  _createClass(SignUpForm, [{
-	    key: "render",
+	    key: 'postData',
+	
+	
+	    // Need to set email in component state, and handle changes via function
+	    // http://stackoverflow.com/questions/23427384/get-form-data-in-reactjs
+	
+	    // handleEmailChange(e) {
+	    //  this.setState({email: e.target.value});
+	    //  console.log(this.state.email)
+	    // }
+	
+	    // <input type="text" name="email" placeholder="Your Email" ref="email" value={this.state.email} onChange={this.handleEmailChange}></input>
+	
+	
+	    value: function postData(e) {
+	      console.log('posting', e.target);
+	      fetch('/email', {
+	        method: 'POST',
+	        headers: {
+	          'Accept': 'application/json',
+	          'Content-Type': 'application/json'
+	        },
+	        body: JSON.stringify({
+	          firstParam: 'yourValue',
+	          secondParam: 'yourOtherValue'
+	        })
+	      });
+	    }
+	  }, {
+	    key: 'render',
 	    value: function render() {
 	
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "SignUpForm" },
+	        'div',
+	        { className: 'SignUpForm' },
 	        _react2.default.createElement(
-	          "h2",
+	          'h2',
 	          null,
-	          "Join Our Mailing List"
+	          'Join Our Mailing List'
 	        ),
 	        _react2.default.createElement(
-	          "form",
-	          { id: "contact_form", method: "post" },
+	          'form',
+	          { id: 'contact_form', method: 'post' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form__row" },
-	            _react2.default.createElement("input", { type: "text", name: "email", placeholder: "Your Email" })
+	            'div',
+	            { className: 'form__row' },
+	            _react2.default.createElement('input', { type: 'text', name: 'email', placeholder: 'Your Email', ref: 'email' })
 	          ),
 	          _react2.default.createElement(
-	            "button",
-	            { type: "submit", form: "email_form", value: "Submit", className: "btn--outline" },
-	            "Join Now"
+	            'button',
+	            { type: 'submit', form: 'email_form', value: 'Submit', className: 'btn--outline', onClick: this.postData },
+	            'Join Now'
 	          )
 	        )
 	      );

@@ -20,7 +20,7 @@ app.listen(3000, function () {
   console.log('Site listening on port 3000!')
 })
 
-// 
+// handle contact page posts
 app.post('/contact', function(req, res) {
   var payload = req.body;
   var name = xss(payload.name)
@@ -49,4 +49,9 @@ app.post('/contact', function(req, res) {
   transporter.close();
 });
 
+// handle email submission posts
+app.post('/email', function(req, res) {
+  var payload = req.body;
+  console.log('test', payload)
+});
 
