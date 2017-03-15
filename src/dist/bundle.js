@@ -34865,21 +34865,8 @@
 	
 	  _createClass(SignUpForm, [{
 	    key: 'postData',
-	
-	
-	    // Need to set email in component state, and handle changes via function
-	    // http://stackoverflow.com/questions/23427384/get-form-data-in-reactjs
-	
-	    // handleEmailChange(e) {
-	    //  this.setState({email: e.target.value});
-	    //  console.log(this.state.email)
-	    // }
-	
-	    // <input type="text" name="email" placeholder="Your Email" ref="email" value={this.state.email} onChange={this.handleEmailChange}></input>
-	
-	
 	    value: function postData(e) {
-	      console.log('posting', e.target);
+	      var email = this.refs.email.value;
 	      fetch('/email', {
 	        method: 'POST',
 	        headers: {
@@ -34887,8 +34874,7 @@
 	          'Content-Type': 'application/json'
 	        },
 	        body: JSON.stringify({
-	          firstParam: 'yourValue',
-	          secondParam: 'yourOtherValue'
+	          email: email
 	        })
 	      });
 	    }
@@ -34914,7 +34900,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'button',
-	            { type: 'submit', form: 'email_form', value: 'Submit', className: 'btn--outline', onClick: this.postData },
+	            { type: 'submit', form: 'email_form', value: 'Submit', className: 'btn--outline', onClick: this.postData.bind(this) },
 	            'Join Now'
 	          )
 	        )
