@@ -1,4 +1,8 @@
 
+.guitar__slider {
+  margin-top: 2rem;
+}
+
 .guitar__slide img{
   width: 100%; 
 }

@@ -30,6 +30,13 @@
   max-width: 360px;
   padding: 2rem;
   margin-top: 2.5rem;
+  @media (max-width: $mq-tablet) {
+    margin-top: 0;
+  }
+  @media (max-width: $mq-mobile) {
+    text-align: center;
+    max-width: 100%;
+  }
 }
 
 .home__logo {

@@ -18,8 +18,8 @@ class GuitarSlider extends Component {
     var { guitars } = this.props;
 
     var settings = {
-      arrows: true,
-      dots: true,
+      arrows: false,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
