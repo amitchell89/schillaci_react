@@ -22,7 +22,7 @@ export default class Home extends Component {
         />
 
         <Parallax
-          className="hero"
+          className="parallax parallax--hero"
           bgImage="../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"
           strength={400}
         >
@@ -44,7 +44,7 @@ export default class Home extends Component {
         </div>
 
         <Parallax
-          className="hero"
+          className="parallax_img"
           bgImage="../../img/Necks/schillaci_guitars_custom_necks_2.jpg"
           strength={400}
         >

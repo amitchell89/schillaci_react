@@ -18,7 +18,7 @@ export default class About extends Component {
           />
         
         <Parallax
-          className="hero"
+          className="parallax parallax--hero"
           bgImage="../../img/About/Darren_Schillaci_In_The_Shop_Guitars.jpg"
           strength={400}
         >

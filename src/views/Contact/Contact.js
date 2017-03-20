@@ -18,7 +18,7 @@ export default class Contact extends Component {
           />
 
         <Parallax
-          className="hero"
+          className="parallax parallax--hero"
           bgImage="../../img/Guitar_Details/schillaci_guitars_detail_riptide_bass_c_02.jpg"
           strength={400}
         >

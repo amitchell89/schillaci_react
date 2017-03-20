@@ -19,6 +19,10 @@ body {
   width: 100%;
 }
 
+.center {
+  text-align: center;
+}
+
 /* Layout */
 
 .site_wrapper {
@@ -40,7 +44,7 @@ body {
 
 /* Fonts */
 
-h1, h2 {
+h1, h2, h3, h4 {
   color: $accent-primary;
 }
 
@@ -101,11 +105,20 @@ button {
 
 /* Hero */
 
-.hero {
+.parallax {
   height: 400px;
   width: calc(100% + 4rem);
   position: relative;
   left: -2rem;
+}
+
+.parallax--hero {
   margin-bottom: 2rem;
+}
+
+.parallax--bottom {
+  height: 600px;
+  bottom: -1rem;
+  margin-top: 2rem;
 }
 

@@ -3,6 +3,11 @@
   margin-top: 0;
 }
 
+
+.necks__specs {
+  @include clearfix();
+}
+
 .necks__spec-list {
   width: calc(50% - 1rem);
   border: 1px solid $gray-light;
@@ -27,6 +32,9 @@
   font-weight: bold;
 }
 
+.necks__cta {
+  padding: 2rem 0;
+}
 
 .necks__pictures {
   img {
