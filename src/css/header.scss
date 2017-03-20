@@ -40,3 +40,28 @@ nav {
     color: $accent-primary;
   }
 }
+
+@media (max-width: $mq-mobile) {
+  .header {
+    position: static;
+  }
+  
+  nav a {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: $mq-tablet) {
+  .Logo {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .header__tagline {
+    display: none;
+  }
+
+  nav {
+    text-align: center;
+  }
+}

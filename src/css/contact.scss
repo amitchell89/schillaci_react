@@ -12,6 +12,8 @@
   margin-bottom: 1rem;
 }
 
-.contact__credits {
-  margin-top: 4rem;
+@media (max-width: $mq-mobile) {
+  .contact__btn {
+    width: 100%;
+  }
 }

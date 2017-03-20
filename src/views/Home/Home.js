@@ -22,7 +22,7 @@ export default class Home extends Component {
         />
 
         <Parallax
-          className="parallax parallax--hero"
+          className="parallax parallax--hero expand"
           bgImage="../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"
           strength={400}
         >
@@ -38,13 +38,13 @@ export default class Home extends Component {
 
         <GuitarSlider />
 
-        <div className="home__testimonial">
+        <div className="home__testimonial expand">
           <h2>"I'm blown away by this guitar. I can feel the rock solid construction and the neck is amazing. Thank you so much for your craftsmanship and for working with me on this idea."</h2>
           <p>- Adam Krichmar, Satisifed Customer</p>
         </div>
 
         <Parallax
-          className="parallax_img"
+          className="parallax expand"
           bgImage="../../img/Necks/schillaci_guitars_custom_necks_2.jpg"
           strength={400}
         >

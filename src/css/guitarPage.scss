@@ -1,5 +1,7 @@
 .guitarPage__hero {
   margin-top: 2rem;
+  width: 100%;
+  height: auto;
 }
 
 .guitarPage__name {
@@ -50,6 +52,18 @@
   padding: 1rem;
   margin: 0;
   img {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mq-tablet) {
+  .guitarPage__about__item, .guitarPage__detail {
+    width: 50%;
+  }
+}
+
+@media (max-width: $mq-mobile) {
+  .guitarPage__about__item, .guitarPage__detail {
     width: 100%;
   }
 }

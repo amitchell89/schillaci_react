@@ -16,7 +16,7 @@ export default class Necks extends Component {
             { property: "og:url", content: ''},
           ] }
           />
-        <Parallax className="parallax parallax--hero" bgImage="../../img/Necks/schillaci_guitars_custom_necks.jpg" strength={400}>
+        <Parallax className="parallax parallax--hero expand" bgImage="../../img/Necks/schillaci_guitars_custom_necks.jpg" strength={400}>
         </Parallax>
 
         <div className="necks__info">
@@ -53,11 +53,11 @@ export default class Necks extends Component {
           </p>
           <div className="center">
             <h4>The 19 Tone Equal Neck</h4>
-            <img src="../../img/Necks/schillaci_guitars_microtonal_neck_2.png" />
+            <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_2.png" />
             <h4>The 31 Tone Equal Neck</h4>
-            <img src="../../img/Necks/schillaci_guitars_microtonal_neck_3.png" />
+            <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_3.png" />
             <h4>The Fretless Flyer Neck</h4>
-            <img src="../../img/Necks/schillaci_guitars_microtonal_neck_1.png" />
+            <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_1.png" />
           </div>
         </div>
 
@@ -67,13 +67,6 @@ export default class Necks extends Component {
             <button className="btn--outline">Send Us a Message</button>
           </Link>
         </div>
-
-        <Parallax
-          className="parallax parallax--bottom"
-          bgImage="../../img/Necks/schillaci_guitars_all_necks.jpg"
-          strength={400}
-        >
-        </Parallax>
       </div>
     )
   }

@@ -18,7 +18,7 @@ export default class About extends Component {
           />
         
         <Parallax
-          className="parallax parallax--hero"
+          className="parallax parallax--hero expand"
           bgImage="../../img/About/Darren_Schillaci_In_The_Shop_Guitars.jpg"
           strength={400}
         >
@@ -43,7 +43,7 @@ export default class About extends Component {
           <Link to="/contact">
             <button className="btn--outline">Send us a Message</button>
           </Link>
-          <div className="contact__credits">
+          <div className="about__credits">
             <p>
               Website Design by <a href="http://www.mitchellaaron.com">Aaron Mitchell</a>
             </p>

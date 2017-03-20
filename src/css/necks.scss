@@ -26,6 +26,15 @@
   float: right;
 }
 
+@media (max-width: $mq-tablet) {
+  .necks__spec-list {
+    width: 100%;
+  }
+  .necks__spec-list--profiles, .necks__spec-list--nuts {
+    float: none;
+  }
+}
+
 .necks__spec-list__header {
   border-bottom: 1px solid $gray-light;
   padding: 1rem;
@@ -36,10 +45,8 @@
   padding: 2rem 0;
 }
 
-.necks__pictures {
-  img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-  }
+.necks__img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
 }

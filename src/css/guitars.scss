@@ -1,6 +1,6 @@
 
 .guitar__thumb__container {
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .guitar__thumb {
@@ -8,6 +8,12 @@
   padding: 1rem;
   display: inline-block;
   img {
+    width: 100%;
+  }
+  @media (max-width: $mq-tablet) {
+    width: 50%;
+  }
+  @media (max-width: $mq-mobile) {
     width: 100%;
   }
 }

@@ -18,7 +18,7 @@ export default class ContactForm extends Component {
             <label>Your Message:</label>
             <textarea type="text" name="message" placeholder="Your Message" rows="7"></textarea>
           </div>
-          <button type="submit" form="contact_form" value="Submit" className="btn--outline">Send Message</button>
+          <button type="submit" form="contact_form" value="Submit" className="contact__btn btn--outline">Send Message</button>
         </form>
       </div>
     )

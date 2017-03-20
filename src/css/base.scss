@@ -17,6 +17,9 @@ body {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  @media (max-width: $mq-mobile) {
+    background-image: none;
+  }
 }
 
 .center {
@@ -36,10 +39,26 @@ body {
 .content_wrapper {
   padding: 1rem 2rem;
   background: $white;
+  @media (max-width: $mq-mobile) {
+    padding: 1rem;
+  }
 }
 
 .content {
   padding-top: 138px;
+  @media (max-width: $mq-mobile) {
+    padding-top: 0;
+  }
+}
+
+.expand {
+  width: calc(100% + 4rem);
+  position: relative;
+  left: -2rem;
+  @media (max-width: $mq-mobile) {
+    width: calc(100% + 2rem);
+    left: -1rem;
+  }
 }
 
 /* Fonts */
@@ -107,18 +126,12 @@ button {
 
 .parallax {
   height: 400px;
-  width: calc(100% + 4rem);
-  position: relative;
-  left: -2rem;
+  @media (max-width: $mq-tablet) {
+    height: 300px;
+  }
 }
 
 .parallax--hero {
   margin-bottom: 2rem;
-}
-
-.parallax--bottom {
-  height: 600px;
-  bottom: -1rem;
-  margin-top: 2rem;
 }
 
