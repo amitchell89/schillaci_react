@@ -6,6 +6,17 @@ var nodemailer = require('nodemailer');
 var helmet = require('helmet')
 var xss = require('xss');
 
+// MongoDb
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/schillaci');
+
+// Make db accessible to our router
+app.use(function(req,res,next){
+  req.db = db;
+  next();
+});
+
 // Helmet setup
 app.use(helmet())
 app.use(express.static('src'))
@@ -53,5 +64,24 @@ app.post('/contact', function(req, res) {
 app.post('/email', function(req, res) {
   var payload = req.body;
   console.log('test', payload)
+
+  // Set our internal DB variable
+  var db = req.db;
+  var collection = db.get('emails');
+  // Submit to the DB
+   collection.insert(payload, function (err, doc) {
+       if (err) {
+         // If it failed, return error
+         res.send("There was a problem adding the information to the database.");
+       }
+       else {
+         // And forward to success page
+         res.redirect("userlist");
+       }
+   });
+
 });
+
+
+
 
