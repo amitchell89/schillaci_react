@@ -23,6 +23,20 @@ app.use(express.static('src'))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// create reusable transporter object using the default SMTP transport
+// NodeMailer 0.7
+var password = process.env.PASSWORD || null
+var user = process.env.USER || null
+var service = process.env.SERVICE || null
+
+var transporter = nodemailer.createTransport("SMTP", {
+  service: service,
+  auth: {
+    user: user,
+    pass: password
+  }
+});
+
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname +'/index.html'));
 })
@@ -34,36 +48,17 @@ app.listen(3000, function () {
 // handle contact page posts
 app.post('/contact', function(req, res) {
   var payload = req.body;
-  var name = xss(payload.name)
-  var email = xss(payload.email)
-  var message = xss(payload.message)
-
+  var name = xss(payload.name);
+  var email = xss(payload.email);
+  var message = xss(payload.message);
   var email_message = '<b>From:</b> ' + name + '<br /><br /><b>Email:</b> ' + email + '<br /><br /><b>Message:</b> ' + message;
-
-  // setup e-mail data with unicode symbols
-  var mailOptions = {
-    from: '"Site Name Here" <' + user + '>', // sender address
-    to: 'aaronmitchellart@gmail.com', // list of receivers
-    subject: 'New Message From Your Website', // Subject line
-    text: email_message, // plaintext body
-    html: email_message // html body
-  };
-
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        res.redirect('/post?post=fail')
-        return console.log(error);
-    }
-    res.redirect('/post?post=success')
-  });
-  transporter.close();
+  var subject = 'Schillaci Guitars: New Message';
+  sendMail(subject, email_message, res);
 });
 
 // handle email submission posts
 app.post('/email', function(req, res) {
   var payload = req.body;
-
   // Set our internal DB variable
   var db = req.db;
   var collection = db.get('emails');
@@ -74,11 +69,33 @@ app.post('/email', function(req, res) {
          res.send("There was a problem adding the information to the database.");
        }
        else {
-         res.end();
+          var subject = 'Schillaci Guitars: New Email Signup';
+          var message = '<b>New Email Signup:</b> ' + payload.email;
+          sendMail(subject, message, res);
        }
    });
-
 });
+
+// Send Emails
+function sendMail(subject, message, res) {
+  // setup e-mail data with unicode symbols
+  var mailOptions = {
+    from: '"Schillaci Guitars" <' + user + '>', // sender address
+    to: 'aaronmitchellart@gmail.com', // list of receivers
+    subject: subject, // Subject line
+    text: message, // plaintext body
+    html: message // html body
+  };
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+        res.end();
+        return console.log(error);
+    }
+    res.end();
+  });
+  transporter.close();
+}
 
 
 
