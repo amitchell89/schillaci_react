@@ -63,7 +63,6 @@ app.post('/contact', function(req, res) {
 // handle email submission posts
 app.post('/email', function(req, res) {
   var payload = req.body;
-  console.log('test', payload)
 
   // Set our internal DB variable
   var db = req.db;
@@ -75,8 +74,7 @@ app.post('/email', function(req, res) {
          res.send("There was a problem adding the information to the database.");
        }
        else {
-         // And forward to success page
-         res.redirect("userlist");
+         res.end();
        }
    });
 
