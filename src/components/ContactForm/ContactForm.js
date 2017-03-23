@@ -11,7 +11,6 @@ export default class ContactForm extends Component {
 
   postData(e) {
     e.preventDefault();
-    console.log('attempting send')
     let name = this.refs.name.value;
     let email = this.refs.email.value;
     let message = this.refs.message.value;

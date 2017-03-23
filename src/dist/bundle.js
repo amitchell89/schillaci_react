@@ -35717,7 +35717,6 @@
 	    key: 'postData',
 	    value: function postData(e) {
 	      e.preventDefault();
-	      console.log('attempting send');
 	      var name = this.refs.name.value;
 	      var email = this.refs.email.value;
 	      var message = this.refs.message.value;

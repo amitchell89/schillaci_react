@@ -48,8 +48,6 @@ app.listen(3000, function () {
 // handle contact page posts
 app.post('/contact', function(req, res) {
   var payload = req.body;
-  console.log('post on contact')
-  console.log('check', payload)
   var name = xss(payload.name);
   var email = xss(payload.email);
   var message = xss(payload.message);
@@ -95,6 +93,7 @@ function sendMail(subject, message, res) {
         return console.log(error);
     }
     res.end();
+    return console.log('mail sent successfully');
   });
   transporter.close();
 }
