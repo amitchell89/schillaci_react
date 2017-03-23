@@ -41,8 +41,8 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname +'/index.html'));
 })
 
-app.listen(3000, function () {
-  console.log('Site listening on port 3000!')
+app.listen(3003, function () {
+  console.log('Site listening on port 3003!')
 })
 
 // handle contact page posts
