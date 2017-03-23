@@ -35678,7 +35678,7 @@
   \***************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -35701,58 +35701,110 @@
 	var ContactForm = function (_Component) {
 	  _inherits(ContactForm, _Component);
 	
-	  function ContactForm() {
+	  function ContactForm(props) {
 	    _classCallCheck(this, ContactForm);
 	
-	    return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
+	
+	    _this.state = {
+	      signupAlert: false,
+	      alertStatus: null
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(ContactForm, [{
-	    key: "render",
+	    key: 'postData',
+	    value: function postData(e) {
+	      e.preventDefault();
+	      console.log('attempting send');
+	      var name = this.refs.name.value;
+	      var email = this.refs.email.value;
+	      var message = this.refs.message.value;
+	      var parseJson = function parseJson(response) {
+	        return response.json();
+	      };
+	      fetch('/contact', {
+	        method: 'POST',
+	        headers: {
+	          'Accept': 'application/json',
+	          'Content-Type': 'application/json'
+	        },
+	        body: JSON.stringify({
+	          name: name,
+	          email: email,
+	          message: message
+	        })
+	      }).then(function (response) {
+	        this.triggerAlert(response);
+	      }.bind(this));
+	    }
+	  }, {
+	    key: 'triggerAlert',
+	    value: function triggerAlert(response) {
+	      this.setState({ signupAlert: true, alertStatus: response.status });
+	      document.getElementById("name").value = "";
+	      document.getElementById("email").value = "";
+	      document.getElementById("message").value = "";
+	    }
+	  }, {
+	    key: 'render',
 	    value: function render() {
+	      var _state = this.state,
+	          signupAlert = _state.signupAlert,
+	          alertStatus = _state.alertStatus;
 	
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "form",
-	          { id: "contact_form", method: "post" },
+	          'form',
+	          { id: 'contact_form' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form__row" },
+	            'div',
+	            { className: 'form__row' },
 	            _react2.default.createElement(
-	              "label",
+	              'label',
 	              null,
-	              "Your Name:"
+	              'Your Name:'
 	            ),
-	            _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Your Name" })
+	            _react2.default.createElement('input', { ref: 'name', id: 'name', type: 'text', name: 'name', placeholder: 'Your Name' })
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form__row" },
+	            'div',
+	            { className: 'form__row' },
 	            _react2.default.createElement(
-	              "label",
+	              'label',
 	              null,
-	              "Your Email Address:"
+	              'Your Email Address:'
 	            ),
-	            _react2.default.createElement("input", { type: "text", name: "email", placeholder: "Your Email" })
+	            _react2.default.createElement('input', { ref: 'email', id: 'email', type: 'text', name: 'email', placeholder: 'Your Email' })
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "form__row" },
+	            'div',
+	            { className: 'form__row' },
 	            _react2.default.createElement(
-	              "label",
+	              'label',
 	              null,
-	              "Your Message:"
+	              'Your Message:'
 	            ),
-	            _react2.default.createElement("textarea", { type: "text", name: "message", placeholder: "Your Message", rows: "7" })
+	            _react2.default.createElement('textarea', { ref: 'message', id: 'message', type: 'text', name: 'message', placeholder: 'Your Message', rows: '7' })
 	          ),
 	          _react2.default.createElement(
-	            "button",
-	            { type: "submit", form: "contact_form", value: "Submit", className: "contact__btn btn--outline" },
-	            "Send Message"
+	            'button',
+	            { onClick: this.postData.bind(this), type: 'submit', form: 'contact_form', value: 'Submit', className: 'contact__btn btn--outline' },
+	            'Send Message'
 	          )
-	        )
+	        ),
+	        signupAlert ? alertStatus === 200 ? _react2.default.createElement(
+	          'p',
+	          { className: 'alert--success' },
+	          'Your message has been sent! Thank You.'
+	        ) : _react2.default.createElement(
+	          'p',
+	          { className: 'alert--error' },
+	          'We\'re sorry, there was an error sending your message.'
+	        ) : null
 	      );
 	    }
 	  }]);
