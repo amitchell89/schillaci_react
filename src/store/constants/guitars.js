@@ -108,7 +108,7 @@ export const guitars = [
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_4.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_a_01.jpg",
-      "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_a_01.jpg"
+      "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_a_02.jpg"
       ],
     hidden: false
   },
