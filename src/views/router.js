@@ -11,7 +11,7 @@ import Necks from './Necks';
 import About from './About';
 import Contact from './Contact';
 import AppContainer from './appContainer';
-import NotFound from './notFound';
+import NotFound from './NotFound';
 
 import * as meta from '../store/constants/meta_info';
 

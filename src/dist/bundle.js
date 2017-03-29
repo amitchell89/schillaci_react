@@ -22099,9 +22099,9 @@
 	
 	var _appContainer2 = _interopRequireDefault(_appContainer);
 	
-	var _notFound = __webpack_require__(/*! ./notFound */ 331);
+	var _NotFound = __webpack_require__(/*! ./NotFound */ 331);
 	
-	var _notFound2 = _interopRequireDefault(_notFound);
+	var _NotFound2 = _interopRequireDefault(_NotFound);
 	
 	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 332);
 	
@@ -22144,7 +22144,7 @@
 	            _react2.default.createElement(_reactRouter.Route, { path: '/necks', component: _Necks2.default, meta: meta }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default, meta: meta }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default, meta: meta }),
-	            _react2.default.createElement(_reactRouter.Route, { path: '*', component: _notFound2.default, meta: meta })
+	            _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFound2.default, meta: meta })
 	          )
 	        )
 	      );
@@ -36207,9 +36207,9 @@
 
 /***/ },
 /* 331 */
-/*!*******************************!*\
-  !*** ./src/views/notFound.js ***!
-  \*******************************/
+/*!****************************************!*\
+  !*** ./src/views/NotFound/NotFound.js ***!
+  \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
