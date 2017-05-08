@@ -29855,6 +29855,7 @@
 	var guitars = exports.guitars = [{
 	  name: "LSG",
 	  type: "guitar",
+	  "style": "set",
 	  price: "$2499.00",
 	  about: ["1 5/8 thick 2pc. Mahogany body", "3pc. Mahogany neck w/ rosewood fingerboard", "24 5/8 short scale neck", "Headstock/ Pickguard match w/ matching truss cover plate", "Single pickup / Single volume control configuration", "Standard stop bar and tailpiece", "Side mounted output jack", "\"Greenglow\" red mahogany finish"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_lsg_guitar_1.png",
@@ -29864,6 +29865,7 @@
 	}, {
 	  name: "LP Junior",
 	  type: "guitar",
+	  "style": "set",
 	  price: "$2999.00",
 	  about: ["12 tone ultra plus fingerboard", "All maple body + neck", "Chambered body with flame top", "59 sunburst top", "All gold back + sides", "25.5 long scale", "P-90 pickup", "Wraparound stop tailpiece"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_junior_guitar_1.jpg",
@@ -29873,6 +29875,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  "style": "knucklehead",
 	  price: "$1599.00",
 	  about: ["One Piece Ash Body", "72 Matching Stained Gloss Finish", "Competition Racing Stripes", "Rosewood Neck with Skunk Stripe", "Black Tusq Nut", "Reverse Tremolo", "Vintage Bridge Plate with Custom Saddles", "Humbuckers with Individual Tone Controls", "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_1.jpg",
@@ -29882,6 +29885,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  "style": "knucklehead",
 	  price: "$1199.00",
 	  about: ["One Piece Mahogany Ribbon Body with Black Binding", "Natural Hand Rubbed Satin Finish", "Vintage Laotian Ebony Neck", "Black Tusq Nut", "24 Fret Short Scale", "Hard Tail Bridge with Black Hardware", "Alternating Bobbin Humbuckers", "Two Volume and Two Tone Controls with Blade Switch", "Side Mounted Jack"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_2.jpg",
@@ -29891,6 +29895,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  "style": "knucklehead",
 	  price: "$899.00",
 	  about: ["Multi-laminated body", "Tusq nut", "22 fret long scale", "Hard tail bridge", "Two volume, two tone with blade switch", "Side mounted jack"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_3.jpg",
@@ -29900,6 +29905,7 @@
 	}, {
 	  name: "Knucklehead",
 	  type: "guitar",
+	  "style": "knucklehead",
 	  price: "$1799.00",
 	  about: ["Three Piece Ash Body", "Flame Maple Gloss Finish", "Matching Seafoam Green Peghead, Pickguard and Back", "Chambered with F Hole", "One Piece Maple Neck with Skunk Stripe", "White Tusq Nut", "Sperzel Locking Tuners", "Vintage Reverse Tremolo with Modern Saddles", "Chrome Covered Humbuckers", "Elongated Pickguard", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_4.jpg",
@@ -29908,6 +29914,7 @@
 	  hidden: false
 	}, {
 	  name: "Knucklehead",
+	  "style": "knucklehead",
 	  type: "guitar",
 	  price: "$899.00",
 	  about: ["Solid Maple Body", "Solid Chartreuse Yellow Gloss Finish", "Rosewood Finger Board Non Skunk Stripe Neck", "Upper Tross Rod Adjustment", "Vintage Reverse Tremolo", "Chrome Covered Humbuckers with Individual Tone Controls", "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs", "Top Mounted Jack Cup"],
@@ -29918,6 +29925,7 @@
 	}, {
 	  name: "Hammerhead",
 	  type: "guitar",
+	  "style": "hammerhead",
 	  price: "$1499.00",
 	  about: ["Three Piece Mahogany Body", "Solid Seafoam Green Gloss Finish", "Matching Peghead", "Gabon Ebony Finger Board with Pearl Dots", "Graf-Tech Nut", "Reverse Vintage Tremolo with Graf-Tech Saddles", "Three Single Coil Pickups", "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_1.jpg",
@@ -29927,6 +29935,7 @@
 	}, {
 	  name: "7 String Hammerhead",
 	  type: "guitar",
+	  "style": "hammerhead",
 	  price: "1199.00",
 	  about: ["One Piece Mahogany Ribbon Body", "Natural Hand Rubbed Satin Finish", "One Piece Maple Neck with Black Binding", "Micarta Nut", "Hard Tail Bridge with Black Hardware", "7 String Humbuckers with Individual Tone Controls", "Elongated Spacing Between Volume and Tone Knobs", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_2.jpg",
@@ -29936,6 +29945,7 @@
 	}, {
 	  name: "Hammerhead",
 	  type: "guitar",
+	  "style": "hammerhead",
 	  price: "$999.00",
 	  about: ["1 PC. Pine body", "Clear \"GreenGlow\" finish", "22 fret rosewood neck", "Standard elongated pick guard", "Alnico sin/sin/sin pickup configuration", "w/ standard controls", "Top mounted jack cup", "Toggle \"kill\" switch"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_3.jpg",
@@ -29945,6 +29955,7 @@
 	}, {
 	  name: "Roy's Caster",
 	  type: "guitar",
+	  "style": "hammerhead",
 	  price: "$999.00",
 	  about: ["3 piece popular body", "Red gloss finish", "1 piece maple neck", "Matching peg head", "Three single coil pickups", "Elongated pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_royscaster_1.jpg",
@@ -29954,6 +29965,7 @@
 	}, {
 	  name: "Riptide Bass I",
 	  type: "bass",
+	  "style": "bolt",
 	  price: "$899.00",
 	  about: ["2 PC. Popular body", "Red gloss finish", "Rosewood fingerboard", "Single J pickup", "Elongated vintage style pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_1.jpg",
@@ -29963,6 +29975,7 @@
 	}, {
 	  name: "Riptide Bass I",
 	  type: "bass",
+	  "style": "bolt",
 	  price: "$799.00",
 	  about: ["2 PC. Popular body", "Red gloss finish", "Rosewood fingerboard", "Single J pickup", "Elongated vintage style pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_2.jpg",
@@ -29972,6 +29985,7 @@
 	}, {
 	  name: "Riptide Bass II",
 	  type: "bass",
+	  "style": "bolt",
 	  price: "$999.00",
 	  about: ["Three Piece Alder Body", "Solid Antique White Gloss Finish", "Matching Peghead", "One Piece Maple Neck", "White Tusq Nut", "Two J Pickups", "Elongated Tortoise Shell Vintage Style Pickguard", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_3.jpg",
@@ -29981,6 +29995,7 @@
 	}, {
 	  name: "Bosko Bass",
 	  type: "bass",
+	  "style": "bolt",
 	  price: "$1199.00",
 	  about: ["One Piece Mahogany Ribbon Body", "Natural Hand Rubbed Satin Finish", "One Piece Maple Neck with Black Binding and Black Inlays", "Micarta Nut", "5 String Hard Tail Bridge with Black Hardware", "Single P Pickup", "Top Mounted Jack Cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_bosko_bass_2.jpg",
@@ -29990,6 +30005,7 @@
 	}, {
 	  name: "Bosko Bass",
 	  type: "bass",
+	  "style": "bolt",
 	  price: "",
 	  about: ["3 PC. Alder body ( east coast) sea green", "Maple neck w/ rosewood board", "Single P pickup", "Enlongated vintage style pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_bosko_bass_1.png",
@@ -29999,6 +30015,7 @@
 	}, {
 	  name: "PJ Bass",
 	  type: "bass",
+	  "style": "bolt",
 	  price: "$799.00",
 	  about: ["70's style 1 PC. Maple neck w/ binding + big block inlays", "60's style Electronics w/ concentric pots + knobs", "50's style Basswood body w/ large face pick guard", "Hip shot string thru body bridge", "Flat black finish"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_pj_bass_1.png",
@@ -30008,6 +30025,7 @@
 	}, {
 	  name: "Kestral",
 	  type: "guitar",
+	  "style": "hammerhead",
 	  price: "$1299.00",
 	  about: ["5 string orchestral guitar tuned in 5th's", "1 bass string & 4 guitar strings each with individual saddles", "24 fret. 26.5\" scale length", "Matching rosewood truss rod cover plate", "2 PC. Mahogany body", "Maple neck w/angled peghead", "Rosewood fingerboard", "Top mounted jack cup", "Neck bolt ferrules", "26.5\" scale length", "2 Lace Sensor humbuckers", "Coil tapped w/ push-pull tone pots"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_kestral_guitar_1.jpg",
@@ -34970,9 +34988,9 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 210);
 	
-	var _GuitarThumb = __webpack_require__(/*! ../../components/GuitarThumb */ 337);
+	var _GuitarGallery = __webpack_require__(/*! ../../containers/GuitarGallery */ 338);
 	
-	var _GuitarThumb2 = _interopRequireDefault(_GuitarThumb);
+	var _GuitarGallery2 = _interopRequireDefault(_GuitarGallery);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35000,38 +35018,26 @@
 	  _createClass(Guitars, [{
 	    key: 'render',
 	    value: function render() {
-	      var guitars = this.props.guitars;
 	
+	      var guitars = this.props.guitars.filter(function (n) {
+	        return n.hidden !== true;
+	      });
 	
-	      var guitar_list = guitars.filter(function (n) {
-	        return n.hidden !== true && n.type === 'guitar';
+	      var hammerhead_list = guitars.filter(function (n) {
+	        return n.type === 'guitar' && n.style === 'hammerhead';
+	      });
+	
+	      var knucklehead_list = guitars.filter(function (n) {
+	        return n.type === 'guitar' && n.style === 'knucklehead';
+	      });
+	
+	      var set_neck_list = guitars.filter(function (n) {
+	        return n.type === 'guitar' && n.style === 'set';
 	      });
 	
 	      var bass_list = guitars.filter(function (n) {
-	        return n.hidden !== true && n.type === 'bass';
+	        return n.type === 'bass';
 	      });
-	
-	      console.log('check', guitars);
-	
-	      var guitarThumbs = _react2.default.createElement(
-	        'div',
-	        { className: 'guitar__gallery' },
-	        guitar_list.map(function (s, i) {
-	          var thumb = '../../img/' + s.thumb_photo;
-	          var link = '/guitar/' + i;
-	          return _react2.default.createElement(_GuitarThumb2.default, { link: link, thumb: thumb, name: s.name, price: s.price });
-	        }.bind(this))
-	      );
-	
-	      var bassThumbs = _react2.default.createElement(
-	        'div',
-	        { className: 'guitar__gallery' },
-	        bass_list.map(function (s, i) {
-	          var thumb = '../../img/' + s.thumb_photo;
-	          var link = '/guitar/' + i;
-	          return _react2.default.createElement(_GuitarThumb2.default, { link: link, thumb: thumb, name: s.name, price: s.price });
-	        }.bind(this))
-	      );
 	
 	      return _react2.default.createElement(
 	        'div',
@@ -35046,28 +35052,27 @@
 	          _react2.default.createElement(
 	            'h2',
 	            null,
-	            'Bolt On Guitars'
+	            'Hammerhead - Bolt On Guitars'
 	          ),
+	          _react2.default.createElement(_GuitarGallery2.default, { guitars: hammerhead_list }),
 	          _react2.default.createElement(
-	            'div',
+	            'h2',
 	            null,
-	            guitarThumbs
+	            'Knucklehead - Bolt On Guitars'
 	          ),
+	          _react2.default.createElement(_GuitarGallery2.default, { guitars: knucklehead_list }),
 	          _react2.default.createElement(
 	            'h2',
 	            null,
 	            'Set Neck Guitars'
 	          ),
+	          _react2.default.createElement(_GuitarGallery2.default, { guitars: set_neck_list }),
 	          _react2.default.createElement(
 	            'h2',
 	            null,
 	            'Bolt On Basses'
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            bassThumbs
-	          )
+	          _react2.default.createElement(_GuitarGallery2.default, { guitars: bass_list })
 	        )
 	      );
 	    }
@@ -36355,11 +36360,15 @@
 	    key: 'render',
 	    value: function render() {
 	      var _props = this.props,
-	          link = _props.link,
 	          thumb = _props.thumb,
 	          name = _props.name,
-	          price = _props.price;
+	          price = _props.price,
+	          thumb = _props.thumb,
+	          i = _props.i;
 	
+	
+	      thumb = '../../img/' + thumb;
+	      var link = '/guitar/' + i;
 	
 	      return _react2.default.createElement(
 	        _reactRouter.Link,
@@ -36391,6 +36400,69 @@
 	}(_react.Component);
 	
 	exports.default = GuitarThumb;
+
+/***/ },
+/* 338 */
+/*!*******************************************************!*\
+  !*** ./src/containers/GuitarGallery/GuitarGallery.js ***!
+  \*******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
+	var _GuitarThumb = __webpack_require__(/*! ../../components/GuitarThumb */ 337);
+	
+	var _GuitarThumb2 = _interopRequireDefault(_GuitarThumb);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var GuitarGallery = function (_Component) {
+	  _inherits(GuitarGallery, _Component);
+	
+	  function GuitarGallery() {
+	    _classCallCheck(this, GuitarGallery);
+	
+	    return _possibleConstructorReturn(this, (GuitarGallery.__proto__ || Object.getPrototypeOf(GuitarGallery)).apply(this, arguments));
+	  }
+	
+	  _createClass(GuitarGallery, [{
+	    key: 'render',
+	    value: function render() {
+	      var guitars = this.props.guitars;
+	
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'guitar__gallery' },
+	        guitars.map(function (s, i) {
+	          return _react2.default.createElement(_GuitarThumb2.default, { thumb: s.thumb_photo, name: s.name, price: s.price, i: i });
+	        }.bind(this))
+	      );
+	    }
+	  }]);
+	
+	  return GuitarGallery;
+	}(_react.Component);
+	
+	exports.default = GuitarGallery;
 
 /***/ }
 /******/ ]);

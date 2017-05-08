@@ -4,7 +4,10 @@ import { Link } from 'react-router';
 export default class GuitarThumb extends Component {
   render() {
 
-    var { link, thumb, name, price } = this.props;
+    var { thumb, name, price, thumb, i } = this.props;
+
+    thumb = '../../img/' + thumb;
+    let link = '/guitar/' + i;
 
     return (
       <Link to={link}>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Helmet from "react-helmet";
 import { Link } from 'react-router';
 
-import GuitarThumb from '../../components/GuitarThumb';
+import GuitarGallery from '../../containers/GuitarGallery';
 
 function mapStateToProps(state) {
    return {
@@ -13,39 +13,26 @@ function mapStateToProps(state) {
 
 class Guitars extends Component {
   render() {
-    const { guitars } = this.props;
 
-    const guitar_list = guitars.filter(function(n) {
-      return n.hidden !== true && n.type === 'guitar';
+    const guitars = this.props.guitars.filter(function(n) {
+      return n.hidden !== true;
+    });
+
+    const hammerhead_list = guitars.filter(function(n) {
+      return n.type === 'guitar' && n.style === 'hammerhead';
+    });
+
+    const knucklehead_list = guitars.filter(function(n) {
+      return n.type === 'guitar' && n.style === 'knucklehead';
+    });
+
+    const set_neck_list = guitars.filter(function(n) {
+      return n.type === 'guitar' && n.style === 'set';
     });
 
     const bass_list = guitars.filter(function(n) {
-      return n.hidden !== true && n.type === 'bass';
+      return n.type === 'bass';
     });
-
-    console.log('check', guitars)
-
-    const guitarThumbs = (
-      <div className="guitar__gallery">
-        {guitar_list.map(function (s, i) {
-          let thumb = '../../img/' + s.thumb_photo;
-          let link = '/guitar/' + i;
-          return (
-            <GuitarThumb link={link} thumb={thumb} name={s.name} price={s.price} />
-          )}.bind(this))}
-      </div>
-    )
-
-    const bassThumbs = (
-      <div className="guitar__gallery">
-        {bass_list.map(function (s, i) {
-          let thumb = '../../img/' + s.thumb_photo;
-          let link = '/guitar/' + i;
-          return (
-            <GuitarThumb link={link} thumb={thumb} name={s.name} price={s.price} />
-          )}.bind(this))}
-      </div>
-    )
 
     return (
       <div>
@@ -58,11 +45,14 @@ class Guitars extends Component {
           ] }
           />
         <div className="guitar__thumb__container">
-          <h2>Bolt On Guitars</h2>
-          <div>{guitarThumbs}</div>
+          <h2>Hammerhead - Bolt On Guitars</h2>
+          <GuitarGallery guitars={hammerhead_list} />
+          <h2>Knucklehead - Bolt On Guitars</h2>
+          <GuitarGallery guitars={knucklehead_list} />
           <h2>Set Neck Guitars</h2>
+          <GuitarGallery guitars={set_neck_list} />
           <h2>Bolt On Basses</h2>
-          <div>{bassThumbs}</div>
+          <GuitarGallery guitars={bass_list} />
         </div>
       </div>
     )

@@ -2,6 +2,7 @@ export const guitars = [
   {
     name: "LSG",
     type: "guitar",
+    "style": "set",
     price: "$2499.00",
     about: [
       "1 5/8 thick 2pc. Mahogany body",
@@ -26,6 +27,7 @@ export const guitars = [
   {
     name: "LP Junior",
     type: "guitar",
+    "style": "set",
     price: "$2999.00",
     about: [
       "12 tone ultra plus fingerboard",
@@ -48,6 +50,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    "style": "knucklehead",
     price: "$1599.00",
     about: [
       "One Piece Ash Body",
@@ -72,6 +75,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    "style": "knucklehead",
     price: "$1199.00",
     about: [
       "One Piece Mahogany Ribbon Body with Black Binding",
@@ -95,6 +99,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    "style": "knucklehead",
     price: "$899.00",
     about: [
       "Multi-laminated body",
@@ -115,6 +120,7 @@ export const guitars = [
   {
     name: "Knucklehead",
     type: "guitar",
+    "style": "knucklehead",
     price: "$1799.00",
     about: [
       "Three Piece Ash Body",
@@ -140,6 +146,7 @@ export const guitars = [
   },
   {
     name: "Knucklehead",
+    "style": "knucklehead",
     type: "guitar",
     price: "$899.00",
     about: [
@@ -163,6 +170,7 @@ export const guitars = [
   {
     name: "Hammerhead",
     type: "guitar",
+    "style": "hammerhead",
     price: "$1499.00",
     about: [
       "Three Piece Mahogany Body",
@@ -183,6 +191,7 @@ export const guitars = [
   {
     name: "7 String Hammerhead",
     type: "guitar",
+    "style": "hammerhead",
     price: "1199.00",
     about: [
       "One Piece Mahogany Ribbon Body",
@@ -205,6 +214,7 @@ export const guitars = [
   {
     name: "Hammerhead",
     type: "guitar",
+    "style": "hammerhead",
     price: "$999.00",
     about: [
       "1 PC. Pine body",
@@ -228,6 +238,7 @@ export const guitars = [
   {
     name: "Roy's Caster",
     type: "guitar",
+    "style": "hammerhead",
     price: "$999.00",
     about: [
       "3 piece popular body",
@@ -249,6 +260,7 @@ export const guitars = [
   {
     name: "Riptide Bass I",
     type: "bass",
+    "style": "bolt",
     price: "$899.00",
     about: [
       "2 PC. Popular body",
@@ -270,6 +282,7 @@ export const guitars = [
   {
     name: "Riptide Bass I",
     type: "bass",
+    "style": "bolt",
     price: "$799.00",
     about: [
       "2 PC. Popular body",
@@ -290,6 +303,7 @@ export const guitars = [
   {
     name: "Riptide Bass II",
     type: "bass",
+    "style": "bolt",
     price: "$999.00",
     about: [
       "Three Piece Alder Body",
@@ -312,6 +326,7 @@ export const guitars = [
   {
     name: "Bosko Bass",
     type: "bass",
+    "style": "bolt",
     price: "$1199.00",
     about: [
       "One Piece Mahogany Ribbon Body",
@@ -334,6 +349,7 @@ export const guitars = [
   {
     name: "Bosko Bass",
     type: "bass",
+    "style": "bolt",
     price: "",
     about: [
       "3 PC. Alder body ( east coast) sea green",
@@ -354,6 +370,7 @@ export const guitars = [
   {
     name: "PJ Bass",
     type: "bass",
+    "style": "bolt",
     price: "$799.00",
     about: [
       "70's style 1 PC. Maple neck w/ binding + big block inlays",
@@ -374,6 +391,7 @@ export const guitars = [
   {
     name: "Kestral",
     type: "guitar",
+    "style": "hammerhead",
     price: "$1299.00",
     about: [
       "5 string orchestral guitar tuned in 5th's",
