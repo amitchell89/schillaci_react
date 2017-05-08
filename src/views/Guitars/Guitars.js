@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Helmet from "react-helmet";
 import { Link } from 'react-router';
 
+import GuitarThumb from '../../components/GuitarThumb';
+
 function mapStateToProps(state) {
    return {
     guitars: state.guitars
@@ -26,19 +28,10 @@ class Guitars extends Component {
     const guitarThumbs = (
       <div className="guitar__gallery">
         {guitar_list.map(function (s, i) {
-
           let thumb = '../../img/' + s.thumb_photo;
-          let guitar_link = '/guitar/' + i;
+          let link = '/guitar/' + i;
           return (
-            <Link to={guitar_link}>
-              <div className="guitar__thumb">
-                <img src={thumb} />
-                <div className="guitar__thumb__label">
-                  <span className="guitar__thumb__label--name">{s.name}</span>
-                  <span className="guitar__thumb__label--price">{s.price}</span>
-                </div>
-              </div>
-            </Link>
+            <GuitarThumb link={link} thumb={thumb} name={s.name} price={s.price} />
           )}.bind(this))}
       </div>
     )
@@ -46,19 +39,10 @@ class Guitars extends Component {
     const bassThumbs = (
       <div className="guitar__gallery">
         {bass_list.map(function (s, i) {
-
           let thumb = '../../img/' + s.thumb_photo;
-          let bass_link = '/guitar/' + i;
+          let link = '/guitar/' + i;
           return (
-            <Link to={bass_link}>
-              <div className="guitar__thumb">
-                <img src={thumb} />
-                <div className="guitar__thumb__label">
-                  <span className="guitar__thumb__label--name">{s.name}</span>
-                  <span className="guitar__thumb__label--price">{s.price}</span>
-                </div>
-              </div>
-            </Link>
+            <GuitarThumb link={link} thumb={thumb} name={s.name} price={s.price} />
           )}.bind(this))}
       </div>
     )
@@ -74,7 +58,10 @@ class Guitars extends Component {
           ] }
           />
         <div className="guitar__thumb__container">
+          <h2>Bolt On Guitars</h2>
           <div>{guitarThumbs}</div>
+          <h2>Set Neck Guitars</h2>
+          <h2>Bolt On Basses</h2>
           <div>{bassThumbs}</div>
         </div>
       </div>
