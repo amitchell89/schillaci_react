@@ -67,6 +67,9 @@ export default class Necks extends Component {
             <button className="btn--outline">Send Us a Message</button>
           </Link>
         </div>
+        <div className="necks__fan center">
+          <img className="necks__img necks__img--fan" src="../../img/Necks/schillaci_guitars_neck_fan.jpg" />
+        </div>
       </div>
     )
   }
