@@ -1,5 +1,6 @@
 export const guitars = [
   {
+    id: 1,
     name: "LSG",
     type: "guitar",
     "style": "set",
@@ -25,6 +26,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 2,
     name: "LP Junior",
     type: "guitar",
     "style": "set",
@@ -48,6 +50,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 3,
     name: "Knucklehead",
     type: "guitar",
     "style": "knucklehead",
@@ -73,6 +76,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 4,
     name: "Knucklehead",
     type: "guitar",
     "style": "knucklehead",
@@ -97,6 +101,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 5,
     name: "Knucklehead",
     type: "guitar",
     "style": "knucklehead",
@@ -118,6 +123,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 6,
     name: "Knucklehead",
     type: "guitar",
     "style": "knucklehead",
@@ -145,6 +151,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 7,
     name: "Knucklehead",
     "style": "knucklehead",
     type: "guitar",
@@ -168,6 +175,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 8,
     name: "Hammerhead",
     type: "guitar",
     "style": "hammerhead",
@@ -189,6 +197,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 9,
     name: "7 String Hammerhead",
     type: "guitar",
     "style": "hammerhead",
@@ -212,6 +221,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 10,
     name: "Hammerhead",
     type: "guitar",
     "style": "hammerhead",
@@ -236,6 +246,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 11,
     name: "Roy's Caster",
     type: "guitar",
     "style": "hammerhead",
@@ -258,6 +269,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 12,
     name: "Riptide Bass I",
     type: "bass",
     "style": "bolt",
@@ -280,6 +292,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 13,
     name: "Riptide Bass I",
     type: "bass",
     "style": "bolt",
@@ -301,6 +314,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 14,
     name: "Riptide Bass II",
     type: "bass",
     "style": "bolt",
@@ -324,6 +338,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 15,
     name: "Bosko Bass",
     type: "bass",
     "style": "bolt",
@@ -347,6 +362,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 16,
     name: "Bosko Bass",
     type: "bass",
     "style": "bolt",
@@ -368,6 +384,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 17,
     name: "PJ Bass",
     type: "bass",
     "style": "bolt",
@@ -389,6 +406,7 @@ export const guitars = [
     hidden: false
   },
   {
+    id: 18,
     name: "Kestral",
     type: "guitar",
     "style": "hammerhead",

@@ -12,7 +12,7 @@ export default class GuitarGallery extends Component {
       <div className="guitar__gallery">
         {guitars.map(function (s, i) {
           return (
-            <GuitarThumb thumb={s.thumb_photo} name={s.name} price={s.price} i={i} />
+            <GuitarThumb thumb={s.thumb_photo} name={s.name} price={s.price} id={s.id} />
           )}.bind(this))}
       </div>
     )

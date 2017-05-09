@@ -73,7 +73,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(/*! ./css/index.scss */ 333);
+	__webpack_require__(/*! ./css/index.scss */ 335);
 	
 	_reactDom2.default.render(_react2.default.createElement(_router2.default, null), document.getElementById('app'));
 
@@ -22079,31 +22079,31 @@
 	
 	var _Guitars2 = _interopRequireDefault(_Guitars);
 	
-	var _GuitarPage = __webpack_require__(/*! ./GuitarPage */ 321);
+	var _GuitarPage = __webpack_require__(/*! ./GuitarPage */ 323);
 	
 	var _GuitarPage2 = _interopRequireDefault(_GuitarPage);
 	
-	var _Necks = __webpack_require__(/*! ./Necks */ 322);
+	var _Necks = __webpack_require__(/*! ./Necks */ 324);
 	
 	var _Necks2 = _interopRequireDefault(_Necks);
 	
-	var _About = __webpack_require__(/*! ./About */ 323);
+	var _About = __webpack_require__(/*! ./About */ 325);
 	
 	var _About2 = _interopRequireDefault(_About);
 	
-	var _Contact = __webpack_require__(/*! ./Contact */ 324);
+	var _Contact = __webpack_require__(/*! ./Contact */ 326);
 	
 	var _Contact2 = _interopRequireDefault(_Contact);
 	
-	var _appContainer = __webpack_require__(/*! ./appContainer */ 326);
+	var _appContainer = __webpack_require__(/*! ./appContainer */ 328);
 	
 	var _appContainer2 = _interopRequireDefault(_appContainer);
 	
-	var _NotFound = __webpack_require__(/*! ./NotFound */ 331);
+	var _NotFound = __webpack_require__(/*! ./NotFound */ 333);
 	
 	var _NotFound2 = _interopRequireDefault(_NotFound);
 	
-	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 332);
+	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 334);
 	
 	var meta = _interopRequireWildcard(_meta_info);
 	
@@ -29853,6 +29853,7 @@
 	  value: true
 	});
 	var guitars = exports.guitars = [{
+	  id: 1,
 	  name: "LSG",
 	  type: "guitar",
 	  "style": "set",
@@ -29863,6 +29864,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"],
 	  hidden: false
 	}, {
+	  id: 2,
 	  name: "LP Junior",
 	  type: "guitar",
 	  "style": "set",
@@ -29873,6 +29875,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_junior_guitar_a_01.jpg", "Guitar_Details/schillaci_guitars_detail_junior_guitar_a_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 3,
 	  name: "Knucklehead",
 	  type: "guitar",
 	  "style": "knucklehead",
@@ -29883,6 +29886,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_01.jpg", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 4,
 	  name: "Knucklehead",
 	  type: "guitar",
 	  "style": "knucklehead",
@@ -29893,6 +29897,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_c_01.jpg", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_c_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 5,
 	  name: "Knucklehead",
 	  type: "guitar",
 	  "style": "knucklehead",
@@ -29903,6 +29908,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_a_01.jpg", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_a_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 6,
 	  name: "Knucklehead",
 	  type: "guitar",
 	  "style": "knucklehead",
@@ -29913,6 +29919,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_d_01.jpg", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_d_02.jpg", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_d_03.jpg"],
 	  hidden: false
 	}, {
+	  id: 7,
 	  name: "Knucklehead",
 	  "style": "knucklehead",
 	  type: "guitar",
@@ -29923,6 +29930,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_e_01.jpg", "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_e_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 8,
 	  name: "Hammerhead",
 	  type: "guitar",
 	  "style": "hammerhead",
@@ -29933,6 +29941,7 @@
 	  detail_photos: [],
 	  hidden: false
 	}, {
+	  id: 9,
 	  name: "7 String Hammerhead",
 	  type: "guitar",
 	  "style": "hammerhead",
@@ -29943,6 +29952,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_hammerhead_guitar_a_01.jpg", "Guitar_Details/schillaci_guitars_detail_hammerhead_guitar_a_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 10,
 	  name: "Hammerhead",
 	  type: "guitar",
 	  "style": "hammerhead",
@@ -29953,6 +29963,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_hammerhead_guitar_b_01.jpg", "Guitar_Details/schillaci_guitars_detail_hammerhead_guitar_b_02.jpg", "Guitar_Details/schillaci_guitars_detail_hammerhead_guitar_b_03.jpg"],
 	  hidden: false
 	}, {
+	  id: 11,
 	  name: "Roy's Caster",
 	  type: "guitar",
 	  "style": "hammerhead",
@@ -29963,6 +29974,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_royscaster_a_01.jpg", "Guitar_Details/schillaci_guitars_detail_royscaster_a_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 12,
 	  name: "Riptide Bass I",
 	  type: "bass",
 	  "style": "bolt",
@@ -29973,6 +29985,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_riptide_bass_c_01.jpg", "Guitar_Details/schillaci_guitars_detail_riptide_bass_c_02.jpg", "Guitar_Details/schillaci_guitars_detail_riptide_bass_c_03.jpg"],
 	  hidden: false
 	}, {
+	  id: 13,
 	  name: "Riptide Bass I",
 	  type: "bass",
 	  "style": "bolt",
@@ -29983,6 +29996,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_riptide_bass_a_01.jpg", "Guitar_Details/schillaci_guitars_detail_riptide_bass_a_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 14,
 	  name: "Riptide Bass II",
 	  type: "bass",
 	  "style": "bolt",
@@ -29993,6 +30007,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_riptide_bass_b_01.jpg", "Guitar_Details/schillaci_guitars_detail_riptide_bass_b_02.jpg"],
 	  hidden: false
 	}, {
+	  id: 15,
 	  name: "Bosko Bass",
 	  type: "bass",
 	  "style": "bolt",
@@ -30003,6 +30018,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_bosko_bass_b_01.jpg", "Guitar_Details/schillaci_guitars_detail_bosko_bass_b_02.jpg", "Guitar_Details/schillaci_guitars_detail_bosko_bass_b_03.jpg"],
 	  hidden: false
 	}, {
+	  id: 16,
 	  name: "Bosko Bass",
 	  type: "bass",
 	  "style": "bolt",
@@ -30013,6 +30029,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_bosko_bass_a_01.jpg", "Guitar_Details/schillaci_guitars_detail_bosko_bass_a_02.jpg", "Guitar_Details/schillaci_guitars_detail_bosko_bass_a_03.jpg"],
 	  hidden: false
 	}, {
+	  id: 17,
 	  name: "PJ Bass",
 	  type: "bass",
 	  "style": "bolt",
@@ -30023,6 +30040,7 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_pj_bass_01.jpg", "Guitar_Details/schillaci_guitars_detail_pj_bass_02.jpg", "Guitar_Details/schillaci_guitars_detail_pj_bass_03.jpg"],
 	  hidden: false
 	}, {
+	  id: 18,
 	  name: "Kestral",
 	  type: "guitar",
 	  "style": "hammerhead",
@@ -34988,7 +35006,7 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 210);
 	
-	var _GuitarGallery = __webpack_require__(/*! ../../containers/GuitarGallery */ 338);
+	var _GuitarGallery = __webpack_require__(/*! ../../containers/GuitarGallery */ 321);
 	
 	var _GuitarGallery2 = _interopRequireDefault(_GuitarGallery);
 	
@@ -35085,6 +35103,152 @@
 
 /***/ },
 /* 321 */
+/*!*******************************************************!*\
+  !*** ./src/containers/GuitarGallery/GuitarGallery.js ***!
+  \*******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
+	var _GuitarThumb = __webpack_require__(/*! ../../components/GuitarThumb */ 322);
+	
+	var _GuitarThumb2 = _interopRequireDefault(_GuitarThumb);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var GuitarGallery = function (_Component) {
+	  _inherits(GuitarGallery, _Component);
+	
+	  function GuitarGallery() {
+	    _classCallCheck(this, GuitarGallery);
+	
+	    return _possibleConstructorReturn(this, (GuitarGallery.__proto__ || Object.getPrototypeOf(GuitarGallery)).apply(this, arguments));
+	  }
+	
+	  _createClass(GuitarGallery, [{
+	    key: 'render',
+	    value: function render() {
+	      var guitars = this.props.guitars;
+	
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'guitar__gallery' },
+	        guitars.map(function (s, i) {
+	          return _react2.default.createElement(_GuitarThumb2.default, { thumb: s.thumb_photo, name: s.name, price: s.price, id: s.id });
+	        }.bind(this))
+	      );
+	    }
+	  }]);
+	
+	  return GuitarGallery;
+	}(_react.Component);
+	
+	exports.default = GuitarGallery;
+
+/***/ },
+/* 322 */
+/*!***************************************************!*\
+  !*** ./src/components/GuitarThumb/GuitarThumb.js ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 210);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var GuitarThumb = function (_Component) {
+	  _inherits(GuitarThumb, _Component);
+	
+	  function GuitarThumb() {
+	    _classCallCheck(this, GuitarThumb);
+	
+	    return _possibleConstructorReturn(this, (GuitarThumb.__proto__ || Object.getPrototypeOf(GuitarThumb)).apply(this, arguments));
+	  }
+	
+	  _createClass(GuitarThumb, [{
+	    key: 'render',
+	    value: function render() {
+	      var _props = this.props,
+	          thumb = _props.thumb,
+	          name = _props.name,
+	          price = _props.price,
+	          thumb = _props.thumb,
+	          id = _props.id;
+	
+	
+	      thumb = '../../img/' + thumb;
+	      var link = '/guitar/' + id;
+	
+	      return _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: link },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'guitar__thumb' },
+	          _react2.default.createElement('img', { src: thumb }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'guitar__thumb__label' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'guitar__thumb__label--name' },
+	              name
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'guitar__thumb__label--price' },
+	              price
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return GuitarThumb;
+	}(_react.Component);
+	
+	exports.default = GuitarThumb;
+
+/***/ },
+/* 323 */
 /*!********************************************!*\
   !*** ./src/views/GuitarPage/GuitarPage.js ***!
   \********************************************/
@@ -35138,9 +35302,25 @@
 	    value: function render() {
 	      var guitars = this.props.guitars;
 	
-	      var thisGuitar = this.props.params.guitar;
-	      var data = guitars[thisGuitar];
+	      var guitarId = parseInt(this.props.params.guitar);
+	
+	      var data = guitars.filter(function (n) {
+	        return n.id === guitarId;
+	      })[0];
+	
 	      var hero = '../../img/' + data.slider_photo;
+	
+	      var guitarAbout = _react2.default.createElement(
+	        'div',
+	        { className: 'guitarPage__about' },
+	        data.about.map(function (s, i) {
+	          return _react2.default.createElement(
+	            'p',
+	            { className: 'guitarPage__about__item' },
+	            s
+	          );
+	        }.bind(this))
+	      );
 	
 	      var guitarDetails = _react2.default.createElement(
 	        'div',
@@ -35151,18 +35331,6 @@
 	            'div',
 	            { className: 'guitarPage__detail' },
 	            _react2.default.createElement('img', { src: detail })
-	          );
-	        }.bind(this))
-	      );
-	
-	      var guitarAbout = _react2.default.createElement(
-	        'div',
-	        { className: 'guitarPage__about' },
-	        data.about.map(function (s, i) {
-	          return _react2.default.createElement(
-	            'p',
-	            { className: 'guitarPage__about__item' },
-	            s
 	          );
 	        }.bind(this))
 	      );
@@ -35207,7 +35375,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(GuitarPage);
 
 /***/ },
-/* 322 */
+/* 324 */
 /*!**********************************!*\
   !*** ./src/views/Necks/Necks.js ***!
   \**********************************/
@@ -35418,7 +35586,7 @@
 	exports.default = Necks;
 
 /***/ },
-/* 323 */
+/* 325 */
 /*!**********************************!*\
   !*** ./src/views/About/About.js ***!
   \**********************************/
@@ -35568,7 +35736,7 @@
 	exports.default = About;
 
 /***/ },
-/* 324 */
+/* 326 */
 /*!**************************************!*\
   !*** ./src/views/Contact/Contact.js ***!
   \**************************************/
@@ -35590,7 +35758,7 @@
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _ContactForm = __webpack_require__(/*! ../../components/ContactForm */ 325);
+	var _ContactForm = __webpack_require__(/*! ../../components/ContactForm */ 327);
 	
 	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 	
@@ -35650,7 +35818,7 @@
 	exports.default = Contact;
 
 /***/ },
-/* 325 */
+/* 327 */
 /*!***************************************************!*\
   !*** ./src/components/ContactForm/ContactForm.js ***!
   \***************************************************/
@@ -35792,7 +35960,7 @@
 	exports.default = ContactForm;
 
 /***/ },
-/* 326 */
+/* 328 */
 /*!***********************************!*\
   !*** ./src/views/appContainer.js ***!
   \***********************************/
@@ -35818,15 +35986,15 @@
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _Header = __webpack_require__(/*! ../containers/Header */ 327);
+	var _Header = __webpack_require__(/*! ../containers/Header */ 329);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _Footer = __webpack_require__(/*! ../components/Footer */ 329);
+	var _Footer = __webpack_require__(/*! ../components/Footer */ 331);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
-	var _Modal = __webpack_require__(/*! ../components/Modal */ 330);
+	var _Modal = __webpack_require__(/*! ../components/Modal */ 332);
 	
 	var _Modal2 = _interopRequireDefault(_Modal);
 	
@@ -35891,7 +36059,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(AppContainer);
 
 /***/ },
-/* 327 */
+/* 329 */
 /*!*****************************************!*\
   !*** ./src/containers/Header/Header.js ***!
   \*****************************************/
@@ -35911,7 +36079,7 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 210);
 	
-	var _Logo = __webpack_require__(/*! ../../components/Logo */ 328);
+	var _Logo = __webpack_require__(/*! ../../components/Logo */ 330);
 	
 	var _Logo2 = _interopRequireDefault(_Logo);
 	
@@ -35987,7 +36155,7 @@
 	exports.default = Header;
 
 /***/ },
-/* 328 */
+/* 330 */
 /*!*************************************!*\
   !*** ./src/components/Logo/Logo.js ***!
   \*************************************/
@@ -36041,7 +36209,7 @@
 	exports.default = Logo;
 
 /***/ },
-/* 329 */
+/* 331 */
 /*!*****************************************!*\
   !*** ./src/components/Footer/Footer.js ***!
   \*****************************************/
@@ -36104,7 +36272,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 330 */
+/* 332 */
 /*!***************************************!*\
   !*** ./src/components/Modal/Modal.js ***!
   \***************************************/
@@ -36184,7 +36352,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Modal);
 
 /***/ },
-/* 331 */
+/* 333 */
 /*!****************************************!*\
   !*** ./src/views/NotFound/NotFound.js ***!
   \****************************************/
@@ -36240,7 +36408,7 @@
 	exports.default = NotFound;
 
 /***/ },
-/* 332 */
+/* 334 */
 /*!******************************************!*\
   !*** ./src/store/constants/meta_info.js ***!
   \******************************************/
@@ -36255,7 +36423,7 @@
 	var meta_404 = exports.meta_404 = 'Womp womp. Looks like this link is broken.';
 
 /***/ },
-/* 333 */
+/* 335 */
 /*!****************************!*\
   !*** ./src/css/index.scss ***!
   \****************************/
@@ -36264,7 +36432,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 334);
+	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 336);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 316)(content, {});
@@ -36284,7 +36452,7 @@
 	}
 
 /***/ },
-/* 334 */
+/* 336 */
 /*!*********************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader?sourceMap!./src/css/index.scss ***!
   \*********************************************************************/
@@ -36295,13 +36463,13 @@
 	
 	
 	// module
-	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'PT Sans', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 335) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n  @media (max-width: 414px) {\n    body {\n      background-image: none; } }\n\n.center {\n  text-align: center; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n  @media (max-width: 414px) {\n    .content_wrapper {\n      padding: 1rem; } }\n\n.content {\n  padding-top: 138px; }\n  @media (max-width: 414px) {\n    .content {\n      padding-top: 0; } }\n\n.expand {\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem; }\n  @media (max-width: 414px) {\n    .expand {\n      width: calc(100% + 2rem);\n      left: -1rem; } }\n\n/* Fonts */\nh1, h2, h3, h4 {\n  color: #4e74aa;\n  line-height: 1.25; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem;\n  border: 1px solid #dddddd; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px;\n  font-weight: bold; }\n\n.btn--outline {\n  background: none;\n  border: 3px solid #4e74aa;\n  color: #4e74aa; }\n\n.btn--small {\n  padding: 0.5rem 1rem;\n  font-size: 0.875rem; }\n\n/* Alerts */\n.alert--success {\n  color: #33cc33; }\n\n.alert--error {\n  color: #ff3300; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n/* Hero */\n.parallax {\n  height: 400px; }\n  @media (max-width: 767px) {\n    .parallax {\n      height: 300px; } }\n\n.parallax--hero {\n  margin-bottom: 2rem; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 336) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n@media (max-width: 414px) {\n  .header {\n    position: static; }\n  nav a {\n    margin-right: 1rem; } }\n\n@media (max-width: 767px) {\n  .Logo {\n    float: none;\n    margin: 0 auto; }\n  .header__tagline {\n    display: none; }\n  nav {\n    text-align: center; } }\n\n.home__tagline {\n  text-align: center;\n  text-align: center;\n  margin-bottom: 1rem; }\n  .home__tagline h1 {\n    margin-bottom: 0; }\n  .home__tagline p {\n    margin: 1rem 0 1.5rem; }\n\n.home__testimonial {\n  background: #4e74aa;\n  padding: 2rem;\n  margin-top: 3rem;\n  border-bottom: 3px solid #ffffff; }\n  .home__testimonial h2 {\n    color: #ffffff; }\n  .home__testimonial p {\n    color: #ffffff; }\n\n.home__necks {\n  background: rgba(255, 255, 255, 0.8);\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  margin-top: 2.5rem; }\n  @media (max-width: 767px) {\n    .home__necks {\n      margin-top: 0; } }\n  @media (max-width: 414px) {\n    .home__necks {\n      text-align: center;\n      max-width: 100%;\n      padding: 2rem 1rem; } }\n\n.home__logo {\n  padding: 5rem 0; }\n  .home__logo:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .home__logo .Logo {\n    margin: 0 auto;\n    float: none; }\n\n.guitar__thumb__container {\n  padding-top: 2rem; }\n  .guitar__thumb__container h2 {\n    text-align: center; }\n\n.guitar__thumb {\n  width: 25%;\n  padding: 1rem;\n  display: inline-block; }\n  .guitar__thumb img {\n    width: 100%; }\n  @media (max-width: 767px) {\n    .guitar__thumb {\n      width: 50%; } }\n  @media (max-width: 414px) {\n    .guitar__thumb {\n      width: 100%; } }\n\n.guitar__thumb__label {\n  color: #555555;\n  position: relative;\n  top: -1.5rem;\n  font-size: 0.875rem; }\n\n.guitar__thumb__label--name {\n  background: rgba(255, 255, 255, 0.9);\n  border: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitar__thumb__label--price {\n  background: rgba(255, 255, 255, 0.7);\n  border-top: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  border-bottom: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitarPage__hero {\n  margin-top: 2rem;\n  width: 100%;\n  height: auto; }\n\n.guitarPage__name {\n  border-top: 1px solid #dddddd;\n  border-left: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  padding: 0.5rem 1rem;\n  margin-bottom: 0;\n  margin-top: 1rem;\n  font-weight: bold; }\n  .guitarPage__name:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .guitarPage__name p {\n    float: left; }\n  .guitarPage__name button {\n    float: right;\n    margin-top: 0.2rem; }\n\n.guitarPage__about {\n  border: 1px solid #dddddd;\n  padding: 1em 1rem 0;\n  margin-bottom: 1rem; }\n  .guitarPage__about:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__about__item {\n  width: 33.333%;\n  display: inline-block;\n  vertical-align: top;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding-right: 2rem;\n  padding-bottom: 1rem; }\n\n.guitarPage__details {\n  position: relative;\n  left: -1rem;\n  width: calc(100% + 2rem); }\n  .guitarPage__details:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__detail {\n  float: left;\n  width: 33.333%;\n  padding: 1rem;\n  margin: 0; }\n  .guitarPage__detail img {\n    width: 100%; }\n\n@media (max-width: 767px) {\n  .guitarPage__about__item, .guitarPage__detail {\n    width: 50%; } }\n\n@media (max-width: 414px) {\n  .guitarPage__about__item, .guitarPage__detail {\n    width: 100%; } }\n\n.guitar__slider {\n  margin-top: 2rem; }\n\n.guitar__slide img {\n  width: 100%; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__specs:after {\n  content: \"\";\n  display: table;\n  clear: both; }\n\n.necks__spec-list {\n  width: calc(50% - 1rem);\n  border: 1px solid #dddddd;\n  margin: 1rem 0; }\n  .necks__spec-list:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .necks__spec-list p {\n    padding: 0.25rem 1rem; }\n\n.necks__spec-list--profiles {\n  float: left; }\n\n.necks__spec-list--nuts {\n  float: right; }\n\n@media (max-width: 767px) {\n  .necks__spec-list {\n    width: 100%; }\n  .necks__spec-list--profiles, .necks__spec-list--nuts {\n    float: none; } }\n\n.necks__spec-list__header {\n  border-bottom: 1px solid #dddddd;\n  padding: 1rem;\n  font-weight: bold; }\n\n.necks__cta {\n  padding: 2rem 0; }\n\n.necks__img {\n  width: 100%;\n  height: auto;\n  margin-bottom: 1rem; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.about__credits {\n  margin-top: 4rem; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n\n@media (max-width: 414px) {\n  .contact__btn {\n    width: 100%; } }\n\n.SignUpForm {\n  width: 100%;\n  max-width: 512px;\n  margin: 4rem auto 0;\n  text-align: center; }\n", ""]);
+	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'PT Sans', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background-image: url(" + __webpack_require__(/*! ../img/bkgd_purple.png */ 337) + ");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  height: 100%;\n  width: 100%; }\n  @media (max-width: 414px) {\n    body {\n      background-image: none; } }\n\n.center {\n  text-align: center; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n  @media (max-width: 414px) {\n    .content_wrapper {\n      padding: 1rem; } }\n\n.content {\n  padding-top: 138px; }\n  @media (max-width: 414px) {\n    .content {\n      padding-top: 0; } }\n\n.expand {\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem; }\n  @media (max-width: 414px) {\n    .expand {\n      width: calc(100% + 2rem);\n      left: -1rem; } }\n\n/* Fonts */\nh1, h2, h3, h4 {\n  color: #4e74aa;\n  line-height: 1.25; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem;\n  border: 1px solid #dddddd; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px;\n  font-weight: bold; }\n\n.btn--outline {\n  background: none;\n  border: 3px solid #4e74aa;\n  color: #4e74aa; }\n\n.btn--small {\n  padding: 0.5rem 1rem;\n  font-size: 0.875rem; }\n\n/* Alerts */\n.alert--success {\n  color: #33cc33; }\n\n.alert--error {\n  color: #ff3300; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n/* Hero */\n.parallax {\n  height: 400px; }\n  @media (max-width: 767px) {\n    .parallax {\n      height: 300px; } }\n\n.parallax--hero {\n  margin-bottom: 2rem; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 338) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n@media (max-width: 414px) {\n  .header {\n    position: static; }\n  nav a {\n    margin-right: 1rem; } }\n\n@media (max-width: 767px) {\n  .Logo {\n    float: none;\n    margin: 0 auto; }\n  .header__tagline {\n    display: none; }\n  nav {\n    text-align: center; } }\n\n.home__tagline {\n  text-align: center;\n  text-align: center;\n  margin-bottom: 1rem; }\n  .home__tagline h1 {\n    margin-bottom: 0; }\n  .home__tagline p {\n    margin: 1rem 0 1.5rem; }\n\n.home__testimonial {\n  background: #4e74aa;\n  padding: 2rem;\n  margin-top: 3rem;\n  border-bottom: 3px solid #ffffff; }\n  .home__testimonial h2 {\n    color: #ffffff; }\n  .home__testimonial p {\n    color: #ffffff; }\n\n.home__necks {\n  background: rgba(255, 255, 255, 0.8);\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  margin-top: 2.5rem; }\n  @media (max-width: 767px) {\n    .home__necks {\n      margin-top: 0; } }\n  @media (max-width: 414px) {\n    .home__necks {\n      text-align: center;\n      max-width: 100%;\n      padding: 2rem 1rem; } }\n\n.home__logo {\n  padding: 5rem 0; }\n  .home__logo:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .home__logo .Logo {\n    margin: 0 auto;\n    float: none; }\n\n.guitar__thumb__container {\n  padding-top: 2rem; }\n  .guitar__thumb__container h2 {\n    text-align: center; }\n\n.guitar__thumb {\n  width: 25%;\n  padding: 1rem;\n  display: inline-block; }\n  .guitar__thumb img {\n    width: 100%; }\n  @media (max-width: 767px) {\n    .guitar__thumb {\n      width: 50%; } }\n  @media (max-width: 414px) {\n    .guitar__thumb {\n      width: 100%; } }\n\n.guitar__thumb__label {\n  color: #555555;\n  position: relative;\n  top: -1.5rem;\n  font-size: 0.875rem; }\n\n.guitar__thumb__label--name {\n  background: rgba(255, 255, 255, 0.9);\n  border: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitar__thumb__label--price {\n  background: rgba(255, 255, 255, 0.7);\n  border-top: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  border-bottom: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitarPage__hero {\n  margin-top: 2rem;\n  width: 100%;\n  height: auto; }\n\n.guitarPage__name {\n  border-top: 1px solid #dddddd;\n  border-left: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  padding: 0.5rem 1rem;\n  margin-bottom: 0;\n  margin-top: 1rem;\n  font-weight: bold; }\n  .guitarPage__name:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .guitarPage__name p {\n    float: left; }\n  .guitarPage__name button {\n    float: right;\n    margin-top: 0.2rem; }\n\n.guitarPage__about {\n  border: 1px solid #dddddd;\n  padding: 1em 1rem 0;\n  margin-bottom: 1rem; }\n  .guitarPage__about:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__about__item {\n  width: 33.333%;\n  display: inline-block;\n  vertical-align: top;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding-right: 2rem;\n  padding-bottom: 1rem; }\n\n.guitarPage__details {\n  position: relative;\n  left: -1rem;\n  width: calc(100% + 2rem); }\n  .guitarPage__details:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__detail {\n  float: left;\n  width: 33.333%;\n  padding: 1rem;\n  margin: 0; }\n  .guitarPage__detail img {\n    width: 100%; }\n\n@media (max-width: 767px) {\n  .guitarPage__about__item, .guitarPage__detail {\n    width: 50%; } }\n\n@media (max-width: 414px) {\n  .guitarPage__about__item, .guitarPage__detail {\n    width: 100%; } }\n\n.guitar__slider {\n  margin-top: 2rem; }\n\n.guitar__slide img {\n  width: 100%; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__specs:after {\n  content: \"\";\n  display: table;\n  clear: both; }\n\n.necks__spec-list {\n  width: calc(50% - 1rem);\n  border: 1px solid #dddddd;\n  margin: 1rem 0; }\n  .necks__spec-list:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .necks__spec-list p {\n    padding: 0.25rem 1rem; }\n\n.necks__spec-list--profiles {\n  float: left; }\n\n.necks__spec-list--nuts {\n  float: right; }\n\n@media (max-width: 767px) {\n  .necks__spec-list {\n    width: 100%; }\n  .necks__spec-list--profiles, .necks__spec-list--nuts {\n    float: none; } }\n\n.necks__spec-list__header {\n  border-bottom: 1px solid #dddddd;\n  padding: 1rem;\n  font-weight: bold; }\n\n.necks__cta {\n  padding: 2rem 0; }\n\n.necks__img {\n  width: 100%;\n  height: auto;\n  margin-bottom: 1rem; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.about__credits {\n  margin-top: 4rem; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n\n@media (max-width: 414px) {\n  .contact__btn {\n    width: 100%; } }\n\n.SignUpForm {\n  width: 100%;\n  max-width: 512px;\n  margin: 4rem auto 0;\n  text-align: center; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 335 */
+/* 337 */
 /*!*********************************!*\
   !*** ./src/img/bkgd_purple.png ***!
   \*********************************/
@@ -36310,159 +36478,13 @@
 	module.exports = __webpack_require__.p + "bkgd_purple.png";
 
 /***/ },
-/* 336 */
+/* 338 */
 /*!********************************************!*\
   !*** ./src/img/Schillaci_Guitars_Logo.png ***!
   \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "Schillaci_Guitars_Logo.png";
-
-/***/ },
-/* 337 */
-/*!***************************************************!*\
-  !*** ./src/components/GuitarThumb/GuitarThumb.js ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 210);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var GuitarThumb = function (_Component) {
-	  _inherits(GuitarThumb, _Component);
-	
-	  function GuitarThumb() {
-	    _classCallCheck(this, GuitarThumb);
-	
-	    return _possibleConstructorReturn(this, (GuitarThumb.__proto__ || Object.getPrototypeOf(GuitarThumb)).apply(this, arguments));
-	  }
-	
-	  _createClass(GuitarThumb, [{
-	    key: 'render',
-	    value: function render() {
-	      var _props = this.props,
-	          thumb = _props.thumb,
-	          name = _props.name,
-	          price = _props.price,
-	          thumb = _props.thumb,
-	          i = _props.i;
-	
-	
-	      thumb = '../../img/' + thumb;
-	      var link = '/guitar/' + i;
-	
-	      return _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: link },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'guitar__thumb' },
-	          _react2.default.createElement('img', { src: thumb }),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'guitar__thumb__label' },
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'guitar__thumb__label--name' },
-	              name
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'guitar__thumb__label--price' },
-	              price
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return GuitarThumb;
-	}(_react.Component);
-	
-	exports.default = GuitarThumb;
-
-/***/ },
-/* 338 */
-/*!*******************************************************!*\
-  !*** ./src/containers/GuitarGallery/GuitarGallery.js ***!
-  \*******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 210);
-	
-	var _GuitarThumb = __webpack_require__(/*! ../../components/GuitarThumb */ 337);
-	
-	var _GuitarThumb2 = _interopRequireDefault(_GuitarThumb);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var GuitarGallery = function (_Component) {
-	  _inherits(GuitarGallery, _Component);
-	
-	  function GuitarGallery() {
-	    _classCallCheck(this, GuitarGallery);
-	
-	    return _possibleConstructorReturn(this, (GuitarGallery.__proto__ || Object.getPrototypeOf(GuitarGallery)).apply(this, arguments));
-	  }
-	
-	  _createClass(GuitarGallery, [{
-	    key: 'render',
-	    value: function render() {
-	      var guitars = this.props.guitars;
-	
-	
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'guitar__gallery' },
-	        guitars.map(function (s, i) {
-	          return _react2.default.createElement(_GuitarThumb2.default, { thumb: s.thumb_photo, name: s.name, price: s.price, i: i });
-	        }.bind(this))
-	      );
-	    }
-	  }]);
-	
-	  return GuitarGallery;
-	}(_react.Component);
-	
-	exports.default = GuitarGallery;
 
 /***/ }
 /******/ ]);

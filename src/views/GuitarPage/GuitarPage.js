@@ -13,9 +13,24 @@ class GuitarPage extends Component {
   render() {
 
     var { guitars} = this.props;
-    const thisGuitar = this.props.params.guitar;
-    const data = guitars[thisGuitar]
-    const hero = '../../img/' + data.slider_photo
+    const guitarId = parseInt(this.props.params.guitar);
+
+    let data = guitars.filter(function(n) {
+      return n.id === guitarId;
+    })[0];
+
+    const hero = '../../img/' + data.slider_photo;
+
+    const guitarAbout = (
+      <div className="guitarPage__about">
+        {data.about.map(function (s, i) {
+          return (
+            <p className="guitarPage__about__item">
+              {s}
+            </p>
+          )}.bind(this))}
+      </div>
+    )
 
     const guitarDetails = (
       <div className="guitarPage__details">
@@ -25,17 +40,6 @@ class GuitarPage extends Component {
             <div className="guitarPage__detail">
               <img src={detail} />
             </div>
-          )}.bind(this))}
-      </div>
-    )
-
-    const guitarAbout = (
-      <div className="guitarPage__about">
-        {data.about.map(function (s, i) {
-          return (
-            <p className="guitarPage__about__item">
-              {s}
-            </p>
           )}.bind(this))}
       </div>
     )
