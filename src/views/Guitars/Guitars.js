@@ -42,6 +42,7 @@ class Guitars extends Component {
             { name: "description", content: this.props.route.meta.meta_guitars },
             { property: "og:title", content: 'Schillaci Guitars: Custom Guitars.'},
             { property: "og:url", content: 'https://schillaciguitars.com/guitars'},
+            { property: "og:image", content: 'https://schillaciguitars.com/img/Schillaci_Guitars_Logo.png' },
           ] }
           />
         <div className="guitar__thumb__container">

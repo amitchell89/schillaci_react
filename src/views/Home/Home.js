@@ -9,6 +9,8 @@ import SignUpForm from '../../components/SignUpForm'
 
 export default class Home extends Component {
   render() {
+
+    const hero = 'Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg'
     return (
       <div>
         <Helmet
@@ -17,13 +19,13 @@ export default class Home extends Component {
             { name: "description", content: this.props.route.meta.meta_standard },
             { property: "og:title", content: 'Schillaci Guitars: Custom Guitars & Necks Made To Order.'},
             { property: "og:url", content: 'https://schillaciguitars.com'},
-            { property: "og:image", content: ''},
+            { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero },
           ] }
         />
 
         <Parallax
           className="parallax parallax--hero expand"
-          bgImage="../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"
+          bgImage={"../../img/" + hero }
           strength={400}
         >
         </Parallax>

@@ -30111,16 +30111,18 @@
 	  _createClass(Home, [{
 	    key: 'render',
 	    value: function render() {
+	
+	      var hero = 'Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg';
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: 'Page Title',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_standard }, { property: "og:title", content: 'Schillaci Guitars: Custom Guitars & Necks Made To Order.' }, { property: "og:url", content: 'https://schillaciguitars.com' }, { property: "og:image", content: '' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_standard }, { property: "og:title", content: 'Schillaci Guitars: Custom Guitars & Necks Made To Order.' }, { property: "og:url", content: 'https://schillaciguitars.com' }, { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero }]
 	        }),
 	        _react2.default.createElement(_reactParallax.Parallax, {
 	          className: 'parallax parallax--hero expand',
-	          bgImage: '../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg',
+	          bgImage: "../../img/" + hero,
 	          strength: 400
 	        }),
 	        _react2.default.createElement(
@@ -35062,7 +35064,7 @@
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_guitars }, { property: "og:title", content: 'Schillaci Guitars: Custom Guitars.' }, { property: "og:url", content: 'https://schillaciguitars.com/guitars' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_guitars }, { property: "og:title", content: 'Schillaci Guitars: Custom Guitars.' }, { property: "og:url", content: 'https://schillaciguitars.com/guitars' }, { property: "og:image", content: 'https://schillaciguitars.com/img/Schillaci_Guitars_Logo.png' }]
 	        }),
 	        _react2.default.createElement(
 	          'div',
@@ -35340,7 +35342,7 @@
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_standard + ' ' + data.name }, { property: "og:title", content: 'Schillaci Guitars: ' + data.name }, { property: "og:url", content: 'https://schillaciguitars.com/' + guitarId }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_standard + ' ' + data.name }, { property: "og:title", content: 'Schillaci Guitars: ' + data.name }, { property: "og:url", content: 'https://schillaciguitars.com/' + guitarId }, { property: "og:image", content: 'https://schillaciguitars.com/img/' + data.slider_photo }]
 	        }),
 	        _react2.default.createElement('img', { className: 'guitarPage__hero', src: hero }),
 	        _react2.default.createElement(
@@ -35421,15 +35423,18 @@
 	  _createClass(Necks, [{
 	    key: 'render',
 	    value: function render() {
-	
+	      var hero = 'Necks/schillaci_guitars_custom_necks.jpg';
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_necks }, { property: "og:title", content: 'Schillaci Guitars: Custom Made Necks.' }, { property: "og:url", content: 'https://schillaciguitars.com/necks' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_necks }, { property: "og:title", content: 'Schillaci Guitars: Custom Made Necks.' }, { property: "og:url", content: 'https://schillaciguitars.com/necks' }, { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero }]
 	        }),
-	        _react2.default.createElement(_reactParallax.Parallax, { className: 'parallax parallax--hero expand', bgImage: '../../img/Necks/schillaci_guitars_custom_necks.jpg', strength: 400 }),
+	        _react2.default.createElement(_reactParallax.Parallax, {
+	          className: 'parallax parallax--hero expand',
+	          bgImage: "../../img/" + hero,
+	          strength: 400 }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'necks__info' },
@@ -35637,17 +35642,17 @@
 	  _createClass(About, [{
 	    key: 'render',
 	    value: function render() {
-	
+	      var hero = 'About/Darren_Schillaci_In_The_Shop_Guitars.jpg';
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_about }, { property: "og:title", content: 'Schillaci Guitars: About' }, { property: "og:url", content: 'https://schillaciguitars.com/about' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_about }, { property: "og:title", content: 'Schillaci Guitars: About' }, { property: "og:url", content: 'https://schillaciguitars.com/about' }, { property: "og:image", content: 'https://schillaciguitars.com/img/Schillaci_Guitars_Logo.png' }, { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero }]
 	        }),
 	        _react2.default.createElement(_reactParallax.Parallax, {
 	          className: 'parallax parallax--hero expand',
-	          bgImage: '../../img/About/Darren_Schillaci_In_The_Shop_Guitars.jpg',
+	          bgImage: "../../img/" + hero,
 	          strength: 400
 	        }),
 	        _react2.default.createElement(
@@ -35790,16 +35795,17 @@
 	    key: 'render',
 	    value: function render() {
 	
+	      var hero = 'Guitar_Details/schillaci_guitars_detail_riptide_bass_c_02.jpg';
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: 'Schillaci Guitars: Contact' }, { property: "og:url", content: 'https://schillaciguitars.com/contact' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: 'Schillaci Guitars: Contact' }, { property: "og:url", content: 'https://schillaciguitars.com/contact' }, { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero }]
 	        }),
 	        _react2.default.createElement(_reactParallax.Parallax, {
 	          className: 'parallax parallax--hero expand',
-	          bgImage: '../../img/Guitar_Details/schillaci_guitars_detail_riptide_bass_c_02.jpg',
+	          bgImage: "../../img/" + hero,
 	          strength: 400
 	        }),
 	        _react2.default.createElement(

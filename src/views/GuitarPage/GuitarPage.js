@@ -52,6 +52,7 @@ class GuitarPage extends Component {
             { name: "description", content: this.props.route.meta.meta_standard + ' ' + data.name },
             { property: "og:title", content: 'Schillaci Guitars: ' + data.name },
             { property: "og:url", content: 'https://schillaciguitars.com/' + guitarId},
+            { property: "og:image", content: 'https://schillaciguitars.com/img/' + data.slider_photo },
           ] }
           />
         <img className="guitarPage__hero" src={hero} />

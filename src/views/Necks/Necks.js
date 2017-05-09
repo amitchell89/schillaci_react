@@ -5,7 +5,7 @@ import { Parallax } from 'react-parallax';
 
 export default class Necks extends Component {
   render() {
-
+    const hero = 'Necks/schillaci_guitars_custom_necks.jpg'
     return (
       <div>
         <Helmet
@@ -14,9 +14,13 @@ export default class Necks extends Component {
             { name: "description", content: this.props.route.meta.meta_necks },
             { property: "og:title", content: 'Schillaci Guitars: Custom Made Necks.'},
             { property: "og:url", content: 'https://schillaciguitars.com/necks'},
+            { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero },
           ] }
           />
-        <Parallax className="parallax parallax--hero expand" bgImage="../../img/Necks/schillaci_guitars_custom_necks.jpg" strength={400}>
+        <Parallax
+          className="parallax parallax--hero expand"
+          bgImage={"../../img/" + hero}
+          strength={400}>
         </Parallax>
 
         <div className="necks__info">
