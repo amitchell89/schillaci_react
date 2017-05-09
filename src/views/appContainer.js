@@ -28,7 +28,7 @@ class AppContainer extends Component {
       <div>
         <Helmet
           meta={[
-            { property: "og:site_name", content: 'Site Name Here'},
+            { property: "og:site_name", content: 'Schillaci Guitars'},
             { property: "og:type", content: 'website'},
           ]}
         />

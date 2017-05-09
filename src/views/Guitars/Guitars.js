@@ -39,9 +39,9 @@ class Guitars extends Component {
         <Helmet
           title=""
           meta={ [
-            { name: "description", content: this.props.route.meta.meta_contact },
-            { property: "og:title", content: ''},
-            { property: "og:url", content: ''},
+            { name: "description", content: this.props.route.meta.meta_guitars },
+            { property: "og:title", content: 'Schillaci Guitars: Custom Guitars.'},
+            { property: "og:url", content: 'https://schillaciguitars.com/guitars'},
           ] }
           />
         <div className="guitar__thumb__container">

@@ -11,9 +11,9 @@ export default class Necks extends Component {
         <Helmet
           title=""
           meta={ [
-            { name: "description", content: this.props.route.meta.meta_contact },
-            { property: "og:title", content: ''},
-            { property: "og:url", content: ''},
+            { name: "description", content: this.props.route.meta.meta_necks },
+            { property: "og:title", content: 'Schillaci Guitars: Custom Made Necks.'},
+            { property: "og:url", content: 'https://schillaciguitars.com/necks'},
           ] }
           />
         <Parallax className="parallax parallax--hero expand" bgImage="../../img/Necks/schillaci_guitars_custom_necks.jpg" strength={400}>

@@ -49,9 +49,9 @@ class GuitarPage extends Component {
         <Helmet
           title=""
           meta={ [
-            { name: "description", content: this.props.route.meta.meta_contact },
-            { property: "og:title", content: ''},
-            { property: "og:url", content: ''},
+            { name: "description", content: this.props.route.meta.meta_standard + ' ' + data.name },
+            { property: "og:title", content: 'Schillaci Guitars: ' + data.name },
+            { property: "og:url", content: 'https://schillaciguitars.com/' + guitarId},
           ] }
           />
         <img className="guitarPage__hero" src={hero} />

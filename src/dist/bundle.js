@@ -30116,7 +30116,7 @@
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: 'Page Title',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_about }, { property: "og:title", content: '' }, { property: "og:url", content: '' }, { property: "og:image", content: '' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_standard }, { property: "og:title", content: 'Schillaci Guitars: Custom Guitars & Necks Made To Order.' }, { property: "og:url", content: 'https://schillaciguitars.com' }, { property: "og:image", content: '' }]
 	        }),
 	        _react2.default.createElement(_reactParallax.Parallax, {
 	          className: 'parallax parallax--hero expand',
@@ -35062,7 +35062,7 @@
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_guitars }, { property: "og:title", content: 'Schillaci Guitars: Custom Guitars.' }, { property: "og:url", content: 'https://schillaciguitars.com/guitars' }]
 	        }),
 	        _react2.default.createElement(
 	          'div',
@@ -35340,7 +35340,7 @@
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_standard + ' ' + data.name }, { property: "og:title", content: 'Schillaci Guitars: ' + data.name }, { property: "og:url", content: 'https://schillaciguitars.com/' + guitarId }]
 	        }),
 	        _react2.default.createElement('img', { className: 'guitarPage__hero', src: hero }),
 	        _react2.default.createElement(
@@ -35427,7 +35427,7 @@
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_necks }, { property: "og:title", content: 'Schillaci Guitars: Custom Made Necks.' }, { property: "og:url", content: 'https://schillaciguitars.com/necks' }]
 	        }),
 	        _react2.default.createElement(_reactParallax.Parallax, { className: 'parallax parallax--hero expand', bgImage: '../../img/Necks/schillaci_guitars_custom_necks.jpg', strength: 400 }),
 	        _react2.default.createElement(
@@ -35643,7 +35643,7 @@
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_about }, { property: "og:title", content: 'Schillaci Guitars: About' }, { property: "og:url", content: 'https://schillaciguitars.com/about' }]
 	        }),
 	        _react2.default.createElement(_reactParallax.Parallax, {
 	          className: 'parallax parallax--hero expand',
@@ -35795,7 +35795,7 @@
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: '',
-	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: '' }, { property: "og:url", content: '' }]
+	          meta: [{ name: "description", content: this.props.route.meta.meta_contact }, { property: "og:title", content: 'Schillaci Guitars: Contact' }, { property: "og:url", content: 'https://schillaciguitars.com/contact' }]
 	        }),
 	        _react2.default.createElement(_reactParallax.Parallax, {
 	          className: 'parallax parallax--hero expand',
@@ -36040,7 +36040,7 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
-	          meta: [{ property: "og:site_name", content: 'Site Name Here' }, { property: "og:type", content: 'website' }]
+	          meta: [{ property: "og:site_name", content: 'Schillaci Guitars' }, { property: "og:type", content: 'website' }]
 	        }),
 	        modal,
 	        _react2.default.createElement(
@@ -36424,8 +36424,13 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var meta_standard = exports.meta_standard = 'Meta Information Goes Here';
-	var meta_404 = exports.meta_404 = 'Womp womp. Looks like this link is broken.';
+	var meta_standard = exports.meta_standard = 'Schillaci Guitars: Custom Guitars & Necks Made To Order.';
+	
+	var meta_guitars = exports.meta_guitars = meta_standard + ' Explore guitar models and find the perfect instrument for you.';
+	
+	var meta_about = exports.meta_about = meta_standard + ' Learn more about Darren Schillaci, the man behind the guitar.';
+	
+	var meta_contact = exports.meta_contact = meta_standard + 'Contact Schillaci Guitars now for more information about order the perfect instrument for you,';
 
 /***/ },
 /* 335 */

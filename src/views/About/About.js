@@ -11,9 +11,9 @@ export default class About extends Component {
         <Helmet
           title=""
           meta={ [
-            { name: "description", content: this.props.route.meta.meta_contact },
-            { property: "og:title", content: ''},
-            { property: "og:url", content: ''},
+            { name: "description", content: this.props.route.meta.meta_about },
+            { property: "og:title", content: 'Schillaci Guitars: About'},
+            { property: "og:url", content: 'https://schillaciguitars.com/about'},
           ] }
           />
         

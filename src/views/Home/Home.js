@@ -14,9 +14,9 @@ export default class Home extends Component {
         <Helmet
           title="Page Title"
           meta={ [
-            { name: "description", content: this.props.route.meta.meta_about },
-            { property: "og:title", content: ''},
-            { property: "og:url", content: ''},
+            { name: "description", content: this.props.route.meta.meta_standard },
+            { property: "og:title", content: 'Schillaci Guitars: Custom Guitars & Necks Made To Order.'},
+            { property: "og:url", content: 'https://schillaciguitars.com'},
             { property: "og:image", content: ''},
           ] }
         />

@@ -12,8 +12,8 @@ export default class Contact extends Component {
           title=""
           meta={ [
             { name: "description", content: this.props.route.meta.meta_contact },
-            { property: "og:title", content: ''},
-            { property: "og:url", content: ''},
+            { property: "og:title", content: 'Schillaci Guitars: Contact'},
+            { property: "og:url", content: 'https://schillaciguitars.com/contact'},
           ] }
           />
 
