@@ -14,7 +14,7 @@ export default class Home extends Component {
     return (
       <div>
         <Helmet
-          title="Page Title"
+          title="Schillaci Guitars: Custom Guitars & Necks Made To Order."
           meta={ [
             { name: "description", content: this.props.route.meta.meta_standard },
             { property: "og:title", content: 'Schillaci Guitars: Custom Guitars & Necks Made To Order.'},

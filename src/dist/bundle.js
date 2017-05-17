@@ -30117,7 +30117,7 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: 'Page Title',
+	          title: 'Schillaci Guitars: Custom Guitars & Necks Made To Order.',
 	          meta: [{ name: "description", content: this.props.route.meta.meta_standard }, { property: "og:title", content: 'Schillaci Guitars: Custom Guitars & Necks Made To Order.' }, { property: "og:url", content: 'https://schillaciguitars.com' }, { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero }]
 	        }),
 	        _react2.default.createElement(_reactParallax.Parallax, {
