@@ -5,7 +5,7 @@ import { Parallax } from 'react-parallax';
 
 export default class About extends Component {
   render() {
-    const hero = 'About/Darren_Schillaci_In_The_Shop_Guitars.jpg';
+    const hero = 'About/Darren_schillaci_Guitrars_Shop_2.jpg';
     return (
       <div>
         <Helmet

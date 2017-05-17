@@ -29966,7 +29966,7 @@
 	  id: 11,
 	  name: "Roy's Caster",
 	  type: "guitar",
-	  "style": "hammerhead",
+	  "style": "knucklehead",
 	  price: "$999.00",
 	  about: ["3 piece popular body", "Red gloss finish", "1 piece maple neck", "Matching peg head", "Three single coil pickups", "Elongated pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_royscaster_1.jpg",
@@ -35642,7 +35642,7 @@
 	  _createClass(About, [{
 	    key: 'render',
 	    value: function render() {
-	      var hero = 'About/Darren_Schillaci_In_The_Shop_Guitars.jpg';
+	      var hero = 'About/Darren_schillaci_Guitrars_Shop_2.jpg';
 	      return _react2.default.createElement(
 	        'div',
 	        null,

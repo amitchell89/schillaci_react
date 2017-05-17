@@ -249,7 +249,7 @@ export const guitars = [
     id: 11,
     name: "Roy's Caster",
     type: "guitar",
-    "style": "hammerhead",
+    "style": "knucklehead",
     price: "$999.00",
     about: [
       "3 piece popular body",
