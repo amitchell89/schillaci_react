@@ -30050,6 +30050,17 @@
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_kestral_guitar_1.jpg",
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_kestral_guitar_a_01.jpg", "Guitar_Details/schillaci_guitars_detail_kestral_guitar_a_02.jpg", "Guitar_Details/schillaci_guitars_detail_kestral_guitar_a_03.jpg"],
 	  hidden: false
+	}, {
+	  id: 19,
+	  name: "PJ Bass",
+	  type: "bass",
+	  "style": "bolt",
+	  price: "TBD",
+	  about: ["1 PC. maple neck w/ big block inlays", "Single Bass Lines stacked pickup", "70's style knobs", "Chambered maple body w/ large face pick guard", "Hip Shot \" string thru body\" bridge", "Gloss silver metallic finish"],
+	  slider_photo: "Guitars/schillaci_guitars_slider_pj_bass_2.jpg",
+	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_pj_bass_2.png",
+	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_pj_bass_b_01.jpg", "Guitar_Details/schillaci_guitars_detail_pj_bass_b_02.jpg", "Guitar_Details/schillaci_guitars_detail_pj_bass_b_03.jpg"],
+	  hidden: false
 	}];
 
 /***/ },
