@@ -366,7 +366,7 @@ export const guitars = [
     name: "Bosko Bass",
     type: "bass",
     "style": "bolt",
-    price: "",
+    price: "$799.00",
     about: [
       "3 PC. Alder body ( east coast) sea green",
       "Maple neck w/ rosewood board",
@@ -439,7 +439,7 @@ export const guitars = [
     name: "PJ Bass",
     type: "bass",
     "style": "bolt",
-    price: "TBD",
+    price: "$1499.99",
     about: [
       "1 PC. maple neck w/ big block inlays",
       "Single Bass Lines stacked pickup",
