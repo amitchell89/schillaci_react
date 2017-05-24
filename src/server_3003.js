@@ -81,7 +81,7 @@ function sendMail(subject, message, res) {
   // setup e-mail data with unicode symbols
   var mailOptions = {
     from: '"Schillaci Guitars" <' + user + '>', // sender address
-    to: 'aaronmitchellart@gmail.com', // list of receivers
+    to: 'aaronmitchellart@gmail.com, d.schillaciguitars@gmail.com', // list of receivers
     subject: subject, // Subject line
     text: message, // plaintext body
     html: message // html body
