@@ -29,6 +29,13 @@ export default class Necks extends Component {
           Schillaci Guitars is a manufacturer and seller of necks. Necks and neck profiles are made to order in vintage or modern design which feature one piece maple construction or rosewood slab board. Replacement necks are also available. Heel widths compatible to industry standards.
           </p>
 
+          <div className="center">
+            <h4>Classic Right Handed Neck</h4>
+            <img className="necks__img" src="../../img/Necks/schillaci_guitars_neck_right_handed.png" />
+            <h4>Classic Left Handed Neck</h4>
+            <img className="necks__img" src="../../img/Necks/schillaci_guitars_neck_left_handed.png" />
+          </div>
+
           <div className="necks__specs">
             <div className="necks__spec-list necks__spec-list--profiles">
             <p className="necks__spec-list__header">Necks and Neck Profiles resembling:</p>
@@ -57,11 +64,11 @@ export default class Necks extends Component {
           </p>
           <div className="center">
             <h4>The 19 Tone Equal Neck</h4>
-            <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_2.png" />
+            <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_19_tone.png" />
             <h4>The 31 Tone Equal Neck</h4>
-            <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_3.png" />
+            <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_31_tone.png" />
             <h4>The Fretless Flyer Neck</h4>
-            <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_1.png" />
+            <img className="necks__img" src="../../img/Necks/schillaci_guitars_neck_fretless.png" />
           </div>
         </div>
 

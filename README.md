@@ -17,7 +17,7 @@ Project based on [React_Starter](https://github.com/amitchell89/react_starter)
 
 `npm run server`: Starts express server
 
-Visit localhost:3000
+Visit localhost:3003
 
 
 ## Slider

@@ -35461,6 +35461,22 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
+	            { className: 'center' },
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Classic Right Handed Neck'
+	            ),
+	            _react2.default.createElement('img', { className: 'necks__img', src: '../../img/Necks/schillaci_guitars_neck_right_handed.png' }),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Classic Left Handed Neck'
+	            ),
+	            _react2.default.createElement('img', { className: 'necks__img', src: '../../img/Necks/schillaci_guitars_neck_left_handed.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
 	            { className: 'necks__specs' },
 	            _react2.default.createElement(
 	              'div',
@@ -35559,19 +35575,19 @@
 	              null,
 	              'The 19 Tone Equal Neck'
 	            ),
-	            _react2.default.createElement('img', { className: 'necks__img', src: '../../img/Necks/schillaci_guitars_microtonal_neck_2.png' }),
+	            _react2.default.createElement('img', { className: 'necks__img', src: '../../img/Necks/schillaci_guitars_microtonal_neck_19_tone.png' }),
 	            _react2.default.createElement(
 	              'h4',
 	              null,
 	              'The 31 Tone Equal Neck'
 	            ),
-	            _react2.default.createElement('img', { className: 'necks__img', src: '../../img/Necks/schillaci_guitars_microtonal_neck_3.png' }),
+	            _react2.default.createElement('img', { className: 'necks__img', src: '../../img/Necks/schillaci_guitars_microtonal_neck_31_tone.png' }),
 	            _react2.default.createElement(
 	              'h4',
 	              null,
 	              'The Fretless Flyer Neck'
 	            ),
-	            _react2.default.createElement('img', { className: 'necks__img', src: '../../img/Necks/schillaci_guitars_microtonal_neck_1.png' })
+	            _react2.default.createElement('img', { className: 'necks__img', src: '../../img/Necks/schillaci_guitars_neck_fretless.png' })
 	          )
 	        ),
 	        _react2.default.createElement(
