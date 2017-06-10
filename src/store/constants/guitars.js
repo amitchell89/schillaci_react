@@ -388,7 +388,7 @@ export const guitars = [
     name: "PJ Bass",
     type: "bass",
     "style": "bolt",
-    price: "$799.00",
+    price: "$1899.00",
     about: [
       "70's style 1 PC. Maple neck w/ binding + big block inlays",
       "60's style Electronics w/ concentric pots + knobs",
