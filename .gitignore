@@ -10,4 +10,4 @@ npm-debug.log
 Caddyfile
 
 # Ignore Dist
-src/dist/*
+# src/dist/*
