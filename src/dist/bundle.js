@@ -29864,6 +29864,17 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_lsg_guitar_01.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_02.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_03.jpg", "Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"],
 	  hidden: false
 	}, {
+	  id: 20,
+	  name: "Knucklehead Esquire",
+	  type: "guitar",
+	  "style": "knucklehead",
+	  price: "$2499.00",
+	  about: ["1 PC. 1/4 sawn hard rock maple neck", "2 PC. popular body in Atlantic Sea Green", "Elongated Pickguard  w/ 1 single coil pickup", "String thru body bridge", "Top mounted jack cup"],
+	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_esquire_1.jpg",
+	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_esquire_1.jpg",
+	  detail_photos: ["Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_01.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_02.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_07.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_05.jpg"],
+	  hidden: false
+	}, {
 	  id: 2,
 	  name: "LP Junior",
 	  type: "guitar",
