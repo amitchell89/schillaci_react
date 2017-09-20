@@ -30,7 +30,7 @@ export const guitars = [
     name: "Knucklehead Esquire",
     type: "guitar",
     "style": "knucklehead",
-    price: "$2499.00",
+    price: "$799.00",
     about: [
       "1 PC. 1/4 sawn hard rock maple neck",
       "2 PC. popular body in Atlantic Sea Green",
