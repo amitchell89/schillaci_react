@@ -479,6 +479,29 @@ export const guitars = [
       "Guitar_Details/schillaci_guitars_detail_pj_bass_b_03.jpg"
       ],
     hidden: false
+  },
+  {
+    id: 21,
+    name: "PJ Bass",
+    type: "bass",
+    "style": "bolt",
+    price: "$2499.00",
+    about: [
+      "Reclaimed mahogany 3 PC. body in greenglow finish",
+      "Big block unbound maple neck",
+      "Large face pickguard w/ 70's knobs",
+      "Bass Lines \" stacked\" pickup",
+      "Hip shot \" string thru body\" bridge",
+      "Side mounted jack"
+    ],
+    slider_photo: "Guitars/schillaci_guitars_slider_mahoganey_pj_bass_1.png",
+    thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_mahoganey_pj_bass_1.png",
+    detail_photos: [
+      "Guitar_Details/schillaci_guitars_detail_mahoganey_pj_bass_02.jpg",
+      "Guitar_Details/schillaci_guitars_detail_mahoganey_pj_bass_03.jpg",
+      "Guitar_Details/schillaci_guitars_detail_mahoganey_pj_bass_04.jpg"
+      ],
+    hidden: false
   }
 ]
 
