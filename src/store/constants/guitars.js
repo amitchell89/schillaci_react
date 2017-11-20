@@ -33,7 +33,7 @@ export const guitars = [
     price: "$799.00",
     about: [
       "1 PC. 1/4 sawn hard rock maple neck",
-      "2 PC. popular body in Atlantic Sea Green",
+      "2 PC. Poplar Body in Atlantic Sea Green \"Greenglow\" Finish",
       "Elongated Pickguard  w/ 1 single coil pickup",
       "String thru body bridge",
       "Top mounted jack cup"
@@ -67,8 +67,8 @@ export const guitars = [
     slider_photo: "Guitars/schillaci_guitars_slider_junior_guitar_1.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_junior_guitar_1.jpg",
     detail_photos: [
-      "Guitar_Details/schillaci_guitars_detail_junior_guitar_a_01.jpg",
-      "Guitar_Details/schillaci_guitars_detail_junior_guitar_a_02.jpg"
+      "Guitar_Details/schillaci_guitars_detail_lp_junior_guitar_a_01.jpg",
+      "Guitar_Details/schillaci_guitars_detail_lp_junior_guitar_a_02.jpg"
       ],
     hidden: false
   },
@@ -227,7 +227,7 @@ export const guitars = [
     price: "1199.00",
     about: [
       "One Piece Mahogany Ribbon Body",
-      "Natural Hand Rubbed Satin Finish",
+      "Natural \"Greenglow\" Finish",
       "One Piece Maple Neck with Black Binding",
       "Micarta Nut",
       "Hard Tail Bridge with Black Hardware",
@@ -368,7 +368,7 @@ export const guitars = [
     price: "$1199.00",
     about: [
       "One Piece Mahogany Ribbon Body",
-      "Natural Hand Rubbed Satin Finish",
+      "Natural \"Greenglow\" Finish",
       "One Piece Maple Neck with Black Binding and Black Inlays",
       "Micarta Nut",
       "5 String Hard Tail Bridge with Black Hardware",
@@ -439,7 +439,7 @@ export const guitars = [
       "1 bass string & 4 guitar strings each with individual saddles",
       "24 fret. 26.5\" scale length",
       "Matching rosewood truss rod cover plate",
-      "2 PC. Mahogany body",
+      "2 PC. Mahogany Body with Natural \"Greenglow\" Finish",
       "Maple neck w/angled peghead",
       "Rosewood fingerboard",
       "Top mounted jack cup",
@@ -485,7 +485,7 @@ export const guitars = [
     name: "PJ Bass",
     type: "bass",
     "style": "bolt",
-    price: "$2499.00",
+    price: "$1499.00",
     about: [
       "Reclaimed mahogany 3 PC. body in greenglow finish",
       "Big block unbound maple neck",
