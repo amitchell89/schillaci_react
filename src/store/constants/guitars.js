@@ -391,7 +391,7 @@ export const guitars = [
     "style": "bolt",
     price: "$799.00",
     about: [
-      "3 PC. Alder body ( east coast) sea green",
+      "3 PC. Alder body with Atlantic Sea Green \"Greenglow\" finish",  
       "Maple neck w/ rosewood board",
       "Single P pickup",
       "Enlongated vintage style pick guard",
