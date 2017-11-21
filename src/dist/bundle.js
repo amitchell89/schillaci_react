@@ -30034,7 +30034,7 @@
 	  type: "bass",
 	  "style": "bolt",
 	  price: "$799.00",
-	  about: ["3 PC. Alder body ( east coast) sea green", "Maple neck w/ rosewood board", "Single P pickup", "Enlongated vintage style pick guard", "Top mounted jack cup"],
+	  about: ["3 PC. Alder body with Atlantic Sea Green \"Greenglow\" finish", "Maple neck w/ rosewood board", "Single P pickup", "Enlongated vintage style pick guard", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_bosko_bass_1.png",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_bosko_bass_1.jpg",
 	  detail_photos: ["Guitar_Details/schillaci_guitars_detail_bosko_bass_a_01.jpg", "Guitar_Details/schillaci_guitars_detail_bosko_bass_a_02.jpg", "Guitar_Details/schillaci_guitars_detail_bosko_bass_a_03.jpg"],
