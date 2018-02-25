@@ -67,7 +67,7 @@ export default class Necks extends Component {
             <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_19_tone.png" />
             <h4>The 31 Tone Equal Neck</h4>
             <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_31_tone.png" />
-            <h4>The Fretless Flyer Neck</h4>
+            <h4>The Fretless Neck</h4>
             <img className="necks__img" src="../../img/Necks/schillaci_guitars_neck_fretless.png" />
           </div>
         </div>
