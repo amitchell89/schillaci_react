@@ -23,6 +23,24 @@ export default class Privacy extends Component {
         />
         <h1>Privacy Policy</h1>
         <h3>
+        Scope
+        </h3>
+        <p>
+        This statement applies to all { url } visitors, unless a seperate privacy notice is prominently displayed.
+        </p>
+        <h3>
+        Information Collection and Use
+        </h3>
+        <p>
+        While using our service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to, your email address (“Personal Information”).</p>
+        <p>
+        We collect this information for the purpose of providing the Service, identifying and communicating with you, responding to your requests/enquiries and improving our services.
+        Communications
+        </p>
+        <p>
+        We may use your Personal Information to contact you with nenwsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send.
+        </p>
+        <h3>
         Google Analytics
         </h3>
         <p>

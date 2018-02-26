@@ -9,11 +9,12 @@ export default class Terms extends Component {
 
     let url = route.meta.site_url;
     let owner = route.meta.site_owner;
+    let site_name = route.meta.site_name;
 
     return (
       <div className="Terms">
         <Helmet
-          title={route.meta.site_name}
+          title={site_name}
           meta={ [
             { name: "description", content: this.props.route.meta.meta_about },
             { property: "og:title", content: ''},
@@ -25,6 +26,12 @@ export default class Terms extends Component {
         <h4>Last Updated 02/25/2018</h4>
         <p>
         { url } is owned and operated by { owner }. Throughout the site, the terms “we”, “us” and “our” refer to { owner }. { owner } offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here. If you disagree with these terms and conditions or any part of these terms and conditions, you are not permitted to use this website.
+        </p>
+        <h3>
+        Scope
+        </h3>
+        <p>
+        This statement applies to all { url } visitors, unless a seperate terms of service is prominently displayed.
         </p>
         <h3>
         Intellectual property rights
@@ -90,10 +97,22 @@ export default class Terms extends Component {
         You hereby indemnify us and undertake to keep us indemnified against any losses, damages, costs, liabilities and expenses (including without limitation legal expenses and any amounts paid by us to a third party in settlement of a claim or dispute on the advice of our legal advisers) incurred or suffered by us arising out of any breach by you of any provision of these terms and conditions, or arising out of any claim that you have breached any provision of these terms and conditions
         </p>
         <h3>
-        Breaches of these Terms and Conditions
+        No Responsibility for Security Breaches
         </h3>
         <p>
-        Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, we may take such action as we deem appropriate to deal with the breach, including suspending your access to the website, prohibiting you from accessing the website, blocking computers using your IP address from accessing the website, contacting your internet service provider to request that they block your access to the website and/or bringing court proceedings against you.
+        Although we make an effort to secure this website, information transmitted over the internet is not always secure. Use of this website is purely at your own risk and { site_name } is not liable for any security breaches.
+        </p>
+        <h3>
+        No Responsibility for User-Generated Materials
+        </h3>
+        <p>
+        { site_name } reserves the right to monitor or review any user generated content such as postings, public and private messages, photos and discussions, however Jane's Colony is under no obligation to do so and assumes no responsibility or liability whatsoever arising from the content on our site nor for any error, defamation, libel, slander, omission, falsehood, obscenity, pornography, profanity, danger or inaccuracy contained in any of that content. You are prohibited from posting or transmitting any unlawful, threatening, libelous, defamatory, obscene, scandalous, inflammatory, pornographic or profane material or any material that could constitute or encourage conduct that would be considered a criminal offense, give rise to civil liability, or otherwise violate any law.
+        </p>
+        <h3>
+        Third Party Links
+        </h3>
+        <p>
+        This website may contain links to third party websites. We are not responsible for the operation, content, or security of any third party websites and make no representations or warranties about the information contained on such websites.
         </p>
         <h3>
         Variation
@@ -103,6 +122,18 @@ export default class Terms extends Component {
         </p>
         <p>
         We aim to update the Website regularly, and may change the content at any time. If the need arises, we may suspend access to the Website or close it indefinitely. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.
+        </p>
+        <h3>
+        Errors, Omissions and Inaccuracies
+        </h3>
+        <p>
+        Although { site_name } strive to provide the best content, occasionally the site may present information containing typographical errors, inaccuracies, or omissions that may relate to pricing, promotions, offers, or availability. Although we make reasonable efforts to ensure that all content on the site is current and contain no errors or inaccuracies, we make no representations, warranties or guarantees that the information, Contents or materials included on the site will be error-free or completely accurate or current at all times, or at any time. We reserve the right at any time in our sole discretion and without notice to correct any errors, inaccuracies or omissions to the information on the site.
+        </p>
+        <h3>
+        Breaches of these Terms and Conditions
+        </h3>
+        <p>
+        Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, we may take such action as we deem appropriate to deal with the breach, including suspending your access to the website, prohibiting you from accessing the website, blocking computers using your IP address from accessing the website, contacting your internet service provider to request that they block your access to the website and/or bringing court proceedings against you.
         </p>
         <h3>
         Severability
