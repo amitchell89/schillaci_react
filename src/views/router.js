@@ -11,6 +11,8 @@ import Necks from './Necks';
 import About from './About';
 import Contact from './Contact';
 import AppContainer from './appContainer';
+import Privacy from './Privacy';
+import Terms from './Terms';
 import NotFound from './NotFound';
 
 import * as meta from '../store/constants/meta_info';
@@ -31,6 +33,8 @@ export default class Routes extends Component {
             <Route path='/necks' component={Necks} meta={meta} />
             <Route path='/about' component={About} meta={meta} />
             <Route path='/contact' component={Contact} meta={meta} />
+            <Route path='/privacy' component={Privacy} meta={meta} />
+            <Route path='/terms' component={Terms} meta={meta} />
             <Route path='*' component={NotFound} meta={meta} />
           </Route>
         </Router>

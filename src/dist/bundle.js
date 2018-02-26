@@ -73,7 +73,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(/*! ./css/index.scss */ 343);
+	__webpack_require__(/*! ./css/index.scss */ 345);
 	
 	_reactDom2.default.render(_react2.default.createElement(_router2.default, null), document.getElementById('app'));
 
@@ -22807,11 +22807,19 @@
 	
 	var _appContainer2 = _interopRequireDefault(_appContainer);
 	
-	var _NotFound = __webpack_require__(/*! ./NotFound */ 341);
+	var _Privacy = __webpack_require__(/*! ./Privacy */ 341);
+	
+	var _Privacy2 = _interopRequireDefault(_Privacy);
+	
+	var _Terms = __webpack_require__(/*! ./Terms */ 342);
+	
+	var _Terms2 = _interopRequireDefault(_Terms);
+	
+	var _NotFound = __webpack_require__(/*! ./NotFound */ 343);
 	
 	var _NotFound2 = _interopRequireDefault(_NotFound);
 	
-	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 342);
+	var _meta_info = __webpack_require__(/*! ../store/constants/meta_info */ 344);
 	
 	var meta = _interopRequireWildcard(_meta_info);
 	
@@ -22852,6 +22860,8 @@
 	            _react2.default.createElement(_reactRouter.Route, { path: '/necks', component: _Necks2.default, meta: meta }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default, meta: meta }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default, meta: meta }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/privacy', component: _Privacy2.default, meta: meta }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/terms', component: _Terms2.default, meta: meta }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFound2.default, meta: meta })
 	          )
 	        )
@@ -36416,7 +36426,7 @@
   \*****************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -36427,6 +36437,8 @@
 	var _react = __webpack_require__(/*! react */ 2);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 218);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -36446,21 +36458,32 @@
 	  }
 	
 	  _createClass(Footer, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      var year = new Date().getFullYear();
 	      return _react2.default.createElement(
-	        "footer",
+	        'footer',
 	        null,
 	        _react2.default.createElement(
-	          "div",
-	          { className: "footer content_wrapper" },
+	          'div',
+	          { className: 'footer content_wrapper' },
 	          _react2.default.createElement(
-	            "p",
+	            'p',
 	            null,
-	            "\xA9 ",
+	            '\xA9 ',
 	            year,
-	            "  Schillaci Guitars - Guitars, Basses and Necks Made to Order"
+	            '  Schillaci Guitars - Guitars, Basses and Necks Made to Order. ',
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: 'terms' },
+	              'Terms & Conditions'
+	            ),
+	            ' | ',
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: 'privacy' },
+	              'Privacy Policy'
+	            )
 	          )
 	        )
 	      );
@@ -36554,6 +36577,341 @@
 
 /***/ }),
 /* 341 */
+/*!**************************************!*\
+  !*** ./src/views/Privacy/Privacy.js ***!
+  \**************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 218);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 285);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Privacy = function (_Component) {
+	  _inherits(Privacy, _Component);
+	
+	  function Privacy() {
+	    _classCallCheck(this, Privacy);
+	
+	    return _possibleConstructorReturn(this, (Privacy.__proto__ || Object.getPrototypeOf(Privacy)).apply(this, arguments));
+	  }
+	
+	  _createClass(Privacy, [{
+	    key: 'render',
+	    value: function render() {
+	      var route = this.props.route;
+	
+	
+	      var url = route.meta.site_url;
+	      var owner = route.meta.site_owner;
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'Privacy' },
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: this.props.route.meta.site_name,
+	          meta: [{ name: "description", content: this.props.route.meta.meta_about }, { property: "og:title", content: '' }, { property: "og:url", content: '' }, { property: "og:image", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Privacy Policy'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Google Analytics'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Like millions of other website owners, we use Google Analytics on ',
+	          url,
+	          '. Google Analytics is a piece of software that grabs data about visitors to this site. It\u2019s something like an advanced server log. It will record what website you came from to get here and what kind of computer you\u2019re using among other things. The tracking information allows us to better understand the kind of people who come to our site and what content they\u2019re viewing. This allows us to make better decisions about improving this website. Occasionally, we will compile aggregate statistics about the number of visitors this site receives and browsers being used. No personally identifying data is included in this type of reporting. All data collected by Google Analytics is stored and maintained by Google, not us. All of my activity falls within the bounds of the ',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://www.google.com/analytics/terms/us.html' },
+	            'Google Analytics Terms of Service.'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Privacy;
+	}(_react.Component);
+	
+	exports.default = Privacy;
+
+/***/ }),
+/* 342 */
+/*!**********************************!*\
+  !*** ./src/views/Terms/Terms.js ***!
+  \**********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 218);
+	
+	var _reactHelmet = __webpack_require__(/*! react-helmet */ 285);
+	
+	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Terms = function (_Component) {
+	  _inherits(Terms, _Component);
+	
+	  function Terms() {
+	    _classCallCheck(this, Terms);
+	
+	    return _possibleConstructorReturn(this, (Terms.__proto__ || Object.getPrototypeOf(Terms)).apply(this, arguments));
+	  }
+	
+	  _createClass(Terms, [{
+	    key: 'render',
+	    value: function render() {
+	      var route = this.props.route;
+	
+	
+	      var url = route.meta.site_url;
+	      var owner = route.meta.site_owner;
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'Terms' },
+	        _react2.default.createElement(_reactHelmet2.default, {
+	          title: route.meta.site_name,
+	          meta: [{ name: "description", content: this.props.route.meta.meta_about }, { property: "og:title", content: '' }, { property: "og:url", content: '' }, { property: "og:image", content: '' }]
+	        }),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Terms & Conditions'
+	        ),
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          'Last Updated 02/25/2018'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          url,
+	          ' is owned and operated by ',
+	          owner,
+	          '. Throughout the site, the terms \u201Cwe\u201D, \u201Cus\u201D and \u201Cour\u201D refer to ',
+	          owner,
+	          '. ',
+	          owner,
+	          ' offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here. If you disagree with these terms and conditions or any part of these terms and conditions, you are not permitted to use this website.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Intellectual property rights'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Unless otherwise stated or agreed upon, we are the owner or the licensee of all intellectual property rights in the Website, and in the material published on it. For the purposes of these General Terms, \u201Cmaterial\u201D means material including, without limitation, text, graphics, images, video and sound material. Those works are protected by copyright and other intellectual property laws and treaties around the world. All such rights are reserved.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Client work reproduced on this website is subject to its own terms agreed upon between ',
+	          owner,
+	          ' and that party. These terms and conditions apply for all other parties.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You may view, download for caching purposes only, and print pages or other content from the website for your own personal use, subject to the restrictions set out below and elsewhere in these terms and conditions.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You are not allowed to do any of the following without our explicit prior permission.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'A - Republish, distribute, transmit or disseminate any part of the material from this website (including republication on another website);'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'B - Sell, rent or sub-license material from the website;'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'C - Show any material from the website in public;'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'D - Reproduce, duplicate, copy or otherwise exploit material on our website for a commercial purpose;'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'E - Edit or otherwise modify the paper or digital copies of any material on the website;'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'F - Download or print the material or extracts from it in a systematic or regular manner or otherwise so as to create a database in electronic or paper format comprising all or part of the material appearing on the Website.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'If you print off, copy or download any part of the Website in breach of these General Terms, your right to use the Website will cease immediately and you must, at our option, return or destroy any copies of the materials you have made.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'If you wish to make any use of material on our site, please send us a message using the contact form.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Acceptable Use'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You must not use our website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website; or in any way which is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You must not use our website to copy, store, host, transmit, send, use, publish or distribute any material which consists of (or is linked to) any spyware, computer virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You must not conduct any systematic or automated data collection activities (including without limitation scraping, data mining, data extraction and data harvesting) on or in relation to our website without our express written consent.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You must not use our website to transmit or send unsolicited commercial communications.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You must not use our website for any purposes related to marketing without our express written consent.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Indemnity'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You hereby indemnify us and undertake to keep us indemnified against any losses, damages, costs, liabilities and expenses (including without limitation legal expenses and any amounts paid by us to a third party in settlement of a claim or dispute on the advice of our legal advisers) incurred or suffered by us arising out of any breach by you of any provision of these terms and conditions, or arising out of any claim that you have breached any provision of these terms and conditions'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Breaches of these Terms and Conditions'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, we may take such action as we deem appropriate to deal with the breach, including suspending your access to the website, prohibiting you from accessing the website, blocking computers using your IP address from accessing the website, contacting your internet service provider to request that they block your access to the website and/or bringing court proceedings against you.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Variation'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'We may revise these terms and conditions from time-to-time. Revised terms and conditions will apply to the use of our website from the date of the publication of the revised terms and conditions on our website. Please check this page regularly to ensure you are familiar with the current version.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'We aim to update the Website regularly, and may change the content at any time. If the need arises, we may suspend access to the Website or close it indefinitely. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Severability'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'If a provision of these terms and conditions is determined by any court or other competent authority to be unlawful and/or unenforceable, the other provisions will continue in effect. If any unlawful and/or unenforceable provision would be lawful or enforceable if part of it were deleted, that part will be deemed to be deleted, and the rest of the provision will continue in effect.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Contact'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'For more information, question about use of material on our site and all other inquiries please send us a message using the ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/contact' },
+	            'contact form.'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Terms;
+	}(_react.Component);
+	
+	exports.default = Terms;
+
+/***/ }),
+/* 343 */
 /*!****************************************!*\
   !*** ./src/views/NotFound/NotFound.js ***!
   \****************************************/
@@ -36609,7 +36967,7 @@
 	exports.default = NotFound;
 
 /***/ }),
-/* 342 */
+/* 344 */
 /*!******************************************!*\
   !*** ./src/store/constants/meta_info.js ***!
   \******************************************/
@@ -36621,15 +36979,15 @@
 	  value: true
 	});
 	var meta_standard = exports.meta_standard = 'Schillaci Guitars: Custom Guitars & Necks Made To Order.';
-	
 	var meta_guitars = exports.meta_guitars = meta_standard + ' Explore guitar models and find the perfect instrument for you.';
-	
 	var meta_about = exports.meta_about = meta_standard + ' Learn more about Darren Schillaci, the man behind the guitar.';
-	
 	var meta_contact = exports.meta_contact = meta_standard + 'Contact Schillaci Guitars now for more information about order the perfect instrument for you,';
+	var site_name = exports.site_name = 'Schillaci\'s Guitar';
+	var site_url = exports.site_url = 'schillaciguitars.com';
+	var site_owner = exports.site_owner = 'Darren Schillaci';
 
 /***/ }),
-/* 343 */
+/* 345 */
 /*!****************************!*\
   !*** ./src/css/index.scss ***!
   \****************************/
@@ -36638,7 +36996,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 344);
+	var content = __webpack_require__(/*! !../../~/css-loader!../../~/sass-loader?sourceMap!./index.scss */ 346);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 324)(content, {});
@@ -36658,7 +37016,7 @@
 	}
 
 /***/ }),
-/* 344 */
+/* 346 */
 /*!*********************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader?sourceMap!./src/css/index.scss ***!
   \*********************************************************************/
@@ -36669,13 +37027,13 @@
 	
 	
 	// module
-	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'PT Sans', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background: #eee;\n  height: 100%;\n  width: 100%; }\n  @media (max-width: 414px) {\n    body {\n      background-image: none; } }\n\n.center {\n  text-align: center; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n  @media (max-width: 414px) {\n    .content_wrapper {\n      padding: 1rem; } }\n\n.content {\n  padding-top: 138px; }\n  @media (max-width: 414px) {\n    .content {\n      padding-top: 0; } }\n\n.expand {\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem; }\n  @media (max-width: 414px) {\n    .expand {\n      width: calc(100% + 2rem);\n      left: -1rem; } }\n\n/* Fonts */\nh1, h2, h3, h4 {\n  color: #4e74aa;\n  line-height: 1.25; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem;\n  border: 1px solid #dddddd; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px;\n  font-weight: bold; }\n\n.btn--outline {\n  background: none;\n  border: 3px solid #4e74aa;\n  color: #4e74aa; }\n\n.btn--small {\n  padding: 0.5rem 1rem;\n  font-size: 0.875rem; }\n\n/* Alerts */\n.alert--success {\n  color: #33cc33; }\n\n.alert--error {\n  color: #ff3300; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n/* Hero */\n.parallax {\n  height: 400px; }\n  @media (max-width: 767px) {\n    .parallax {\n      height: 300px; } }\n\n.parallax--hero {\n  margin-bottom: 2rem; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 345) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n@media (max-width: 414px) {\n  .header {\n    position: static; }\n  nav a {\n    margin-right: 1rem; } }\n\n@media (max-width: 767px) {\n  .Logo {\n    float: none;\n    margin: 0 auto; }\n  .header__tagline {\n    display: none; }\n  nav {\n    text-align: center; } }\n\n.home__tagline {\n  text-align: center;\n  text-align: center;\n  margin-bottom: 1rem; }\n  .home__tagline h1 {\n    margin-bottom: 0; }\n  .home__tagline p {\n    margin: 1rem 0 1.5rem; }\n\n.home__testimonial {\n  background: #4e74aa;\n  padding: 2rem;\n  margin-top: 3rem;\n  border-bottom: 3px solid #ffffff; }\n  .home__testimonial h2 {\n    color: #ffffff; }\n  .home__testimonial p {\n    color: #ffffff; }\n\n.home__necks {\n  background: rgba(255, 255, 255, 0.8);\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  margin-top: 2.5rem; }\n  @media (max-width: 767px) {\n    .home__necks {\n      margin-top: 0; } }\n  @media (max-width: 414px) {\n    .home__necks {\n      text-align: center;\n      max-width: 100%;\n      padding: 2rem 1rem; } }\n\n.home__logo {\n  padding: 5rem 0; }\n  .home__logo:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .home__logo .Logo {\n    margin: 0 auto;\n    float: none; }\n\n.guitar__thumb__container {\n  padding-top: 2rem; }\n  .guitar__thumb__container h2 {\n    text-align: center; }\n\n.guitar__thumb {\n  width: 25%;\n  padding: 1rem;\n  display: inline-block; }\n  .guitar__thumb img {\n    width: 100%; }\n  @media (max-width: 767px) {\n    .guitar__thumb {\n      width: 50%; } }\n  @media (max-width: 414px) {\n    .guitar__thumb {\n      width: 100%; } }\n\n.guitar__thumb__label {\n  color: #555555;\n  position: relative;\n  top: -1.5rem;\n  font-size: 0.875rem; }\n\n.guitar__thumb__label--name {\n  background: rgba(255, 255, 255, 0.9);\n  border: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitar__thumb__label--price {\n  background: rgba(255, 255, 255, 0.7);\n  border-top: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  border-bottom: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitarPage__hero {\n  margin-top: 2rem;\n  width: 100%;\n  height: auto; }\n\n.guitarPage__name {\n  border-top: 1px solid #dddddd;\n  border-left: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  padding: 0.5rem 1rem;\n  margin-bottom: 0;\n  margin-top: 1rem;\n  font-weight: bold; }\n  .guitarPage__name:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .guitarPage__name p {\n    float: left; }\n  .guitarPage__name button {\n    float: right;\n    margin-top: 0.2rem; }\n\n.guitarPage__about {\n  border: 1px solid #dddddd;\n  padding: 1em 1rem 0;\n  margin-bottom: 1rem; }\n  .guitarPage__about:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__about__item {\n  width: 33.333%;\n  display: inline-block;\n  vertical-align: top;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding-right: 2rem;\n  padding-bottom: 1rem; }\n\n.guitarPage__details {\n  position: relative;\n  left: -1rem;\n  width: calc(100% + 2rem); }\n  .guitarPage__details:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__detail {\n  float: left;\n  width: 33.333%;\n  padding: 1rem;\n  margin: 0; }\n  .guitarPage__detail img {\n    width: 100%; }\n\n@media (max-width: 767px) {\n  .guitarPage__about__item, .guitarPage__detail {\n    width: 50%; } }\n\n@media (max-width: 414px) {\n  .guitarPage__about__item, .guitarPage__detail {\n    width: 100%; } }\n\n.guitar__slider {\n  margin-top: 2rem; }\n\n.guitar__slide img {\n  width: 100%; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__specs:after {\n  content: \"\";\n  display: table;\n  clear: both; }\n\n.necks__spec-list {\n  width: calc(50% - 1rem);\n  border: 1px solid #dddddd;\n  margin: 1rem 0; }\n  .necks__spec-list:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .necks__spec-list p {\n    padding: 0.25rem 1rem; }\n\n.necks__spec-list--profiles {\n  float: left; }\n\n.necks__spec-list--nuts {\n  float: right; }\n\n@media (max-width: 767px) {\n  .necks__spec-list {\n    width: 100%; }\n  .necks__spec-list--profiles, .necks__spec-list--nuts {\n    float: none; } }\n\n.necks__spec-list__header {\n  border-bottom: 1px solid #dddddd;\n  padding: 1rem;\n  font-weight: bold; }\n\n.necks__cta {\n  padding: 2rem 0; }\n\n.necks__img {\n  width: 100%;\n  height: auto;\n  margin-bottom: 1rem; }\n\n.necks__img--fan {\n  max-width: 600px; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.about__credits {\n  margin-top: 4rem; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n\n@media (max-width: 414px) {\n  .contact__btn {\n    width: 100%; } }\n\n.SignUpForm {\n  width: 100%;\n  max-width: 512px;\n  margin: 4rem auto 0;\n  text-align: center; }\n", ""]);
+	exports.push([module.id, "/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  -ms-text-size-adjust: 100%;\n  /* 2 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/**\n * Remove default margin.\n */\nbody {\n  margin: 0; }\n\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n[hidden],\ntemplate {\n  display: none; }\n\n/* Links\n   ========================================================================== */\n/**\n * Remove the gray background color from active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\na:active,\na:hover {\n  outline: 0; }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\nabbr[title] {\n  border-bottom: 1px dotted; }\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n * Address styling not present in Safari and Chrome.\n */\ndfn {\n  font-style: italic; }\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/**\n * Address styling not present in IE 8/9.\n */\nmark {\n  background: #ff0;\n  color: #000; }\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\nimg {\n  border: 0; }\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\nfigure {\n  margin: 1em 40px; }\n\n/**\n * Address differences between Firefox and other browsers.\n */\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n * Contain overflow in all browsers.\n */\npre {\n  overflow: auto; }\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\n/* Forms\n   ========================================================================== */\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n  margin: 0;\n  /* 3 */ }\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\nbutton {\n  overflow: visible; }\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n * Re-set default cursor for disabled elements.\n */\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default; }\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\ninput {\n  line-height: normal; }\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  /* 2 */\n  box-sizing: content-box; }\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * Define consistent border, margin, and padding.\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\nlegend {\n  border: 0;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\noptgroup {\n  font-weight: bold; }\n\n/* Tables\n   ========================================================================== */\n/**\n * Remove most spacing between table cells.\n */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd,\nth {\n  padding: 0; }\n\n/* Base Styles */\n* {\n  box-sizing: border-box; }\n\nhtml {\n  font-family: 'PT Sans', helvetica, arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5; }\n\nbody {\n  background: #eee;\n  height: 100%;\n  width: 100%; }\n  @media (max-width: 414px) {\n    body {\n      background-image: none; } }\n\n.center {\n  text-align: center; }\n\n/* Layout */\n.site_wrapper {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);\n  width: 100%;\n  max-width: 1024px;\n  margin: auto; }\n\n.content_wrapper {\n  padding: 1rem 2rem;\n  background: #ffffff; }\n  @media (max-width: 414px) {\n    .content_wrapper {\n      padding: 1rem; } }\n\n.content {\n  padding-top: 138px; }\n  @media (max-width: 414px) {\n    .content {\n      padding-top: 0; } }\n\n.expand {\n  width: calc(100% + 4rem);\n  position: relative;\n  left: -2rem; }\n  @media (max-width: 414px) {\n    .expand {\n      width: calc(100% + 2rem);\n      left: -1rem; } }\n\n/* Fonts */\nh1, h2, h3, h4 {\n  color: #4e74aa;\n  line-height: 1.25; }\n\np {\n  color: #555555;\n  font-size: 0.875rem; }\n\n.p__highlight {\n  color: #222222; }\n\na {\n  color: #47C0C0;\n  text-decoration: none; }\n\n/* Inputs */\ninput, textarea {\n  padding: 0.5rem;\n  border: 1px solid #dddddd; }\n\n/* Buttons */\nbutton {\n  background: #ff9933;\n  color: #ffffff;\n  padding: 1rem 2rem;\n  border: 0;\n  outline: 0;\n  border-radius: 10px;\n  font-weight: bold; }\n\n.btn--outline {\n  background: none;\n  border: 3px solid #4e74aa;\n  color: #4e74aa; }\n\n.btn--small {\n  padding: 0.5rem 1rem;\n  font-size: 0.875rem; }\n\n/* Alerts */\n.alert--success {\n  color: #33cc33; }\n\n.alert--error {\n  color: #ff3300; }\n\n/* Footer */\n.footer {\n  background: #222222;\n  padding: 0.5rem 2rem;\n  font-size: 0.75rem; }\n  .footer p {\n    color: #999999; }\n\n/* Hero */\n.parallax {\n  height: 400px; }\n  @media (max-width: 767px) {\n    .parallax {\n      height: 300px; } }\n\n.parallax--hero {\n  margin-bottom: 2rem; }\n\n/* Legal */\n.Privacy, .Terms {\n  padding: 4rem 0; }\n\nheader {\n  position: relative; }\n\n.header {\n  border-bottom: 1px solid #dddddd;\n  position: fixed;\n  width: 100%;\n  max-width: 1024px;\n  z-index: 1000; }\n\n.Logo {\n  width: 150px;\n  height: 68px;\n  background-image: url(" + __webpack_require__(/*! ../img/Schillaci_Guitars_Logo.png */ 347) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  float: left; }\n\n.header__tagline {\n  float: right;\n  margin-top: 2rem; }\n\nnav {\n  clear: both;\n  padding-top: 1rem;\n  font-size: 0.875rem; }\n  nav a {\n    color: #999999;\n    text-decoration: none;\n    margin-right: 1.5rem; }\n  nav a:last-child {\n    margin-right: 0; }\n  nav a:hover {\n    color: #4e74aa; }\n\n@media (max-width: 414px) {\n  .header {\n    position: static; }\n  nav a {\n    margin-right: 1rem; } }\n\n@media (max-width: 767px) {\n  .Logo {\n    float: none;\n    margin: 0 auto; }\n  .header__tagline {\n    display: none; }\n  nav {\n    text-align: center; } }\n\n.home__tagline {\n  text-align: center;\n  text-align: center;\n  margin-bottom: 1rem; }\n  .home__tagline h1 {\n    margin-bottom: 0; }\n  .home__tagline p {\n    margin: 1rem 0 1.5rem; }\n\n.home__testimonial {\n  background: #4e74aa;\n  padding: 2rem;\n  margin-top: 3rem;\n  border-bottom: 3px solid #ffffff; }\n  .home__testimonial h2 {\n    color: #ffffff; }\n  .home__testimonial p {\n    color: #ffffff; }\n\n.home__necks {\n  background: rgba(255, 255, 255, 0.8);\n  width: 100%;\n  max-width: 360px;\n  padding: 2rem;\n  margin-top: 2.5rem; }\n  @media (max-width: 767px) {\n    .home__necks {\n      margin-top: 0; } }\n  @media (max-width: 414px) {\n    .home__necks {\n      text-align: center;\n      max-width: 100%;\n      padding: 2rem 1rem; } }\n\n.home__logo {\n  padding: 5rem 0; }\n  .home__logo:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .home__logo .Logo {\n    margin: 0 auto;\n    float: none; }\n\n.guitar__thumb__container {\n  padding-top: 2rem; }\n  .guitar__thumb__container h2 {\n    text-align: center; }\n\n.guitar__thumb {\n  width: 25%;\n  padding: 1rem;\n  display: inline-block; }\n  .guitar__thumb img {\n    width: 100%; }\n  @media (max-width: 767px) {\n    .guitar__thumb {\n      width: 50%; } }\n  @media (max-width: 414px) {\n    .guitar__thumb {\n      width: 100%; } }\n\n.guitar__thumb__label {\n  color: #555555;\n  position: relative;\n  top: -1.5rem;\n  font-size: 0.875rem; }\n\n.guitar__thumb__label--name {\n  background: rgba(255, 255, 255, 0.9);\n  border: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitar__thumb__label--price {\n  background: rgba(255, 255, 255, 0.7);\n  border-top: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  border-bottom: 1px solid #dddddd;\n  padding: 0.5rem; }\n\n.guitarPage__hero {\n  margin-top: 2rem;\n  width: 100%;\n  height: auto; }\n\n.guitarPage__name {\n  border-top: 1px solid #dddddd;\n  border-left: 1px solid #dddddd;\n  border-right: 1px solid #dddddd;\n  padding: 0.5rem 1rem;\n  margin-bottom: 0;\n  margin-top: 1rem;\n  font-weight: bold; }\n  .guitarPage__name:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .guitarPage__name p {\n    float: left; }\n  .guitarPage__name button {\n    float: right;\n    margin-top: 0.2rem; }\n\n.guitarPage__about {\n  border: 1px solid #dddddd;\n  padding: 1em 1rem 0;\n  margin-bottom: 1rem; }\n  .guitarPage__about:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__about__item {\n  width: 33.333%;\n  display: inline-block;\n  vertical-align: top;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding-right: 2rem;\n  padding-bottom: 1rem; }\n\n.guitarPage__details {\n  position: relative;\n  left: -1rem;\n  width: calc(100% + 2rem); }\n  .guitarPage__details:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n\n.guitarPage__detail {\n  float: left;\n  width: 33.333%;\n  padding: 1rem;\n  margin: 0; }\n  .guitarPage__detail img {\n    width: 100%; }\n\n@media (max-width: 767px) {\n  .guitarPage__about__item, .guitarPage__detail {\n    width: 50%; } }\n\n@media (max-width: 414px) {\n  .guitarPage__about__item, .guitarPage__detail {\n    width: 100%; } }\n\n.guitar__slider {\n  margin-top: 2rem; }\n\n.guitar__slide img {\n  width: 100%; }\n\n.necks__info p:first-child {\n  margin-top: 0; }\n\n.necks__specs:after {\n  content: \"\";\n  display: table;\n  clear: both; }\n\n.necks__spec-list {\n  width: calc(50% - 1rem);\n  border: 1px solid #dddddd;\n  margin: 1rem 0; }\n  .necks__spec-list:after {\n    content: \"\";\n    display: table;\n    clear: both; }\n  .necks__spec-list p {\n    padding: 0.25rem 1rem; }\n\n.necks__spec-list--profiles {\n  float: left; }\n\n.necks__spec-list--nuts {\n  float: right; }\n\n@media (max-width: 767px) {\n  .necks__spec-list {\n    width: 100%; }\n  .necks__spec-list--profiles, .necks__spec-list--nuts {\n    float: none; } }\n\n.necks__spec-list__header {\n  border-bottom: 1px solid #dddddd;\n  padding: 1rem;\n  font-weight: bold; }\n\n.necks__cta {\n  padding: 2rem 0; }\n\n.necks__img {\n  width: 100%;\n  height: auto;\n  margin-bottom: 1rem; }\n\n.necks__img--fan {\n  max-width: 600px; }\n\n.about__info p:first-child {\n  margin-top: 0; }\n\n.about__credits {\n  margin-top: 4rem; }\n\n.form__row label {\n  display: block;\n  margin-bottom: 0.5rem;\n  color: #555555;\n  font-size: 0.875rem; }\n\n.form__row input, .form__row textarea {\n  display: block;\n  width: 100%;\n  margin-bottom: 1rem; }\n\n@media (max-width: 414px) {\n  .contact__btn {\n    width: 100%; } }\n\n.SignUpForm {\n  width: 100%;\n  max-width: 512px;\n  margin: 4rem auto 0;\n  text-align: center; }\n", ""]);
 	
 	// exports
 
 
 /***/ }),
-/* 345 */
+/* 347 */
 /*!********************************************!*\
   !*** ./src/img/Schillaci_Guitars_Logo.png ***!
   \********************************************/

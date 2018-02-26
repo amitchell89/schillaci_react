@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 
 export default class Footer extends Component {
   render() {
@@ -6,7 +7,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <div className="footer content_wrapper">
-          <p>&copy; {year}  Schillaci Guitars - Guitars, Basses and Necks Made to Order</p>
+          <p>&copy; {year}  Schillaci Guitars - Guitars, Basses and Necks Made to Order. <Link to ="terms">Terms & Conditions</Link> | <Link to ="privacy">Privacy Policy</Link></p>
         </div>
       </footer>
     )
