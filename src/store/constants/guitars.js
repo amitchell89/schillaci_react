@@ -50,14 +50,14 @@ export const guitars = [
   },
 
   {
-    id: 21,
+    id: 22,
     name: "Knucklehead Esquire",
     type: "guitar",
     "style": "knucklehead",
     price: "$799.00",
     about: [
       "1 PC. 1/4 sawn hard rock maple neck",
-      "3 PC. Poplar Body in Atlantic Sea Green \"Greenglow\" Finish",
+      "3 PC. Poplar Body in Burgandy/Red Wine \"Greenglow\" Finish",
       "Elongated Pickguard  w/ 1 single coil pickup",
       "String thru body bridge",
       "Top mounted jack cup"

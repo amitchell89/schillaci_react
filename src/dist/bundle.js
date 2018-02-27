@@ -30708,12 +30708,12 @@
 	  detail_photos: ["Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_01.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_02.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_07.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_05.jpg"],
 	  hidden: false
 	}, {
-	  id: 21,
+	  id: 22,
 	  name: "Knucklehead Esquire",
 	  type: "guitar",
 	  "style": "knucklehead",
 	  price: "$799.00",
-	  about: ["1 PC. 1/4 sawn hard rock maple neck", "3 PC. Poplar Body in Atlantic Sea Green \"Greenglow\" Finish", "Elongated Pickguard  w/ 1 single coil pickup", "String thru body bridge", "Top mounted jack cup"],
+	  about: ["1 PC. 1/4 sawn hard rock maple neck", "3 PC. Poplar Body in Burgandy/Red Wine \"Greenglow\" Finish", "Elongated Pickguard  w/ 1 single coil pickup", "String thru body bridge", "Top mounted jack cup"],
 	  slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_esquire_2.png",
 	  thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_esquire_2.png",
 	  detail_photos: ["Guitar_Details/schillaci_guitars_details_knucklehead_esquire_b_01.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_b_02.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_b_03.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_b_04.jpg", "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_b_05.jpg"],
@@ -36475,13 +36475,13 @@
 	            '  Schillaci Guitars - Guitars, Basses and Necks Made to Order. ',
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: 'terms' },
+	              { to: '/terms' },
 	              'Terms & Conditions'
 	            ),
 	            ' | ',
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: 'privacy' },
+	              { to: '/privacy' },
 	              'Privacy Policy'
 	            )
 	          )
@@ -36641,6 +36641,38 @@
 	        _react2.default.createElement(
 	          'h3',
 	          null,
+	          'Scope'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'This statement applies to all ',
+	          url,
+	          ' visitors, unless a seperate privacy notice is prominently displayed.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Information Collection and Use'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'While using our service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to, your email address (\u201CPersonal Information\u201D).'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'We collect this information for the purpose of providing the Service, identifying and communicating with you, responding to your requests/enquiries and improving our services. Communications'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'We may use your Personal Information to contact you with nenwsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
 	          'Google Analytics'
 	        ),
 	        _react2.default.createElement(
@@ -36714,12 +36746,13 @@
 	
 	      var url = route.meta.site_url;
 	      var owner = route.meta.site_owner;
+	      var site_name = route.meta.site_name;
 	
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'Terms' },
 	        _react2.default.createElement(_reactHelmet2.default, {
-	          title: route.meta.site_name,
+	          title: site_name,
 	          meta: [{ name: "description", content: this.props.route.meta.meta_about }, { property: "og:title", content: '' }, { property: "og:url", content: '' }, { property: "og:image", content: '' }]
 	        }),
 	        _react2.default.createElement(
@@ -36743,6 +36776,18 @@
 	          '. ',
 	          owner,
 	          ' offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here. If you disagree with these terms and conditions or any part of these terms and conditions, you are not permitted to use this website.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Scope'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'This statement applies to all ',
+	          url,
+	          ' visitors, unless a seperate terms of service is prominently displayed.'
 	        ),
 	        _react2.default.createElement(
 	          'h3',
@@ -36854,12 +36899,35 @@
 	        _react2.default.createElement(
 	          'h3',
 	          null,
-	          'Breaches of these Terms and Conditions'
+	          'No Responsibility for Security Breaches'
 	        ),
 	        _react2.default.createElement(
 	          'p',
 	          null,
-	          'Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, we may take such action as we deem appropriate to deal with the breach, including suspending your access to the website, prohibiting you from accessing the website, blocking computers using your IP address from accessing the website, contacting your internet service provider to request that they block your access to the website and/or bringing court proceedings against you.'
+	          'Although we make an effort to secure this website, information transmitted over the internet is not always secure. Use of this website is purely at your own risk and ',
+	          site_name,
+	          ' is not liable for any security breaches.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'No Responsibility for User-Generated Materials'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          site_name,
+	          ' reserves the right to monitor or review any user generated content such as postings, public and private messages, photos and discussions, however Jane\'s Colony is under no obligation to do so and assumes no responsibility or liability whatsoever arising from the content on our site nor for any error, defamation, libel, slander, omission, falsehood, obscenity, pornography, profanity, danger or inaccuracy contained in any of that content. You are prohibited from posting or transmitting any unlawful, threatening, libelous, defamatory, obscene, scandalous, inflammatory, pornographic or profane material or any material that could constitute or encourage conduct that would be considered a criminal offense, give rise to civil liability, or otherwise violate any law.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Third Party Links'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'This website may contain links to third party websites. We are not responsible for the operation, content, or security of any third party websites and make no representations or warranties about the information contained on such websites.'
 	        ),
 	        _react2.default.createElement(
 	          'h3',
@@ -36875,6 +36943,28 @@
 	          'p',
 	          null,
 	          'We aim to update the Website regularly, and may change the content at any time. If the need arises, we may suspend access to the Website or close it indefinitely. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Errors, Omissions and Inaccuracies'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Although ',
+	          site_name,
+	          ' strive to provide the best content, occasionally the site may present information containing typographical errors, inaccuracies, or omissions that may relate to pricing, promotions, offers, or availability. Although we make reasonable efforts to ensure that all content on the site is current and contain no errors or inaccuracies, we make no representations, warranties or guarantees that the information, Contents or materials included on the site will be error-free or completely accurate or current at all times, or at any time. We reserve the right at any time in our sole discretion and without notice to correct any errors, inaccuracies or omissions to the information on the site.'
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Breaches of these Terms and Conditions'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Without prejudice to our other rights under these terms and conditions, if you breach these terms and conditions in any way, we may take such action as we deem appropriate to deal with the breach, including suspending your access to the website, prohibiting you from accessing the website, blocking computers using your IP address from accessing the website, contacting your internet service provider to request that they block your access to the website and/or bringing court proceedings against you.'
 	        ),
 	        _react2.default.createElement(
 	          'h3',
