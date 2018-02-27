@@ -37072,9 +37072,9 @@
 	var meta_guitars = exports.meta_guitars = meta_standard + ' Explore guitar models and find the perfect instrument for you.';
 	var meta_about = exports.meta_about = meta_standard + ' Learn more about Darren Schillaci, the man behind the guitar.';
 	var meta_contact = exports.meta_contact = meta_standard + 'Contact Schillaci Guitars now for more information about order the perfect instrument for you,';
-	var site_name = exports.site_name = 'Schillaci Guitar\'s';
+	var site_name = exports.site_name = 'Schillaci Guitars';
 	var site_url = exports.site_url = 'schillaciguitars.com';
-	var site_owner = exports.site_owner = 'Schillaci Guitar\'s';
+	var site_owner = exports.site_owner = 'Schillaci Guitars';
 
 /***/ }),
 /* 345 */
