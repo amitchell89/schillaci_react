@@ -35256,10 +35256,7 @@
 	
 	    var _this = _possibleConstructorReturn(this, (SignUpForm.__proto__ || Object.getPrototypeOf(SignUpForm)).call(this, props));
 	
-	    _this.state = {
-	      // signupAlert: false,
-	      // alertStatus: null,
-	    };
+	    _this.state = {};
 	    _this.postData = _this.postData.bind(_this);
 	    return _this;
 	  }
@@ -35274,38 +35271,9 @@
 	      this.props.addEmail(data);
 	      document.getElementById("email").value = "";
 	    }
-	
-	    // postData(e) {
-	    //   e.preventDefault();
-	    //   let email = this.refs.email.value;
-	    //   const parseJson = function (response) {
-	    //       return response.json();
-	    //   };
-	    //   fetch('/email', {
-	    //     method: 'POST',
-	    //     headers: {
-	    //       'Accept': 'application/json',
-	    //       'Content-Type': 'application/json',
-	    //     },
-	    //     body: JSON.stringify({
-	    //       email: email
-	    //     })
-	    //   }).then(function(response) {
-	    //     this.triggerAlert(response)
-	    //   }.bind(this));
-	    // }
-	
-	    // triggerAlert(response) {
-	    //   this.setState({ signupAlert: true, alertStatus: response.status })
-	    //   document.getElementById("email").value = "";
-	    // }
-	
-	
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      // const { signupAlert, alertStatus } = this.state;
-	
 	      var _props = this.props,
 	          isAddEmailPending = _props.isAddEmailPending,
 	          isAddEmailSuccess = _props.isAddEmailSuccess,

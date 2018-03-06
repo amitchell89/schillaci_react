@@ -24,8 +24,6 @@ class SignUpForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // signupAlert: false,
-      // alertStatus: null,
     };
     this.postData = this.postData.bind(this);
   }  
@@ -39,35 +37,7 @@ class SignUpForm extends Component {
     document.getElementById("email").value = "";
   }
 
-  // postData(e) {
-  //   e.preventDefault();
-  //   let email = this.refs.email.value;
-  //   const parseJson = function (response) {
-  //       return response.json();
-  //   };
-  //   fetch('/email', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({
-  //       email: email
-  //     })
-  //   }).then(function(response) {
-  //     this.triggerAlert(response)
-  //   }.bind(this));
-  // }
-
-  // triggerAlert(response) {
-  //   this.setState({ signupAlert: true, alertStatus: response.status })
-  //   document.getElementById("email").value = "";
-  // }
-
-
   render() {
-    // const { signupAlert, alertStatus } = this.state;
-
     const { isAddEmailPending, isAddEmailSuccess, addEmailError } = this.props;
 
     let statusSuccess = <p className="alert--success">You have successfully signed up! Thank You.</p>;
