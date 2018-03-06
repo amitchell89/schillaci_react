@@ -17,6 +17,13 @@ import NotFound from './NotFound';
 
 import * as meta from '../store/constants/meta_info';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize(meta.ga_tracking_code);
+
+function fireTracking() {
+  ReactGA.pageview(window.location.pathname);
+}
+
 export default class Routes extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +32,7 @@ export default class Routes extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Router history={browserHistory}>
+        <Router history={browserHistory} onUpdate={fireTracking}>
           <Route path='/' component={AppContainer} meta={meta}>
             <IndexRoute component={Home} meta={meta} />
             <Route path='/guitars' component={Guitars} meta={meta} />

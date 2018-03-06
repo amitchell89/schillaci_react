@@ -1,2 +1,7 @@
 export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
+
+// Add Email
+export const SET_ADD_EMAIL_PENDING = 'SET_ADD_EMAIL_PENDING';
+export const SET_ADD_EMAIL_SUCCESS = 'SET_ADD_EMAIL_SUCCESS';
+export const SET_ADD_EMAIL_ERROR = 'SET_ADD_EMAIL_ERROR';

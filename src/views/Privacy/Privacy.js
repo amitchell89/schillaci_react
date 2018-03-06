@@ -35,8 +35,8 @@ export default class Privacy extends Component {
         While using our service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to, your email address (“Personal Information”).</p>
         <p>
         We collect this information for the purpose of providing the Service, identifying and communicating with you, responding to your requests/enquiries and improving our services.
-        <h3>Communications</h3>
         </p>
+        <h3>Communications</h3>
         <p>
         We may use your Personal Information to contact you with nenwsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send.
         </p>

@@ -1,3 +1,7 @@
+///////////////////
+// Requirements //
+/////////////////
+
 var express = require('express')
 var app = express()
 var path    = require("path");
@@ -5,8 +9,23 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var helmet = require('helmet')
 var xss = require('xss');
+var validator = require("email-validator");
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-// MongoDb
+//////////////////
+// Helmet setup //
+//////////////////
+
+app.use(helmet())
+app.use(express.static('src'))
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//////////////
+// MongoDb //
+////////////
+
 var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/schillaci');
@@ -17,11 +36,24 @@ app.use(function(req,res,next){
   next();
 });
 
-// Helmet setup
-app.use(helmet())
-app.use(express.static('src'))
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+/////////////////////
+// Mongoose Setup //
+///////////////////
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/schillaci');
+
+/////////////
+// Router //
+////////////
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname +'/index.html'));
+})
+
+app.listen(3003, function () {
+  console.log('Site listening on port 3003!')
+})
 
 // create reusable transporter object using the default SMTP transport
 // NodeMailer 0.7
@@ -37,15 +69,10 @@ var transporter = nodemailer.createTransport("SMTP", {
   }
 });
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname +'/index.html'));
-})
+//////////////
+// Contact //
+////////////
 
-app.listen(3003, function () {
-  console.log('Site listening on port 3003!')
-})
-
-// handle contact page posts
 app.post('/contact', function(req, res) {
   var payload = req.body;
   var name = xss(payload.name);
@@ -56,24 +83,40 @@ app.post('/contact', function(req, res) {
   sendMail(subject, email_message, res);
 });
 
-// handle email submission posts
-app.post('/email', function(req, res) {
+///////////////////
+// Email Signup //
+/////////////////
+
+var userEmail = require('./api/models/UserEmail');
+
+app.post('/api/addEmail', function(req, res) {
   var payload = req.body;
-  // Set our internal DB variable
-  var db = req.db;
-  var collection = db.get('emails');
-  // Submit to the DB
-   collection.insert(payload, function (err, doc) {
-       if (err) {
-         // If it failed, return error
-         res.send("There was a problem adding the information to the database.");
-       }
-       else {
-          var subject = 'Schillaci Guitars: New Email Signup';
-          var message = '<b>New Email Signup:</b> ' + payload.email;
-          sendMail(subject, message, res);
-       }
-   });
+
+  // Validate Email
+  // var email = xss(payload)
+  var result = validator.validate(payload.email);
+  if (result) {
+    var newEmail = new userEmail({ 
+      email: payload.email
+    });
+
+    newEmail.save(function (err, newEmail) {
+      if (err) {
+        console.log('err', err)
+        return res.status(500).json({message: 'Signup Failure: Server Error'});
+      } else {
+        console.log('success', newEmail)
+        var subject = 'Schillaci Guitars: New Email Signup';
+        var message = '<b>New Email Signup:</b> ' + payload.email;
+        sendMail(subject, message, res);
+        return res.json({
+          newEmail
+        })
+      }
+    });
+  } else {
+    return res.status(401).json({message: 'Please enter a valid email'});
+  }
 });
 
 // Send Emails
@@ -81,7 +124,8 @@ function sendMail(subject, message, res) {
   // setup e-mail data with unicode symbols
   var mailOptions = {
     from: '"Schillaci Guitars" <' + user + '>', // sender address
-    to: 'aaronmitchellart@gmail.com, d.schillaciguitars@gmail.com', // list of receivers
+    // to: 'aaronmitchellart@gmail.com, d.schillaciguitars@gmail.com', // list of receivers
+    to: 'aaronmitchellart@gmail.com', // list of receivers
     subject: subject, // Subject line
     text: message, // plaintext body
     html: message // html body

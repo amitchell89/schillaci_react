@@ -5,3 +5,5 @@ export const meta_contact = meta_standard + 'Contact Schillaci Guitars now for m
 export const site_name = 'Schillaci Guitars';
 export const site_url = 'schillaciguitars.com';
 export const site_owner = 'Schillaci Guitars';
+
+export const ga_tracking_code = 'UA-114677834-1';
