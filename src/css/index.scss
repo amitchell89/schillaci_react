@@ -2,12 +2,6 @@
 @import 'variables';
 @import 'mixins';
 @import 'base';
-@import 'header';
-@import 'home';
-@import 'guitars';
-@import 'guitarPage';
-@import 'guitarSlider';
-@import 'necks';
-@import 'about';
-@import 'contact';
-@import 'SignUpForm';
+@import '../components/index.scss';
+@import '../containers/index.scss';
+@import '../views/index.scss';
