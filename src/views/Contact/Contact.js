@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Helmet from "react-helmet";
 import ContactForm from '../../components/ContactForm'
-import { Parallax } from 'react-parallax';
+
+import ParallaxHero from '../../components/ParallaxHero';
 
 export default class Contact extends Component {
   render() {
@@ -19,12 +20,10 @@ export default class Contact extends Component {
           ] }
           />
 
-        <Parallax
-          className="parallax parallax--hero expand"
-          bgImage={"../../img/" + hero}
-          strength={400}
-        >
-        </Parallax>
+        <ParallaxHero 
+          desktopImage={"../../img/" + hero}
+          mobileImage={"../../img/" + hero}
+        />
 
         <h2>
         Interested in ordering a guitar or neck?

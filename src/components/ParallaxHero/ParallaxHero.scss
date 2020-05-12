@@ -1,0 +1,24 @@
+
+.parallax--hero {
+  margin-bottom: 2rem;
+}
+
+.parallax--desktop {
+	display: block;
+	height: 400px;
+}
+
+.parallax--mobile {
+	display: none;
+	height: 300px;
+}
+
+@media (max-width: $mq-tablet) {
+	.parallax--desktop {
+		display: none;
+	}
+
+	.parallax--mobile {
+		display: block;
+	}
+}

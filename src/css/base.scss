@@ -139,21 +139,6 @@ button {
   }
 }
 
-/* Hero */
-
-.parallax {
-  height: 400px;
-  @media (max-width: $mq-tablet) {
-    height: 300px;
-  }
-}
-
-.parallax--hero {
-  margin-bottom: 2rem;
-}
-
-
-
 /* Legal */
 .Privacy, .Terms {
   padding: 4rem 0;

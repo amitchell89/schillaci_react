@@ -3,9 +3,10 @@ import { Link } from 'react-router'
 import Helmet from "react-helmet";
 import { Parallax } from 'react-parallax';
 
-import ModalButton from '../../components/ModalButton'
-import GuitarSlider from '../../components/GuitarSlider'
-import SignUpForm from '../../components/SignUpForm'
+import ModalButton from '../../components/ModalButton';
+import GuitarSlider from '../../components/GuitarSlider';
+import SignUpForm from '../../components/SignUpForm';
+import ParallaxHero from '../../components/ParallaxHero';
 
 export default class Home extends Component {
   render() {
@@ -23,12 +24,10 @@ export default class Home extends Component {
           ] }
         />
 
-        <Parallax
-          className="parallax parallax--hero expand"
-          bgImage={"../../img/" + hero }
-          strength={400}
-        >
-        </Parallax>
+        <ParallaxHero 
+          desktopImage="../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"
+          mobileImage="../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"
+        />
 
         <div className="home__tagline">
           <h1>Let's Build Your Next Guitar</h1>

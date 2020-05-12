@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Helmet from "react-helmet";
-import { Parallax } from 'react-parallax';
+
+import ParallaxHero from '../../components/ParallaxHero';
 
 export default class About extends Component {
   render() {
@@ -18,13 +19,11 @@ export default class About extends Component {
             { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero },
           ] }
           />
-        
-        <Parallax
-          className="parallax parallax--hero expand"
-          bgImage={"../../img/" + hero}
-          strength={400}
-        >
-        </Parallax>
+
+        <ParallaxHero 
+          desktopImage={"../../img/" + hero}
+          mobileImage={"../../img/" + hero}
+        />
 
         <div className="about__info">
           <h2>

@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Helmet from "react-helmet";
-import { Parallax } from 'react-parallax';
+
+import ParallaxHero from '../../components/ParallaxHero';
 
 export default class Necks extends Component {
   render() {
-    const hero = 'Necks/schillaci_guitars_custom_necks.jpg'
+    const hero = 'Necks/schillaci_guitars_custom_necks.jpg';
     return (
       <div>
         <Helmet
@@ -17,11 +18,11 @@ export default class Necks extends Component {
             { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero },
           ] }
           />
-        <Parallax
-          className="parallax parallax--hero expand"
-          bgImage={"../../img/" + hero}
-          strength={400}>
-        </Parallax>
+
+        <ParallaxHero 
+          desktopImage={"../../img/" + hero}
+          mobileImage={"../../img/" + hero}
+        />
 
         <div className="necks__info">
           <h2>Custom Necks</h2>
