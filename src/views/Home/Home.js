@@ -25,8 +25,8 @@ export default class Home extends Component {
         />
 
         <ParallaxHero 
-          desktopImage="../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"
-          mobileImage="../../img/Guitar_Details/schillaci_guitars_detail_lsg_guitar_04.jpg"
+          desktopImage="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Hero/schillaci_guitars_home_hero_desktop.jpg"
+          mobileImage="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Hero/schillaci_guitars_home_hero_mobile.jpg"
         />
 
         <div className="home__tagline">

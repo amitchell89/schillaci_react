@@ -19,7 +19,8 @@ class GuitarPage extends Component {
       return n.id === guitarId;
     })[0];
 
-    const hero = '../../img/' + data.slider_photo;
+    // const hero = '../../img/' + data.slider_photo;
+    const hero = data.slider_photo;
 
     const guitarAbout = (
       <div className="guitarPage__about">

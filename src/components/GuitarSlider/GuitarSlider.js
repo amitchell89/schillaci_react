@@ -32,13 +32,16 @@ class GuitarSlider extends Component {
     const guitarSlides = (
       <Slider {...settings}>
         {guitars.map(function (s, i) {
-          let slide = '../../img/' + s.slider_photo;
-          let slide_link = '/guitar/' + i;
+
+          let slide_link = '/guitar/' + s.id;
           return (
             <div className="guitar__slide" key={s.id}>
               <Link to={slide_link}>
-                <img src={slide} />
+                <img src={s.slider_photo} />
               </Link>
+              <div className="guitar__slide__name">
+                {s.name}
+              </div>
             </div>
           )}.bind(this))}
       </Slider>

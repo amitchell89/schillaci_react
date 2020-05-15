@@ -15,7 +15,7 @@ export const guitars = [
       "Side mounted output jack",
       "\"Greenglow\" red mahogany finish"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_lsg_guitar_1.png",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_01_full_LSG.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_lsg_guitar_1.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_lsg_guitar_01.jpg",
@@ -38,7 +38,7 @@ export const guitars = [
       "String thru body bridge",
       "Top mounted jack cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_esquire_1.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_20_full_knucklehead_esquire.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_esquire_1.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_a_01.jpg",
@@ -62,7 +62,7 @@ export const guitars = [
       "String thru body bridge",
       "Top mounted jack cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_esquire_2.png",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_22_full_knucklehead_esquire.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_esquire_2.png",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_details_knucklehead_esquire_b_01.jpg",
@@ -91,7 +91,7 @@ export const guitars = [
       "P-90 pickup",
       "Wraparound stop tailpiece"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_junior_guitar_1.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_02_full_LP_Junior.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_junior_guitar_1.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_lp_junior_guitar_a_01.jpg",
@@ -117,7 +117,7 @@ export const guitars = [
       "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs",
       "Top Mounted Jack Cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_1.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_03_full_knucklehead.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_1.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_b_01.jpg",
@@ -142,7 +142,7 @@ export const guitars = [
       "Two Volume and Two Tone Controls with Blade Switch",
       "Side Mounted Jack"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_2.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_04_full_knucklehead.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_2.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_c_01.jpg",
@@ -164,7 +164,7 @@ export const guitars = [
       "Two volume, two tone with blade switch",
       "Side mounted jack"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_3.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_05_full_knucklehead.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_4.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_a_01.jpg",
@@ -191,7 +191,7 @@ export const guitars = [
       "Elongated Pickguard",
       "Top Mounted Jack Cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_4.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_06_full_knucklehead.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_3.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_d_01.jpg",
@@ -216,7 +216,7 @@ export const guitars = [
       "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs",
       "Top Mounted Jack Cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_knucklehead_guitar_5.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_07_full_knucklehead.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_knucklehead_guitar_5.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_e_01.jpg",
@@ -241,7 +241,7 @@ export const guitars = [
       "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs",
       "Top Mounted Jack Cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_1.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_08_full_hammerhead.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_hammerhead_guitar_1.jpg",
     detail_photos: [],
     hidden: false
@@ -262,7 +262,7 @@ export const guitars = [
       "Elongated Spacing Between Volume and Tone Knobs",
       "Top Mounted Jack Cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_2.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_09_full_hammerhead.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_hammerhead_guitar_2.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_hammerhead_guitar_a_01.jpg",
@@ -286,7 +286,7 @@ export const guitars = [
       "Top mounted jack cup",
       "Toggle \"kill\" switch"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_hammerhead_guitar_3.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_10_full_hammerhead.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_hammerhead_3.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_hammerhead_guitar_b_01.jpg",
@@ -310,7 +310,7 @@ export const guitars = [
       "Elongated pick guard",
       "Top mounted jack cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_royscaster_1.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_11_full_royscaster.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_royscaster_guitar_1.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_royscaster_a_01.jpg",
@@ -332,7 +332,7 @@ export const guitars = [
       "Elongated vintage style pick guard",
       "Top mounted jack cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_1.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_12_full_riptide_bass.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_riptide_bass_1.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_riptide_bass_c_01.jpg",
@@ -355,7 +355,7 @@ export const guitars = [
       "Elongated vintage style pick guard",
       "Top mounted jack cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_2.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_13_full_riptide_bass.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_riptide_bass_2.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_riptide_bass_a_01.jpg",
@@ -379,7 +379,7 @@ export const guitars = [
       "Elongated Tortoise Shell Vintage Style Pickguard",
       "Top Mounted Jack Cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_riptide_bass_3.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_14_full_riptide_bass.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_riptide_bass_3.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_riptide_bass_b_01.jpg",
@@ -402,7 +402,7 @@ export const guitars = [
       "Single P Pickup",
       "Top Mounted Jack Cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_bosko_bass_2.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_15_full_bosko_bass.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_bosko_bass_2.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_bosko_bass_b_01.jpg",
@@ -424,7 +424,7 @@ export const guitars = [
       "Enlongated vintage style pick guard",
       "Top mounted jack cup"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_bosko_bass_1.png",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_16_bosko_bass.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_bosko_bass_1.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_bosko_bass_a_01.jpg",
@@ -446,7 +446,7 @@ export const guitars = [
       "Hip shot string thru body bridge",
       "Flat black finish"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_pj_bass_1.png",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_17_full_pj_bass.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_pj_bass_1.png",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_pj_bass_01.jpg",
@@ -475,7 +475,7 @@ export const guitars = [
       "2 Lace Sensor humbuckers",
       "Coil tapped w/ push-pull tone pots"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_kestral_guitar_1.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_18_kestral_guitar.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_kestral_guitar_1.jpg",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_kestral_guitar_a_01.jpg",
@@ -498,7 +498,7 @@ export const guitars = [
       "Hip Shot \" string thru body\" bridge",
       "Gloss silver metallic finish"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_pj_bass_2.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_19_full_pj_bass.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_pj_bass_2.png",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_pj_bass_b_01.jpg",
@@ -521,7 +521,7 @@ export const guitars = [
       "Hip shot \" string thru body\" bridge",
       "Side mounted jack"
     ],
-    slider_photo: "Guitars/schillaci_guitars_slider_mahoganey_pj_bass_1.png",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_21_pj_bass.jpg",
     thumb_photo: "Guitar_Thumbs/schillaci_guitars_thumb_mahoganey_pj_bass_1.png",
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_mahoganey_pj_bass_02.jpg",

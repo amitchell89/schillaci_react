@@ -3,6 +3,21 @@
   margin-top: 2rem;
 }
 
+.guitar__slide {
+	position: relative;
+}
+
 .guitar__slide img{
   width: 100%; 
+}
+
+.guitar__slide__name {
+	position: absolute;
+	background: $semi-transparent-background;
+	color: $white;
+	padding: 0.5rem 1rem;
+	padding-left: calc(40px + 0.5rem);
+	right: 0;
+	bottom: 0;
+	clip-path: polygon(40px 0,100% 0,100% 100%,0 100%,0 100%);
 }
