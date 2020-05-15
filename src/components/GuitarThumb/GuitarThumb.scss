@@ -1,3 +1,9 @@
+.guitar__thumb {
+  position: relative;
+  img {
+    width: 100%;
+  }
+}
 
 .guitar__thumb__container {
   padding-top: 2rem;
@@ -6,39 +12,29 @@
   }
 }
 
-.guitar__thumb {
-  width: 25%;
-  padding: 1rem;
-  display: inline-block;
-  img {
-    width: 100%;
-  }
-  @media (max-width: $mq-tablet) {
-    width: 50%;
-  }
-  @media (max-width: $mq-mobile) {
-    width: 100%;
-  }
-}
-
 .guitar__thumb__label {
   color: $gray-dark;
   position: relative;
-  top: -1.5rem;
   font-size: 0.875rem;
+  font-style: italic;
+  text-align: center;
+  padding: 0.25rem;
 }
 
 
 .guitar__thumb__label--name {
-  background: rgba(255,255,255,0.9);
-  border: 1px solid $gray-light;
-  padding: 0.5rem;
+  // background: rgba(255,255,255,0.9);
+  // border: 1px solid $gray-light;
+  // padding: 0.5rem;
 }
 
 .guitar__thumb__label--price {
-  background: rgba(255,255,255,0.7);
-  border-top: 1px solid $gray-light;
-  border-right: 1px solid $gray-light;
-  border-bottom: 1px solid $gray-light;
-  padding: 0.5rem;
+  // background: rgba(255,255,255,0.7);
+  // border-top: 1px solid $gray-light;
+  // border-right: 1px solid $gray-light;
+  // border-bottom: 1px solid $gray-light;
+  // padding: 0.5rem;
+  display: none;
 }
+
+
