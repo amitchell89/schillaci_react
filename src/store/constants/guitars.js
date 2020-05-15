@@ -48,7 +48,6 @@ export const guitars = [
       ],
     hidden: false
   },
-
   {
     id: 22,
     name: "Knucklehead Esquire",
@@ -73,8 +72,6 @@ export const guitars = [
       ],
     hidden: false
   },
-
-
   {
     id: 2,
     name: "LP Junior",
@@ -169,6 +166,29 @@ export const guitars = [
     detail_photos: [
       "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_a_01.jpg",
       "Guitar_Details/schillaci_guitars_detail_knucklehead_guitar_a_02.jpg"
+      ],
+    hidden: false
+  },
+  {
+    id: 23,
+    name: "\'74 / P Plus",
+    type: "bass",
+    "style": "bolt",
+    price: "$1295.00",
+    about: [
+      "Poplar/ cypress body",
+      "Maple neck w/ rosewood board",
+      "Hip Shot bridge",
+      "String-thru body",
+      "\'74 J set of pickups",
+      "Side output jack"
+    ],
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_23_full_74_p_plus.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_23_thumb_74_p_plus.jpg",
+    detail_photos: [
+      "Guitar_Details/schillaci_guitars_23_detail_01.jpg",
+      "Guitar_Details/schillaci_guitars_23_detail_02.jpg",
+      "Guitar_Details/schillaci_guitars_23_detail_03.jpg",
       ],
     hidden: false
   },
