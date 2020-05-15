@@ -6,7 +6,7 @@ export default class GuitarThumb extends Component {
 
     var { thumb, name, price, thumb, id } = this.props;
 
-    thumb = '../../img/' + thumb;
+    // thumb = '../../img/' + thumb;
     let link = '/guitar/' + id;
 
     return (
