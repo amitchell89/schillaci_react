@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import { Link } from 'react-router';
 
 import GuitarGallery from '../../containers/GuitarGallery';
+import ContactCallout from '../../components/ContactCallout';
 
 function mapStateToProps(state) {
    return {
@@ -26,6 +27,8 @@ class Guitars extends Component {
       return n.type === 'guitar' && n.style === 'knucklehead';
     });
 
+    const combined_guitar_list = knucklehead_list.concat(hammerhead_list);
+
     const set_neck_list = guitars.filter(function(n) {
       return n.type === 'guitar' && n.style === 'set';
     });
@@ -45,15 +48,14 @@ class Guitars extends Component {
             { property: "og:image", content: 'https://schillaciguitars.com/img/Schillaci_Guitars_Logo.png' },
           ] }
           />
-        <div className="guitar__thumb__container">
-          <h2>Hammerhead - Bolt On Guitars</h2>
-          <GuitarGallery guitars={hammerhead_list} />
-          <h2>Knucklehead - Bolt On Guitars</h2>
-          <GuitarGallery guitars={knucklehead_list} />
+        <div className="guitar__gallery__container">
+          <h2>Guitars</h2>
+          <GuitarGallery guitars={combined_guitar_list} />
           <h2>Set Neck Guitars</h2>
           <GuitarGallery guitars={set_neck_list} />
-          <h2>Bolt On Basses</h2>
+          <h2>Bass Guitars</h2>
           <GuitarGallery guitars={bass_list} />
+          <ContactCallout />
         </div>
       </div>
     )

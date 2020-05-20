@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import Helmet from "react-helmet";
 
 import ParallaxHero from '../../components/ParallaxHero';
+import ContactCallout from '../../components/ContactCallout';
 
 export default class About extends Component {
   render() {
@@ -38,12 +39,7 @@ export default class About extends Component {
           <p>
             All guitar bodies are painted with sparkling Dupont paint (matched colors available upon request). Figured tops and bodies, natural woods, stains and sunburst finishes are also available.
           </p>
-          <p>
-            <span className="p__highlight">Interested in ordering a guitar or neck?</span>
-          </p>
-          <Link to="/contact">
-            <button className="btn--outline">Send us a Message</button>
-          </Link>
+          <ContactCallout />
           <div className="about__credits">
             <p>
               Website Design by <a href="http://www.mitchellaaron.com">Aaron Mitchell</a>

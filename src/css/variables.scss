@@ -1,10 +1,28 @@
+$neutral_0: #000000;
+$neutral_10: #111111;
+$neutral_30: #595959;
+$neutral_60: #999999;
+$neutral_75: #BFBFBF;
+$neutral_85: #D9D9D9;
+$neutral_95: #F2F2F2;
+$neutral_100: #ffffff;
+
+$alert_red: #FF4D4D;
+$alert_green: #35B65C;
+$alert_yellow: #FFBB39;
+
+$blue_light: #e6f0ff;
+$blue: #4e74aa;
+
+/////////
+
 $gray-light: #dddddd;
 $gray-mid: #999999;
 $gray-dark: #555555;
 $black: #222222;
 $white: #ffffff;
 
-$accent-primary: #4e74aa;        // Blue
+$accent-primary: $blue;        // Blue
 $accent-secondary: #47C0C0;       // Light Blue
 $accent-cta: #ff9933;            // Orange
 
@@ -14,3 +32,6 @@ $mq-mobile: 414px;
 $semi-transparent-background: rgba(0,0,0,0.75);
 
 $box_shadow: 0px 2px 4px rgba(0,0,0,0.2);
+$border-radius: 8px;
+
+

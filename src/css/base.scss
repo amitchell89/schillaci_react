@@ -7,7 +7,7 @@
 html {
   font-family: 'PT Sans', helvetica, arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 body {
@@ -15,7 +15,8 @@ body {
   // background-size: cover;
   // background-attachment: fixed;
   // background-repeat: no-repeat;
-  background: #eee;
+  // background: #eee;
+  background: $neutral_95;
   height: 100%;
   width: 100%;
   @media (max-width: $mq-mobile) {
@@ -62,11 +63,24 @@ body {
   }
 }
 
+
+.col__2 {
+  width: 50%;
+  display: inline-block;
+}
+
+@media (max-width: $mq-mobile) {
+  .col__2 {
+    width: 100%;
+    display: block;
+  }
+}
+
 /* Fonts */
 
 h1, h2, h3, h4 {
   color: $accent-primary;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 p {
@@ -164,3 +178,4 @@ button {
     width: 100%;
   }
 }
+

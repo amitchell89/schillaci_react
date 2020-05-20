@@ -1,0 +1,9 @@
+.Contact {
+	margin: 4rem 0;
+}
+
+@media (max-width: $mq-mobile) {
+	.Contact {
+		margin-top: 2rem;
+	}
+}

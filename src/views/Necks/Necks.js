@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import Helmet from "react-helmet";
 
 import ParallaxHero from '../../components/ParallaxHero';
+import ContactCallout from '../../components/ContactCallout';
 
 export default class Necks extends Component {
   render() {
@@ -30,7 +31,7 @@ export default class Necks extends Component {
           Schillaci Guitars is a manufacturer and seller of necks. Necks and neck profiles are made to order in vintage or modern design which feature one piece maple construction or rosewood slab board. Replacement necks are also available. Heel widths compatible to industry standards.
           </p>
 
-          <div className="center">
+          <div>
             <h4>Classic Right Handed Neck</h4>
             <img className="necks__img" src="../../img/Necks/schillaci_guitars_neck_right_handed.png" />
             <h4>Classic Left Handed Neck</h4>
@@ -63,7 +64,7 @@ export default class Necks extends Component {
           <p>
           Schillaci Guitars also specializes in custom microtonal necks. A Microtonal instrument uses intervals beyond the western system of 12 intervals per octave, opening up a world of new sounds and musical opportunities. Several styles of microtonal necks are available, each providing their own unique playing style and personality.
           </p>
-          <div className="center">
+          <div>
             <h4>The 19 Tone Equal Neck</h4>
             <img className="necks__img" src="../../img/Necks/schillaci_guitars_microtonal_neck_19_tone.png" />
             <h4>The 31 Tone Equal Neck</h4>
@@ -72,13 +73,8 @@ export default class Necks extends Component {
             <img className="necks__img" src="../../img/Necks/schillaci_guitars_neck_fretless.png" />
           </div>
         </div>
-
-        <div className="necks__cta center">
-          <h2>Interested in ordering a neck?</h2>
-          <Link to="/contact">
-            <button className="btn--outline">Send Us a Message</button>
-          </Link>
-        </div>
+        <ContactCallout />
+        
         <div className="necks__fan center">
           <img className="necks__img necks__img--fan" src="../../img/Necks/schillaci_guitars_neck_fan.jpg" />
         </div>

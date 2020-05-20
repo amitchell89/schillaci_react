@@ -7,6 +7,7 @@ import ModalButton from '../../components/ModalButton';
 import GuitarSlider from '../../components/GuitarSlider';
 import SignUpForm from '../../components/SignUpForm';
 import ParallaxHero from '../../components/ParallaxHero';
+import ContactCallout from '../../components/ContactCallout';
 
 export default class Home extends Component {
   render() {
@@ -29,15 +30,23 @@ export default class Home extends Component {
           mobileImage="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Hero/schillaci_guitars_home_hero_mobile.jpg"
         />
 
-        <div className="home__tagline">
+        <div className="home__intro">
           <h1>Let's Build Your Next Guitar</h1>
-          <p>Guitars, Basses and Necks Made to Order</p>
-          <Link to="/guitars">
-            <button className="btn--outline">View All Guitars</button>
-          </Link>
+          <p>Darren Schillaci has been building guitars for over twenty years. A lifelong player, he turns his passion into an unmatched precision that resonates from every guitar. When you order from Schillaci Guitars, you are guaranteed to receive a one of a kind instrument, built exactly to your precise needs and taste. 
+          </p>
         </div>
 
-        <GuitarSlider />
+        <ContactCallout />
+
+        <div className="home__slider">
+          <div className="home__slider__headline">
+            <h2>Recently sold instruments</h2>
+            <Link to="/guitars">
+              <button className="btn--outline btn--small">View all</button>
+            </Link>
+          </div>
+          <GuitarSlider /> 
+        </div>
 
         <div className="home__testimonial expand">
           <h2>"I'm blown away by this guitar. I can feel the rock solid construction and the neck is amazing. Thank you so much for your craftsmanship and for working with me on this idea."</h2>

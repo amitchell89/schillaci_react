@@ -1,0 +1,55 @@
+.ContactCallout {
+	background: $blue_light;
+	border-radius: $border-radius;
+	padding: 1.5rem;
+	margin: 2rem 0;
+	@include clearfix;
+	display: grid;
+  grid-template-columns: 1fr 200px;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.ContactCallout__info {
+	display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.ContactCallout__img img {
+	width: 100%;
+	height: auto;
+}
+
+.ContactCallout__copy {
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.ContactCallout__button {}
+
+@media (max-width: $mq-tablet) {
+	.ContactCallout {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.ContactCallout__info {
+		column-gap: 1rem;
+	  align-items: flex-start;
+	}
+
+	.ContactCallout__copy {
+		margin: 0 0 1.5rem;
+	}
+	
+	.ContactCallout__button {
+		width: 100%;
+		button {
+			width: 100%;
+		}
+	}
+}
