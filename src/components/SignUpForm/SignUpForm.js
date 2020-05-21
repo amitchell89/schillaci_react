@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
+import ReCAPTCHA from "react-recaptcha";
 
 import { addEmail } from '../../store/actions/Email';
 
@@ -20,22 +21,38 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
+
 class SignUpForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      reCaptchaCode: null
     };
     this.postData = this.postData.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
   }  
 
   postData(e) {
     e.preventDefault();
     var data = {
-      email: this.refs.email.value
+      email: this.refs.email.value,
+      reCaptchaCode: this.state.reCaptchaCode
     }
     this.props.addEmail(data)
     document.getElementById("email").value = "";
   }
+
+
+  // specifying your onload callback function
+  callback() {
+    // console.log('reCaptcha Loaded');
+  };
+   
+  // specifying verify callback function
+  verifyCallback(response) {
+    this.setState({ reCaptchaCode: response });
+  };
+
 
   render() {
     const { isAddEmailPending, isAddEmailSuccess, addEmailError } = this.props;
@@ -50,7 +67,15 @@ class SignUpForm extends Component {
           <div className="form__row">
             <input id="email" type="text" name="email" placeholder="Your Email" ref="email"></input>
           </div>
-          <button type="submit" form="email_form" value="Submit" className="btn--outline btn--100" onClick={this.postData.bind(this)}>Sign Up</button>
+
+          <ReCAPTCHA
+            sitekey="6LffPvoUAAAAAAXA6EfFo7Hgknou_GH3rtOHlAyC"
+            render="explicit"
+            verifyCallback={this.verifyCallback}
+            onloadCallback={this.callback}
+          />
+
+          <button disabled={!this.state.reCaptchaCode} type="submit" form="email_form" value="Submit" className="btn--outline btn--100" onClick={this.postData.bind(this)}>Sign Up</button>
         </form>
         { isAddEmailSuccess ? statusSuccess : null }
         { addEmailError ? statusError : null }

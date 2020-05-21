@@ -21,6 +21,7 @@
     "babel-preset-react": "^6.22.0",
     "body-parser": "^1.15.2",
     "css-loader": "^0.26.1",
+    "dotenv": "^8.2.0",
     "email-validator": "^1.1.1",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",

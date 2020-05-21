@@ -11,7 +11,10 @@ var helmet = require('helmet')
 var xss = require('xss');
 var validator = require("email-validator");
 var mongoose = require('mongoose');
+var axios = require('axios');
 var Schema = mongoose.Schema;
+require('dotenv').config();
+
 
 //////////////////
 // Helmet setup //
@@ -98,34 +101,64 @@ var userEmail = require('./api/models/UserEmail');
 app.post('/api/addEmail', function(req, res) {
   var payload = req.body;
 
-  // Validate Email
-  // var email = xss(payload)
-  var result = validator.validate(payload.email);
-  if (result) {
-    var newEmail = new userEmail({ 
-      email: payload.email
-    });
+  let secret = process.env.RECAPTCHA_SECRET || null;
+  let response = payload.reCaptchaCode;
 
-    newEmail.save(function (err, newEmail) {
-      if (err) {
-        console.log('err', err)
-        return res.status(500).json({message: 'Signup Failure: Server Error'});
-      } else {
-        console.log('success', newEmail)
-        var subject = 'Schillaci Guitars: New Email Signup';
-        var message = '<b>New Email Signup:</b> ' + payload.email;
-        sendMail(subject, message, res);
-        return res.json({
-          newEmail
-        })
-      }
-    });
-  } else {
-    return res.status(401).json({message: 'Please enter a valid email'});
+  axios.post(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${response}`,
+    {},
+    {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
+      },
+    }
+  ).then((res) => {
+    if (res.data.success) {
+      saveEmailToDB(payload.email)
+    } else {
+      return res.status(401).json({message: 'Nice try bot ;)'});
+    }
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+
+  function saveEmailToDB(email) {
+
+    // Validate Email
+    // var email = xss(payload)
+    var result = validator.validate(email);
+    if (result) {
+      var newEmail = new userEmail({ 
+        email: email
+      });
+
+      newEmail.save(function (err, newEmail) {
+        if (err) {
+          console.log('err', err)
+          return res.status(500).json({message: 'Signup Failure: Server Error'});
+        } else {
+          console.log('success', newEmail)
+          var subject = 'Schillaci Guitars: New Email Signup';
+          var message = '<b>New Email Signup:</b> ' + email;
+          sendMail(subject, message, res);
+          return res.json({
+            newEmail
+          })
+        }
+      });
+    } else {
+      return res.status(401).json({message: 'Please enter a valid email'});
+    }
   }
+
+
 });
 
-// Send Emails
+
+//////////////////
+// Send Emails //
+////////////////
 function sendMail(subject, message, res) {
   // setup e-mail data with unicode symbols
   var mailOptions = {
