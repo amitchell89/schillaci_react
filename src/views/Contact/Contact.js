@@ -7,7 +7,8 @@ import ParallaxHero from '../../components/ParallaxHero';
 export default class Contact extends Component {
   render() {
 
-    const hero = 'Guitar_Details/schillaci_guitars_detail_riptide_bass_c_02.jpg'
+    const DesktopHero = "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Hero/schillaci_guitars_contact_hero_desktop.jpg"
+    const MobileHero = "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Hero/schillaci_guitars_contact_hero_mobile.jpg"
     return (
       <div>
         <Helmet
@@ -16,13 +17,13 @@ export default class Contact extends Component {
             { name: "description", content: this.props.route.meta.meta_contact },
             { property: "og:title", content: 'Schillaci Guitars: Contact'},
             { property: "og:url", content: 'https://schillaciguitars.com/contact'},
-            { property: "og:image", content: 'https://schillaciguitars.com/img/' + hero },
+            { property: "og:image", content: 'https://schillaciguitars.com/img/' + DesktopHero },
           ] }
           />
 
         <ParallaxHero 
-          desktopImage={"../../img/" + hero}
-          mobileImage={"../../img/" + hero}
+          desktopImage={DesktopHero}
+          mobileImage={MobileHero}
         />
         <div className="Contact">
           <h2>
