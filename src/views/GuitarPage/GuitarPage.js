@@ -24,10 +24,10 @@ class GuitarPage extends Component {
 
     const guitarAbout = (
       <div className="guitarPage__about">
-        {data.about.map(function (s, i) {
+        {data.about.map(function (about, i) {
           return (
             <p className="guitarPage__about__item">
-              {s}
+              {about}
             </p>
           )}.bind(this))}
       </div>
@@ -35,11 +35,10 @@ class GuitarPage extends Component {
 
     const guitarDetails = (
       <div className="guitarPage__details">
-        {data.detail_photos.map(function (s, i) {
-          let detail = '../../img/' + s;
+        {data.detail_photos.map(function (detailPhoto, i) {
           return (
             <div className="guitarPage__detail">
-              <img src={detail} />
+              <img src={detailPhoto} />
             </div>
           )}.bind(this))}
       </div>
