@@ -555,13 +555,13 @@ export const guitars = [
   },
   {
     id: 24,
-    name: "LEB Bass",
+    name: "LEBO Bass",
     type: "bass",
     "style": "bolt",
     price: "$2599.00",
     about: [
-      "2 pc. Mahogany body",
-      "3 pc. Mahogany neck w/ rosewood fingerboards",
+      "2 pc. Mahogany body 1 5/8\" thick",
+      "3 pc. Mahogany neck w/ rosewood fingerboard",
       "21 fret fingerboards",
       "Fan maple Headstock faceplate",
       "Single humbucking pickup",
