@@ -29,9 +29,9 @@ export default class ExtendedContactForm extends Component {
 
     let { name, email, message, project, instrument, fretboard, neckStyle } = this.state;
 
-    let projectInfo = `Project type: ${project} \nInstrument type: ${instrument} \nNeck Style: ${neckStyle} \nFretboard: ${fretboard}`;
+    let projectInfo = `<br />Project type: ${project} <br />Instrument type: ${instrument} <br />Neck Style: ${neckStyle} <br />Fretboard: ${fretboard}`;
 
-    message = `${projectInfo} \n\nCustomer's message: ${message}`
+    message = `${projectInfo} <br /><br />Customer's message: ${message}`
 
 
     const parseJson = function (response) {
