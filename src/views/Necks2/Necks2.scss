@@ -1,3 +1,17 @@
+.necks__info {
+  margin-bottom: 4rem;
+}
+
+.neck-container {
+  border-bottom: 1px solid $gray-light;
+  padding: 1rem 0;
+}
+
+.neck-callout {
+  background: $blue_light;
+  border-radius: $border-radius;
+  padding: 1.5rem;
+}
 
 .necks__info p:first-child {
   margin-top: 0;

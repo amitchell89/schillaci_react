@@ -1,0 +1,33 @@
+#extended_contact_form {
+
+	// background: $blue_light;
+	border: 3px solid $accent-primary;
+	border-radius: $border-radius;
+	padding: 1.5rem;
+	margin: 2rem 0;
+	@include clearfix;
+
+	.radio-container {
+		margin-right: 1rem;
+	}
+	.radio-label {
+		display: inline-block;
+		margin-left: 0.5rem;
+		position: relative;
+		bottom: 2px;
+	}
+}
+
+.extended_contact_form__headline {
+	margin-bottom: 1rem;
+	img {
+	width: 40px;
+	height: auto;
+	float: left;
+	margin-right: 1rem;
+	}
+	h2 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}

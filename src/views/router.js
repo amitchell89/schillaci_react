@@ -8,6 +8,7 @@ import Home from './Home';
 import Guitars from './Guitars';
 import GuitarPage from './GuitarPage';
 import Necks from './Necks';
+import Necks2 from './Necks2';
 import About from './About';
 import Contact from './Contact';
 import AppContainer from './appContainer';
@@ -37,7 +38,7 @@ export default class Routes extends Component {
             <IndexRoute component={Home} meta={meta} />
             <Route path='/guitars' component={Guitars} meta={meta} />
             <Route path='/guitar/(:guitar)' component={GuitarPage} meta={meta} />
-            <Route path='/necks' component={Necks} meta={meta} />
+            <Route path='/necks' component={Necks2} meta={meta} />
             <Route path='/about' component={About} meta={meta} />
             <Route path='/contact' component={Contact} meta={meta} />
             <Route path='/privacy' component={Privacy} meta={meta} />
