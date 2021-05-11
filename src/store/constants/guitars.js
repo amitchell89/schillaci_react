@@ -255,7 +255,6 @@ export const guitars = [
       "Solid Seafoam Green Gloss Finish",
       "Matching Peghead",
       "Gabon Ebony Finger Board with Pearl Dots",
-      "Graf-Tech Nut",
       "Reverse Vintage Tremolo with Graf-Tech Saddles",
       "Three Single Coil Pickups",
       "Elongated Pickguard with Increased Spacing Between Volume and Tone Knobs",
@@ -263,7 +262,9 @@ export const guitars = [
     ],
     slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_08_full_hammerhead.jpg",
     thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_08_thumb_hammerhead.jpg",
-    detail_photos: [],
+    detail_photos: [
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_seafoam_hammerhead_01.jpg"
+    ],
     hidden: false
   },
   {
@@ -343,7 +344,7 @@ export const guitars = [
     name: "Riptide Bass I",
     type: "bass",
     "style": "bolt",
-    price: "$899.00",
+    price: "$1199.00",
     about: [
       "2 PC. Popular body",
       "Red gloss finish",
@@ -366,10 +367,10 @@ export const guitars = [
     name: "Riptide Bass I",
     type: "bass",
     "style": "bolt",
-    price: "$799.00",
+    price: "$999.00",
     about: [
-      "2 PC. Popular body",
-      "Red gloss finish",
+      "2 PC. Poplar body",
+      "Flat black finish",
       "Rosewood fingerboard",
       "Single J pickup",
       "Elongated vintage style pick guard",
@@ -412,7 +413,7 @@ export const guitars = [
     name: "Bosko Bass",
     type: "bass",
     "style": "bolt",
-    price: "$1199.00",
+    price: "$1499.00",
     about: [
       "One Piece Mahogany Ribbon Body",
       "Natural \"Greenglow\" Finish",
@@ -436,7 +437,7 @@ export const guitars = [
     name: "Bosko Bass",
     type: "bass",
     "style": "bolt",
-    price: "$799.00",
+    price: "$899.00",
     about: [
       "3 PC. Alder body with Atlantic Sea Green \"Greenglow\" finish",  
       "Maple neck w/ rosewood board",
