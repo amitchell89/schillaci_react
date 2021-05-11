@@ -44,7 +44,7 @@ export default class Necks2 extends Component {
     
             <img className="necks__img" src="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/schillaci_guitars_quarter_tone_microtonal_neck_rosewood.jpg" />
             <p className="neck-callout">
-              Due to popular demand, Schillaci Guitars is now producing quarter tone microtonal necks, as popularized by King Gizzard and The Lizard Wizard. Due to this being a new product, we have mocked up what the quarter tone fret placement will look like. <b>Quartertone Microtonal Necks start at $395 + Shipping & handling.</b>
+              Due to popular demand, Schillaci Guitars is now producing quarter tone microtonal necks, the same style used by King Gizzard and The Lizard Wizard. <b>Quartertone Microtonal Necks start at $395 + Shipping & handling.</b> &nbsp;<a href="#necks-form"><b>Order a microtonal neck</b></a>
             </p>
           </div>
 
