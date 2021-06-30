@@ -1,3 +1,11 @@
+/// To Do
+//
+// Get rid of scroll detection based on pixels
+// Detect when form is in viewport
+// When form in viewport hide fixed button
+// when form in viewport fire GA event for has seen form 
+
+
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Helmet from "react-helmet";
@@ -13,47 +21,60 @@ export default class Necks2 extends Component {
     super(props);
     this.state = {
       hasSeenForm: false,
-      hasClickedFixedCTA: false
+      hasClickedFixedCTA: false,
+      viewport: window.innerWidth
     };
   } 
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll, true);
+    window.addEventListener('resize', this.handleResize, true);
+    this.handleScroll();
+    this.handleResize();
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
+  handleResize = () => {
+    this.setState({
+      viewport: window.innerWidth
+    })
+  }
+
   handleScroll = () => {
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    if (scroll > 1600) {
-      document.getElementById('fixed__button').style.display = "none";
+    console.log('check', scroll, this.state.viewport)
+    if (scroll < 1600 && this.state.viewport < 415) {
+      document.getElementById('fixed__button').style.display = "block";
 
-      if (this.state.hasSeenForm === false) {
-        this.handleEventSawOrderForm();
-      }
+      // if (this.state.hasSeenForm === false) {
+      //   this.handleEventSawOrderForm();
+      // }
       
     } else {
-      document.getElementById('fixed__button').style.display = "block";
+      document.getElementById('fixed__button').style.display = "none";
     }
-
+    
   };
 
   // Fire GA event when user sees order form in viewport. Only allow it to fire once
-  handleEventSawOrderForm = () => {
+  // Need to make this work on desktop. Currently work fire above mobile
 
-    ReactGA.event({
-      category: 'UXMetric',
-      action: 'SawOrderForm',
-    });
+  // handleEventSawOrderForm = () => {
 
-    this.setState({
-      hasSeenForm: true
-    });
+  //   ReactGA.event({
+  //     category: 'UXMetric',
+  //     action: 'SawOrderForm',
+  //   });
 
-  }
+  //   this.setState({
+  //     hasSeenForm: true
+  //   });
+
+  // }
 
   // Fire GA event when user clicks fixed CTA. Only allow it to fire once
   handleEventClickNecksFixedCTA = () => {
