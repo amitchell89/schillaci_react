@@ -1,12 +1,78 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Helmet from "react-helmet";
+import ReactGA from 'react-ga';
 
 import ParallaxHero from '../../components/ParallaxHero';
 import ContactCallout from '../../components/ContactCallout';
 import ExtendedContactForm from '../../components/ExtendedContactForm';
 
 export default class Necks2 extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasSeenForm: false,
+      hasClickedFixedCTA: false
+    };
+  } 
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll, true);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    if (scroll > 1600) {
+      document.getElementById('fixed__button').style.display = "none";
+
+      if (this.state.hasSeenForm === false) {
+        this.handleEventSawOrderForm();
+      }
+      
+    } else {
+      document.getElementById('fixed__button').style.display = "block";
+    }
+
+  };
+
+  // Fire GA event when user sees order form in viewport. Only allow it to fire once
+  handleEventSawOrderForm = () => {
+
+    ReactGA.event({
+      category: 'UXMetric',
+      action: 'SawOrderForm',
+    });
+
+    this.setState({
+      hasSeenForm: true
+    });
+
+  }
+
+  // Fire GA event when user clicks fixed CTA. Only allow it to fire once
+  handleEventClickNecksFixedCTA = () => {
+
+    if (this.state.hasClickedFixedCTA === false) {
+
+      ReactGA.event({
+        category: 'UXMetric',
+        action: 'ClickNecksFixedCTA',
+      });
+
+      this.setState({
+        hasClickedFixedCTA: true
+      });
+
+    }
+
+  }
+
   render() {
     const hero = 'schillaci_guitars_custom_necks.jpg';
     return (
@@ -21,6 +87,12 @@ export default class Necks2 extends Component {
           ] }
           />
 
+        <div id="fixed__button">
+          <a href="#necks-form">
+            <button onClick={this.handleEventClickNecksFixedCTA}>Get a quote on a custom neck</button>
+          </a>
+        </div>  
+
         <ParallaxHero 
           desktopImage={"https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/" + hero}
           mobileImage={"https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/" + hero}
@@ -30,11 +102,13 @@ export default class Necks2 extends Component {
           <h1>Custom Classic and Microtonal Necks</h1>
           <h3>Over 20 years of experience building premium, high quality necks and custom guitars</h3>
           <p>
-          Schillaci Guitars is a manufacturer and seller of custom necks including classic and microtonal designs for guitar and bass. All necks are made to order in vintage or modern design and are available in one piece maple construction or maple with rosewood slab board. Darren Schillaci has been building necks for over 25 years and microtonal necks for over 20. Schillaci Guitars provide a precision and quality unparalled in the custom neck industry. 
+          Classic and microtonal designs for guitar and bass. All necks are made to order in vintage or modern design and built to fit standard guitars.
           </p>
-          <a href="#necks-form">
-            <button className="btn--outline">Order a custom neck</button>
-          </a>
+          <div className="button--desktop-only">
+            <a href="#necks-form">
+              <button className="btn--outline">Order a custom neck</button>
+            </a>
+          </div>
 
         </div>
         <div>
@@ -90,3 +164,6 @@ export default class Necks2 extends Component {
     )
   }
 }
+
+
+// Schillaci Guitars is a manufacturer and seller of custom necks including classic and microtonal designs for guitar and bass. All necks are made to order in vintage or modern design and are available in one piece maple construction or maple with rosewood slab board. Darren Schillaci has been building necks for over 25 years and microtonal necks for over 20. Schillaci Guitars provide a precision and quality unparalled in the custom neck industry. 

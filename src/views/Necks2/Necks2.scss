@@ -40,12 +40,20 @@
   float: right;
 }
 
-@media (max-width: $mq-tablet) {
-  .necks__spec-list {
+#fixed__button {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: $white;
+  padding: 10px;
+  width: 100%;
+  // border-top: 2px solid $neutral_75;
+  box-shadow: 0px -5px 10px rgba(0,0,0,0.25);
+  button {
+    padding: 0.5rem 2rem;
     width: 100%;
-  }
-  .necks__spec-list--profiles, .necks__spec-list--nuts {
-    float: none;
   }
 }
 
@@ -63,4 +71,27 @@
 
 .necks__img--fan {
   max-width: 600px;
+}
+
+@media (max-width: $mq-tablet) {
+  .necks__spec-list {
+    width: 100%;
+  }
+  .necks__spec-list--profiles, .necks__spec-list--nuts {
+    float: none;
+  }
+}
+
+
+@media (max-width: $mq-mobile) {
+  #fixed__button {
+    display: block;
+  }
+
+  .button--desktop-only {
+    display: none;
+  }
+  .necks__info {
+    margin-bottom: 0;
+  }
 }

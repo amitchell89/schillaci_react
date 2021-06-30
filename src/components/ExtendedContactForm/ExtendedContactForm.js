@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 
 export default class ExtendedContactForm extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ export default class ExtendedContactForm extends Component {
       instrument: null,
       fretboard: null,
       neckStyle: "Microtonal Quarter Tone",
+      hasSubmittedForm: false
     };
     this.handleChange = this.handleChange.bind(this);
   } 
@@ -27,7 +29,7 @@ export default class ExtendedContactForm extends Component {
     // let email = this.refs.email.value;
     // let message = this.refs.message.value;
 
-    let { name, email, message, project, instrument, fretboard, neckStyle } = this.state;
+    let { name, email, message, project, instrument, fretboard, neckStyle, hasSubmittedForm } = this.state;
 
     let projectInfo = `Project type: ${project} ///// Instrument type: ${instrument} ///// Neck Style: ${neckStyle} ///// Fretboard: ${fretboard}`;
 
@@ -39,6 +41,20 @@ export default class ExtendedContactForm extends Component {
     };
 
     console.log('name: ', name, '\nemail: ', email, '\nmessage: ', message)
+
+    // Fire GA event when user submits form. Only allow it to fire once
+    if (this.state.hasSubmittedForm === false) {
+
+      ReactGA.event({
+        category: 'UXMetric',
+        action: 'SubmitOrderForm',
+      });
+
+      this.setState({
+        hasSubmittedForm: true
+      });
+
+    }
 
     fetch('/contact', {
       method: 'POST',
