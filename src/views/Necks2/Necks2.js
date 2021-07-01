@@ -1,11 +1,3 @@
-/// To Do
-//
-// Get rid of scroll detection based on pixels
-// Detect when form is in viewport
-// When form in viewport hide fixed button
-// when form in viewport fire GA event for has seen form 
-
-
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Helmet from "react-helmet";
@@ -35,46 +27,57 @@ export default class Necks2 extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   handleResize = () => {
     this.setState({
       viewport: window.innerWidth
     })
+    this.handleScroll(); // Fire this on resize to make sure we're hiding the button when needed 
   }
 
   handleScroll = () => {
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    console.log('check', scroll, this.state.viewport)
-    if (scroll < 1600 && this.state.viewport < 415) {
-      document.getElementById('fixed__button').style.display = "block";
+    // Check if form is in view
+    var element = document.getElementById("necks-form");
+    var elementInView = this.isElementInViewport(element);
 
-      // if (this.state.hasSeenForm === false) {
-      //   this.handleEventSawOrderForm();
-      // }
-      
+    // Fire Event when form is viewed. Only once. 
+    if (elementInView === true && this.state.hasSeenForm === false) {
+      this.handleEventSawOrderForm();
+    }
+
+    // Hide button when form is in view and page is mobile
+    if (elementInView === false && this.state.viewport < 415) {
+      document.getElementById('fixed__button').style.display = "block";
     } else {
       document.getElementById('fixed__button').style.display = "none";
     }
     
-  };
+  }
+
+  isElementInViewport = (el) => {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) /* or $(window).height() */
+    );
+  }
 
   // Fire GA event when user sees order form in viewport. Only allow it to fire once
-  // Need to make this work on desktop. Currently work fire above mobile
+  handleEventSawOrderForm = () => {
 
-  // handleEventSawOrderForm = () => {
+    ReactGA.event({
+      category: 'UXMetric',
+      action: 'SawOrderForm',
+    });
 
-  //   ReactGA.event({
-  //     category: 'UXMetric',
-  //     action: 'SawOrderForm',
-  //   });
+    this.setState({
+      hasSeenForm: true
+    });
 
-  //   this.setState({
-  //     hasSeenForm: true
-  //   });
-
-  // }
+  }
 
   // Fire GA event when user clicks fixed CTA. Only allow it to fire once
   handleEventClickNecksFixedCTA = () => {
@@ -170,7 +173,6 @@ export default class Necks2 extends Component {
               <img className="necks__img" src="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_02_full_LP_Junior.jpg" />
             </Link>
           </div>
-
 
         </div>
 
