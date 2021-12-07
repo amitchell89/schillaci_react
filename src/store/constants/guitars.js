@@ -580,7 +580,144 @@ export const guitars = [
 
       ],
     hidden: false
+  }, 
+  {
+    id: 25,
+    name: "LSP",
+    type: "guitar",
+    "style": "set",
+    price: "$3299.00",
+    about: [
+      "2pc. Bound Mahogany body",
+      "W/ non-matched, Bookmatched top",
+      "59' Burst finish in Lacquer",
+      "3pc. Bound Maple neck in sanded polyurethane",
+      "Ebony Fingerboard w/ Pearl block inlays",
+      "3 position lever switch w/ telecaster control layout",
+      "Side mounted jack plate"
+    ],
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_25_full_lsp.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_25_thumb_lsp.jpg",
+    detail_photos: [
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_25_detail_01.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_25_detail_02.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_25_detail_03.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_25_detail_04.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_25_detail_05.jpg"
+
+      ],
+    hidden: false
+  }, 
+  {
+    id: 26,
+    name: "Jam V",
+    type: "guitar",
+    "style": "set",
+    price: "$1999.00",
+    about: [
+      "2 pc. Pine body (purple stain)",
+      "1 pc.  Maple neck (black stain)",
+      "Bound Ebony fingerboard W/ \"King Gizzard's Flying Microtonal Banana\" album art Mother of Pearl / Abalone inlay",
+      "2 full octave (24 fret)",
+      "String thru body",
+      "Schaller Tune-O-Matic Bridge",
+      "\"Stratocaster\" control layout",
+      "Side mounted jack"
+    ],
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_26_full_jam_v.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_26_thumb_jam_v.jpg",
+    detail_photos: [
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_26_detail_01.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_26_detail_02.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_26_detail_03.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_26_detail_04.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_26_detail_05.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_26_detail_06.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_26_detail_07.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_26_detail_08.jpg"
+
+      ],
+    hidden: false
+  }, 
+  {
+    id: 27,
+    name: "MICI Bass",
+    type: "bass",
+    "style": "bolt",
+    price: "$1599.00",
+    about: [
+      "2pc. Pine body/ Red gloss finish",
+      "Maple neck/ Rosewood board",
+      "Hip Shot steel bridge",
+      "Lindy Fralin Jazz pickup set",
+      "Telecaster control plate",
+      "W/ Jazz electronics",
+      "Side mounted jack"
+    ],
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_27_full_mici_bass.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_27_thumb_mici_bass.jpg",
+    detail_photos: [
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_27_detail_01.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_27_detail_02.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_27_detail_03.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_27_detail_04.jpg"
+
+      ],
+    hidden: false
+  }, 
+  {
+    id: 28,
+    name: "MICI Roller",
+    type: "guitar",
+    "style": "hammerhead",
+    price: "$1499.00",
+    about: [
+      "2 pc. popular \"Cavalier\" style body",
+      "Antique White Finish",
+      "Maple neck/ Rosewood fingerboard",
+      "L.S.R. \"Roller\" nut",
+      "Kahler vintage \"Roller\" bridge",
+      "Seymour Duncan pickups",
+      "L.P. control layout",
+      "\"Blade\" switch",
+      "Side mounted jack",
+    ],
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_28_full_mici_roller.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_28_thumb_mici_roller.jpg",
+    detail_photos: [
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_28_detail_01.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_28_detail_02.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_28_detail_03.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_28_detail_04.jpg"
+
+      ],
+    hidden: false
+  }, 
+  {
+    id: 29,
+    name: "LSG Double",
+    type: "guitar",
+    "style": "set",
+    price: "$3999.00",
+    about: [
+      "3pc. Mahogany body",
+      "1 pc. Maple necks / Rosewood boards w/ M.O.P. split parallelagram inlays",
+      "Authentic EDS-1275 pickguards",
+      "Trapizodial tailpieces",
+      "Nashville bridges",
+      "Gibson humbuckers",
+      "Side mounted jack"
+    ],
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_29_full_lsg_double.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_29_thumb_lsg_double.jpg",
+    detail_photos: [
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_29_detail_01.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_29_detail_02.jpg"
+
+      ],
+    hidden: false
   }
+
 ]
 
 
