@@ -30,7 +30,7 @@ export const guitars = [
     name: "Knucklehead Esquire",
     type: "guitar",
     "style": "knucklehead",
-    price: "$799.00",
+    price: "$999.00",
     about: [
       "1 PC. 1/4 sawn hard rock maple neck",
       "2 PC. Poplar Body in Atlantic Sea Green \"Greenglow\" Finish",
@@ -53,7 +53,7 @@ export const guitars = [
     name: "Knucklehead Esquire",
     type: "guitar",
     "style": "knucklehead",
-    price: "$799.00",
+    price: "$999.00",
     about: [
       "1 PC. 1/4 sawn hard rock maple neck",
       "3 PC. Poplar Body in Burgandy/Red Wine \"Greenglow\" Finish",
@@ -127,7 +127,7 @@ export const guitars = [
     name: "Knucklehead",
     type: "guitar",
     "style": "knucklehead",
-    price: "$1199.00",
+    price: "$1699.00",
     about: [
       "One Piece Mahogany Ribbon Body with Black Binding",
       "Natural Hand Rubbed Satin Finish",
@@ -152,7 +152,7 @@ export const guitars = [
     name: "Knucklehead",
     type: "guitar",
     "style": "knucklehead",
-    price: "$899.00",
+    price: "$1499.00",
     about: [
       "Multi-laminated body",
       "Tusq nut",
@@ -174,7 +174,7 @@ export const guitars = [
     name: "\'74 / P Plus",
     type: "bass",
     "style": "bolt",
-    price: "$1295.00",
+    price: "$1499.00",
     about: [
       "Poplar/ cypress body",
       "Maple neck w/ rosewood board",
@@ -197,7 +197,7 @@ export const guitars = [
     name: "Knucklehead",
     type: "guitar",
     "style": "knucklehead",
-    price: "$1799.00",
+    price: "$2199.00",
     about: [
       "Three Piece Ash Body",
       "Flame Maple Gloss Finish",
@@ -225,7 +225,7 @@ export const guitars = [
     name: "Knucklehead",
     "style": "knucklehead",
     type: "guitar",
-    price: "$899.00",
+    price: "$1299.00",
     about: [
       "Solid Maple Body",
       "Solid Chartreuse Yellow Gloss Finish",
@@ -272,7 +272,7 @@ export const guitars = [
     name: "7 String Hammerhead",
     type: "guitar",
     "style": "hammerhead",
-    price: "1199.00",
+    price: "1699.00",
     about: [
       "One Piece Mahogany Ribbon Body",
       "Natural \"Greenglow\" Finish",
@@ -296,7 +296,7 @@ export const guitars = [
     name: "Hammerhead",
     type: "guitar",
     "style": "hammerhead",
-    price: "$999.00",
+    price: "$1299.00",
     about: [
       "1 PC. Pine body",
       "Clear \"GreenGlow\" finish",
@@ -321,7 +321,7 @@ export const guitars = [
     name: "Roy's Caster",
     type: "guitar",
     "style": "knucklehead",
-    price: "$999.00",
+    price: "$1399.00",
     about: [
       "3 piece popular body",
       "Red gloss finish",
@@ -344,7 +344,7 @@ export const guitars = [
     name: "Riptide Bass I",
     type: "bass",
     "style": "bolt",
-    price: "$1199.00",
+    price: "$1399.00",
     about: [
       "2 PC. Popular body",
       "Red gloss finish",
@@ -367,7 +367,7 @@ export const guitars = [
     name: "Riptide Bass I",
     type: "bass",
     "style": "bolt",
-    price: "$999.00",
+    price: "$1199.00",
     about: [
       "2 PC. Poplar body",
       "Flat black finish",
@@ -389,7 +389,7 @@ export const guitars = [
     name: "Riptide Bass II",
     type: "bass",
     "style": "bolt",
-    price: "$999.00",
+    price: "$1599.00",
     about: [
       "Three Piece Alder Body",
       "Solid Antique White Gloss Finish",
@@ -413,7 +413,7 @@ export const guitars = [
     name: "Bosko Bass",
     type: "bass",
     "style": "bolt",
-    price: "$1499.00",
+    price: "$1999.00",
     about: [
       "One Piece Mahogany Ribbon Body",
       "Natural \"Greenglow\" Finish",
@@ -437,7 +437,7 @@ export const guitars = [
     name: "Bosko Bass",
     type: "bass",
     "style": "bolt",
-    price: "$899.00",
+    price: "$999.00",
     about: [
       "3 PC. Alder body with Atlantic Sea Green \"Greenglow\" finish",  
       "Maple neck w/ rosewood board",
@@ -459,7 +459,7 @@ export const guitars = [
     name: "PJ Bass",
     type: "bass",
     "style": "bolt",
-    price: "$1899.00",
+    price: "$2399.00",
     about: [
       "70's style 1 PC. Maple neck w/ binding + big block inlays",
       "60's style Electronics w/ concentric pots + knobs",
@@ -481,7 +481,7 @@ export const guitars = [
     name: "Kestral",
     type: "guitar",
     "style": "hammerhead",
-    price: "$1299.00",
+    price: "$1999.00",
     about: [
       "5 string orchestral guitar tuned in 5th's",
       "1 bass string & 4 guitar strings each with individual saddles",
@@ -510,7 +510,7 @@ export const guitars = [
     name: "PJ Bass",
     type: "bass",
     "style": "bolt",
-    price: "$1499.99",
+    price: "$2199.99",
     about: [
       "1 PC. maple neck w/ big block inlays",
       "Single Bass Lines stacked pickup",
@@ -533,7 +533,7 @@ export const guitars = [
     name: "PJ Bass",
     type: "bass",
     "style": "bolt",
-    price: "$1499.00",
+    price: "$1699.00",
     about: [
       "Reclaimed mahogany 3 PC. body in greenglow finish",
       "Maple neck w/ rosewood board",
