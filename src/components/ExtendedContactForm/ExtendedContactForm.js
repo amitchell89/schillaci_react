@@ -198,10 +198,12 @@ export default class ExtendedContactForm extends Component {
               name="neckStyle"
               onChange={this.handleChange}
             >
+              {/*
               <option value="Microtonal Quarter Tone">Quarter Tone Microtonal</option>
-              <option value="Classic">Classic</option>
               <option value="Microtonal 19">19 Tone Microtonal</option>
               <option value="Microtonal 31">31 Tone Microtonal</option>
+              */}
+              <option value="Classic">Classic</option>
               <option value="Fretless">Fretless</option>
             </select>
           </div>

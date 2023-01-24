@@ -94,7 +94,7 @@ export const guitars = [
       "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_lp_junior_guitar_a_01.jpg",
       "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_lp_junior_guitar_a_02.jpg"
       ],
-    hidden: false
+    hidden: true
   },
   {
     id: 3,

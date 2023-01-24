@@ -121,22 +121,26 @@ export default class Necks2 extends Component {
           desktopImage={"https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/" + hero}
           mobileImage={"https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/" + hero}
         />
+        
 
         <div className="necks__info">
-          <h1>Custom Classic and Microtonal Necks</h1>
+          <h1>Custom {/*Classic and Microtonal */}Necks</h1>
           <h3>Over 20 years of experience building premium, high quality necks and custom guitars</h3>
           <p>
-          Classic and microtonal designs for guitar and bass. All necks are made to order in vintage or modern design and built to fit standard guitars.
+          Classic {/* and microtonal */}designs for guitar and bass. All necks are made to order in vintage or modern design and built to fit standard guitars.
           </p>
+          {/*
           <div className="button--desktop-only">
             <a href="#necks-form">
               <button className="btn--outline">Order a custom neck</button>
             </a>
           </div>
+          */}
 
         </div>
-        <div>
 
+        <div>
+          {/*
           <div className="neck-container">
             <h4><span className="new-callout">NEW</span>Quarter Tone Microtonal Neck</h4>
     
@@ -145,12 +149,14 @@ export default class Necks2 extends Component {
               Due to popular demand, Schillaci Guitars is now producing quarter tone microtonal necks, the same style used by King Gizzard and The Lizard Wizard. <b>Quartertone Microtonal Necks start at $395 + Shipping & handling.</b> &nbsp;<a href="#necks-form"><b>Order a microtonal neck</b></a>
             </p>
           </div>
+          */}
 
           <div className="neck-container">
             <h4>Classic Right Handed Neck</h4>
             <img className="necks__img" src="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/schillaci_guitars_neck_right_handed.png" />
           </div>
 
+          {/*
           <div className="neck-container">
             <h4>19 Tone Equal Neck</h4>
             <img className="necks__img" src="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/schillaci_guitars_microtonal_neck_19_tone.png" />
@@ -160,12 +166,14 @@ export default class Necks2 extends Component {
             <h4>31 Tone Equal Neck</h4>
             <img className="necks__img" src="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/schillaci_guitars_microtonal_neck_31_tone.png" />
           </div>
+          */}
 
           <div className="neck-container">
             <h4>Fretless Neck</h4>
             <img className="necks__img" src="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/schillaci_guitars_neck_fretless.png" />
           </div>
 
+          {/*
           <div>
             <h3>Schillaci also makes fully customized guitars</h3>
             <p>When you order from Schillaci Guitars, you are guaranteed to receive a one of a kind instrument, built exactly to your precise needs and taste. <Link to="/guitars">Explore past custom guitar commissions</Link></p>
@@ -173,16 +181,18 @@ export default class Necks2 extends Component {
               <img className="necks__img" src="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_02_full_LP_Junior.jpg" />
             </Link>
           </div>
+          */}
 
         </div>
 
         <div id="necks-form">
           <ExtendedContactForm />
         </div>
-        
+        {/*
         <div className="necks__fan center">
           <img className="necks__img necks__img--fan" src="https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Necks/schillaci_guitars_neck_fan.jpg" />
         </div>
+      */}
       </div>
     )
   }
