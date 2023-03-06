@@ -70,9 +70,9 @@ app.use(emailRoute);
 
 // create reusable transporter object using the default SMTP transport
 // NodeMailer 0.7
-var password = process.env.PASSWORD || null
-var user = process.env.USER || null
-var service = process.env.SERVICE || null
+var password = process.env.EMAIL_PASSWORD || null
+var user = process.env.EMAIL_USER || null
+var service = process.env.EMAIL_SERVICE || null
 
 var transporter = nodemailer.createTransport("SMTP", {
   service: service,
