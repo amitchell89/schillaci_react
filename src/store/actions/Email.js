@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 import { sendToApi } from '../../lib/sendToApi';
 
 export function addEmail(data) {
-  console.log('action: add Email')
+  console.log('action: add Email', data)
 
   return dispatch => {
     dispatch(setAddEmailPending(true));
@@ -20,6 +20,18 @@ export function addEmail(data) {
           category: 'EmailSignup',
           action: 'submit',
         });
+
+        // fetch('/emailSignup', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Accept': 'application/json',
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body: JSON.stringify({
+        //     email: data.email
+        //   })
+        // });
+        
       } else {
         console.log('action: error!', payload[1])
         dispatch(setAddEmailError(payload[1].message));

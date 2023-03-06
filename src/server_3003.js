@@ -64,6 +64,11 @@ app.listen(3003, function () {
   console.log('Site listening on port 3003!')
 })
 
+//include the routes file
+var emailRoute = require('./api/routes/addEmail');
+
+app.use(emailRoute);
+
 // create reusable transporter object using the default SMTP transport
 // NodeMailer 0.7
 var password = process.env.PASSWORD || null
