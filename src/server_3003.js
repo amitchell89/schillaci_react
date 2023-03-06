@@ -66,7 +66,6 @@ app.listen(3003, function () {
 
 //include the routes file
 var emailRoute = require('./api/routes/addEmail');
-
 app.use(emailRoute);
 
 // create reusable transporter object using the default SMTP transport
@@ -101,7 +100,7 @@ app.post('/contact', function(req, res) {
 // Email Signup //
 /////////////////
 
-var userEmail = require('./api/models/UserEmail');
+var userEmail = require('./api/models/EmailSignup');
 
 app.post('/api/addEmail', function(req, res) {
   var payload = req.body;
