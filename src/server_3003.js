@@ -87,6 +87,7 @@ var transporter = nodemailer.createTransport("SMTP", {
 ////////////
 
 app.post('/contact', function(req, res) {
+  console.log('Step - hit /contact')
   var payload = req.body;
   var name = xss(payload.name);
   var email = xss(payload.email);
@@ -165,6 +166,7 @@ app.post('/api/addEmail', function(req, res) {
 ////////////////
 function sendMail(subject, message, res) {
   // setup e-mail data with unicode symbols
+  console.log('Step - sendMail Function')
   var mailOptions = {
     from: '"Schillaci Guitars" <' + user + '>', // sender address
     to: 'aaronmitchellart@gmail.com, d.schillaciguitars@gmail.com', // list of receivers
