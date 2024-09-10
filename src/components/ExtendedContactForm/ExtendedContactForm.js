@@ -13,7 +13,7 @@ export default class ExtendedContactForm extends Component {
       project: null,
       instrument: null,
       fretboard: null,
-      neckStyle: "Ignore this",
+      neckStyle: "Classic",
       hasSubmittedForm: false
     };
     this.handleChange = this.handleChange.bind(this);
