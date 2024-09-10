@@ -79,22 +79,22 @@ export const guitars = [
     "style": "set",
     price: "$2999.00",
     about: [
-      "12 tone ultra plus fingerboard",
-      "All maple body + neck",
-      "Chambered body with flame top",
-      "59 sunburst top",
-      "All gold back + sides",
-      "25.5 long scale",
-      "P-90 pickup",
-      "Wraparound stop tailpiece"
+      "All maple body and neck",
+      "Long scale for slide - 25.5",
+      "Single P- 90 pickup",
+      "Wrap around bridge",
+      "Split block inlays",
+      "Cherry Sunburst",
+      "All gold back and sides"
     ],
-    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_02_full_LP_Junior.jpg",
-    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_02_thumb_LP_Junior.jpg",
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_full_lp_junior_2024_standard.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_thumb_lp_junior_standard_2024.jpg",
     detail_photos: [
-      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_lp_junior_guitar_a_01.jpg",
-      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_lp_junior_guitar_a_02.jpg"
-      ],
-    hidden: true
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_lp_junior_standard_2024_01.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_lp_junior_standard_2024_02.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_lp_junior_standard_2024_04.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_lp_junior_standard_2024_03.jpg"      ],
+    hidden: false
   },
   {
     id: 3,
@@ -714,6 +714,28 @@ export const guitars = [
       "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_29_detail_01.jpg",
       "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_29_detail_02.jpg"
 
+      ],
+    hidden: false
+  },
+    {
+    id: 30,
+    name: "Knucklehead Esquire",
+    type: "guitar",
+    "style": "knucklehead",
+    price: "$1099.00",
+    about: [
+      "1/4 sawn maple neck",
+      "Palonia body",
+      "1/4 tone fingerboard to 15th fret",
+      "Hardtail bridge",
+      "Top mount Jack cup"
+    ],
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_full_esquire_2024.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_thumb_esquire_2024.jpg",
+    detail_photos: [
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_esquire_2024_01.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_esquire_2024_02.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_esquire_2024_02.jpg"
       ],
     hidden: false
   }
