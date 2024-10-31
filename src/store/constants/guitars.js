@@ -735,7 +735,7 @@ export const guitars = [
     detail_photos: [
       "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_esquire_2024_01.jpg",
       "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_esquire_2024_02.jpg",
-      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_esquire_2024_02.jpg"
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_detail_esquire_2024_03.jpg"
       ],
     hidden: false
   }
