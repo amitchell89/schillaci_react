@@ -1,5 +1,31 @@
 export const guitars = [
   {
+    id: 31,
+    name: "Firebird",
+    type: "guitar",
+    "style": "set",
+    price: "$",
+    about: [
+      "1pc. Lacewood neck thru body",
+      "3 pc. wings. Zircote, Flamed Red Maple & Swamp Ash",
+      "1 3/4\" Bone Nut",
+      "Standard electronics",
+      "Mojo tone Guitar Tech Johnny Winter pickups",
+      "Kluson Banjo style tuners",
+      "Inlays (Outsourced)"
+    ],
+    slider_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Slider/schillaci_guitars_firedog_01_full.jpg",
+    thumb_photo: "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Thumb/schillaci_guitars_firedog_01_thumb.jpg",
+    detail_photos: [
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_firedog_01_detail_01.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_firedog_01_detail_05.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_firedog_01_detail_02.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_firedog_01_detail_03.jpg",
+      "https://blacksquare.nyc3.digitaloceanspaces.com/schillaci-guitars/Guitar_Details/schillaci_guitars_firedog_01_detail_04.jpg"
+      ],
+    hidden: false
+  },
+  {
     id: 1,
     name: "LSG",
     type: "guitar",
