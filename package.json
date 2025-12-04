@@ -53,7 +53,7 @@
     "sass-loader": "^4.0.2",
     "slick-carousel": "^1.6.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.15.0",
+    "webpack": "^5.103.0",
     "xss": "^0.3.3"
   },
   "devDependencies": {
