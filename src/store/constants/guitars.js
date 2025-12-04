@@ -1,7 +1,7 @@
 export const guitars = [
   {
     id: 31,
-    name: "Firebird",
+    name: "Firedog",
     type: "guitar",
     "style": "set",
     price: "$",
