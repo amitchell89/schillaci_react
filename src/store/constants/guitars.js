@@ -4,7 +4,7 @@ export const guitars = [
     name: "Firedog",
     type: "guitar",
     "style": "set",
-    price: "$",
+    price: "$3999.00",
     about: [
       "1pc. Lacewood neck thru body",
       "3 pc. wings. Zircote, Flamed Red Maple & Swamp Ash",
