@@ -62,7 +62,7 @@
     "babel-preset-stage-2": "^6.18.0",
     "compression-webpack-plugin": "^1.1.10",
     "concurrently": "^3.3.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "webpack-dev-server": "^1.16.2"
   },
   "author": "Aaron Mitchell",
