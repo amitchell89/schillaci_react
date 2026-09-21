@@ -29,14 +29,29 @@ variable silently becomes `null`.
 
 ---
 
-## Open questions
+## Droplet environment
 
-| Question | Why it matters |
+Confirmed 21 Sep 2026:
+
+| | |
 |---|---|
-| What Node version does the droplet run? | Determines whether any dependency upgrade is even safe |
-| Is MongoDB bound to `127.0.0.1`? (`ss -lntp \| grep 27017`) | An unauthenticated EOL database on a public interface is actively scanned for |
+| Node | **v10.22.0** |
+| MongoDB | 3.6.3, listening on `127.0.0.1:27017` only — not exposed |
+| App path | `~/apps/schillaci_react` |
+| Process manager | forever |
 
----
+MongoDB being on loopback is the reassuring half. Node 10 is the other half:
+it reached end of life in **April 2021**, so the runtime serving the site has
+had no security patches in five years.
+
+This is also the real constraint on every future dependency decision. Anything
+upgraded from here has to stay Node 10 compatible, or Node gets upgraded first.
+The nodemailer upgrade noted below is a concrete example — check its engine
+requirement before attempting it.
+
+The code shipped on 21 Sep 2026 is deliberately ES5 (no arrow functions, no
+`const`/`let` in server code) and was confirmed running on Node 10 in
+production after a `forever restart`.
 
 ## Deferred: infrastructure (shared with other sites)
 
@@ -47,6 +62,9 @@ worms.
   security patches. Deliberately left alone.
 - **forever** left in `dependencies` and untouched for the same reason, even
   though a process manager is an odd thing for an app to depend on.
+- **Node 10.22.0** on the droplet, EOL since April 2021. Upgrading it is the
+  single highest value infrastructure change available, and also the riskiest,
+  because other sites share the box.
 
 ---
 
