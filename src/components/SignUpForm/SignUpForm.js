@@ -30,6 +30,7 @@ class SignUpForm extends Component {
     };
     this.postData = this.postData.bind(this);
     this.verifyCallback = this.verifyCallback.bind(this);
+    this.expiredCallback = this.expiredCallback.bind(this);
   }  
 
   postData(e) {
@@ -40,8 +41,22 @@ class SignUpForm extends Component {
     }
     this.props.addEmail(data)
     document.getElementById("email").value = "";
+
+    // reCAPTCHA tokens are single use and Google consumes them whether or not
+    // verification passed. Holding on to a spent one meant every retry on the
+    // same page load replayed it and came back as timeout-or-duplicate, which
+    // the server could only report as "Nice try bot". Clear it and make the
+    // visitor tick a fresh box.
+    this.resetCaptcha();
   }
 
+  resetCaptcha() {
+    this.setState({ reCaptchaCode: null });
+
+    if (this.recaptchaInstance) {
+      this.recaptchaInstance.reset();
+    }
+  }
 
   // specifying your onload callback function
   callback() {
@@ -51,6 +66,12 @@ class SignUpForm extends Component {
   // specifying verify callback function
   verifyCallback(response) {
     this.setState({ reCaptchaCode: response });
+  };
+
+  // Google fires this roughly two minutes after the box is ticked. Dropping the
+  // token disables the button, so a stale one can never be submitted.
+  expiredCallback() {
+    this.setState({ reCaptchaCode: null });
   };
 
 
@@ -69,9 +90,11 @@ class SignUpForm extends Component {
           </div>
 
           <ReCAPTCHA
+            ref={(instance) => { this.recaptchaInstance = instance; }}
             sitekey="6LffPvoUAAAAAAXA6EfFo7Hgknou_GH3rtOHlAyC"
             render="explicit"
             verifyCallback={this.verifyCallback}
+            expiredCallback={this.expiredCallback}
             onloadCallback={this.callback}
           />
 

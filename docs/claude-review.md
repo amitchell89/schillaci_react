@@ -65,6 +65,12 @@ worms.
 - **Node 10.22.0** on the droplet, EOL since April 2021. Upgrading it is the
   single highest value infrastructure change available, and also the riskiest,
   because other sites share the box.
+- **The app exits if MongoDB is not up when it boots.** `mongoose.connect()` in
+  `server_3003.js` has no error handler, so a failed first connect throws and
+  kills the process — forever then restart-loops until Mongo is available.
+  Pre-existing behaviour, observed while testing on 21 Sep 2026. Adding a
+  `.catch()` would let the site serve pages while the database is down, since
+  only the two form endpoints actually need it.
 
 ---
 
