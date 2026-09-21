@@ -6,6 +6,7 @@ export default class ContactForm extends Component {
     this.state = {
       signupAlert: false,
       alertStatus: null,
+      alertMessage: null,
     };
   }  
 
@@ -14,9 +15,6 @@ export default class ContactForm extends Component {
     let name = this.refs.name.value;
     let email = this.refs.email.value;
     let message = this.refs.message.value;
-    const parseJson = function (response) {
-        return response.json();
-    };
     fetch('/contact', {
       method: 'POST',
       headers: {
@@ -29,19 +27,40 @@ export default class ContactForm extends Component {
         message: message
       })
     }).then(function(response) {
-      this.triggerAlert(response)
+      // The server always answers with JSON, but never let a bad body swallow
+      // the status - that is how this form spent months reporting false success.
+      return response.json()
+        .catch(function() { return {}; })
+        .then(function(body) {
+          this.triggerAlert(response.status, body.message);
+        }.bind(this));
+    }.bind(this)).catch(function() {
+      this.triggerAlert(0, null);
     }.bind(this));
   }
 
-  triggerAlert(response) {
-    this.setState({ signupAlert: true, alertStatus: response.status })
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
+  triggerAlert(status, message) {
+    const didSend = status === 200;
+
+    this.setState({
+      signupAlert: true,
+      alertStatus: status,
+      alertMessage: message || (didSend
+        ? 'Your message has been sent! Thank You.'
+        : "We're sorry, there was an error sending your message.")
+    });
+
+    // Only clear the form once the message is actually on its way, so a failure
+    // does not throw away what the visitor typed.
+    if (didSend) {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    }
   }
 
   render() {
-    const { signupAlert, alertStatus } = this.state;
+    const { signupAlert, alertStatus, alertMessage } = this.state;
     return (
       <div>
         <form id="contact_form">
@@ -62,8 +81,8 @@ export default class ContactForm extends Component {
         { signupAlert 
           ? 
           alertStatus === 200 
-            ? <p className="alert--success">Your message has been sent! Thank You.</p> 
-            : <p className="alert--error">We're sorry, there was an error sending your message.</p> 
+            ? <p className="alert--success">{alertMessage}</p> 
+            : <p className="alert--error">{alertMessage}</p> 
           : null
         }
       </div>

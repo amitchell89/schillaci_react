@@ -2,19 +2,23 @@
 // Requirements //
 /////////////////
 
+// Loaded first so every module below sees the configured environment.
+// NB: dotenv reads .env from the process working directory, not from this
+// file's directory - start the app from the project root.
+require('dotenv').config();
+
 var express = require('express')
 var app = express()
 var path    = require("path");
 var bodyParser = require('body-parser');
-var nodemailer = require('nodemailer');
 var helmet = require('helmet')
 var xss = require('xss');
 var validator = require("email-validator");
 var mongoose = require('mongoose');
-var axios = require('axios');
 var Schema = mongoose.Schema;
-require('dotenv').config();
 
+var mailer = require('./api/mailer');
+var ContactMessage = require('./api/models/ContactMessage');
 
 //////////////////
 // Helmet setup //
@@ -46,6 +50,82 @@ app.use(function(req,res,next){
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/schillaci');
 
+//////////////
+// Contact //
+////////////
+
+/**
+ * Stores an enquiry before delivery is attempted so a mail outage can never
+ * lose one. Never blocks on a database that is down.
+ *
+ * @param {Object} fields
+ * @param {Function} callback called as callback(storedDocumentOrNull)
+ */
+function storeContactMessage(fields, callback) {
+  if (mongoose.connection.readyState !== 1) {
+    console.error('[contact] mongo is not connected - this message will not be stored');
+    return callback(null);
+  }
+
+  var contactMessage = new ContactMessage(fields);
+
+  contactMessage.save(function(error) {
+    if (error) {
+      console.error('[contact] failed to store message: ' + error.message);
+      return callback(null);
+    }
+    return callback(contactMessage);
+  });
+}
+
+app.post('/contact', function(req, res) {
+  console.log('Step - hit /contact')
+
+  var payload = req.body || {};
+  var name = xss(payload.name || '').trim();
+  var email = xss(payload.email || '').trim();
+  var message = xss(payload.message || '').trim();
+
+  if (!name || !message || !validator.validate(email)) {
+    return res.status(400).json({ message: 'Please add your name, a valid email address and a message.' });
+  }
+
+  var subject = 'Schillaci Guitars: New Message';
+  var emailBody = '<b>From:</b> ' + name + '<br /><br /><b>Email:</b> ' + email + '<br /><br /><b>Message:</b> ' + message;
+
+  storeContactMessage({ name: name, email: email, message: message }, function(stored) {
+    mailer.sendMail(subject, emailBody, function(mailError) {
+      if (stored) {
+        stored.emailed = !mailError;
+        stored.emailError = mailError ? mailError.message : null;
+        stored.save(function(error) {
+          if (error) {
+            console.error('[contact] failed to record delivery status: ' + error.message);
+          }
+        });
+      }
+
+      if (mailError) {
+        // Tell the visitor rather than thanking them for a message that never
+        // arrived. The enquiry is still stored, so nothing is lost either way.
+        return res.status(502).json({
+          message: "We couldn't send your message right now. Please email us directly at d.schillaciguitars@gmail.com."
+        });
+      }
+
+      return res.json({ message: 'Your message has been sent! Thank You.' });
+    });
+  });
+});
+
+///////////////////
+// Email Signup //
+/////////////////
+
+// Registered before the catch-all below so it can never be shadowed again.
+var emailRoute = require('./api/routes/addEmail');
+app.use(emailRoute);
+
 /////////////
 // Router //
 ////////////
@@ -56,6 +136,7 @@ app.get('*.js', function (req, res, next) {
   next();
 });
 
+// Catch-all for client side routing - must stay last
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname +'/index.html'));
 })
@@ -63,129 +144,3 @@ app.get('/*', function (req, res) {
 app.listen(3003, function () {
   console.log('Site listening on port 3003!')
 })
-
-//include the routes file
-var emailRoute = require('./api/routes/addEmail');
-app.use(emailRoute);
-
-// create reusable transporter object using the default SMTP transport
-// NodeMailer 0.7
-var password = process.env.EMAIL_PASSWORD || null
-var user = process.env.EMAIL_USER || null
-var service = process.env.EMAIL_SERVICE || null
-
-var transporter = nodemailer.createTransport("SMTP", {
-  service: service,
-  auth: {
-    user: user,
-    pass: password
-  }
-});
-
-//////////////
-// Contact //
-////////////
-
-app.post('/contact', function(req, res) {
-  console.log('Step - hit /contact')
-  var payload = req.body;
-  var name = xss(payload.name);
-  var email = xss(payload.email);
-  var message = xss(payload.message);
-  var email_message = '<b>From:</b> ' + name + '<br /><br /><b>Email:</b> ' + email + '<br /><br /><b>Message:</b> ' + message;
-  var subject = 'Schillaci Guitars: New Message';
-  sendMail(subject, email_message, res);
-});
-
-///////////////////
-// Email Signup //
-/////////////////
-
-var userEmail = require('./api/models/EmailSignup');
-
-app.post('/api/addEmail', function(req, res) {
-  var payload = req.body;
-
-  let secret = process.env.RECAPTCHA_SECRET || null;
-  let response = payload.reCaptchaCode;
-
-  axios.post(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${response}`,
-    {},
-    {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
-      },
-    }
-  ).then((res) => {
-    if (res.data.success) {
-      saveEmailToDB(payload.email)
-    } else {
-      return res.status(401).json({message: 'Nice try bot ;)'});
-    }
-  })
-  .catch((error) => {
-    console.error(error)
-  })
-
-  function saveEmailToDB(email) {
-
-    // Validate Email
-    // var email = xss(payload)
-    var result = validator.validate(email);
-    if (result) {
-      var newEmail = new userEmail({ 
-        email: email
-      });
-
-      newEmail.save(function (err, newEmail) {
-        if (err) {
-          console.log('err', err)
-          return res.status(500).json({message: 'Signup Failure: Server Error'});
-        } else {
-          console.log('success', newEmail)
-          var subject = 'Schillaci Guitars: New Email Signup';
-          var message = '<b>New Email Signup:</b> ' + email;
-          sendMail(subject, message, res);
-          return res.json({
-            newEmail
-          })
-        }
-      });
-    } else {
-      return res.status(401).json({message: 'Please enter a valid email'});
-    }
-  }
-
-
-});
-
-
-//////////////////
-// Send Emails //
-////////////////
-function sendMail(subject, message, res) {
-  // setup e-mail data with unicode symbols
-  console.log('Step - sendMail Function')
-  var mailOptions = {
-    from: '"Schillaci Guitars" <' + user + '>', // sender address
-    to: 'aaronmitchellart@gmail.com, d.schillaciguitars@gmail.com', // list of receivers
-    subject: subject, // Subject line
-    text: message, // plaintext body
-    html: message // html body
-  };
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        res.end();
-        return console.log(error);
-    }
-    res.end();
-    return console.log('mail sent successfully');
-  });
-  transporter.close();
-}
-
-
-
-
