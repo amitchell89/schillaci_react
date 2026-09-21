@@ -35,7 +35,11 @@ one lives on the droplet):
 | `EMAIL_USER` | The Gmail address notifications are sent from |
 | `EMAIL_PASSWORD` | **A 16 character Gmail App Password, not the account password** |
 | `EMAIL_SERVICE` | `Gmail` |
-| `RECAPTCHA_SECRET` | Server-side secret for the mailing list signup |
+
+> `RECAPTCHA_SECRET` is no longer used. Google retired this site's classic
+> reCAPTCHA key in September 2026, so the signup form is protected by rate
+> limiting instead — see `src/api/rateLimit.js`.
+
 
 ### About that app password
 

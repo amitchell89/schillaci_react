@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import ReCAPTCHA from "react-recaptcha";
 
 import { addEmail } from '../../store/actions/Email';
 
@@ -25,55 +24,18 @@ function mapDispatchToProps(dispatch) {
 class SignUpForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      reCaptchaCode: null
-    };
     this.postData = this.postData.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
-    this.expiredCallback = this.expiredCallback.bind(this);
   }  
 
+  // The reCAPTCHA that used to guard this form was retired by Google and had
+  // not actually been running since 2023. The server rate limits this endpoint
+  // instead - see src/api/rateLimit.js.
   postData(e) {
     e.preventDefault();
-    var data = {
-      email: this.refs.email.value,
-      reCaptchaCode: this.state.reCaptchaCode
-    }
-    this.props.addEmail(data)
+
+    this.props.addEmail({ email: this.refs.email.value });
     document.getElementById("email").value = "";
-
-    // reCAPTCHA tokens are single use and Google consumes them whether or not
-    // verification passed. Holding on to a spent one meant every retry on the
-    // same page load replayed it and came back as timeout-or-duplicate, which
-    // the server could only report as "Nice try bot". Clear it and make the
-    // visitor tick a fresh box.
-    this.resetCaptcha();
   }
-
-  resetCaptcha() {
-    this.setState({ reCaptchaCode: null });
-
-    if (this.recaptchaInstance) {
-      this.recaptchaInstance.reset();
-    }
-  }
-
-  // specifying your onload callback function
-  callback() {
-    // console.log('reCaptcha Loaded');
-  };
-   
-  // specifying verify callback function
-  verifyCallback(response) {
-    this.setState({ reCaptchaCode: response });
-  };
-
-  // Google fires this roughly two minutes after the box is ticked. Dropping the
-  // token disables the button, so a stale one can never be submitted.
-  expiredCallback() {
-    this.setState({ reCaptchaCode: null });
-  };
-
 
   render() {
     const { isAddEmailPending, isAddEmailSuccess, addEmailError } = this.props;
@@ -89,16 +51,7 @@ class SignUpForm extends Component {
             <input id="email" type="text" name="email" placeholder="Your Email" ref="email"></input>
           </div>
 
-          <ReCAPTCHA
-            ref={(instance) => { this.recaptchaInstance = instance; }}
-            sitekey="6LffPvoUAAAAAAXA6EfFo7Hgknou_GH3rtOHlAyC"
-            render="explicit"
-            verifyCallback={this.verifyCallback}
-            expiredCallback={this.expiredCallback}
-            onloadCallback={this.callback}
-          />
-
-          <button disabled={!this.state.reCaptchaCode} type="submit" form="email_form" value="Submit" className="btn--outline btn--100" onClick={this.postData.bind(this)}>Sign Up</button>
+          <button disabled={isAddEmailPending} type="submit" form="email_form" value="Submit" className="btn--outline btn--100" onClick={this.postData}>Sign Up</button>
         </form>
         { isAddEmailSuccess ? statusSuccess : null }
         { addEmailError ? statusError : null }

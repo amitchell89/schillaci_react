@@ -89,15 +89,35 @@ and cannot talk to it. Either `react-ga4` or a plain gtag snippet.
 Knock-on effect: `src/views/Privacy/Privacy.js` still tells visitors the site
 uses Google Analytics. That statement is currently untrue.
 
-### The contact form has no bot protection
+### reCAPTCHA is gone — both forms are rate limited instead
 
-Rate limiting was added on 21 Sep 2026 (`src/api/rateLimit.js`) — 5 submissions
-per address per 15 minutes, 30 per hour overall. That caps the damage but does
-not stop a determined bot.
+On 21 Sep 2026 Google began rejecting this site's classic reCAPTCHA key
+outright, with `Migrate your key to continue using reCAPTCHA`. The "Migrate
+keys" banner in the admin console was not an upsell; it was a deadline that had
+already passed.
 
-The signup form already has reCAPTCHA and the plumbing is reusable. Putting the
-same check on `/contact` is the obvious next step; it was left out to avoid a
-front-end change and rebuild.
+Rather than move to a Google Cloud project with billing attached, the captcha
+was removed. `src/api/rateLimit.js` now guards both endpoints, with separate
+budgets so a flood of signups cannot exhaust the allowance real enquiries
+depend on:
+
+| Endpoint | Per address | Global |
+|---|---|---|
+| `/contact` | 5 per 15 min | 30 per hour |
+| `/api/addEmail` | 3 per 15 min | 15 per hour |
+
+This was proportionate: the signup form has produced about one signup a year,
+and its captcha had not actually run since March 2023 anyway.
+
+**If real bot traffic ever appears**, Cloudflare Turnstile is the replacement to
+reach for — free, no billing account, works without the site being behind
+Cloudflare, and a genuine challenge rather than throttling. That would mean new
+keys, a widget in `SignUpForm.js`, and a verify call in the route.
+
+Leftovers from the removal, both harmless and both left in place deliberately:
+
+- `RECAPTCHA_SECRET` in the droplet's `.env` is now unused
+- `axios` is no longer imported by anything, but remains in `dependencies`
 
 ---
 

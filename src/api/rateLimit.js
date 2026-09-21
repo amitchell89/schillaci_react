@@ -70,52 +70,68 @@ function createCounter(windowMs, max) {
   };
 }
 
-//////////////////////////
-// Contact form limiter //
-//////////////////////////
+/**
+ * Builds an Express middleware that caps requests per address and in total.
+ * The global cap is the one protecting the Gmail account, since both of these
+ * endpoints send mail.
+ */
+function createLimiter(options) {
+  var perIp = createCounter(options.perIpWindowMs, options.perIpMax);
+  var overall = createCounter(options.globalWindowMs, options.globalMax);
+
+  return function limiter(req, res, next) {
+    var ip = clientIp(req);
+    var byIp = perIp(ip);
+
+    if (byIp.limited) {
+      console.warn('[rateLimit] blocked ' + options.label + ' from ' + ip + ' (per address limit)');
+      res.set('Retry-After', String(byIp.retryAfterSeconds));
+      return res.status(429).json({ message: options.message });
+    }
+
+    var byAll = overall('all');
+
+    if (byAll.limited) {
+      console.warn('[rateLimit] blocked ' + options.label + ' - global cap of ' +
+                   options.globalMax + '/hour reached, latest from ' + ip);
+      res.set('Retry-After', String(byAll.retryAfterSeconds));
+      return res.status(429).json({ message: options.message });
+    }
+
+    return next();
+  };
+}
+
+//////////////
+// Limiters //
+//////////////
 
 // A real enquiry is sent once. Five in a quarter of an hour is already generous.
-var PER_IP_WINDOW_MS = 15 * 60 * 1000;
-var PER_IP_MAX = 5;
+var contactFormLimiter = createLimiter({
+  label: '/contact',
+  perIpWindowMs: 15 * 60 * 1000,
+  perIpMax: 5,
+  globalWindowMs: 60 * 60 * 1000,
+  globalMax: 30,
+  message: "You've already sent a few messages. Please wait a little while, or email us directly at d.schillaciguitars@gmail.com."
+});
 
-// Backstop protecting the Gmail account itself, regardless of source address.
-// Tripping this on a site this size means abuse, not a busy day.
-var GLOBAL_WINDOW_MS = 60 * 60 * 1000;
-var GLOBAL_MAX = 30;
-
-var perIp = createCounter(PER_IP_WINDOW_MS, PER_IP_MAX);
-var global = createCounter(GLOBAL_WINDOW_MS, GLOBAL_MAX);
-
-var TOO_MANY = "You've already sent a few messages. Please wait a little while, or email us directly at d.schillaciguitars@gmail.com.";
-
-/**
- * Express middleware. Caps submissions per address and in total, so an open
- * unauthenticated endpoint cannot flood the inbox or get the sending account
- * rate limited by Google.
- */
-function contactFormLimiter(req, res, next) {
-  var ip = clientIp(req);
-  var byIp = perIp(ip);
-
-  if (byIp.limited) {
-    console.warn('[rateLimit] blocked /contact from ' + ip + ' (per address limit)');
-    res.set('Retry-After', String(byIp.retryAfterSeconds));
-    return res.status(429).json({ message: TOO_MANY });
-  }
-
-  var overall = global('all');
-
-  if (overall.limited) {
-    console.warn('[rateLimit] blocked /contact - global cap of ' + GLOBAL_MAX + '/hour reached, latest from ' + ip);
-    res.set('Retry-After', String(overall.retryAfterSeconds));
-    return res.status(429).json({ message: TOO_MANY });
-  }
-
-  return next();
-}
+// The signup form has no captcha, so this is its only bot protection. It gets a
+// separate budget from the contact form on purpose: a flood of signups must not
+// be able to use up the allowance that real enquiries depend on.
+var signupLimiter = createLimiter({
+  label: '/api/addEmail',
+  perIpWindowMs: 15 * 60 * 1000,
+  perIpMax: 3,
+  globalWindowMs: 60 * 60 * 1000,
+  globalMax: 15,
+  message: "That's a few signups from here already. Please try again a little later."
+});
 
 module.exports = {
   contactFormLimiter: contactFormLimiter,
+  signupLimiter: signupLimiter,
   clientIp: clientIp,
-  createCounter: createCounter
+  createCounter: createCounter,
+  createLimiter: createLimiter
 };
