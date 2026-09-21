@@ -19,6 +19,7 @@ var Schema = mongoose.Schema;
 
 var mailer = require('./api/mailer');
 var ContactMessage = require('./api/models/ContactMessage');
+var rateLimit = require('./api/rateLimit');
 
 //////////////////
 // Helmet setup //
@@ -78,7 +79,7 @@ function storeContactMessage(fields, callback) {
   });
 }
 
-app.post('/contact', function(req, res) {
+app.post('/contact', rateLimit.contactFormLimiter, function(req, res) {
   console.log('Step - hit /contact')
 
   var payload = req.body || {};
