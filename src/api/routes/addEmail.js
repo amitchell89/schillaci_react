@@ -15,10 +15,16 @@ var mailer = require('../mailer');
 // reCAPTCHA //
 //////////////
 
-// Google's error codes say whose fault a rejection is. Accusing a real person
-// of being a bot because OUR secret is wrong is the worst outcome here, so a
-// configuration failure lets the signup through and shouts in the log instead.
-var SERVER_FAULT_CODES = ['missing-input-secret', 'invalid-input-secret', 'bad-request'];
+// Only these two mean "the visitor did not present a valid token", which is the
+// only thing we should ever reject as a bot. Everything else - a bad secret, a
+// retired key, or some future message Google invents - is our problem, not
+// theirs, so it lets the signup through and shouts in the log instead.
+//
+// This list is deliberately a whitelist. It started as a list of OUR faults and
+// that was the wrong way round: on 21 Sep 2026 Google began rejecting classic
+// keys with "Migrate your key to continue using reCAPTCHA", which matched
+// nothing, fell through to the bot branch, and blocked real signups.
+var BOT_CODES = ['invalid-input-response', 'missing-input-response'];
 
 /**
  * Verifies a reCAPTCHA token with Google.
@@ -55,22 +61,22 @@ function verifyReCaptcha(token, callback) {
     var codes = data['error-codes'] || [];
     console.warn('[addEmail] reCAPTCHA rejected: ' + (codes.join(', ') || 'no error codes returned'));
 
-    var isServerFault = codes.some(function(code) {
-      return SERVER_FAULT_CODES.indexOf(code) !== -1;
-    });
-
-    if (isServerFault) {
-      console.error('[addEmail] ^ that is a SERVER misconfiguration, not a bot. RECAPTCHA_SECRET ' +
-                    'does not match the site key in src/components/SignUpForm/SignUpForm.js. ' +
-                    'Letting the signup through rather than blaming the visitor.');
-      return callback(null, { allow: true, reason: 'misconfigured' });
-    }
-
     if (codes.indexOf('timeout-or-duplicate') !== -1) {
       return callback(null, { allow: false, reason: 'expired' });
     }
 
-    return callback(null, { allow: false, reason: 'bot' });
+    var looksLikeABot = codes.some(function(code) {
+      return BOT_CODES.indexOf(code) !== -1;
+    });
+
+    if (looksLikeABot) {
+      return callback(null, { allow: false, reason: 'bot' });
+    }
+
+    console.error('[addEmail] ^ that is not a bot signal, it is a problem on our side. ' +
+                  'Letting the signup through rather than blaming the visitor. ' +
+                  'Check the reCAPTCHA key and RECAPTCHA_SECRET.');
+    return callback(null, { allow: true, reason: 'our-problem' });
   }).catch(function(error) {
     console.error('[addEmail] reCAPTCHA verification request failed: ' + error.message);
     return callback(error);
