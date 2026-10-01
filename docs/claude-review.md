@@ -121,6 +121,66 @@ Leftovers from the removal, both harmless and both left in place deliberately:
 
 ---
 
+## The form spam bot (observed 24-30 Sep 2026)
+
+A bot began submitting both forms on 24 Sep 2026, about once a day. Nine
+submissions over nine days, each one hitting `/api/addEmail` and `/contact` in
+the same second with a fresh address.
+
+Its fingerprint, which is what `src/api/spamFilter.js` matches on:
+
+- a throwaway Gmail address with dots scattered through the local part
+  (`ad.a.r.o.k.ena54@gmail.com` → `adarokena54@gmail.com`; Gmail ignores dots,
+  so every variant reaches one inbox and naive deduplication sees new users)
+- a message body that is one run of random mixed case characters, 16-17 long
+- always the same answers on the order form: Custom Guitar / Bass / Classic /
+  Rosewood, which are the last radio in each group
+- random two-token names: "Ssls Sbacdw", "Ygctndfb Ylxnt"
+
+**It was not stoppable by rate limiting.** One visit every five to ten hours is
+deliberately paced below any sane limit, and `grep rateLimit` over the logs
+returned nothing the whole time. Rate limiting protects against a volume spike;
+it does nothing about low-and-slow.
+
+**Assessed risk: low.** The form cannot be used as a relay — `mailer.js` hardcodes
+the recipients, so a submitted address never becomes a `to:`, there is no
+`Reply-To` to inject into, and all three fields pass through `xss()`. Volume was
+about one a day, nowhere near Gmail's sending limits. The real costs were inbox
+noise and a subscriber list that was 60% junk (9 of 15 rows).
+
+The likely motive is form discovery: cataloguing which forms accept submissions,
+for use or sale later. The benign gibberish is reconnaissance rather than a
+payload, so **escalation is the thing to watch for** — this site is now in
+somebody's list of working targets.
+
+### What was done
+
+- `src/api/spamFilter.js` requires **both** tells before suppressing a
+  notification. Either alone would catch more, but a real customer writing a
+  short one-word message from `firstname.lastname@gmail.com` must never be
+  swallowed. Suspected spam is stored with `spam: true`, logged with its reason,
+  and answered with a normal-looking success so the bot learns nothing
+- Signups are deduplicated on the normalised address, which defeats the dot
+  trick and also catches honest double-signups
+- `npm test` runs `src/api/spamFilter.test.js`, 27 assertions over the real
+  observed data. Run it if the bot's pattern changes
+
+### If it escalates
+
+A honeypot field is the next cheap step, though this bot sets radio values and
+so is parsing the form properly — it may well fill a hidden input too. Cloudflare
+Turnstile is the real answer, and needs no billing account.
+
+Useful queries:
+
+```js
+db.contact_messages.find({spam: false}).sort({createdAt: -1})   // real enquiries only
+db.contact_messages.count({spam: true})                          // how much noise
+db.user_emails.find({spam: false})                               // the real list
+```
+
+---
+
 ## Deferred: dead code and dead weight
 
 None of this is harmful. All of it is confusing to the next person.

@@ -20,6 +20,7 @@ var Schema = mongoose.Schema;
 var mailer = require('./api/mailer');
 var ContactMessage = require('./api/models/ContactMessage');
 var rateLimit = require('./api/rateLimit');
+var spamFilter = require('./api/spamFilter');
 
 //////////////////
 // Helmet setup //
@@ -91,10 +92,21 @@ app.post('/contact', rateLimit.contactFormLimiter, function(req, res) {
     return res.status(400).json({ message: 'Please add your name, a valid email address and a message.' });
   }
 
+  var verdict = spamFilter.inspect({ email: email, message: message });
+
   var subject = 'Schillaci Guitars: New Message';
   var emailBody = '<b>From:</b> ' + name + '<br /><br /><b>Email:</b> ' + email + '<br /><br /><b>Message:</b> ' + message;
 
-  storeContactMessage({ name: name, email: email, message: message }, function(stored) {
+  storeContactMessage({ name: name, email: email, message: message, spam: verdict.spam }, function(stored) {
+    if (verdict.spam) {
+      // Stored and logged, but kept out of the inbox. The response looks like a
+      // normal success so the bot learns nothing and does not adapt. If a real
+      // enquiry ever goes missing, it is in contact_messages with spam:true.
+      console.warn('[contact] stored but NOT emailed, looks automated (' +
+                   verdict.reason + '): ' + email);
+      return res.json({ message: 'Your message has been sent! Thank You.' });
+    }
+
     mailer.sendMail(subject, emailBody, function(mailError) {
       if (stored) {
         stored.emailed = !mailError;

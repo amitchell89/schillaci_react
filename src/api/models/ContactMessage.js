@@ -9,7 +9,10 @@ var contactMessageSchema = Schema({
   message: { type: String },
   createdAt: { type: Date, default: Date.now },
   emailed: { type: Boolean, default: false },
-  emailError: { type: String, default: null }
+  emailError: { type: String, default: null },
+  // Suspected automated submission: stored and logged, but no notification
+  // sent. See src/api/spamFilter.js for the fingerprint.
+  spam: { type: Boolean, default: false }
 });
 
 module.exports = mongoose.model('contact_message', contactMessageSchema);

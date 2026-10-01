@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node src/api/spamFilter.test.js",
     "webpack": "./node_modules/.bin/webpack -d --watch",
     "build": "bash scripts/build.sh",
     "server": "node src/server_3003.js",
